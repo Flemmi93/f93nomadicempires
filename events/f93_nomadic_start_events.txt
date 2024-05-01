@@ -1,0 +1,62 @@
+namespace = f93_nomadic_start
+
+country_event = {
+	id = f93_nomadic_start.1
+	is_triggered_only = yes
+	title = f93_nomadic_start.1.name
+	desc = f93_nomadic_start.1.desc
+	picture	= GFX_evt_hangar_bay
+
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = f93_nomadic_start.1.a
+		hidden_effect = {
+			#Create Nomadic Nation
+			create_country = {
+				name = ROOT
+				adjective = ROOT
+			#	contact_rule = default
+				type = ROOT
+				auto_delete = no
+				name_list = ROOT
+				ship_prefix = ROOT
+				authority = ROOT
+				civics = ROOT
+				species = ROOT
+				flag = ROOT
+				ethos = ROOT
+				ignore_initial_colony_error = yes
+				effect = {
+					set_player = ROOT
+					save_global_event_target_as = pirates@root
+					set_country_flag = pirates@root
+					add_modifier = { modifier = f93_nomadic_livestyle }
+				}
+			}
+
+			#Create Assets
+			every_controlled_fleet = {
+				limit = {
+					is_ship_class = shipclass_starbase
+				}
+				destroy_fleet = this
+			}
+			every_owned_leader = {
+				set_owner = last_created_country
+			}
+			every_owned_fleet = {
+				set_owner = last_created_country
+			}
+			#Remove old Country
+			every_owned_planet = {
+				destroy_colony = yes
+			}
+		}
+	}
+	option = {
+		name = f93_nomadic_start.1.b
+	}
+}

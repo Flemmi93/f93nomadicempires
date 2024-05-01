@@ -1,0 +1,12 @@
+f93_nomadic_livestyle = {
+#	edicts_unity_cost_mult = -1
+	leaders_upkeep_mult = -1
+	force_disparity_fire_rate_mult = 0.25
+	country_commander_cap_add = 1
+	ship_armor_regen_add_perc = 0.001
+	ship_hull_regen_add_perc = 0.001
+	starbase_module_capacity_add = 6
+	starbase_building_capacity_add = 4
+	shipclass_mining_station_build_cost_mult = -0.25
+	shipclass_research_station_build_cost_mult = -0.25
+}

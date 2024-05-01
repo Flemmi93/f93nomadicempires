@@ -1,0 +1,22 @@
+namespace = f93_nomadic_travel
+
+ship_event = {
+	id = f93_nomadic_travel.1
+	is_triggered_only = yes
+	title = f93_nomadic_travel.1.name
+	desc = f93_nomadic_travel.1.desc
+	picture = GFX_evt_ship_in_orbit
+
+	trigger = {
+		is_ship_class = shipclass_starbase
+	}
+
+	option = {
+		name = f93_nomadic_travel.1.a
+		owner = {
+			add_resource = {
+				alloys = 50
+			}
+		}
+	}
+}
