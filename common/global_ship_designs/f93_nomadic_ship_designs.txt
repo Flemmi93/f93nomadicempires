@@ -1,0 +1,30 @@
+# This file configures pre-scripted designs the game will use.
+
+# Nomadic Unity Ship
+ship_design = {
+	name = "NAME_nomadic_unity_ship"
+	ship_size = nomadic_freighter
+
+	section = {
+		template = "nomadic_freighter_section"
+		slot = "mid"
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "f93_nomad_unity_1"
+		}
+	}
+}
+# Nomadic Science Ship
+ship_design = {
+	name = "NAME_nomadic_science_ship"
+	ship_size = nomadic_freighter
+
+	section = {
+		template = "nomadic_freighter_section"
+		slot = "mid"
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "f93_nomad_science_lab_1"
+		}
+	}
+}

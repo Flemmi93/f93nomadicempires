@@ -156,3 +156,14 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = f93_nomadic_start.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_ship_design = NAME_nomadic_unity_ship
+		add_ship_design = NAME_nomadic_science_ship
+	}
+}

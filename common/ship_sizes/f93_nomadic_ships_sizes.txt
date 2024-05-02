@@ -1,0 +1,46 @@
+
+# Civilian Freighter
+nomadic_freighter = {
+	graphical_culture = no
+	entity = cargo_transport_containers_entity
+	max_speed = @speed_slow
+	acceleration = 0.3
+	rotation_speed = 0.2
+	collision_radius = @destroyer_collision_radius
+
+	modifier = {
+		ship_evasion_add = 5
+		ship_armor_add = 3
+	}
+	max_hitpoints = 240
+	size_multiplier = 1
+	fleet_slot_size = 3
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 1
+	is_space_station = no
+	icon = ship_size_military_1
+	base_buildtime = @destroyer_build_time
+	can_have_federation_design = no
+	is_civilian = no
+	class = shipclass_military
+	prerequisites = { "tech_nomatic_society" }
+	is_designable = no #yes if i can fix it
+	combat_disengage_chance = 5
+
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @destroyer_upkeep_energy
+			alloys = @destroyer_upkeep_alloys
+		}
+	}
+	min_upgrade_cost = {
+		alloys = 2
+	}
+}
