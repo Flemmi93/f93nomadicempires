@@ -4,15 +4,17 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_mconverter_1"
 	icon_frame = 1
-	power = -100
+	power = -70
+	modifier = {
+		ships_upkeep_mult = 0
+	}
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 5
 		}
 		upkeep = {
-			energy = 4
-			minerals = -1
+			minerals = -5
 		}
 	}
 
@@ -33,8 +35,8 @@ utility_component_template = {
 			alloys = 25
 		}
 		upkeep = {
-			energy = 6
-			minerals = -5
+			energy = 1
+			minerals = -10
 		}
 	}
 
@@ -55,13 +57,81 @@ utility_component_template = {
 			alloys = 125
 		}
 		upkeep = {
-			energy = 10
-			minerals = -10
+			energy = 3
+			minerals = -20
 		}
 	}
 
 	prerequisites = { "tech_space_mining_2" "tech_nomatic_society" }
 	component_set = "f93_nomad_mconverter_3"
+}
+#Minerals
+utility_component_template = {
+	key = "f93_nomad_generator_1"
+	size = aux
+	icon = "GFX_ship_part_generator_1"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = -20
+			alloys = 2
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = {"tech_nomatic_society" }
+	component_set = "f93_nomad_generator_1"
+	upgrades_to = "f93_nomad_generator_2"
+}
+
+utility_component_template = {
+	key = "f93_nomad_generator_2"
+	size = aux
+	icon = "GFX_ship_part_generator_2"
+	icon_frame = 1
+	power = -250
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 750
+		}
+		upkeep = {
+			energy = -50
+			alloys = 4
+			consumer_goods = 4
+		}
+	}
+
+	prerequisites = { "tech_space_mining_1" "tech_nomatic_society" }
+	component_set = "f93_nomad_generator_2"
+	upgrades_to = "f93_nomad_generator_3"
+}
+
+utility_component_template = {
+	key = "f93_nomad_generator_3"
+	size = aux
+	icon = "GFX_ship_part_generator_3"
+	icon_frame = 1
+	power = -600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1000
+		}
+		upkeep = {
+			energy = -100
+			alloys = 8
+			consumer_goods = 8
+		}
+	}
+
+	prerequisites = { "tech_space_mining_2" "tech_nomatic_society" }
+	component_set = "f93_nomad_generator_3"
 }
 
 #Alloys
@@ -70,16 +140,16 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_alloy_refinery_1"
 	icon_frame = 1
-	power = -100
+	power = -70
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 5
 		}
 		upkeep = {
-			energy = 2
-			minerals = 2
-			alloys = -1
+			energy = 1
+			minerals = 4
+			alloys = -2
 		}
 	}
 
@@ -100,7 +170,7 @@ utility_component_template = {
 			alloys = 25
 		}
 		upkeep = {
-			energy = 5
+			energy = 4
 			minerals = 15
 			alloys = -10
 		}
@@ -147,9 +217,9 @@ utility_component_template = {
 			alloys = 5
 		}
 		upkeep = {
-			energy = 2
-			minerals = 2
-			consumer_goods = -1
+			energy = 1
+			minerals = 6
+			consumer_goods = -4
 		}
 	}
 
@@ -171,8 +241,8 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 5
-			minerals = 15
-			consumer_goods = -10
+			minerals = 16
+			consumer_goods = -12
 		}
 	}
 
@@ -216,9 +286,9 @@ utility_component_template = {
 			alloys = 5
 		}
 		upkeep = {
-			energy = 2
+			energy = 1
 			consumer_goods = 1
-			unity = -4
+			unity = -8
 		}
 	}
 
@@ -239,9 +309,9 @@ utility_component_template = {
 			alloys = 25
 		}
 		upkeep = {
-			energy = 8
+			energy = 4
 			consumer_goods = 3
-			unity = -15
+			unity = -24
 		}
 	}
 
@@ -262,9 +332,9 @@ utility_component_template = {
 			alloys = 125
 		}
 		upkeep = {
-			energy = 60
+			energy = 10
 			consumer_goods = 8
-			unity = -40
+			unity = -75
 		}
 	}
 
@@ -285,11 +355,11 @@ utility_component_template = {
 			alloys = 25
 		}
 		upkeep = {
-			energy = 4
-			consumer_goods = 1
-			physics_research = -3
-			society_research = -3
-			engineering_research = -3
+			energy = 1
+			consumer_goods = 2
+			physics_research = -8
+			society_research = -8
+			engineering_research = -8
 		}
 	}
 
@@ -310,12 +380,12 @@ utility_component_template = {
 			alloys = 125
 		}
 		upkeep = {
-			energy = 10
+			energy = 5
 			exotic_gases = 0.6
-			consumer_goods = 3
-			physics_research = -10
-			society_research = -10
-			engineering_research = -10
+			consumer_goods = 5
+			physics_research = -26
+			society_research = -26
+			engineering_research = -26
 		}
 	}
 
@@ -336,12 +406,12 @@ utility_component_template = {
 			alloys = 300
 		}
 		upkeep = {
-			energy = 75
+			energy = 15
 			exotic_gases = 1
 			consumer_goods = 8
-			physics_research = -35
-			society_research = -35
-			engineering_research = -35
+			physics_research = -75
+			society_research = -75
+			engineering_research = -75
 		}
 	}
 

@@ -16,6 +16,21 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ship_part_generator_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_generator_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_generator_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_5.dds"
+	}
+
+	spriteType = {
 		name = "GFX_ship_part_alloy_refinery_1"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_alloy_refinery_1.dds"
 	}
