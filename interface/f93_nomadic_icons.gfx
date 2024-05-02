@@ -1,0 +1,92 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_part_mconverter_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mconverter_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_mconverter_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mconverter_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_mconverter_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mconverter_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_alloy_refinery_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_alloy_refinery_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_alloy_refinery_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_alloy_refinery_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_alloy_refinery_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_alloy_refinery_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_unity_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_unityy_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_unity_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_science_lab_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_science_lab_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_science_lab_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_science_lab_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_science_lab_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_science_lab_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_csg_factory_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_csg_factory_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_csg_factory_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_csg_factory_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_csg_factory_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_csg_factory_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nomad_unity_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nomad_unity_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nomad_unity_3 "
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_3.dds"
+	}
+}

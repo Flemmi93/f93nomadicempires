@@ -4,11 +4,40 @@
  f93_nomadic_start.1.desc: "§Y[Root.Leader.GetName]§! suggests that living on §Y[Root.Capital.GetName]§! is bad, the gravity is to high, the sun is to bright and generally the mood sunk as deep as the gravity well."
  f93_nomadic_start.1.a: "§GLet's get Moving"
  f93_nomadic_start.1.b: "§RWe will stay!"
-
+ f93_nomadic_start.1.c: "§LI be a Pirate!"
  f93_nomadic_travel.1.name: "Station Dismantled"
  f93_nomadic_travel.1.desc: "After dismanteling [This.GetName] and all outlying Mining and Research Operations we have gathered plenty of salvage"
  f93_nomadic_travel.1.a: "Hard Earned Cash"
  f93_nomadic_livestyle: "Nomadic Lifestyle"
  f93_nomadic_livestyle_desc: "We are strangers wherever we go, we stick together though thick and thin."
+
+#Technology
+ tech_nomatic_society: "Nomadic Travels"
+ tech_nomatic_society_desc: "Our Society knows how to travel inbetwen the stars."
+
+#government
+ origin_nomadic_empire: "Nomadic Empire"
+ origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, its only to gather some very needed components for their homefleet."
+ civic_nomadic_pirate: "A Pirate's Life"
+ civic_nomadic_pirate_desc: "These people decided to nolonger play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
+
+#Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
- mod_shipclass_research_station_build_cost_mult: "Research Station Build Cost
+ mod_shipclass_research_station_build_cost_mult: "Research Station Build Cost"
+
+#Components
+ f93_nomad_mconverter_1: "Matter Converter 1"
+ f93_nomad_mconverter_2: "Matter Converter 2"
+ f93_nomad_mconverter_3: "Matter Converter 3"
+ f93_nomad_refinery_1: "Alloy Refinery 1"
+ f93_nomad_refinery_2: "Alloy Refinery 2"
+ f93_nomad_refinery_3: "Alloy Refinery 3"
+ f93_nomad_unity_1: "Communal Mess Hall 1"
+ f93_nomad_unity_2: "Communal Mess Hall 2"
+ f93_nomad_unity_3: "Communal Mess Hall 3"
+ f93_nomad_science_lab_1: "Sciencee Lab 1"
+ f93_nomad_science_lab_2: "Sciencee Lab 2"
+ f93_nomad_science_lab_3: "Sciencee Lab 3"
+ f93_nomad_factory_1: "2D Printer"
+ f93_nomad_factory_2: "3D Printer"
+ f93_nomad_factory_3: "4D Printer"

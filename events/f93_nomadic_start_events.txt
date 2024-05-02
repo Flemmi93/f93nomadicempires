@@ -11,7 +11,9 @@ country_event = {
 		is_ai = no
 	}
 
+
 	option = {
+		save_event_target_as = origin_nation
 		name = f93_nomadic_start.1.a
 		hidden_effect = {
 			#Create Nomadic Nation
@@ -30,13 +32,9 @@ country_event = {
 				ethos = ROOT
 				ignore_initial_colony_error = yes
 				effect = {
-					set_player = ROOT
-					save_global_event_target_as = pirates@root
-					set_country_flag = pirates@root
 					add_modifier = { modifier = f93_nomadic_livestyle }
 				}
 			}
-
 			#Create Assets
 			every_controlled_fleet = {
 				limit = {
@@ -50,13 +48,111 @@ country_event = {
 			every_owned_fleet = {
 				set_owner = last_created_country
 			}
-			#Remove old Country
+			#Turn pops into Rescources 
+			last_created_country = {
+				add_resource = {
+					energy = 250
+					minerals = 500
+					consumer_goods = 100
+					alloys = 150
+				}
+				if = { limit = { is_machine_empire = no }
+					add_resource = {
+						food = 250
+					}
+				}
+				if = { limit = { is_machine_empire = yes }
+					add_resource = {
+						energy = 250
+					}
+				}
+				set_player = ROOT
+				give_technology = { tech = tech_nomatic_society message = no }
+			}
+			
+			#Remove colonies
 			every_owned_planet = {
 				destroy_colony = yes
 			}
 		}
 	}
+	
 	option = {
 		name = f93_nomadic_start.1.b
+	}
+	option = {
+		name = f93_nomadic_start.1.c
+	}
+}
+
+country_event = {
+	id = f93_nomadic_start.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_ai = no
+		has_origin = origin_nomadic_empire
+	}
+
+	immediate = {
+		#Create Nomadic Nation
+		create_country = {
+			name = ROOT
+			adjective = ROOT
+		#	contact_rule = default
+			type = ROOT
+			auto_delete = no
+			name_list = ROOT
+			ship_prefix = ROOT
+			authority = ROOT
+			civics = ROOT
+			species = ROOT
+			flag = ROOT
+			ethos = ROOT
+			ignore_initial_colony_error = yes
+			effect = {
+				#add_modifier = { modifier = f93_nomadic_livestyle }
+			}
+		}
+		#Create Assets
+		every_controlled_fleet = {
+			limit = {
+				is_ship_class = shipclass_starbase
+			}
+			destroy_fleet = this
+		}
+		every_owned_leader = {
+			set_owner = last_created_country
+		}
+		every_owned_fleet = {
+			set_owner = last_created_country
+		}
+		#Turn pops into Rescources 
+		last_created_country = {
+			add_resource = {
+				energy = 250
+				minerals = 500
+				consumer_goods = 100
+				alloys = 150
+			}
+			if = { limit = { is_machine_empire = no }
+				add_resource = {
+					food = 250
+				}
+			}
+			if = { limit = { is_machine_empire = yes }
+				add_resource = {
+					energy = 250
+				}
+			}
+			set_player = ROOT
+			give_technology = { tech = tech_nomatic_society message = no }
+		}
+		
+		#Remove colonies
+		every_owned_planet = {
+			destroy_colony = yes
+		}
 	}
 }

@@ -1,0 +1,7 @@
+tech_nomatic_society = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	category = { statecraft }
+	weight = 0
+}

@@ -1,0 +1,105 @@
+# Icons set here are the ones shown in component editor list.
+
+component_set = {
+	key = "f93_nomad_mconverter_1"
+
+	icon = "GFX_ship_part_mconverter_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_mconverter_2"
+
+	icon = "GFX_ship_part_mconverter_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_mconverter_3"
+
+	icon = "GFX_ship_part_mconverter_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "f93_nomad_refinery_1"
+
+	icon = "GFX_ship_part_alloy_refinery_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_refinery_2"
+
+	icon = "GFX_ship_part_alloy_refinery_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_refinery_3"
+
+	icon = "GFX_ship_part_alloy_refinery_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_unity_1"
+
+	icon = "GFX_ship_part_unity_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_unity_2"
+
+	icon = "GFX_ship_part_unity_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_unity_3"
+
+	icon = "GFX_ship_part_unity_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_science_lab_1"
+
+	icon = "GFX_ship_part_science_lab_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_science_lab_2"
+
+	icon = "GFX_ship_part_science_lab_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_science_lab_3"
+
+	icon = "GFX_ship_part_science_lab_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_factory_1"
+
+	icon = "GFX_ship_part_csg_factory_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_factory_2"
+
+	icon = "GFX_ship_part_csg_factory_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_factory_3"
+
+	icon = "GFX_ship_part_csg_factory_3"
+	icon_frame = 1
+}
