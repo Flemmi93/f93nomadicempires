@@ -1,25 +1,47 @@
 # Icons set here are the ones shown in component editor list.
 
 component_set = {
-	key = "f93_nomad_mconverter_1"
+	key = "f93_nomad_energy_1"
 
-	icon = "GFX_ship_part_mconverter_1"
+	icon = "GFX_ship_part_energy_1"
 	icon_frame = 1
 }
 
 component_set = {
-	key = "f93_nomad_mconverter_2"
+	key = "f93_nomad_energy_2"
 
-	icon = "GFX_ship_part_mconverter_2"
+	icon = "GFX_ship_part_energy_2"
 	icon_frame = 1
 }
 
 component_set = {
-	key = "f93_nomad_mconverter_3"
+	key = "f93_nomad_energy_3"
 
-	icon = "GFX_ship_part_mconverter_3"
+	icon = "GFX_ship_part_energy_3"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "f93_nomad_minerals_1"
+
+	icon = "GFX_ship_part_minerals_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_minerals_2"
+
+	icon = "GFX_ship_part_minerals_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_minerals_3"
+
+	icon = "GFX_ship_part_minerals_3"
+	icon_frame = 1
+}
+
 component_set = {
 	key = "f93_nomad_generator_1"
 
@@ -121,5 +143,75 @@ component_set = {
 	key = "f93_nomad_factory_3"
 
 	icon = "GFX_ship_part_csg_factory_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_exotic_gases_1"
+
+	icon = "GFX_ship_part_exotic_gases_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_exotic_gases_2"
+
+	icon = "GFX_ship_part_exotic_gases_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_rare_crystals_1"
+
+	icon = "GFX_ship_part_rare_crystals_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_rare_crystals_2"
+
+	icon = "GFX_ship_part_rare_crystals_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_volatile_motes_1"
+
+	icon = "GFX_ship_part_volatile_motes_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_volatile_motes_2"
+
+	icon = "GFX_ship_part_volatile_motes_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_zro"
+
+	icon = "GFX_ship_part_zro"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_dark_matter"
+
+	icon = "GFX_ship_part_dark_matter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_nanites"
+
+	icon = "GFX_ship_part_nanites"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_living_metal"
+
+	icon = "GFX_ship_part_living_metal"
 	icon_frame = 1
 }

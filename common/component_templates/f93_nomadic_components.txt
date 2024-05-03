@@ -1,12 +1,12 @@
 #Minerals
 utility_component_template = {
-	key = "f93_nomad_mconverter_1"
+	key = "f93_nomad_minerals_1"
 	size = aux
-	icon = "GFX_ship_part_mconverter_1"
+	icon = "GFX_ship_part_minerals_1"
 	icon_frame = 1
 	power = -70
 	modifier = {
-		ships_upkeep_mult = 0
+		country_base_minerals_produces_add = 5
 	}
 	resources = {
 		category = ship_components
@@ -14,21 +14,24 @@ utility_component_template = {
 			alloys = 5
 		}
 		upkeep = {
-			minerals = -5
+	#		minerals = -5
 		}
 	}
 
 	prerequisites = {"tech_nomatic_society" }
-	component_set = "f93_nomad_mconverter_1"
-	upgrades_to = "f93_nomad_mconverter_2"
+	component_set = "f93_nomad_minerals_1"
+	upgrades_to = "f93_nomad_minerals_2"
 }
 
 utility_component_template = {
-	key = "f93_nomad_mconverter_2"
+	key = "f93_nomad_minerals_2"
 	size = aux
-	icon = "GFX_ship_part_mconverter_2"
+	icon = "GFX_ship_part_minerals_2"
 	icon_frame = 1
 	power = -200
+	modifier = {
+		country_base_minerals_produces_add = 10
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -36,21 +39,24 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 1
-			minerals = -10
+	#		minerals = -10
 		}
 	}
 
 	prerequisites = { "tech_space_mining_1" "tech_nomatic_society" }
-	component_set = "f93_nomad_mconverter_2"
-	upgrades_to = "f93_nomad_mconverter_3"
+	component_set = "f93_nomad_minerals_2"
+	upgrades_to = "f93_nomad_minerals_3"
 }
 
 utility_component_template = {
-	key = "f93_nomad_mconverter_3"
+	key = "f93_nomad_minerals_3"
 	size = aux
-	icon = "GFX_ship_part_mconverter_3"
+	icon = "GFX_ship_part_minerals_3"
 	icon_frame = 1
 	power = -400
+	modifier = {
+		country_base_minerals_produces_add = 20
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -58,80 +64,90 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 3
-			minerals = -20
+	#		minerals = -20
 		}
 	}
 
 	prerequisites = { "tech_space_mining_2" "tech_nomatic_society" }
-	component_set = "f93_nomad_mconverter_3"
+	component_set = "f93_nomad_minerals_3"
 }
-#Minerals
+
+#Energy
 utility_component_template = {
-	key = "f93_nomad_generator_1"
+	key = "f93_nomad_energy_1"
 	size = aux
-	icon = "GFX_ship_part_generator_1"
+	icon = "GFX_ship_part_energy_1"
 	icon_frame = 1
 	power = -100
+	modifier = {
+		country_base_energy_produces_add = 20
+	}
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 500
 		}
 		upkeep = {
-			energy = -20
+		#	energy = -20
 			alloys = 2
 			consumer_goods = 2
 		}
 	}
 
 	prerequisites = {"tech_nomatic_society" }
-	component_set = "f93_nomad_generator_1"
-	upgrades_to = "f93_nomad_generator_2"
+	component_set = "f93_nomad_energy_1"
+	upgrades_to = "f93_nomad_energy_2"
 }
 
 utility_component_template = {
-	key = "f93_nomad_generator_2"
+	key = "f93_nomad_energy_2"
 	size = aux
-	icon = "GFX_ship_part_generator_2"
+	icon = "GFX_ship_part_energy_2"
 	icon_frame = 1
 	power = -250
+	modifier = {
+		country_base_energy_produces_add = 50
+	}
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 750
 		}
 		upkeep = {
-			energy = -50
+		#	energy = -50
 			alloys = 4
 			consumer_goods = 4
 		}
 	}
 
 	prerequisites = { "tech_space_mining_1" "tech_nomatic_society" }
-	component_set = "f93_nomad_generator_2"
-	upgrades_to = "f93_nomad_generator_3"
+	component_set = "f93_nomad_energy_2"
+	upgrades_to = "f93_nomad_energy_3"
 }
 
 utility_component_template = {
-	key = "f93_nomad_generator_3"
+	key = "f93_nomad_energy_3"
 	size = aux
-	icon = "GFX_ship_part_generator_3"
+	icon = "GFX_ship_part_energy_3"
 	icon_frame = 1
 	power = -600
+	modifier = {
+		country_base_energy_produces_add = 100
+	}
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = 1000
 		}
 		upkeep = {
-			energy = -100
+			# energy = -100
 			alloys = 8
 			consumer_goods = 8
 		}
 	}
 
 	prerequisites = { "tech_space_mining_2" "tech_nomatic_society" }
-	component_set = "f93_nomad_generator_3"
+	component_set = "f93_nomad_energy_3"
 }
 
 #Alloys
@@ -141,6 +157,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_alloy_refinery_1"
 	icon_frame = 1
 	power = -70
+	modifier = {
+		country_base_alloys_produces_add = 2
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -149,7 +168,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			minerals = 4
-			alloys = -2
+			# alloys = -2
 		}
 	}
 
@@ -164,6 +183,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_alloy_refinery_2"
 	icon_frame = 1
 	power = -200
+	modifier = {
+		country_base_alloys_produces_add = 10
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -172,7 +194,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 4
 			minerals = 15
-			alloys = -10
+			# alloys = -10
 		}
 	}
 
@@ -187,6 +209,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_alloy_refinery_3"
 	icon_frame = 1
 	power = -400
+	modifier = {
+		country_base_alloys_produces_add = 25
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -195,7 +220,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 10
 			minerals = 40
-			alloys = -25
+			# alloys = -25
 		}
 	}
 
@@ -211,6 +236,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_csg_factory_1"
 	icon_frame = 1
 	power = -100
+	modifier = {
+		country_base_consumer_goods_produces_add = 4
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -219,7 +247,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			minerals = 6
-			consumer_goods = -4
+			# consumer_goods = -4
 		}
 	}
 
@@ -234,6 +262,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_csg_factory_2"
 	icon_frame = 1
 	power = -200
+	modifier = {
+		country_base_consumer_goods_produces_add = 12
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -242,7 +273,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 5
 			minerals = 16
-			consumer_goods = -12
+			# consumer_goods = -12
 		}
 	}
 
@@ -257,6 +288,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_csg_factory_3"
 	icon_frame = 1
 	power = -400
+	modifier = {
+		country_base_consumer_goods_produces_add = 25
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -265,7 +299,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 10
 			minerals = 40
-			consumer_goods = -25
+			# consumer_goods = -25
 		}
 	}
 
@@ -280,6 +314,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_nomad_unity_1"
 	icon_frame = 1
 	power = -50
+	modifier = {
+		country_base_unity_produces_add = 8
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -288,7 +325,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			consumer_goods = 1
-			unity = -8
+			# unity = -8
 		}
 	}
 
@@ -303,6 +340,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_nomad_unity_2"
 	icon_frame = 1
 	power = -150
+	modifier = {
+		country_base_unity_produces_add = 24
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -311,7 +351,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 4
 			consumer_goods = 3
-			unity = -24
+			# unity = -24
 		}
 	}
 
@@ -326,6 +366,9 @@ utility_component_template = {
 	icon = "GFX_ship_part_nomad_unity_3"
 	icon_frame = 1
 	power = -300
+	modifier = {
+		country_base_unity_produces_add = 75
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -334,7 +377,7 @@ utility_component_template = {
 		upkeep = {
 			energy = 10
 			consumer_goods = 8
-			unity = -75
+			# unity = -75
 		}
 	}
 
@@ -349,6 +392,11 @@ utility_component_template = {
 	icon = "GFX_ship_part_science_lab_1"
 	icon_frame = 1
 	power = -50
+	modifier = {
+		country_base_physics_research_produces_add = 8
+		country_base_society_research_produces_add = 8
+		country_base_engineering_research_produces_add = 8
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -357,9 +405,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			consumer_goods = 2
-			physics_research = -8
-			society_research = -8
-			engineering_research = -8
+			# physics_research = -8
+			# society_research = -8
+			# engineering_research = -8
 		}
 	}
 
@@ -374,6 +422,11 @@ utility_component_template = {
 	icon = "GFX_ship_part_science_lab_2"
 	icon_frame = 1
 	power = -150
+	modifier = {
+		country_base_physics_research_produces_add = 26
+		country_base_society_research_produces_add = 26
+		country_base_engineering_research_produces_add = 26
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -383,9 +436,9 @@ utility_component_template = {
 			energy = 5
 			exotic_gases = 0.6
 			consumer_goods = 5
-			physics_research = -26
-			society_research = -26
-			engineering_research = -26
+			# physics_research = -26
+			# society_research = -26
+			# engineering_research = -26
 		}
 	}
 
@@ -397,9 +450,14 @@ utility_component_template = {
 utility_component_template = {
 	key = "f93_nomad_science_lab_3"
 	size = aux
-	icon = "GFX_ship_part_science_lab_2"
+	icon = "GFX_ship_part_science_lab_3"
 	icon_frame = 1
 	power = -300
+	modifier = {
+		country_base_physics_research_produces_add = 75
+		country_base_society_research_produces_add = 75
+		country_base_engineering_research_produces_add = 75
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -409,12 +467,259 @@ utility_component_template = {
 			energy = 15
 			exotic_gases = 1
 			consumer_goods = 8
-			physics_research = -75
-			society_research = -75
-			engineering_research = -75
+			# physics_research = -75
+			# society_research = -75
+			# engineering_research = -75
 		}
 	}
 
 	prerequisites = { "tech_basic_science_lab_3" "tech_space_science_4" "tech_nomatic_society" }
 	component_set = "f93_nomad_science_lab_3"
+}
+
+#Exotic Gases
+utility_component_template = {
+	key = "f93_nomad_exotic_gases_1"
+	size = aux
+	icon = "GFX_ship_part_exotic_gases_1"
+	icon_frame = 1
+	power = -50
+	modifier = {
+		country_base_exotic_gases_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	prerequisites = { "tech_mine_exotic_gases" "tech_nomatic_society" }
+	component_set = "f93_nomad_exotic_gases_1"
+	upgrades_to = "f93_nomad_exotic_gases_2"
+}
+
+utility_component_template = {
+	key = "f93_nomad_exotic_gases_2"
+	size = aux
+	icon = "GFX_ship_part_exotic_gases_2"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_exotic_gases_produces_add = 2
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 6
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_mine_exotic_gases" "tech_exotic_gases" "tech_nomatic_society" }
+	component_set = "f93_nomad_exotic_gases_2"
+}
+
+#Rare Crystals
+utility_component_template = {
+	key = "f93_nomad_rare_crystals_1"
+	size = aux
+	icon = "GFX_ship_part_rare_crystals_1"
+	icon_frame = 1
+	power = -50
+	modifier = {
+		country_base_rare_crystals_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	prerequisites = { "tech_mine_rare_crystals" "tech_nomatic_society" }
+	component_set = "f93_nomad_rare_crystals_1"
+	upgrades_to = "f93_nomad_rare_crystals_2"
+}
+
+utility_component_template = {
+	key = "f93_nomad_rare_crystals_2"
+	size = aux
+	icon = "GFX_ship_part_rare_crystals_2"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_rare_crystals_produces_add = 2
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 6
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_mine_rare_crystals" "tech_rare_crystals" "tech_nomatic_society" }
+	component_set = "f93_nomad_rare_crystals_2"
+}
+
+#Volatile Mote
+utility_component_template = {
+	key = "f93_nomad_volatile_motes_1"
+	size = aux
+	icon = "GFX_ship_part_volatile_motes_1"
+	icon_frame = 1
+	power = -50
+	modifier = {
+		country_base_volatile_motes_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	prerequisites = { "tech_mine_volatile_motes" "tech_nomatic_society" }
+	component_set = "f93_nomad_volatile_motes_1"
+	upgrades_to = "f93_nomad_volatile_motes_2"
+}
+
+utility_component_template = {
+	key = "f93_nomad_volatile_motes_2"
+	size = aux
+	icon = "GFX_ship_part_volatile_motes_2"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_volatile_motes_produces_add = 2
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 6
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_mine_volatile_motes" "tech_volatile_motes" "tech_nomatic_society" }
+	component_set = "f93_nomad_volatile_motes_2"
+}
+
+#Zro
+utility_component_template = {
+	key = "f93_nomad_zro"
+	size = aux
+	icon = "GFX_ship_part_zro"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_sr_zro_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 6
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_mine_zro" "tech_nomatic_society" }
+	component_set = "f93_nomad_zro"
+}
+
+#Dark Matter
+utility_component_template = {
+	key = "f93_nomad_dark_matter"
+	size = aux
+	icon = "GFX_ship_part_dark_matter"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_sr_dark_matter_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 6
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_mine_dark_matter" "tech_nomatic_society" }
+	component_set = "f93_nomad_dark_matter"
+}
+
+#Nanites
+utility_component_template = {
+	key = "f93_nomad_nanites"
+	size = aux
+	icon = "GFX_ship_part_nanites"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_nanites_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 12
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_nanite_transmutation" "tech_nomatic_society" }
+	component_set = "f93_nomad_nanites"
+}
+
+#Living Metal
+utility_component_template = {
+	key = "f93_nomad_living_metal"
+	size = aux
+	icon = "GFX_ship_part_living_metal"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		country_base_sr_living_metal_produces_add = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 12
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_mine_living_metal" "tech_nomatic_society" }
+	component_set = "f93_nomad_living_metal"
 }

@@ -13,8 +13,11 @@ country_event = {
 
 
 	option = {
+		give_technology = { tech = tech_juggernaut message = no }
 		save_event_target_as = origin_nation
 		name = f93_nomadic_start.1.a
+		create_fleet_from_naval_cap = 0.4
+		
 		hidden_effect = {
 			#Create Nomadic Nation
 			create_country = {
@@ -24,7 +27,7 @@ country_event = {
 				type = ROOT
 				auto_delete = no
 				name_list = ROOT
-				ship_prefix = ROOT
+				ship_prefix = ""
 				authority = ROOT
 				civics = ROOT
 				species = ROOT
@@ -33,6 +36,10 @@ country_event = {
 				ignore_initial_colony_error = yes
 				effect = {
 					add_modifier = { modifier = f93_nomadic_livestyle }
+					give_technology = { tech = tech_juggernaut message = no }
+					give_technology = { tech = tech_nomatic_society message = no }
+					# create_ship_design = { design = <key> ftl = root }
+					# add_ship_design = last_created_design
 				}
 			}
 			#Create Assets
@@ -66,8 +73,17 @@ country_event = {
 						energy = 250
 					}
 				}
+				
+				create_fleet = {
+					name =random 
+					effect = {
+						set_owner = root
+						create_ship = {
+							random_existing_design = juggernaut
+						}
+					} 
+				}
 				set_player = ROOT
-				give_technology = { tech = tech_nomatic_society message = no }
 			}
 			
 			#Remove colonies
@@ -79,9 +95,6 @@ country_event = {
 	
 	option = {
 		name = f93_nomadic_start.1.b
-	}
-	option = {
-		name = f93_nomadic_start.1.c
 	}
 }
 

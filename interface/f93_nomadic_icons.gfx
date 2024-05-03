@@ -1,18 +1,33 @@
 spriteTypes = {
 
 	spriteType = {
-		name = "GFX_ship_part_mconverter_1"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_mconverter_1.dds"
+		name = "GFX_ship_part_minerals_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_minerals_1.dds"
 	}
 
 	spriteType = {
-		name = "GFX_ship_part_mconverter_2"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_mconverter_2.dds"
+		name = "GFX_ship_part_minerals_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_minerals_2.dds"
 	}
 
 	spriteType = {
-		name = "GFX_ship_part_mconverter_3"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_mconverter_3.dds"
+		name = "GFX_ship_part_minerals_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_minerals_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_energy_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_energy_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_energy_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_energy_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_energy_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_energy_3.dds"
 	}
 
 	spriteType = {
@@ -101,7 +116,57 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ship_part_nomad_unity_3 "
+		name = "GFX_ship_part_nomad_unity_3"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_unity_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_exotic_gases_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_exotic_gases_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_exotic_gases_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_exotic_gases_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_rare_crystals_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_rare_crystals_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_rare_crystals_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_rare_crystals_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_volatile_motes_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_volatile_motes_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_volatile_motes_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_volatile_motes_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_zro"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_zro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_dark_matter"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_dark_matter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nanites"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nanites.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_living_metal"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_living_metal.dds"
 	}
 }

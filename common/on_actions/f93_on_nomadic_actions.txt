@@ -14,50 +14,12 @@ on_destroying_station = {
 	}
 }
 
-#Create a Counter for Stations, than can be cashed out when an outpost is dismantled
-
-
-# The game will generate one on_building_X on_action for every station ship-size
-# Orbital stations will get the planet in FROM, space stations only get they building ship
-
-# This = construction ship
-# From = planet OR Astral Rift it is built on
-# Fires when construction is complete,
-# immediately before station is created
-on_building_mining_station = {
-	events = {
-	}
-}
-
-# This = construction ship
-# From = planet OR Astral Rift it is built on
-# Fires when construction is complete,
-# immediately before station is created
-on_building_research_station = {
-	events = {
-
-	}
-}
-
-#This = ship (starbase)
-#From = owner country
-on_building_starbase_outpost = {
-	events = {
-
-	}
-}
-
-# This = construction ship
-# From = planet it is built on
-on_building_observation_station = {
-	events = {
-	}
-}
-
 # Planet has taken damage from orbital bombardment - Damage is applied daily
 # This = Planet
 # From = Bombarder
 on_planet_bombarded = {
 	events = {
+		f93_nomadic_travel.3
+		f93_nomadic_travel.4
 	}
 }
