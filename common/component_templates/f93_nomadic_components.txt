@@ -120,7 +120,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_space_mining_1" "tech_nomatic_society" }
+	prerequisites = { "tech_cold_fusion_power" "tech_nomatic_society" }
 	component_set = "f93_nomad_energy_2"
 	upgrades_to = "f93_nomad_energy_3"
 }
@@ -146,7 +146,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_space_mining_2" "tech_nomatic_society" }
+	prerequisites = { "tech_zero_point_power" "tech_nomatic_society" }
 	component_set = "f93_nomad_energy_3"
 }
 
