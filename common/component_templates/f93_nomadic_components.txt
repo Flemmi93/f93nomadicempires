@@ -180,7 +180,7 @@ utility_component_template = {
 			minerals = 8
 		}
 		produces = {
-			alloys = 4
+			alloys = 8
 		}
 	}
 
@@ -208,7 +208,7 @@ utility_component_template = {
 			minerals = 28
 		}
 		produces = {
-			alloys = 16
+			alloys = 24
 		}
 	}
 
@@ -236,7 +236,7 @@ utility_component_template = {
 			minerals = 50
 		}
 		produces = {
-			alloys = 32
+			alloys = 64
 		}
 	}
 
