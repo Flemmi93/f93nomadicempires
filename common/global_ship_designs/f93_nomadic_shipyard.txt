@@ -78,8 +78,8 @@ ship_design = {
 
 	required_component = "CRUISER_FISSION_REACTOR"
 	required_component = "HYPER_DRIVE_1"
+	required_component = "CRUISER_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
-	required_component = "SHIP_THRUSTER_1"
 	required_component = "COMBAT_COMPUTER_DEFAULT"
 
 }
@@ -131,8 +131,8 @@ ship_design = {
 	}
 	required_component = "DESTROYER_FISSION_REACTOR"
 	required_component = "HYPER_DRIVE_1"
+	required_component = "DESTROYER_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
-	required_component = "SHIP_THRUSTER_1"
 	required_component = "COMBAT_COMPUTER_DEFAULT"
 
 }
@@ -184,8 +184,8 @@ ship_design = {
 	}
 	required_component = "DESTROYER_FISSION_REACTOR"
 	required_component = "HYPER_DRIVE_1"
+	required_component = "DESTROYER_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
-	required_component = "SHIP_THRUSTER_1"
 	required_component = "COMBAT_COMPUTER_DEFAULT"
 
 }
@@ -237,8 +237,8 @@ ship_design = {
 	}
 	required_component = "DESTROYER_FISSION_REACTOR"
 	required_component = "HYPER_DRIVE_1"
+	required_component = "DESTROYER_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
-	required_component = "SHIP_THRUSTER_1"
 	required_component = "COMBAT_COMPUTER_DEFAULT"
 
 }
@@ -290,8 +290,8 @@ ship_design = {
 	}
 	required_component = "DESTROYER_FISSION_REACTOR"
 	required_component = "HYPER_DRIVE_1"
+	required_component = "DESTROYER_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
-	required_component = "SHIP_THRUSTER_1"
 	required_component = "COMBAT_COMPUTER_DEFAULT"
 
 }
