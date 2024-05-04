@@ -7,7 +7,7 @@ country_event = {
 	desc = f93_nomadic_start.1.desc
 	picture	= GFX_evt_hangar_bay
 	show_sound = event_ship_bridge
-	
+
 	trigger = {
 		is_ai = no
 	}
@@ -65,8 +65,5 @@ country_event = {
 			}
 		}
 		clear_global_event_target = homeworld
-		every_controlled_fleet = {
-			set_home_base = last_created_fleet
-		}
 	}
 }
