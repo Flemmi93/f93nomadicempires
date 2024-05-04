@@ -15,7 +15,7 @@
  f93_nomadic_travel.2.a: "What have we here"
 
 #Global Ship Design
- NAME_Nomadic_juggernaut: "Construction"
+ NAME_Nomadic_shipyard: "Construction"
 
 #Technology
  tech_nomatic_society: "Nomadic Travels"
@@ -127,3 +127,5 @@
  nomadic_freighter_plural: "$civilian_freighter_plural$"
  nomadic_freighter_sectionS: "$civilian_freighter$ $stern$"
  nomadic_freighter_sectionB: "$civilian_freighter$ $bow$"
+ nomadic_shipyard: "Nomadic Shipyard"
+ nomadic_shipyard_plural: "Nomadic Shipyards"

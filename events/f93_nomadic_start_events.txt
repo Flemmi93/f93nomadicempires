@@ -52,17 +52,17 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		give_technology = { tech = tech_juggernaut message = no }
 		create_fleet = {
 			name = "Nomadic Fleet"
 			effect = {
 				set_owner = ROOT
-				set_location = owner.capital_scope.solar_system
+				set_location = event_target:homeworld
 				create_ship = {
-					name = NAME_Nomadic_juggernaut
-					design = NAME_Nomadic_juggernaut
+					name = NAME_Nomadic_shipyard
+					design = NAME_Nomadic_shipyard
 				}
 			}
 		}
+		clear_global_event_target = homeworld
 	}
 }

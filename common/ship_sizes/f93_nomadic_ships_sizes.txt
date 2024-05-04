@@ -95,10 +95,10 @@ nomadic_shipyard = {
 	construction_type = starbase_shipyard
 
 	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
 
 	min_upgrade_cost = {
 		alloys = 50

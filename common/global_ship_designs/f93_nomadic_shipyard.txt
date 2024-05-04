@@ -1,0 +1,85 @@
+ship_design = {
+	name = NAME_Nomadic_shipyard
+	ship_size = nomadic_shipyard
+	is_event_design = no
+	hide_size = no
+	section = {
+		template = nomadic_shipyard_sectionB
+		slot = bow
+		component = {
+			slot = MEDIUM_GUN_01
+			template = MEDIUM_RED_LASER
+		}
+		component = {
+			slot = MEDIUM_GUN_02
+			template = MEDIUM_RED_LASER
+		}
+		component = {
+			slot = MEDIUM_UTILITY_1
+			template = MEDIUM_ARMOR_1
+		}
+		component = {
+			slot = MEDIUM_UTILITY_2
+			template = MEDIUM_ARMOR_1
+		}
+		component = {
+			slot = MEDIUM_UTILITY_3
+			template = MEDIUM_ARMOR_1
+		}
+		component = {
+			slot = MEDIUM_UTILITY_4
+			template = MEDIUM_SHIELD_1
+		}
+	}
+	section = {
+		template = nomadic_shipyard_sectionM
+		slot = mid
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = LARGE_SCOUT_HANGAR_1
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = f93_nomad_energy_1
+		}
+		component = {
+			slot = AUX_UTILITY_2
+			template = f93_nomad_science_lab_1
+		}
+		component = {
+			slot = AUX_UTILITY_3
+			template = REACTOR_BOOSTER_1
+		}
+	}
+	section = {
+		template = nomadic_shipyard_sectionS
+		slot = stern
+		component = {
+			slot = MEDIUM_GUN_01
+			template = MEDIUM_RED_LASER
+		}
+		component = {
+			slot = MEDIUM_UTILITY_1
+			template = MEDIUM_ARMOR_1
+		}
+		component = {
+			slot = MEDIUM_UTILITY_2
+			template = MEDIUM_ARMOR_1
+		}
+		component = {
+			slot = MEDIUM_UTILITY_3
+			template = MEDIUM_ARMOR_1
+		}
+		component = {
+			slot = MEDIUM_UTILITY_4
+			template = MEDIUM_SHIELD_1
+		}
+	}
+
+	required_component = "CRUISER_FISSION_REACTOR"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "SENSOR_1"
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "COMBAT_COMPUTER_DEFAULT"
+
+}
