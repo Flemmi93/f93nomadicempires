@@ -231,7 +231,7 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_csg_factory_1"
 	icon_frame = 1
-	power = -100
+	power = -70
 	modifier = {
 		country_base_consumer_goods_produces_add = 4
 	}

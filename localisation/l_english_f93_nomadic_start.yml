@@ -23,7 +23,7 @@
  NAME_Nomadic_shipyard: "Construction"
  NAME_Nomadic_freighter_mins: "Matter Converter"
  NAME_Nomadic_freighter_gen: "Generator"
- NAME_Nomadic_freighter_aloy: "Reefinery"
+ NAME_Nomadic_freighter_aloy: "Refinery"
  NAME_Nomadic_freighter_science: "Research"
 
 #Technology
@@ -42,6 +42,7 @@
  mod_country_base_physics_research_produces_add: "$mod_country_physics_research_produces_add$"
  mod_country_base_society_research_produces_add: "$mod_country_society_research_produces_add$"
  mod_country_base_engineering_research_produces_add: "$mod_country_engineering_research_produces_add$"
+ mod_ships_alloys_upkeep_mult:0 "Ships £alloys£ alloys Upkeep"
 
 #Components
  f93_nomad_minerals_1: "Matter Converter 1"

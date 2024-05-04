@@ -372,7 +372,8 @@ utility_component_template = {
 	ai_tag_weight = 0
 
 	ship_modifier = {
-		ship_upkeep_mult = -0.05
+		ships_alloys_upkeep_mult = -0.05
+		ships_energy_upkeep_mult = -0.05
 	}
 
 	ai_weight = {
@@ -406,7 +407,8 @@ utility_component_template = {
 	ai_tag_weight = 0
 
 	ship_modifier = {
-		ship_upkeep_mult = -0.10
+		ships_alloys_upkeep_mult = -0.1
+		ships_energy_upkeep_mult = -0.1
 	}
 
 	ai_weight = {
@@ -439,7 +441,8 @@ utility_component_template = {
 	ai_tag_weight = 0
 
 	ship_modifier = {
-		ship_upkeep_mult = -0.15
+		ships_alloys_upkeep_mult = -0.15
+		ships_energy_upkeep_mult = -0.15
 	}
 
 	ai_weight = {
@@ -484,7 +487,8 @@ utility_component_template = {
 	ai_tag_weight = 0
 
 	ship_modifier = {
-		ship_upkeep_mult = -0.20
+		ships_alloys_upkeep_mult = -0.2
+		ships_energy_upkeep_mult = -0.2
 	}
 
 	ai_weight = {
@@ -517,7 +521,8 @@ utility_component_template = {
 	ai_tag_weight = 0
 
 	ship_modifier = {
-		ship_upkeep_mult = -0.25
+		ships_alloys_upkeep_mult = -0.25
+		ships_energy_upkeep_mult = -0.25
 	}
 
 	ai_weight = {
