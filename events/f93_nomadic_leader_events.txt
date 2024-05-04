@@ -6,6 +6,7 @@ country_event = {
 	title = f93_nomadic_leader.1.name
 	desc = f93_nomadic_leader.1.desc
 	picture = GFX_evt_salute
+	show_sound = event_big_door_opening
 	
 	option = {
 		name = f93_nomadic_leader.1.a
