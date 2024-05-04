@@ -64,5 +64,8 @@ country_event = {
 			}
 		}
 		clear_global_event_target = homeworld
+		every_controlled_fleet = {
+			set_home_base = last_created_ship
+		}
 	}
 }

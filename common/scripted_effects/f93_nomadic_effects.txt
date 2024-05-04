@@ -44,6 +44,7 @@ create_nomad_country_effect = {
 	}
 	#Turn pops into Rescources 
 	last_created_country = {
+		start_situation = { type = nomadic_recruitment target = last_created_country }
 		add_resource = {
 			energy = 250
 			minerals = 400

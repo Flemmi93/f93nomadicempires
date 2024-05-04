@@ -10,7 +10,6 @@ on_game_start_country = {
 # From = planet/astral_rift it was built on
 on_destroying_station = {
 	events = {
-		f93_nomadic_travel.1
 	}
 }
 
@@ -19,7 +18,6 @@ on_destroying_station = {
 # From = Bombarder
 on_planet_bombarded = {
 	events = {
-		f93_nomadic_travel.3
-		f93_nomadic_travel.4
+		f93_nomadic_raid.2
 	}
 }

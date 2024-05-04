@@ -1,0 +1,53 @@
+nomadic_recruitment = {
+	picture = GFX_evt_salute
+	category = positive
+	complete_icon = GFX_situation_outcome_meh
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	
+	on_progress_complete = {			
+		destroy_situation = this
+		owner = { start_situation = { type = nomadic_recruitment target = owner } }
+		owner = { country_event = { id = f93_nomadic_leader.1 } }
+ 	}
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = 8.5
+			desc = situation_nomadic_balanced_desc
+			current_situation_approach = situation_nomadic_balanced
+		}
+	}
+
+	approach = {
+		name = approach_default
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		modifier = {
+			leaders_upkeep_mult = -0.1
+		}
+	}
+	approach = {
+		name = situation_nomadic_balanced
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				unity = 15
+			}
+		}
+	}
+}

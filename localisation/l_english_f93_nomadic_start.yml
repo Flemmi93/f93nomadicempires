@@ -5,14 +5,19 @@
  f93_nomadic_start.1.a: "§GLet's get Moving"
  f93_nomadic_start.1.b: "§RWe will stay!"
  f93_nomadic_start.1.c: "§LI be a Pirate!"
- f93_nomadic_travel.1.name: "Station Dismantled"
- f93_nomadic_travel.1.desc: "After dismanteling [This.GetName] and all outlying Mining and Research Operations we have gathered plenty of salvage"
- f93_nomadic_travel.1.a: "Hard Earned Cash"
+ f93_nomadic_raid.1.name: "Station Dismantled"
+ f93_nomadic_raid.1.desc: "After dismanteling [This.GetName] and all outlying Mining and Research Operations we have gathered plenty of salvage"
+ f93_nomadic_raid.1.a: "Hard Earned Cash"
  f93_nomadic_livestyle: "Nomadic Lifestyle"
  f93_nomadic_livestyle_desc: "We are strangers wherever we go, we stick together though thick and thin."
- f93_nomadic_travel.2.name: "Raid conducted on §Y[event_target:Nomadic_bombardment.GetName]§!"
- f93_nomadic_travel.2.desc: "Our raiders on §Y[event_target:Nomadic_bombardment.GetName]§! have returned to §Y[event_target:Nomadic_bombardment.GetName]§! and brought some goodies."
- f93_nomadic_travel.2.a: "What have we here"
+ f93_nomadic_raid.2.name: "Raid conducted on §Y[event_target:Nomadic_bombardment.GetName]§!"
+ f93_nomadic_raid.2.desc: "Our raiders on §Y[event_target:Nomadic_bombardment.GetName]§! have returned to §Y[event_target:Nomadic_bombardment.GetName]§! and brought some goodies."
+ f93_nomadic_raid.2.a: "What have we here"
+ f93_nomadic_leader.1.name: "New Officer Recruits"
+ f93_nomadic_leader.1.desc: "A handful of men seem up to the task.$NEW_LINE$Who shall fill the vacant stop?"
+ f93_nomadic_leader.1.a: "§R$default_commander$"
+ f93_nomadic_leader.1.b: "§B$default_scientist$"
+ f93_nomadic_leader.1.c: "§Y$default_official$"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
@@ -129,3 +134,12 @@
  nomadic_freighter_sectionB: "$civilian_freighter$ $bow$"
  nomadic_shipyard: "Nomadic Shipyard"
  nomadic_shipyard_plural: "Nomadic Shipyards"
+
+#Situations
+ situation_nomadic_balanced: "Searching for new Officers"
+ situation_nomadic_balanced_desc: "We will send out talent scouts into the crew quarters to see if some of the sailors are qualified to be promoted to the officer ranks"
+ nomadic_recruitment: "Officer Recruitment"
+ nomadic_recruitment_type: "Officer Recruitment"
+ nomadic_recruitment_monthly_change_tooltip: ""
+ nomadic_recruitment_desc: "$situation_nomadic_balanced_desc$"
+ 

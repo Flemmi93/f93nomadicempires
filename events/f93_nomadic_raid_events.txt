@@ -1,0 +1,210 @@
+namespace = f93_nomadic_raid
+
+country_event = {
+	id = f93_nomadic_raid.1
+	is_triggered_only = yes
+	title = f93_nomadic_raid.2.name
+	desc = f93_nomadic_raid.2.desc
+	picture = GFX_evt_ship_in_orbit
+
+	option = {
+		name = f93_nomadic_raid.2.a
+		locked_random_list = {
+			10 = { add_resource = { alloys = 500 } }
+			10 = { add_resource = { energy = 750 } }
+			10 = { add_resource = { minerals = 750 } }
+			10 = { add_resource = { consumer_goods = 500 } }
+			10 = { add_resource = { minor_artifacts = 5 } }
+			10 = { add_resource = { rare_crystals = 10 } }
+			10 = { add_resource = { volatile_motes = 10 } }
+			10 = { add_resource = { exotic_gases = 10 } }
+			10 = {
+				copy_random_tech_from = {
+					who = event_target:Nomadic_bombardment.owner
+				}
+			}
+		}
+		clear_global_event_target = Nomadic_bombardment
+		clear_global_event_target = nomadic_bombarder
+	}
+}
+planet_event = {
+	id = f93_nomadic_raid.2
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = { has_owner = yes }
+	immediate = {
+		reroll_random = yes
+		from = { save_global_event_target_as = nomadic_bombarder }
+		save_global_event_target_as = Nomadic_bombardment
+		planet_event = { id = f93_nomadic_raid.5 }
+		planet_event = { id = f93_nomadic_raid.10 }
+		planet_event = { id = f93_nomadic_raid.15 }
+		planet_event = { id = f93_nomadic_raid.20 }
+		planet_event = { id = f93_nomadic_raid.25 }
+		planet_event = { id = f93_nomadic_raid.30 }
+		planet_event = { id = f93_nomadic_raid.35 }
+		planet_event = { id = f93_nomadic_raid.40 }
+		planet_event = { id = f93_nomadic_raid.45 }
+		planet_event = { id = f93_nomadic_raid.50 }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 5
+		NOT = { has_planet_flag = was_recently_raided5 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided5 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.10
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 10
+		NOT = { has_planet_flag = was_recently_raided10 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided10 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.15
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 15
+		NOT = { has_planet_flag = was_recently_raided15 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided15 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.20
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 20
+		NOT = { has_planet_flag = was_recently_raided20 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided20 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.25
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 25
+		NOT = { has_planet_flag = was_recently_raided25 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided25 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.30
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 30
+		NOT = { has_planet_flag = was_recently_raided30 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided30 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.35
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		planet_devastation > 35
+		NOT = { has_planet_flag = was_recently_raided35 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided35 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.40
+	is_triggered_only = yes
+	hide_window = yes
+	pre_triggers = {
+		has_owner = yes	
+	}
+	trigger = {
+		planet_devastation > 40
+		NOT = { has_planet_flag = was_recently_raided40 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided40 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.45
+	is_triggered_only = yes
+	hide_window = yes
+	pre_triggers = {
+		has_owner = yes	
+	}
+	trigger = {
+		planet_devastation > 45
+		NOT = { has_planet_flag = was_recently_raided45 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided45 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
+
+planet_event = {
+	id = f93_nomadic_raid.50
+	is_triggered_only = yes
+	hide_window = yes
+	pre_triggers = {
+		has_owner = yes	
+	}
+	trigger = {
+		planet_devastation > 50
+		NOT = { has_planet_flag = was_recently_raided50 }
+	}
+
+	immediate = {
+		set_timed_planet_flag = { flag = was_recently_raided50 days = 1080 }
+		event_target:nomadic_bombarder = { country_event = { id = f93_nomadic_raid.1 } }
+	}
+}
