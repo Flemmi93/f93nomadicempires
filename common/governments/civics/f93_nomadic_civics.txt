@@ -10,7 +10,7 @@ civic_nomadic_pirate = {
 				}
 			}
 	}
-	description = civic_nomadic_pirate_desc
+	#description = civic_nomadic_pirate_desc
 	modifier = {
 		ship_fire_rate_mult = 0.1
 		command_limit_mult = -0.25

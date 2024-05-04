@@ -1,0 +1,74 @@
+#Effect to create a nomad Empire.
+# ROOT = origin country
+# Last_created_country = new country
+create_nomad_country_effect = {
+	country_event = { id = f93_nomadic_start.3 }
+	#Prepwork
+	capital_scope = {
+		save_event_target_as = homeworld
+	}
+	create_fleet_from_naval_cap = 0.4
+	#Create Nomadic Nation
+	create_country = {
+		name = ROOT
+		adjective = ROOT
+	#	contact_rule = default
+		type = ROOT
+		auto_delete = no
+		name_list = ROOT
+		ship_prefix = ""
+		authority = ROOT
+		origin = origin_nomadic_empire
+		civics = ROOT
+		species = ROOT
+		flag = ROOT
+		ethos = ROOT
+		ignore_initial_colony_error = yes
+		effect = {
+			#add_modifier = { modifier = f93_nomadic_livestyle }
+			give_technology = { tech = tech_juggernaut }
+			give_technology = { tech = tech_nomatic_society }
+		}
+	}
+	#Create Assets
+	every_controlled_fleet = {
+		limit = {
+			is_ship_class = shipclass_starbase
+			NOT = { is_ship_size = juggernaut }
+		}
+		destroy_fleet = this
+	}
+
+
+	every_owned_leader = {
+		set_owner = last_created_country
+	}
+	every_owned_fleet = {
+		set_owner = last_created_country
+	}
+	#Turn pops into Rescources 
+	last_created_country = {
+		add_resource = {
+			energy = 250
+			minerals = 400
+			consumer_goods = 100
+			alloys = 250
+		}
+		if = { limit = { is_machine_empire = no }
+			add_resource = {
+				food = 250
+			}
+		}
+		if = { limit = { is_machine_empire = yes }
+			add_resource = {
+				energy = 250
+			}
+		}
+		set_player = ROOT
+	}
+	
+	#Remove colonies
+	every_owned_planet = {
+		destroy_colony = yes
+	}
+}

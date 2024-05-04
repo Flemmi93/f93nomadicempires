@@ -14,6 +14,9 @@
  f93_nomadic_travel.2.desc: "Our raiders on §Y[event_target:Nomadic_bombardment.GetName]§! have returned to §Y[event_target:Nomadic_bombardment.GetName]§! and brought some goodies."
  f93_nomadic_travel.2.a: "What have we here"
 
+#Global Ship Design
+ NAME_Nomadic_juggernaut: "Construction"
+
 #Technology
  tech_nomatic_society: "Nomadic Travels"
  tech_nomatic_society_desc: "Our Society knows how to travel inbetwen the stars."
@@ -22,7 +25,7 @@
  origin_nomadic_empire: "Nomadic Empire"
  origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, its only to gather some very needed components for their homefleet."
  civic_nomadic_pirate: "A Pirate's Life"
- civic_nomadic_pirate_desc: "These people decided to nolonger play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
+ civic_nomadic_pirate_desc: "These people decided to nolonger play by the rules, they plunder and run. As long as rum and money flows these people will be happy."#$NEW_LINE$-§GUses Pirate Ship Set§!" #pirate ship set only for special ships aviable at this point
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -94,6 +97,8 @@
  f93_nomad_nanites_DESC: "Nanite Farm"
  f93_nomad_living_metal: "Living Metal Growtank"
  f93_nomad_living_metal_DESC: "Living Metal Growtank"
+ f93_nomad_shipyard: "Shipyard"
+ f93_nomad_shipyard_desc: "Shipyard"
 
  NOMADIC_FISSION_REACTOR: "$DESTROYER_FISSION_REACTOR$"
  NOMADIC_FUSION_REACTOR: "$DESTROYER_FUSION_REACTOR$"
@@ -113,6 +118,7 @@
  NOMADIC_COMPUTER_CARRIER_PRECOG: "$COMBAT_COMPUTER_CARRIER_PRECOG$"
 
  shipclass_starbase_nomad: "$shipclass_starbase$"
+
 #Planet Classes
  pc_nomadic_habitat: "Civilian Fleet"
 

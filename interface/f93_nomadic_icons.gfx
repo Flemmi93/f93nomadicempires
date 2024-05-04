@@ -169,4 +169,8 @@ spriteTypes = {
 		name = "GFX_ship_part_living_metal"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_living_metal.dds"
 	}
+	spriteType = {
+		name = "GFX_ship_part_shipyard"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_shipyard.dds"
+	}
 }

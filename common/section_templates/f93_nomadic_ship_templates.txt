@@ -7,7 +7,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "destroyer_bow_L1_entity"
 	icon = "GFX_ship_part_core_bow"
-	ai_tags = { gunship brawler }
+	ai_tags = { gunship brawler carrier }
 
 	component_slot = {
 		name = "MEDIUM_GUN_01"
@@ -34,7 +34,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "destroyer_stern_M1_entity"
 	icon = "GFX_ship_part_core_stern"
-	ai_tags = { gunship brawler }
+	ai_tags = { carrier }
 
 	component_slot = {
 		name = "STRIKE_CRAFT_01"
@@ -49,6 +49,115 @@ ship_section_template = {
 		category = ship_sections
 		cost = {
 			alloys = 35
+		}
+	}
+}
+
+ship_section_template = {
+	key = "nomadic_freighter_sectionS2"
+	ship_size = nomadic_freighter
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "destroyer_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_tags = { gunship brawler }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 35
+		}
+	}
+}
+# Nomadic Shipyard
+ship_section_template = {
+	key = "nomadic_shipyard_sectionB"
+	ship_size = nomadic_shipyard
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = "cruiser_bow_M2_entity"
+	icon = "GFX_ship_part_core_bow"
+	ai_tags = { gunship }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	medium_utility_slots = 4
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 40
+		}
+	}
+}
+
+
+
+ship_section_template = {
+	key = "nomadic_shipyard_sectionM"
+	ship_size = nomadic_shipyard
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "cruiser_mid_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { carrier }
+
+	aux_utility_slots = 4
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 40
+		}
+	}
+}
+
+ship_section_template = {
+	key = "nomadic_shipyard_sectionS"
+	ship_size = nomadic_shipyard
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "cruiser_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_tags = { gunship }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	medium_utility_slots = 4
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 40
 		}
 	}
 }

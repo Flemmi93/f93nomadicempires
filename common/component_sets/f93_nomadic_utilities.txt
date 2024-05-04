@@ -215,3 +215,10 @@ component_set = {
 	icon = "GFX_ship_part_living_metal"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "f93_nomad_shipyard"
+
+	icon = "GFX_ship_part_shipyard"
+	icon_frame = 1
+}

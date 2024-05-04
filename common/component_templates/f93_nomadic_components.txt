@@ -405,9 +405,6 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			consumer_goods = 2
-			# physics_research = -8
-			# society_research = -8
-			# engineering_research = -8
 		}
 	}
 
@@ -436,9 +433,6 @@ utility_component_template = {
 			energy = 5
 			exotic_gases = 0.6
 			consumer_goods = 5
-			# physics_research = -26
-			# society_research = -26
-			# engineering_research = -26
 		}
 	}
 
@@ -467,9 +461,6 @@ utility_component_template = {
 			energy = 15
 			exotic_gases = 1
 			consumer_goods = 8
-			# physics_research = -75
-			# society_research = -75
-			# engineering_research = -75
 		}
 	}
 
@@ -722,4 +713,29 @@ utility_component_template = {
 
 	prerequisites = { "tech_mine_living_metal" "tech_nomatic_society" }
 	component_set = "f93_nomad_living_metal"
+}
+#Shipyard
+utility_component_template = {
+	key = "f93_nomad_shipyard"
+	size = aux
+	icon = "GFX_ship_part_shipyard"
+	icon_frame = 1
+	power = -150
+	modifier = {
+		starbase_shipyard_capacity_add = 1
+	}
+	size_restriction = { nomadic_shipyard juggernaut }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 125
+		}
+		upkeep = {
+			energy = 2
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = { "tech_cruisers" "tech_nomatic_society" }
+	component_set = "f93_nomad_shipyard"
 }
