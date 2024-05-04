@@ -13,8 +13,8 @@ utility_component_template = {
 		cost = {
 			alloys = 5
 		}
-		upkeep = {
-	#		minerals = -5
+		produces = {
+			minerals = 5
 		}
 	}
 
@@ -39,7 +39,9 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 1
-	#		minerals = -10
+		}
+		produces = {
+			minerals = 10
 		}
 	}
 
@@ -64,7 +66,9 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 3
-	#		minerals = -20
+		}
+		produces = {
+			minerals = 20
 		}
 	}
 
@@ -88,9 +92,11 @@ utility_component_template = {
 			alloys = 500
 		}
 		upkeep = {
-		#	energy = -20
 			alloys = 2
 			consumer_goods = 2
+		}
+		produces = {
+			energy = 50
 		}
 	}
 
@@ -114,9 +120,11 @@ utility_component_template = {
 			alloys = 750
 		}
 		upkeep = {
-		#	energy = -50
 			alloys = 4
 			consumer_goods = 4
+		}
+		produces = {
+			energy = 125
 		}
 	}
 
@@ -143,6 +151,9 @@ utility_component_template = {
 			alloys = 8
 			consumer_goods = 8
 		}
+		produces = {
+			energy = 250
+		}
 	}
 
 	prerequisites = { "tech_zero_point_power" "tech_nomatic_society" }
@@ -167,6 +178,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			minerals = 8
+		}
+		produces = {
+			alloys = 4
 		}
 	}
 
@@ -193,6 +207,9 @@ utility_component_template = {
 			energy = 4
 			minerals = 28
 		}
+		produces = {
+			alloys = 16
+		}
 	}
 
 	prerequisites = { "tech_advanced_metallurgy_1" "tech_nomatic_society" }
@@ -217,6 +234,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 10
 			minerals = 50
+		}
+		produces = {
+			alloys = 32
 		}
 	}
 
@@ -243,7 +263,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			minerals = 6
-			# consumer_goods = -4
+		}
+		produces = {
+			consumer_goods = 4
 		}
 	}
 
@@ -269,7 +291,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 5
 			minerals = 16
-			# consumer_goods = -12
+		}
+		produces = {
+			consumer_goods = 12
 		}
 	}
 
@@ -295,7 +319,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 10
 			minerals = 40
-			# consumer_goods = -25
+		}
+		produces = {
+			consumer_goods = 25
 		}
 	}
 
@@ -321,7 +347,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			consumer_goods = 1
-			# unity = -8
+		}
+		produces = {
+			unity = 8
 		}
 	}
 
@@ -347,7 +375,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 4
 			consumer_goods = 3
-			# unity = -24
+		}
+		produces = {
+			unity = 24
 		}
 	}
 
@@ -373,7 +403,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 10
 			consumer_goods = 8
-			# unity = -75
+		}
+		produces = {
+			unity = 75
 		}
 	}
 
@@ -401,6 +433,11 @@ utility_component_template = {
 		upkeep = {
 			energy = 1
 			consumer_goods = 2
+		}
+		produces = {
+			physics_research = 8
+			society_research = 8
+			engineering_research = 8
 		}
 	}
 
@@ -430,6 +467,11 @@ utility_component_template = {
 			exotic_gases = 0.6
 			consumer_goods = 5
 		}
+		produces = {
+			physics_research = 26
+			society_research = 26
+			engineering_research = 26
+		}
 	}
 
 	prerequisites = { "tech_basic_science_lab_2" "tech_space_science_2" "tech_nomatic_society" }
@@ -458,6 +500,11 @@ utility_component_template = {
 			exotic_gases = 1
 			consumer_goods = 8
 		}
+		produces = {
+			physics_research = 75
+			society_research = 75
+			engineering_research = 75
+		}
 	}
 
 	prerequisites = { "tech_basic_science_lab_3" "tech_space_science_4" "tech_nomatic_society" }
@@ -481,6 +528,9 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 4
+		}
+		produces = {
+			exotic_gases = 1
 		}
 	}
 
@@ -507,6 +557,9 @@ utility_component_template = {
 			energy = 6
 			consumer_goods = 2
 		}
+		produces = {
+			exotic_gases = 2
+		}
 	}
 
 	prerequisites = { "tech_mine_exotic_gases" "tech_exotic_gases" "tech_nomatic_society" }
@@ -530,6 +583,9 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 4
+		}
+		produces = {
+			rare_crystals = 1
 		}
 	}
 
@@ -556,6 +612,9 @@ utility_component_template = {
 			energy = 6
 			consumer_goods = 2
 		}
+		produces = {
+			rare_crystals = 2
+		}
 	}
 
 	prerequisites = { "tech_mine_rare_crystals" "tech_rare_crystals" "tech_nomatic_society" }
@@ -579,6 +638,9 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = 4
+		}
+		produces = {
+			volatile_motes = 1
 		}
 	}
 
@@ -605,6 +667,9 @@ utility_component_template = {
 			energy = 6
 			consumer_goods = 2
 		}
+		produces = {
+			volatile_motes = 2
+		}
 	}
 
 	prerequisites = { "tech_mine_volatile_motes" "tech_volatile_motes" "tech_nomatic_society" }
@@ -629,6 +694,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 6
 			consumer_goods = 2
+		}
+		produces = {
+			sr_zro = 1
 		}
 	}
 
@@ -655,6 +723,9 @@ utility_component_template = {
 			energy = 6
 			consumer_goods = 2
 		}
+		produces = {
+			sr_zro = 2
+		}
 	}
 
 	prerequisites = { "tech_mine_dark_matter" "tech_nomatic_society" }
@@ -680,6 +751,9 @@ utility_component_template = {
 			energy = 12
 			consumer_goods = 2
 		}
+		produces = {
+			nanites = 1
+		}
 	}
 
 	prerequisites = { "tech_nanite_transmutation" "tech_nomatic_society" }
@@ -704,6 +778,9 @@ utility_component_template = {
 		upkeep = {
 			energy = 12
 			consumer_goods = 2
+		}
+		produces = {
+			sr_living_metal = 1
 		}
 	}
 
