@@ -15,12 +15,12 @@
 @destroyer_power_5 = 430
 @destroyer_power_6 = 550
 
-@destroyer_cost_1 = 560
-@destroyer_cost_2 = 730
-@destroyer_cost_3 = 950
-@destroyer_cost_4 = 1230
-@destroyer_cost_5 = 1600
-@destroyer_cost_6 = 2080
+@destroyer_cost_1 = 20
+@destroyer_cost_2 = 26
+@destroyer_cost_3 = 34
+@destroyer_cost_4 = 44
+@destroyer_cost_5 = 56
+@destroyer_cost_6 = 74
 
 utility_component_template = {
 	key = "NOMADIC_FISSION_REACTOR"

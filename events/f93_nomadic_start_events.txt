@@ -52,7 +52,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	immediate = {
+	immediate = {	   
 		create_fleet = {
 			name = "Nomadic Fleet"
 			effect = {
@@ -61,6 +61,37 @@ country_event = {
 				create_ship = {
 					name = NAME_Nomadic_shipyard
 					design = NAME_Nomadic_shipyard
+				}
+			}
+		}
+		create_fleet = {
+			name = "Nomadic Fleet"
+			effect = {
+				set_owner = last_created_country
+				set_location = event_target:homeworld
+				create_ship = {
+					name = NAME_Nomadic_freighter_mins
+					design = NAME_Nomadic_freighter_mins
+				}
+				create_ship = {
+					name = NAME_Nomadic_freighter_gen
+					design = NAME_Nomadic_freighter_gen
+				}
+				create_ship = {
+					name = NAME_Nomadic_freighter_gen
+					design = NAME_Nomadic_freighter_gen
+				}
+				create_ship = {
+					name = NAME_Nomadic_freighter_aloy
+					design = NAME_Nomadic_freighter_aloy
+				}
+				create_ship = {
+					name = NAME_Nomadic_freighter_aloy
+					design = NAME_Nomadic_freighter_aloy
+				}
+				create_ship = {
+					name = NAME_Nomadic_freighter_science
+					design = NAME_Nomadic_freighter_science
 				}
 			}
 		}

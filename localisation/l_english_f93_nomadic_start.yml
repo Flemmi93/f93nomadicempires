@@ -21,6 +21,10 @@
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
+ NAME_Nomadic_freighter_mins: "Matter Converter"
+ NAME_Nomadic_freighter_gen: "Generator"
+ NAME_Nomadic_freighter_aloy: "Reefinery"
+ NAME_Nomadic_freighter_science: "Reseeearch"
 
 #Technology
  tech_nomatic_society: "Nomadic Travels"

@@ -6,7 +6,6 @@ create_nomad_country_effect = {
 	capital_scope = {
 		save_global_event_target_as = homeworld
 	}
-	create_fleet_from_naval_cap = 0.3
 	#Create Nomadic Nation
 	create_country = {
 		name = ROOT
@@ -26,6 +25,16 @@ create_nomad_country_effect = {
 		effect = {
 			give_technology = { tech = tech_nomatic_society }
 			country_event = { id = f93_nomadic_start.3 }
+			create_ship_design = { design = NAME_Nomadic_shipyard }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_mins }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_science }
+			add_ship_design = last_created_design
 		}
 	}
 	#Create Assets

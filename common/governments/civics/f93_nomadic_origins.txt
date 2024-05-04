@@ -4,6 +4,7 @@ origin_nomadic_empire = {
 	icon = gfx/interface/icons/governments/civics/nomadic_empire.dds
 	picture = GFX_evt_unknown_ships	
 	modifier = {
+		command_limit_mult = 0.25
 		leaders_upkeep_mult = -0.8
 		force_disparity_fire_rate_mult = 0.25
 		country_commander_cap_add = 1
