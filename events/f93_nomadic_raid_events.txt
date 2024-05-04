@@ -7,7 +7,7 @@ country_event = {
 	desc = f93_nomadic_raid.2.desc
 	picture = GFX_evt_ship_in_orbit
 	show_sound = event_finding_loot
-	
+
 	option = {
 		name = f93_nomadic_raid.2.a
 		locked_random_list = {
@@ -34,6 +34,7 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	pre_triggers = { has_owner = yes }
+	trigger = { from = { has_origin = origin_nomadic_empire } }
 	immediate = {
 		reroll_random = yes
 		from = { save_global_event_target_as = nomadic_bombarder }
