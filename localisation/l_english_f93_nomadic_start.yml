@@ -39,7 +39,7 @@
  origin_nomadic_empire: "Nomadic Empire"
  origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, its only to gather some very needed components for their homefleet."
  civic_nomadic_pirate: "A Pirate's Life"
- civic_nomadic_pirate_desc: "These people decided to nolonger play by the rules, they plunder and run. As long as rum and money flows these people will be happy."#$NEW_LINE$-§GUses Pirate Ship Set§!" #pirate ship set only for special ships aviable at this point
+ civic_nomadic_pirate_desc: "These people decided to nolonger play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
