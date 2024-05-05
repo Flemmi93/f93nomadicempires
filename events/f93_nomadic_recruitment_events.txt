@@ -85,7 +85,7 @@ country_event = {
 		}
 	}
 	option = {
-		potential = {
+		trigger = {
 			has_technology = tech_robotic_workers
 		}
 		name = f93_nomadic_recruitment.2.b
@@ -116,7 +116,7 @@ country_event = {
 		}
 	}
 	option = {
-		potential = {
+		allow = {
 			has_technology = tech_morphogenetic_field_mastery
 		}
 		name = f93_nomadic_recruitment.2.c

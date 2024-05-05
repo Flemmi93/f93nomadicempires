@@ -20,8 +20,8 @@ create_nomad_country_effect = {
 		species = ROOT
 		flag = ROOT
 		ethos = ROOT
-		needs_colony = no
 		ignore_initial_colony_error = yes
+		auto_delete = no
 		effect = {
 			give_technology = { tech = tech_nomatic_society }
 			country_event = { id = f93_nomadic_start.3 }

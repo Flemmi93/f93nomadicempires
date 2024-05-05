@@ -21,3 +21,13 @@ on_planet_bombarded = {
 		f93_nomadic_raid.2
 	}
 }
+
+
+# Executed right after country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established_always_fire = {
+	events = {
+		f93_nomadic_start.4
+	}
+}

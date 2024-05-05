@@ -47,8 +47,41 @@ country_event = {
 	immediate = {
 		create_nomad_country_effect = yes
 		set_origin = origin_default
-		last_created_country = {
-			hostile = yes
+	}
+}
+
+
+# Executed right after country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+country_event = {
+	id = f93_nomadic_start.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			this = { has_origin = origin_nomadic_empire }
+			from = { has_origin = origin_nomadic_empire }
+		}
+	}
+
+	immediate = {
+		from = {
+			set_hostile = this
+			set_closed_borders = {
+				who = this
+				status = no
+				forced = 999
+			}
+		}
+		this = {
+			set_hostile = from
+			set_closed_borders = {
+				who = from
+				status = no
+				forced = 999
+			}
 		}
 	}
 }
