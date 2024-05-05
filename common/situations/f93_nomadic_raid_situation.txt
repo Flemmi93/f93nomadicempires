@@ -10,6 +10,11 @@ begin_nomadic_raid_on_territory = {
 		owner = { set_country_type = playable_pirate_nomads }
 		owner = { start_situation = { type = end_nomadic_raid_on_territory target = owner } }
  	}
+	
+	abort_trigger = {
+		NOT = {	has_civic = civic_nomadic_pirate }
+		has_country_flag = has_Access_to_raiding
+	}
 	start_value = 0
 	stages = {
 		stage_1 = {
@@ -60,6 +65,10 @@ end_nomadic_raid_on_territory = {
 		owner = { country_event = { id = f93_nomadic_start.5 } }
 		owner = { start_situation = { type = begin_nomadic_raid_on_territory target = owner } }
  	}
+	abort_trigger = {
+		NOT = {	has_civic = civic_nomadic_pirate }
+		has_country_flag = has_Access_to_raiding
+	}
 	start_value = 0
 	stages = {
 		stage_1 = {

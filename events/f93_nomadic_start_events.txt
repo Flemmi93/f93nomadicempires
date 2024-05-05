@@ -139,10 +139,11 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
+		days_passed > 29
 		has_civic = civic_nomadic_pirate
 		NOT = {	has_country_flag = has_Access_to_raiding }
 	}
 	immediate = {
-		start_situation = { type = begin_nomadic_raid_on_territory target = owner } 
+		start_situation = { type = begin_nomadic_raid_on_territory target = owner }
 	}
 }
