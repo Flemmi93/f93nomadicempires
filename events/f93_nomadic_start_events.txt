@@ -124,7 +124,9 @@ country_event = {
 	hide_window = yes
 	trigger = { has_civic = civic_nomadic_pirate }
 	immediate = {
+		save_rescources_effect = yes
 		set_country_type = playable_nomads
+		reinstate_rescources_effect = yes
 		while = {
 			count = 5
 			add_resource = { energy = -500 }
@@ -132,6 +134,17 @@ country_event = {
 				add_resource = { energy = 500 }
 			}
 		}
+	}
+}
+country_event = {
+	id = f93_nomadic_start.7
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { has_civic = civic_nomadic_pirate }
+	immediate = {
+		save_rescources_effect = yes
+		set_country_type = playable_pirate_nomads
+		reinstate_rescources_effect = yes
 	}
 }
 country_event = {
@@ -147,3 +160,4 @@ country_event = {
 		start_situation = { type = begin_nomadic_raid_on_territory target = owner }
 	}
 }
+
