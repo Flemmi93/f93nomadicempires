@@ -22,6 +22,9 @@ country_event = {
 	
 	option = {
 		name = f93_nomadic_start.1.b
+		ai_chance = {
+			base = 1000
+		}
 	}
 	option = {
 		name = f93_nomadic_start.1.c
@@ -47,24 +50,6 @@ country_event = {
 	immediate = {
 		create_nomad_country_effect = yes
 		set_origin = origin_default
-	}
-}
-
-
-# Executed right after country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
-# This = Country which established the communications
-# From = Country which communications were established with
-country_event = {
-	id = f93_nomadic_start.4
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		if = { limit = { last_created_country = { has_civic = civic_nomadic_pirate } } set_hostile = last_created_country }
-		set_closed_borders = {
-			who = last_created_country
-			status = no
-			forced = 999
-		}
 	}
 }
 
@@ -117,5 +102,34 @@ country_event = {
 			}
 		}
 		clear_global_event_target = homeworld
+	}
+}
+
+country_event = {
+	id = f93_nomadic_start.4
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		set_closed_borders = {
+			who = last_created_country
+			status = no
+			forced = 999
+		}
+	}
+}
+
+country_event = {
+	id = f93_nomadic_start.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { has_civic = civic_nomadic_pirate }
+	immediate = {
+		every_owned_fleet = {
+			solar_system.space_owner = {
+				set_hostile = ROOT
+				save_event_target_as = target@this 
+			}
+		}
+		set_faction_hostility = { target = target@this set_hostile = yes set_neutral = no set_friendly = no }
 	}
 }

@@ -159,6 +159,12 @@
  nomadic_recruitment_troops_type: "Troop Recruitment"
  nomadic_recruitment_troops_monthly_change_tooltip: "Training progress"
  nomadic_recruitment_troops_desc: "$situation_nomadic_balanced_desc$"
+ begin_nomadic_raid_on_terretory: "Start a Raid"
+ begin_nomadic_raid_on_terretory_desc: "Wherever out Ships are right now, They will set out to attack. So lets make sure we will win.$new_line$ it will take a few years for things to cool down again."
+ begin_nomadic_raid_on_terretory_type: "Raid a terretory"
+ begin_nomadic_raid_on_terretory_monthly_change_tooltip: "Charging Weapons"
+ situation_pirate_atttack: "Start Attack"
+ situation_pirate_atttack_desc: "We are preparing to attack these fools"
  
 #Country Type 
  playable_pirate_nomads: "$pirate$"

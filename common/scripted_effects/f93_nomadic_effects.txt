@@ -36,7 +36,7 @@ create_nomad_country_effect = {
 			create_ship_design = { design =  NAME_Nomadic_freighter_science }
 			add_ship_design = last_created_design
 			establish_communications_no_message = ROOT
-			unlock_council_slots = 4
+			unlock_council_slots = 3
 			every_playable_country = { country_event = { id = f93_nomadic_start.4 } }
 		}
 	}
@@ -101,7 +101,7 @@ create_nomad_country_effect = {
 				energy = 250
 			}
 		}
-		# if = { limit = { has_civic = civic_nomadic_pirate } set_country_type = playable_pirate_nomads }
+		if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_terretory target = last_created_country } }
 		set_player = ROOT
 	}
 	
