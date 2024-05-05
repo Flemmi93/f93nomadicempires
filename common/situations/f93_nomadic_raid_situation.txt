@@ -1,5 +1,5 @@
 
-begin_nomadic_raid_on_terretory = {
+begin_nomadic_raid_on_territory = {
 	picture = GFX_evt_salute
 	category = positive
 	complete_icon = GFX_situation_outcome_meh
@@ -7,8 +7,8 @@ begin_nomadic_raid_on_terretory = {
 	
 	on_progress_complete = {			
 		destroy_situation = this
-		owner = { start_situation = { type = begin_nomadic_raid_on_terretory target = owner } }
-		owner = { country_event = { id = f93_nomadic_start.5 } }
+		owner = { set_country_type = playable_pirate_nomads }
+		# owner = { country_event = { id = f93_nomadic_start.5 } }
  	}
 	start_value = 0
 	stages = {
@@ -41,18 +41,8 @@ begin_nomadic_raid_on_terretory = {
 		name = situation_pirate_atttack
 		icon = GFX_situation_approach_balance_sheet
 		icon_background = GFX_situation_approach_bg_green
-		allow = {
-			NOT = { has_situation_flag = recently_created }
- 			owner = { has_resource = { type = minerals amount < 600 } }
-		}
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip
-		}
-		resources = {
-			category = situations
-			upkeep = {
-				unity = 5
-			}
 		}
 	}
 }

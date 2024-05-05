@@ -102,7 +102,7 @@ nomadic_recruitment_troops = {
 		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			NOT = { has_situation_flag = recently_created }
- 			owner = { has_resource = { type = minerals amount < 600 } }
+ 			owner = { has_resource = { type = minerals amount > 600 } }
 		}
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip

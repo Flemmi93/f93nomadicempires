@@ -101,7 +101,7 @@ create_nomad_country_effect = {
 				energy = 250
 			}
 		}
-		if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_terretory target = last_created_country } }
+		if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = last_created_country } }
 		set_player = ROOT
 	}
 	

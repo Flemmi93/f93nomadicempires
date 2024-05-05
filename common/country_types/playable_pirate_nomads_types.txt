@@ -190,94 +190,94 @@
 # 	}
 # }
 
-# playable_pirate_nomads = {
-# 	has_difficulty_bonuses = yes
-# 	counts_for_victory = yes
-# 	pop_growth = no
-# 	playable = yes
-# 	has_pulse_events = yes
-# 	has_deficits = no
-# 	piracy_risk = no
-# 	randomize_ethos = yes
-# 	shuffle_pop_ethos = yes
-# 	needs_survey = yes
-# 	enforces_borders = no
-# 	colonizing_title = nomadic_exploration_team
-# 	colonizing_desc = nomadic_exploration_team_desc
-# 	diplomatic_wars = yes
-# 	ship_disengagement = yes
-# 	army_disengagement = yes
-# 	relations = yes
-# 	destroys_starbases = yes
-# 	observable = yes
-# 	can_use_invalid_technology = no
-# 	can_receive_envoys = yes
-# 	ownership_limits = default
+playable_pirate_nomads = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no
+	playable = yes
+	has_pulse_events = yes
+	has_deficits = yes
+	piracy_risk = no
+	randomize_ethos = yes
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	enforces_borders = no
+	colonizing_title = nomadic_exploration_team
+	colonizing_desc = nomadic_exploration_team_desc
+	diplomatic_wars = no
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	destroys_starbases = no
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	ownership_limits = default
 
-# 	faction = {
-# 		hostile = yes
-# 		needs_colony = no
-# 	}
-# 	ai = {
-# 		enabled = yes
-# 		declare_war = yes
-# 		min_navy_for_wars = 0.5
-# 		min_assault_armies_for_wars = @armies_for_declaring_war
-# 		colonizer = no
-# 		internal_policies = yes
-# 		modification = yes
-# 		government = yes
-# 		traditions = yes
-# 		ascension_perks = yes
-# 		construction = yes
-# 		follow = yes
-# 		can_use_market = yes
-# 		modules = {
-# 			military_minister_module
-# 			foreign_minister_module
-# 			interior_minister_module
-# 			mercenary_buyer_minister_module
-# 			enclave_founder_minister_module
-# 		}
-# 	}
+	faction = {
+		hostile = yes
+		needs_colony = no
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = @armies_for_declaring_war
+		colonizer = no
+		internal_policies = yes
+		modification = yes
+		government = yes
+		traditions = yes
+		ascension_perks = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+			mercenary_buyer_minister_module
+			enclave_founder_minister_module
+		}
+	}
 
-# 	trade_routes_available = {
-# 		always = no
-# 	}
+	trade_routes_available = {
+		always = no
+	}
 
-# 	modules = {
-# 		standard_event_module = {}
-# 		standard_economy_module = {}
-# 		standard_leader_module = {}
-# 		standard_diplomacy_module = { contact_rule = does_first_contact_sites }
-# 		standard_technology_module = {}
-# 		standard_trade_routes_module = {}
-# 		standard_pop_factions_module = {}
-# 		standard_expansion_module = {}
-# 		standard_species_rights_module = {}
-# 	}
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = { contact_rule = does_first_contact_sites }
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
 
-# 	resources = {
-# 		category = country_base
-# 		produces = {
-# 			energy = 20
-# 			minerals = 20
-# 			physics_research = 10
-# 			society_research = 10
-# 			engineering_research = 10
-# 			influence = 1
-# 			unity = 40
-# 			alloys = 15
-# 			consumer_goods = 15
-# 		}
-# 	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 1
+			unity = 40
+			alloys = 15
+			consumer_goods = 15
+		}
+	}
 
-# 	# planet scope
-# 	branch_office_resources = {
-# 		category = planet_branch_offices
-# 		cost = {
-# 			energy = 1000
-# 			influence = 50
-# 		}
-# 	}
-# }
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}

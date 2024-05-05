@@ -52,62 +52,62 @@
 
 # NOTE: Weight is additive!
 
-# nomad_personality = {
-# 	aggressiveness = 1
-# 	trade_willingness = 1
-# 	bravery = 2
-# 	combat_bravery = 2.0	# rarely ever retreat in battle
+nomad_personality = {
+	aggressiveness = 1
+	trade_willingness = 1
+	bravery = 2
+	combat_bravery = 2.0	# rarely ever retreat in battle
 
-# 	military_spending = 1.2
-# 	colony_spending = 0
+	military_spending = 1.2
+	colony_spending = 0
 
-# 	federation_acceptance = 10
-# 	nap_acceptance = -20
-# 	commercial_pact_acceptance = 10
-# 	research_agreement_acceptance = 20
-# 	defensive_pact_acceptance = 20
-# 	migration_pact_acceptance = -100
-# 	loyalty_acceptance = 1.0
+	federation_acceptance = 10
+	nap_acceptance = -20
+	commercial_pact_acceptance = 10
+	research_agreement_acceptance = 20
+	defensive_pact_acceptance = 20
+	migration_pact_acceptance = -100
+	loyalty_acceptance = 1.0
 
-# 	advanced_start_chance = 75
+	advanced_start_chance = 75
 
-# 	weapon_preferences = weapon_type_strike_craft
-# 	armor_ratio = 0.4
-# 	shields_ratio = 0.4
-# 	hull_ratio = 0.2
+	weapon_preferences = weapon_type_strike_craft
+	armor_ratio = 0.4
+	shields_ratio = 0.4
+	hull_ratio = 0.2
 
-# 	threat_modifier = 0.75
-# 	threat_others_modifier = 0.5
-# 	friction_modifier = 1.0
-# 	claims_modifier = 2.0
+	threat_modifier = 0.75
+	threat_others_modifier = 0.5
+	friction_modifier = 1.0
+	claims_modifier = 2.0
 
-# 	behaviour = {
-# 		conqueror = yes
-# 		subjugator = yes
-# 		liberator = no
-# 		opportunist = yes
-# 		slaver = yes
-# 		uplifter = no
-# 		purger = no
-# 		displacer = no
-# 		dominator = yes
-# 		infiltrator = no
-# 		robot_exploiter = no
-# 		robot_liberator = no
-# 		propagator = no
-# 		multispecies = no
-# 		crisis_fighter = yes
-# 		sneak_attacker = yes
-# 	}
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = no
+		displacer = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = yes
+		sneak_attacker = yes
+	}
 
-# 	allow = {
-# 		OR = {
-# 		is_country_type = playable_pirate_nomads
-# 		is_country_type = playable_nomads
-# 		}
-# 	}
+	allow = {
+		OR = {
+		is_country_type = playable_pirate_nomads
+		# is_country_type = playable_nomads
+		}
+	}
 
-# 	weight_modifier = {
-# 		weight = 100
-# 	}
-# }
+	weight_modifier = {
+		weight = 100
+	}
+}

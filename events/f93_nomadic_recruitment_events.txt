@@ -57,7 +57,37 @@ country_event = {
 	show_sound = event_big_door_opening
 	
 	option = {
-		allow = { has_resource = { type = minerals amount < 600 } }
+		allow = { has_resource = { type = minerals amount > 100 } }
+		name = f93_nomadic_recruitment.2.z
+		random_owned_fleet = {
+			limit = {
+				is_ship_size = nomadic_shipyard
+			}
+			save_event_target_as = troop_spawn_fleet
+		}		
+		create_fleet = {
+			name = random
+			effect = {
+				set_owner = ROOT
+				set_location = {
+					target = event_target:troop_spawn_fleet
+					distance = 10
+					angle = random
+				}
+				while = {
+					count = 1
+					owner = { add_resource = { minerals = -100 } }
+					create_army_transport = {
+						army_name = random
+						army_type = assault_army
+						species = owner_main_species
+					}
+				}
+			}
+		}
+	}
+	option = {
+		allow = { has_resource = { type = minerals amount > 600 } }
 		name = f93_nomadic_recruitment.2.a
 		random_owned_fleet = {
 			limit = {
@@ -90,7 +120,7 @@ country_event = {
 		trigger = {
 			has_technology = tech_robotic_workers
 		}
-		allow = { has_resource = { type = minerals amount < 600 } }
+		allow = { has_resource = { type = minerals amount > 600 } }
 		name = f93_nomadic_recruitment.2.b
 		random_owned_fleet = {
 			limit = {
@@ -120,10 +150,10 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
+		trigger = {
 			has_technology = tech_morphogenetic_field_mastery
 		}
-		allow = { has_resource = { type = minerals amount < 600 } }
+		allow = { has_resource = { type = minerals amount > 600 } }
 		name = f93_nomadic_recruitment.2.c
 		random_owned_fleet = {
 			limit = {

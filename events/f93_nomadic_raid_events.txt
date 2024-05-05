@@ -57,6 +57,98 @@ planet_event = {
 	}
 }
 
+
+# A planets controller becomes a country not the same as the owner.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+planet_event = {
+	id = f93_nomadic_raid.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = {
+			# is_at_war_with = from
+			has_civic = civic_nomadic_pirate
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_planet_flag = recently_raided_army }
+			
+			reroll_random = yes
+			fromfrom = { save_global_event_target_as = nomadic_bombarder }
+			save_global_event_target_as = Nomadic_bombardment
+			planet_event = { id = f93_nomadic_raid.5 }
+			planet_event = { id = f93_nomadic_raid.10 }
+			planet_event = { id = f93_nomadic_raid.15 }
+			planet_event = { id = f93_nomadic_raid.20 }
+			planet_event = { id = f93_nomadic_raid.25 }
+			planet_event = { id = f93_nomadic_raid.30 }
+			planet_event = { id = f93_nomadic_raid.35 }
+			planet_event = { id = f93_nomadic_raid.40 }
+			planet_event = { id = f93_nomadic_raid.45 }
+			planet_event = { id = f93_nomadic_raid.50 }
+			planet_event = { id = f93_nomadic_raid.60 }
+			planet_event = { id = f93_nomadic_raid.70 }
+			planet_event = { id = f93_nomadic_raid.80 }
+			planet_event = { id = f93_nomadic_raid.90 }
+			planet_event = { id = f93_nomadic_raid.99 }
+			set_controller = from
+		}
+		if = {
+			limit = { NOT = { has_planet_flag = recently_raided_army } }
+			set_timed_planet_flag = {
+				flag = recently_raided_army
+				days = 3600
+			}
+			set_controller = from
+			fromfrom = { country_event = { id = f93_nomadic_raid.4 } }
+		}
+	}
+}
+
+
+country_event = {
+	id = f93_nomadic_raid.4
+	is_triggered_only = yes
+	title = f93_nomadic_raid.2.name
+	desc = f93_nomadic_raid.2.desc
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_finding_loot
+
+	option = {
+		name = f93_nomadic_raid.2.a
+		add_resource = {
+			alloys = 1500
+			energy = 2000
+			minerals = 200
+			consumer_goods = 1500
+			minor_artifacts = 50
+			rare_crystals = 100
+			volatile_motes = 100
+			exotic_gases = 100
+		}
+		hidden_effect = {
+			event_target:Nomadic_bombardment.owner = {
+				add_resource = {
+					alloys = -1500
+					energy = -2000
+					minerals = -200
+					consumer_goods = -1500
+					minor_artifacts = -50
+					rare_crystals = -100
+					volatile_motes = -100
+					exotic_gases = -100
+				}
+			}
+		}
+		copy_random_tech_from = {
+			who = event_target:Nomadic_bombardment.owner
+		}
+	}
+}
+
 planet_event = {
 	id = f93_nomadic_raid.5
 	is_triggered_only = yes

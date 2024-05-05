@@ -20,9 +20,10 @@
  f93_nomadic_recruitment.1.c: "§Y$default_official$"
  f93_nomadic_recruitment.2.name: "New Military Troops"
  f93_nomadic_recruitment.2.desc: "We have a new generation of Assault troops$NEW_LINE$Who shall fill the ranks?"
- f93_nomadic_recruitment.2.a: "§V$assault_army_plural$"
- f93_nomadic_recruitment.2.b: "§L$robotic_army_plural$"
- f93_nomadic_recruitment.2.c: "§M$xenomorph_army_plural$"
+ f93_nomadic_recruitment.2.z: "§VA single $assault_army$"
+ f93_nomadic_recruitment.2.a: "§V6 $assault_army_plural$"
+ f93_nomadic_recruitment.2.b: "§L4 $robotic_army_plural$"
+ f93_nomadic_recruitment.2.c: "§M3 $xenomorph_army_plural$"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
@@ -159,17 +160,19 @@
  nomadic_recruitment_troops_type: "Troop Recruitment"
  nomadic_recruitment_troops_monthly_change_tooltip: "Training progress"
  nomadic_recruitment_troops_desc: "$situation_nomadic_balanced_desc$"
- begin_nomadic_raid_on_terretory: "Start a Raid"
- begin_nomadic_raid_on_terretory_desc: "Wherever out Ships are right now, They will set out to attack. So lets make sure we will win.$new_line$ it will take a few years for things to cool down again."
- begin_nomadic_raid_on_terretory_type: "Raid a terretory"
- begin_nomadic_raid_on_terretory_monthly_change_tooltip: "Charging Weapons"
+ begin_nomadic_raid_on_territory: "Start a Raid"
+ begin_nomadic_raid_on_territory_desc: "Wherever out Ships are right now, They will set out to attack. So lets make sure we will win.$new_line$ it will take a few years for things to cool down again."
+ begin_nomadic_raid_on_territory_type: "Raid a terretory"
+ begin_nomadic_raid_on_territory_monthly_change_tooltip: "Charging Weapons"
  situation_pirate_atttack: "Start Attack"
- situation_pirate_atttack_desc: "We are preparing to attack these fools"
+ situation_pirate_atttack_desc: "We have hid long enough, time to show the galaxy who is boss."
  
 #Country Type 
  playable_pirate_nomads: "$pirate$"
  playable_nomads: "Nomadic"
  nomad_personality: "Vagrant Travelers"
+ nomadic_exploration_team: "Explore the Planet"
+ nomadic_exploration_team_desc: "Our people will go down and explore the planet. Surly they will come back up right away."
 
 #Modifiers
  energy_deficit_nomadic: "$energy_deficit$"
