@@ -36,7 +36,8 @@ create_nomad_country_effect = {
 			create_ship_design = { design =  NAME_Nomadic_freighter_science }
 			add_ship_design = last_created_design
 			establish_communications_no_message = ROOT
-			unlock_council_slots = 3
+			country_event = { id = game_start.72 }
+			country_event = { id = game_start.70 }
 			every_playable_country = { country_event = { id = f93_nomadic_start.4 } }
 		}
 	}
@@ -104,7 +105,6 @@ create_nomad_country_effect = {
 		if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = last_created_country } }
 		set_player = ROOT
 	}
-	
 	#Remove colonies
 	# every_owned_planet = {
 	# 	destroy_colony = yes
