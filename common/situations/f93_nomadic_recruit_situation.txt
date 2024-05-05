@@ -1,4 +1,4 @@
-nomadic_recruitment = {
+nomadic_recruitment_leaders = {
 	picture = GFX_evt_salute
 	category = positive
 	complete_icon = GFX_situation_outcome_meh
@@ -6,8 +6,8 @@ nomadic_recruitment = {
 	
 	on_progress_complete = {			
 		destroy_situation = this
-		owner = { start_situation = { type = nomadic_recruitment target = owner } }
-		owner = { country_event = { id = f93_nomadic_leader.1 } }
+		owner = { start_situation = { type = nomadic_recruitment_leaders target = owner } }
+		owner = { country_event = { id = f93_nomadic_recruitment.1 } }
  	}
 	start_value = 0
 	stages = {
@@ -15,6 +15,9 @@ nomadic_recruitment = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
 			end = 100
+			on_first_enter = {
+				situation_event = { id = f93_nomadic_recruitment.99 }
+			}
 		}
 	}
 
@@ -40,6 +43,7 @@ nomadic_recruitment = {
 		name = situation_nomadic_balanced
 		icon = GFX_situation_approach_balance_sheet
 		icon_background = GFX_situation_approach_bg_green
+		allow = { NOT = { has_situation_flag = recently_created } }
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip
 		}
@@ -47,6 +51,63 @@ nomadic_recruitment = {
 			category = situations
 			upkeep = {
 				unity = 15
+			}
+		}
+	}
+}
+nomadic_recruitment_troops = {
+	picture = GFX_evt_salute
+	category = positive
+	complete_icon = GFX_situation_outcome_meh
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	
+	on_progress_complete = {			
+		destroy_situation = this
+		owner = { start_situation = { type = nomadic_recruitment_troops target = owner } }
+		owner = { country_event = { id = f93_nomadic_recruitment.2 } }
+ 	}
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			on_first_enter = {
+				situation_event = { id = f93_nomadic_recruitment.99 }
+			}
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = 50
+			desc = situation_nomadic_balanced_desc
+			current_situation_approach = situation_nomadic_balanced
+		}
+	}
+
+	approach = {
+		name = approach_default
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+	}
+	approach = {
+		name = situation_nomadic_balanced
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		allow = { NOT = { has_situation_flag = recently_created } }
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				minerals = 50
 			}
 		}
 	}

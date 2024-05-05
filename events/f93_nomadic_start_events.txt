@@ -7,11 +7,10 @@ country_event = {
 	desc = f93_nomadic_start.1.desc
 	picture	= GFX_evt_hangar_bay
 	show_sound = event_ship_bridge
-
+	
 	trigger = {
 		is_ai = no
 	}
-
 
 	option = {
 		name = f93_nomadic_start.1.a
@@ -39,11 +38,15 @@ country_event = {
 
 	trigger = {
 		is_ai = no
+	}
+
+	trigger = {
 		has_origin = origin_nomadic_empire
 	}
 
 	immediate = {
 		create_nomad_country_effect = yes
+		set_origin = origin_default
 	}
 }
 

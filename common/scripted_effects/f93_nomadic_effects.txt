@@ -11,8 +11,7 @@ create_nomad_country_effect = {
 		name = ROOT
 		adjective = ROOT
 	#	contact_rule = default
-		type = ROOT
-		auto_delete = no
+		type = playable_nomads
 		name_list = ROOT
 		ship_prefix = ""
 		authority = ROOT
@@ -38,22 +37,49 @@ create_nomad_country_effect = {
 		}
 	}
 	#Create Assets
-	every_controlled_fleet = {
-		limit = {
-			is_ship_class = shipclass_starbase
-		}
-		destroy_fleet = this
-	}
+	# every_controlled_fleet = {
+	# 	limit = {
+	# 		is_ship_class = shipclass_starbase
+	# 	}
+	# 	destroy_fleet = this
+	# }
 
 	every_owned_leader = {
 		set_owner = last_created_country
 	}
 	every_owned_fleet = {
+		
+		limit = {
+			NOR = {
+				is_ship_class = shipclass_starbase 
+				is_ship_class = shipclass_mining_station
+				is_ship_class = shipclass_research_station
+			}
+		}
 		set_owner = last_created_country
+	}
+	while = {
+		count = 2
+		create_leader = {
+			name = random
+			species = ROOT
+			class = official
+		}
+		create_leader = {
+			name = random
+			species = ROOT
+			class = commander
+		}
+		create_leader = {
+			name = random
+			species = ROOT
+			class = scientist
+		}
 	}
 	#Turn pops into Rescources 
 	last_created_country = {
-		start_situation = { type = nomadic_recruitment target = last_created_country }
+		start_situation = { type = nomadic_recruitment_leaders target = last_created_country }
+		start_situation = { type = nomadic_recruitment_troops target = last_created_country }
 		add_resource = {
 			energy = 250
 			minerals = 400
@@ -70,11 +96,12 @@ create_nomad_country_effect = {
 				energy = 250
 			}
 		}
+		if = { limit = { has_civic = civic_nomadic_pirate } set_country_type = playable_pirate_nomads }
 		set_player = ROOT
 	}
 	
 	#Remove colonies
-	every_owned_planet = {
-		destroy_colony = yes
-	}
+	# every_owned_planet = {
+	# 	destroy_colony = yes
+	# }
 }

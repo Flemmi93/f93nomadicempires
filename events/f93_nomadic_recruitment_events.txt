@@ -1,0 +1,142 @@
+namespace = f93_nomadic_recruitment
+
+situation_event = {
+	id = f93_nomadic_recruitment.99
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		set_timed_situation_flag = {
+			flag = recently_created
+			days = 180
+		}
+	}
+}
+country_event = {
+	id = f93_nomadic_recruitment.1
+	is_triggered_only = yes
+	title = f93_nomadic_recruitment.1.name
+	desc = f93_nomadic_recruitment.1.desc
+	picture = GFX_evt_salute
+	show_sound = event_big_door_opening
+	
+	option = {
+		name = f93_nomadic_recruitment.1.a
+		create_leader = {
+			name = random
+			species = owner_main_species
+			class = commander
+			skill = 2
+		}
+	}
+	option = {
+		name = f93_nomadic_recruitment.1.b
+		create_leader = {
+			name = random
+			species = owner_main_species
+			class = scientist
+			skill = 1
+		}
+	}
+	option = {
+		name = f93_nomadic_recruitment.1.c
+		create_leader = {
+			name = random
+			species = owner_main_species
+			class = official
+			skill = 1
+		}
+	}
+}
+
+country_event = {
+	id = f93_nomadic_recruitment.2
+	is_triggered_only = yes
+	title = f93_nomadic_recruitment.2.name
+	desc = f93_nomadic_recruitment.2.desc
+	picture = GFX_evt_salute
+	show_sound = event_big_door_opening
+	
+	option = {
+		name = f93_nomadic_recruitment.2.a
+		random_owned_fleet = {
+			limit = {
+				is_ship_size = nomadic_shipyard
+			}
+			save_event_target_as = troop_spawn_fleet
+		}		
+		create_fleet = {
+			name = random
+			effect = {
+				set_owner = ROOT
+				set_location = {
+					target = event_target:troop_spawn_fleet
+					distance = 10
+					angle = random
+				}
+				while = {
+					count = 3
+					create_army_transport = {
+						army_name = random
+						army_type = assault_army
+						species = owner_main_species
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = f93_nomadic_recruitment.2.b
+		random_owned_fleet = {
+			limit = {
+				is_ship_size = nomadic_shipyard
+			}
+			save_event_target_as = troop_spawn_fleet
+		}
+		create_fleet = {
+			name = random
+			effect = {
+				set_owner = ROOT
+				set_location = {
+					target = event_target:troop_spawn_fleet
+					distance = 10
+					angle = random
+				}
+				while = {
+					count = 3
+					create_army_transport = {
+						army_name = random
+						army_type = robotic_army
+						species = owner_main_species
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = f93_nomadic_recruitment.2.c
+		random_owned_fleet = {
+			limit = {
+				is_ship_size = nomadic_shipyard
+			}
+			save_event_target_as = troop_spawn_fleet
+		}
+		create_fleet = {
+			name = random
+			effect = {
+				set_owner = ROOT
+				set_location = {
+					target = event_target:troop_spawn_fleet
+					distance = 10
+					angle = random
+				}
+				while = {
+					count = 3
+					create_army_transport = {
+						army_name = random
+						army_type = xenomorph_army
+					}
+				}
+			}
+		}
+	}
+}
