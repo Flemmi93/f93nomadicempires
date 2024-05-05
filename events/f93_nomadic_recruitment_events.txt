@@ -57,6 +57,7 @@ country_event = {
 	show_sound = event_big_door_opening
 	
 	option = {
+		allow = { has_resource = { type = minerals amount < 600 } }
 		name = f93_nomadic_recruitment.2.a
 		random_owned_fleet = {
 			limit = {
@@ -74,7 +75,8 @@ country_event = {
 					angle = random
 				}
 				while = {
-					count = 3
+					count = 6
+					owner = { add_resource = { minerals = -100 } }
 					create_army_transport = {
 						army_name = random
 						army_type = assault_army
@@ -88,6 +90,7 @@ country_event = {
 		trigger = {
 			has_technology = tech_robotic_workers
 		}
+		allow = { has_resource = { type = minerals amount < 600 } }
 		name = f93_nomadic_recruitment.2.b
 		random_owned_fleet = {
 			limit = {
@@ -105,7 +108,8 @@ country_event = {
 					angle = random
 				}
 				while = {
-					count = 3
+					count = 4
+					owner = { add_resource = { minerals = -150 } }
 					create_army_transport = {
 						army_name = random
 						army_type = robotic_army
@@ -119,6 +123,7 @@ country_event = {
 		allow = {
 			has_technology = tech_morphogenetic_field_mastery
 		}
+		allow = { has_resource = { type = minerals amount < 600 } }
 		name = f93_nomadic_recruitment.2.c
 		random_owned_fleet = {
 			limit = {
@@ -137,6 +142,7 @@ country_event = {
 				}
 				while = {
 					count = 3
+					owner = { add_resource = { minerals = -200 } }
 					create_army_transport = {
 						army_name = random
 						army_type = xenomorph_army

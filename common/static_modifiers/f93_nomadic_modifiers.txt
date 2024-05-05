@@ -1,12 +1,40 @@
-f93_nomadic_livestyle = {
-#	edicts_unity_cost_mult = -1
-	leaders_upkeep_mult = -0.8
-	force_disparity_fire_rate_mult = 0.25
-	country_commander_cap_add = 1
-	ship_armor_regen_add_perc = 0.001
-	ship_hull_regen_add_perc = 0.001
-	starbase_module_capacity_add = 1
-	starbase_building_capacity_add = 1
-	shipclass_mining_station_build_cost_mult = -0.25
-	shipclass_research_station_build_cost_mult = -0.25
+energy_deficit_nomadic = {
+	country_alloys_produces_mult = 1
+}
+minerals_deficit_nomadic = {
+	
+	country_alloys_produces_mult = 1
+}
+food_deficit_nomadic = {
+	
+}
+consumer_goods_deficit_nomadic = {
+	
+}
+alloys_deficit_nomadic = {
+	
+}
+exotic_gases_deficit_nomadic = {
+	
+}
+rare_crystals_deficit_nomadic = {
+	
+}
+volatile_motes_deficit_nomadic = {
+	
+}
+sr_zro_deficit_nomadic = {
+	
+}
+sr_dark_matter_deficit_nomadic = {
+	
+}
+sr_living_metal_deficit_nomadic = {
+	
+}
+unity_deficit_nomadic = {
+	
+}
+influence_deficit_nomadic = {
+	
 }

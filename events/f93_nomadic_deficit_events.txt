@@ -1,0 +1,56 @@
+namespace = nomadic_deficit
+
+country_event = {
+	id = nomadic_deficit.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_origin = origin_nomadic_empire
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_deficit
+			energy = {
+				add_modifier = { modifier =energy_deficit_nomadic }
+			}
+			minerals = {
+				add_modifier = { modifier =minerals_deficit_nomadic }
+			}
+			food = {
+				add_modifier = { modifier =food_deficit_nomadic }
+			}
+			consumer_goods = {
+				add_modifier = { modifier =consumer_goods_deficit_nomadic }
+			}
+			alloys = {
+				add_modifier = { modifier =alloys_deficit_nomadic }
+			}
+			exotic_gases = {
+				add_modifier = { modifier =exotic_gases_deficit_nomadic }
+			}
+			rare_crystals = {
+				add_modifier = { modifier =rare_crystals_deficit_nomadic }
+			}
+			volatile_motes = {
+				add_modifier = { modifier =volatile_motes_deficit_nomadic }
+			}
+			sr_zro = {
+				add_modifier = { modifier =sr_zro_deficit_nomadic }
+			}
+			sr_dark_matter = {
+				add_modifier = { modifier =sr_dark_matter_deficit_nomadic }
+			}
+			sr_living_metal = {
+				add_modifier = { modifier =sr_living_metal_deficit_nomadic }
+			}
+			unity = {
+				add_modifier = { modifier =unity_deficit_nomadic }
+			}
+			influence = {
+				add_modifier = { modifier =influence_deficit_nomadic }
+			}
+		}
+	}
+}

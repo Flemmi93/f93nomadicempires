@@ -58,30 +58,12 @@ country_event = {
 	id = f93_nomadic_start.4
 	is_triggered_only = yes
 	hide_window = yes
-
-	trigger = {
-		OR = {
-			this = { has_origin = origin_nomadic_empire }
-			from = { has_origin = origin_nomadic_empire }
-		}
-	}
-
 	immediate = {
-		from = {
-			set_hostile = this
-			set_closed_borders = {
-				who = this
-				status = no
-				forced = 999
-			}
-		}
-		this = {
-			set_hostile = from
-			set_closed_borders = {
-				who = from
-				status = no
-				forced = 999
-			}
+		if = { limit = { last_created_country = { has_civic = civic_nomadic_pirate } } set_hostile = last_created_country }
+		set_closed_borders = {
+			who = last_created_country
+			status = no
+			forced = 999
 		}
 	}
 }

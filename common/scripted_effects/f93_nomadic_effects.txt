@@ -37,6 +37,7 @@ create_nomad_country_effect = {
 			add_ship_design = last_created_design
 			establish_communications_no_message = ROOT
 			unlock_council_slots = 4
+			every_playable_country = { country_event = { id = f93_nomadic_start.4 } }
 		}
 	}
 	#Create Assets
@@ -87,6 +88,8 @@ create_nomad_country_effect = {
 			minerals = 400
 			consumer_goods = 100
 			alloys = 250
+			influence = 100
+			unity = 50
 		}
 		if = { limit = { is_machine_empire = no }
 			add_resource = {
@@ -98,7 +101,7 @@ create_nomad_country_effect = {
 				energy = 250
 			}
 		}
-		if = { limit = { has_civic = civic_nomadic_pirate } set_country_type = playable_pirate_nomads }
+		# if = { limit = { has_civic = civic_nomadic_pirate } set_country_type = playable_pirate_nomads }
 		set_player = ROOT
 	}
 	
