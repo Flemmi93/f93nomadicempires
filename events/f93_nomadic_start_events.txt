@@ -124,12 +124,25 @@ country_event = {
 	hide_window = yes
 	trigger = { has_civic = civic_nomadic_pirate }
 	immediate = {
-		every_owned_fleet = {
-			solar_system.space_owner = {
-				set_hostile = ROOT
-				save_event_target_as = target@this 
+		set_country_type = playable_nomads
+		while = {
+			count = 5
+			add_resource = { energy = -500 }
+			random_relation = {
+				add_resource = { energy = 500 }
 			}
 		}
-		set_faction_hostility = { target = target@this set_hostile = yes set_neutral = no set_friendly = no }
+	}
+}
+country_event = {
+	id = f93_nomadic_start.6
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_civic = civic_nomadic_pirate
+		NOT = {	has_country_flag = has_Access_to_raiding }
+	}
+	immediate = {
+		start_situation = { type = begin_nomadic_raid_on_territory target = owner } 
 	}
 }
