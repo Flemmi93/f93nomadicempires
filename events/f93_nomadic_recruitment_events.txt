@@ -85,6 +85,9 @@ country_event = {
 		}
 	}
 	option = {
+		potential = {
+			has_technology = tech_robotic_workers
+		}
 		name = f93_nomadic_recruitment.2.b
 		random_owned_fleet = {
 			limit = {
@@ -113,6 +116,9 @@ country_event = {
 		}
 	}
 	option = {
+		potential = {
+			has_technology = tech_morphogenetic_field_mastery
+		}
 		name = f93_nomadic_recruitment.2.c
 		random_owned_fleet = {
 			limit = {

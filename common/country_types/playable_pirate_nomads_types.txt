@@ -174,7 +174,7 @@ playable_nomads = {
 			society_research = 10
 			engineering_research = 10
 			influence = 1
-			unity = 50
+			unity = 40
 			alloys = 15
 			consumer_goods = 15
 		}
@@ -266,7 +266,7 @@ playable_pirate_nomads = {
 			society_research = 10
 			engineering_research = 10
 			influence = 1
-			unity = 50
+			unity = 40
 			alloys = 15
 			consumer_goods = 15
 		}

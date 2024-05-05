@@ -833,7 +833,7 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_shipyard"
 	icon_frame = 1
-	power = -150
+	power = -75
 	modifier = {
 		starbase_shipyard_capacity_add = 1
 	}
@@ -841,7 +841,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @componenttier3
+			alloys = @componenttier2
 		}
 		upkeep = {
 			energy = @pro_energy1
@@ -849,6 +849,6 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_cruisers" "tech_nomatic_society" }
+	prerequisites = { "tech_nomatic_society" }
 	component_set = "f93_nomad_shipyard"
 }

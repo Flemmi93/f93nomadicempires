@@ -17,6 +17,7 @@ nomadic_freighter = {
 	num_target_locators = 4
 	#icon_frame = 7 #probably unused, but mobile starbases are special
 	icon = ship_size_transport
+	ship_class_icon_frame = 2
 	is_space_station = no
 	base_buildtime = 360
 	can_have_federation_design = no
@@ -86,7 +87,7 @@ nomadic_shipyard = {
 	can_disable = no
 	icon_frame = 7 #probably unused, but mobile starbases are special
 	icon = ship_size_military_64
-	ship_class_icon_frame = 4
+	ship_class_icon_frame = 3
 
 	default_behavior = carrier
 	ship_roles = { carrier artillery }

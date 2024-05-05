@@ -47,6 +47,9 @@ country_event = {
 	immediate = {
 		create_nomad_country_effect = yes
 		set_origin = origin_default
+		last_created_country = {
+			hostile = yes
+		}
 	}
 }
 
