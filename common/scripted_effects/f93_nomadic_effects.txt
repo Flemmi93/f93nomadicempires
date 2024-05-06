@@ -96,7 +96,6 @@ create_nomad_country_effect = {
 				energy = 250
 			}
 		}
-		every_playable_country = { country_event = { id = f93_nomadic_start.4 } }
 		
 	country_event = { id = f93_nomadic_start.3 }
 	

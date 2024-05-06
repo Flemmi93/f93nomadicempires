@@ -110,19 +110,6 @@ country_event = {
 }
 
 country_event = {
-	id = f93_nomadic_start.4
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		set_closed_borders = {
-			who = event_target:homeworld_leavers
-			status = no
-			forced = 999
-		}
-	}
-}
-
-country_event = {
 	id = f93_nomadic_start.5
 	is_triggered_only = yes
 	hide_window = yes

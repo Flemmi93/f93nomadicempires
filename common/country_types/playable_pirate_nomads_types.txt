@@ -108,6 +108,8 @@ playable_nomads = {
 	piracy_risk = yes
 	randomize_ethos = yes
 	shuffle_pop_ethos = yes
+	colonizing_title = nomadic_exploration_team
+	colonizing_desc = nomadic_exploration_team_desc
 	needs_survey = yes
 	diplomatic_wars = yes
 	ship_disengagement = yes
@@ -119,8 +121,8 @@ playable_nomads = {
 	ownership_limits = default
 
 	faction = {
-		hostile = no
 		needs_colony = no
+		needs_border_access = no
 	}
 	ai = {
 		enabled = yes
@@ -213,6 +215,7 @@ playable_pirate_nomads = {
 	faction = {
 		hostile = yes
 		needs_colony = no
+		needs_border_access = no
 	}
 	ai = {
 		enabled = yes
