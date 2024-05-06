@@ -70,6 +70,7 @@ planet_event = {
 		fromfrom = {
 			# is_at_war_with = from
 			has_civic = civic_nomadic_pirate
+			is_country_type = playable_pirate_nomads
 		}
 	}
 	immediate = {

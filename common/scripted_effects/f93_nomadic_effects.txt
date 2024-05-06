@@ -1,60 +1,71 @@
 #Effect to create a nomad Empire.
-# ROOT = origin country
-# Last_created_country = new country
+# ROOT = nomadic country
+# Last_created_country = old country
 create_nomad_country_effect = {
-	#Prepwork
+	save_global_event_target_as = homeworld_leavers
 	capital_scope = {
 		save_global_event_target_as = homeworld
 	}
 	#Create Nomadic Nation
-	create_country = {
-		name = ROOT
-		adjective = ROOT
-	#	contact_rule = default
-		type = ROOT
-		name_list = ROOT
-		ship_prefix = ""
-		authority = ROOT
-		origin = origin_nomadic_empire
-		civics = ROOT
-		species = ROOT
-		flag = ROOT
-		ethos = ROOT
-		ignore_initial_colony_error = yes
-		auto_delete = no
-		effect = {
-			give_technology = { tech = tech_nomatic_society }
-			country_event = { id = f93_nomadic_start.3 }
-			create_ship_design = { design = NAME_Nomadic_shipyard }
-			add_ship_design = last_created_design
-			create_ship_design = { design =  NAME_Nomadic_freighter_mins }
-			add_ship_design = last_created_design
-			create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
-			add_ship_design = last_created_design
-			create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
-			add_ship_design = last_created_design
-			create_ship_design = { design =  NAME_Nomadic_freighter_science }
-			add_ship_design = last_created_design
-			establish_communications_no_message = ROOT
-			country_event = { id = game_start.72 }
-			country_event = { id = game_start.70 }
-			every_playable_country = { country_event = { id = f93_nomadic_start.4 } }
+	give_technology = { tech = tech_nomatic_society message = no }
+	set_country_type = playable_nomads
+	set_origin = origin_nomadic_empire
+	create_ship_design = { design = NAME_Nomadic_shipyard }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_mins }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_science }
+	add_ship_design = last_created_design
+	capital_scope = {
+		destroy_colony = yes
+	}
+	#Populate old Planet again
+	event_target:homeworld = {
+		create_country = {
+			name = ROOT
+			adjective = ROOT
+		#	contact_rule = default
+			type = ROOT
+			name_list = ROOT
+			ship_prefix = ""
+			authority = ROOT
+			origin = origin_default
+			civics = random
+			species = ROOT
+			flag = random
+			ethos = ROOT
+			effect = {
+				add_resource = {
+					energy = 250
+					minerals = 400
+					consumer_goods = 100
+					alloys = 250
+					influence = 100
+					unity = 500
+				}
+				country_event = { id = game_start.72 }
+				country_event = { id = game_start.70 }
+				capital_scope = {
+					while = {
+						count = 28
+						create_pop = {
+							species = root
+							ethos = random
+						}
+					}
+				}
+			}
 		}
 	}
-	#Create Assets
-	# every_controlled_fleet = {
-	# 	limit = {
-	# 		is_ship_class = shipclass_starbase
-	# 	}
-	# 	destroy_fleet = this
-	# }
-
-	every_owned_leader = {
-		set_owner = last_created_country
-	}
+	
+	establish_communications_no_message = last_created_country
 	every_owned_fleet = {
 		limit = {
-			NOR = {
+			OR = {
 				is_ship_class = shipclass_starbase 
 				is_ship_class = shipclass_mining_station
 				is_ship_class = shipclass_research_station
@@ -62,28 +73,11 @@ create_nomad_country_effect = {
 		}
 		set_owner = last_created_country
 	}
-	while = {
-		count = 2
-		create_leader = {
-			name = random
-			species = ROOT
-			class = official
-		}
-		create_leader = {
-			name = random
-			species = ROOT
-			class = commander
-		}
-		create_leader = {
-			name = random
-			species = ROOT
-			class = scientist
-		}
-	}
-	#Turn pops into Rescources 
-	last_created_country = {
-		start_situation = { type = nomadic_recruitment_leaders target = last_created_country }
-		start_situation = { type = nomadic_recruitment_troops target = last_created_country }
+	#adjust rescources and situations
+	
+		start_situation = { type = nomadic_recruitment_leaders target = ROOT }
+		start_situation = { type = nomadic_recruitment_troops target = ROOT }
+		if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = ROOT } }
 		add_resource = {
 			energy = 250
 			minerals = 400
@@ -102,13 +96,10 @@ create_nomad_country_effect = {
 				energy = 250
 			}
 		}
-		if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = last_created_country } }
-		set_player = ROOT
-	}
-	#Remove colonies
-	# every_owned_planet = {
-	# 	destroy_colony = yes
-	# }
+		every_playable_country = { country_event = { id = f93_nomadic_start.4 } }
+		
+	country_event = { id = f93_nomadic_start.3 }
+	
 }
 
 save_rescources_effect = {

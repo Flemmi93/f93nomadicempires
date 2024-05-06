@@ -10,6 +10,7 @@ country_event = {
 	
 	trigger = {
 		is_ai = no
+		NOT = { has_origin = origin_nomadic_empire }
 	}
 
 	option = {
@@ -30,11 +31,9 @@ country_event = {
 		name = f93_nomadic_start.1.c
 		hidden_effect = {
 			create_nomad_country_effect = yes
-			last_created_country = {
-				add_resource = { unity = 500 }
-				country_event = { id = f93_nomadic_start.8 }
-				set_government_cooldown = 0
-			}
+			add_resource = { unity = 500 }
+			country_event = { id = f93_nomadic_start.8 }
+			set_government_cooldown = 0
 		}
 	}
 }
@@ -54,7 +53,6 @@ country_event = {
 
 	immediate = {
 		create_nomad_country_effect = yes
-		set_origin = origin_default
 	}
 }
 
@@ -65,9 +63,9 @@ country_event = {
 
 	immediate = {	   
 		create_fleet = {
-			name = "Nomadic Fleet"
+			name = "Nomadic Construction Vessel"
 			effect = {
-				set_owner = ROOT
+				set_owner = event_target:homeworld_leavers
 				set_location = event_target:homeworld
 				create_ship = {
 					name = NAME_Nomadic_shipyard
@@ -78,7 +76,7 @@ country_event = {
 		create_fleet = {
 			name = "Nomadic Fleet"
 			effect = {
-				set_owner = last_created_country
+				set_owner = event_target:homeworld_leavers
 				set_location = event_target:homeworld
 				create_ship = {
 					name = NAME_Nomadic_freighter_mins
@@ -107,6 +105,7 @@ country_event = {
 			}
 		}
 		clear_global_event_target = homeworld
+		clear_global_event_target = homeworld_leavers
 	}
 }
 
@@ -116,7 +115,7 @@ country_event = {
 	hide_window = yes
 	immediate = {
 		set_closed_borders = {
-			who = last_created_country
+			who = event_target:homeworld_leavers
 			status = no
 			forced = 999
 		}

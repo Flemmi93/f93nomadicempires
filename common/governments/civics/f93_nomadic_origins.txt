@@ -12,6 +12,5 @@ origin_nomadic_empire = {
 		starbase_module_capacity_add = 1
 		starbase_building_capacity_add = 1
 	}
-	non_colonizable_planet_class_neighbor = yes
 	flags = nomadic_start_flag
 }
