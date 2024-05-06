@@ -30,6 +30,11 @@ country_event = {
 		name = f93_nomadic_start.1.c
 		hidden_effect = {
 			create_nomad_country_effect = yes
+			last_created_country = {
+				add_resource = { unity = 500 }
+				country_event = { id = f93_nomadic_start.8 }
+				set_government_cooldown = 0
+			}
 		}
 	}
 }
@@ -161,3 +166,15 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = f93_nomadic_start.8
+	
+	is_triggered_only = yes
+	title = f93_nomadic_start.8.name
+	desc = f93_nomadic_start.8.desc
+	picture	= GFX_evt_ship_in_orbit
+
+	option = {
+		name = OK
+	}
+}

@@ -2,15 +2,7 @@ civic_nomadic_pirate = {
 	icon = gfx/interface/icons/governments/civics/nomadic_empire.dds
 	possible = {
 		origin = { value = origin_nomadic_empire }
-			authority = { 
-				OR ={
-					value = auth_imperial
-					value = auth_hive_mind
-					value = auth_machine_intelligence 
-				}
-			}
 	}
-	#description = civic_nomadic_pirate_desc
 	modifier = {
 		ship_fire_rate_mult = 0.1
 		country_naval_cap_mult = 0.25
@@ -18,5 +10,4 @@ civic_nomadic_pirate = {
 		country_trust_growth = -0.2
 		force_disparity_fire_rate_mult = 0.25
 	}
-	can_build_ruler_ship = yes
 }
