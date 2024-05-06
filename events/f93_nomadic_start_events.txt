@@ -110,14 +110,41 @@ country_event = {
 }
 
 country_event = {
+	id = f93_nomadic_start.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { has_origin = origin_nomadic_empire }
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_origin = origin_nomadic_empire }
+				has_communications = root
+			}
+			set_closed_borders = {
+				who = root
+				status = no
+				forced = 999
+			}
+		}
+	}
+}
+country_event = {
 	id = f93_nomadic_start.5
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = { has_civic = civic_nomadic_pirate }
 	immediate = {
-		save_rescources_effect = yes
-		set_country_type = playable_nomads
-		reinstate_rescources_effect = yes
+		if = {
+			limit = { is_country_type = playable_pirate_nomads }
+			save_rescources_effect = yes
+			set_country_type = playable_nomads
+			reinstate_rescources_effect = yes
+		}
+		if = {
+			limit = { is_country_type = default }
+			set_faction_hostility = { target = every_playable_country set_hostile = no set_neutral = no set_friendly = no }
+		}
 		while = {
 			count = 5
 			add_resource = { energy = -500 }
@@ -133,9 +160,16 @@ country_event = {
 	hide_window = yes
 	trigger = { has_civic = civic_nomadic_pirate }
 	immediate = {
-		save_rescources_effect = yes
-		set_country_type = playable_pirate_nomads
-		reinstate_rescources_effect = yes
+		if = {
+			limit = { is_country_type = playable_nomads }
+			save_rescources_effect = yes
+			set_country_type = playable_pirate_nomads
+			reinstate_rescources_effect = yes
+		}
+		if = {
+			limit = { is_country_type = default }
+			set_faction_hostility = { target = every_playable_country set_hostile = yes set_neutral = no set_friendly = no }
+		}
 	}
 }
 country_event = {

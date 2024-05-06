@@ -34,7 +34,7 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	pre_triggers = { has_owner = yes }
-	trigger = { from = { has_origin = origin_nomadic_empire } }
+	trigger = { from = { has_civic = civic_nomadic_pirate } }
 	immediate = {
 		reroll_random = yes
 		from = { save_global_event_target_as = nomadic_bombarder }
@@ -68,18 +68,15 @@ planet_event = {
 	is_triggered_only = yes
 	trigger = {
 		fromfrom = {
-			# is_at_war_with = from
 			has_civic = civic_nomadic_pirate
-			is_country_type = playable_pirate_nomads
 		}
 	}
 	immediate = {
+		reroll_random = yes
+		fromfrom = { save_global_event_target_as = nomadic_bombarder }
+		save_global_event_target_as = Nomadic_bombardment
 		if = {
 			limit = { has_planet_flag = recently_raided_army }
-			
-			reroll_random = yes
-			fromfrom = { save_global_event_target_as = nomadic_bombarder }
-			save_global_event_target_as = Nomadic_bombardment
 			planet_event = { id = f93_nomadic_raid.5 }
 			planet_event = { id = f93_nomadic_raid.10 }
 			planet_event = { id = f93_nomadic_raid.15 }
@@ -95,7 +92,6 @@ planet_event = {
 			planet_event = { id = f93_nomadic_raid.80 }
 			planet_event = { id = f93_nomadic_raid.90 }
 			planet_event = { id = f93_nomadic_raid.99 }
-			set_controller = from
 		}
 		if = {
 			limit = { NOT = { has_planet_flag = recently_raided_army } }
@@ -103,8 +99,11 @@ planet_event = {
 				flag = recently_raided_army
 				days = 3600
 			}
-			set_controller = from
 			fromfrom = { country_event = { id = f93_nomadic_raid.4 } }
+		}
+		if = {
+			limit = { NOT = { from = { is_at_war_with = fromfrom } } }
+			set_controller = from
 		}
 	}
 }

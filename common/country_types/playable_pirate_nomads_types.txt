@@ -121,8 +121,8 @@ playable_nomads = {
 	ownership_limits = default
 
 	faction = {
-		needs_colony = no
-		needs_border_access = no
+		# needs_colony = no
+		# needs_border_access = no
 	}
 	ai = {
 		enabled = yes
@@ -155,14 +155,13 @@ playable_nomads = {
 		standard_event_module = {}
 		standard_economy_module = {}
 		standard_leader_module = {}
-		standard_diplomacy_module = { contact_rule = does_first_contact_sites }
+		standard_diplomacy_module = {}
 		standard_technology_module = {}
 		standard_trade_routes_module = {}
 		standard_pop_factions_module = {}
 		standard_expansion_module = {}
 		standard_species_rights_module = {}
 	}
-
 	resources = {
 		category = country_base
 		produces = {
@@ -214,8 +213,8 @@ playable_pirate_nomads = {
 
 	faction = {
 		hostile = yes
-		needs_colony = no
-		needs_border_access = no
+		# needs_colony = no
+		# needs_border_access = no
 	}
 	ai = {
 		enabled = yes
@@ -248,12 +247,145 @@ playable_pirate_nomads = {
 		standard_event_module = {}
 		standard_economy_module = {}
 		standard_leader_module = {}
-		standard_diplomacy_module = { contact_rule = does_first_contact_sites }
+		# standard_diplomacy_module = {}
 		standard_technology_module = {}
 		standard_trade_routes_module = {}
 		standard_pop_factions_module = {}
 		standard_expansion_module = {}
 		standard_species_rights_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = does_first_contact_sites
+			can_receive = {
+				action_improve_relation
+				action_build_spy_network
+				action_manage_spy_network
+				action_harm_relation
+				action_declare_war
+				action_offer_peace
+				action_offer_peace_diplomacy_view
+				action_make_claims_diplomacy_view
+				action_offer_trade_deal
+				action_cancel_trade_deal
+				action_make_rival
+				action_end_rivalry
+				action_form_defensive_pact
+				action_break_defensive_pact
+				action_form_non_aggression_pact
+				action_break_non_aggression_pact
+				action_form_commercial_pact
+				action_break_commercial_pact
+				action_form_research_agreement
+				action_break_research_agreement
+				action_guarantee_independence
+				action_break_guarantee
+				action_support_independence
+				action_break_support
+				action_form_migration_pact
+				action_break_migration_pact
+				action_offer_federation_association_status
+				action_revoke_federation_association_status
+				action_ask_for_federation_association_status
+				action_invite_to_federation
+				action_vote_for_federation_law
+				action_vote_for_federation_type
+				action_kick_from_federation
+				action_ask_to_join_federation
+				action_leave_federation
+				action_ask_to_leave_federation
+				# action_open_borders
+				# action_close_borders
+				action_demand_subjugation
+				action_ask_to_become_subjugated
+				action_release_subject
+				action_ask_to_be_released_subject
+				action_negotiate_existing_agreement
+				action_insult
+				action_integrate_subject
+				action_cancel_subject_integration
+				action_ask_to_join_galactic_empire
+				action_add_imperial_council_member
+				action_remove_imperial_council_member
+				action_embassy
+				action_recall_embassy
+				action_pledge_secret_fealty
+				action_propose_secret_fealty
+				action_break_secret_fealty
+				action_propose_to_break_secret_fealty
+				action_reveal_presence
+				action_societal_enlightenment
+				action_stop_societal_enlightenment
+				action_open_technological_enlightenment
+				action_stop_open_technological_enlightenment
+				action_pre_ftl_trade
+				action_stop_pre_ftl_trade
+				action_open_pre_ftl_homeworld
+			}
+			can_send = {
+				action_improve_relation
+				action_build_spy_network
+				action_manage_spy_network
+				action_harm_relation
+				action_declare_war
+				action_offer_peace
+				action_offer_peace_diplomacy_view
+				action_make_claims_diplomacy_view
+				action_offer_trade_deal
+				action_cancel_trade_deal
+				action_make_rival
+				action_end_rivalry
+				action_form_defensive_pact
+				action_break_defensive_pact
+				action_form_non_aggression_pact
+				action_break_non_aggression_pact
+				action_form_commercial_pact
+				action_break_commercial_pact
+				action_form_research_agreement
+				action_break_research_agreement
+				action_guarantee_independence
+				action_break_guarantee
+				action_support_independence
+				action_break_support
+				action_form_migration_pact
+				action_break_migration_pact
+				action_offer_federation_association_status
+				action_revoke_federation_association_status
+				action_ask_for_federation_association_status
+				action_invite_to_federation
+				action_vote_for_federation_law
+				action_vote_for_federation_type
+				action_kick_from_federation
+				action_ask_to_join_federation
+				action_leave_federation
+				action_ask_to_leave_federation
+				# action_open_borders
+				# action_close_borders
+				action_demand_subjugation
+				action_ask_to_become_subjugated
+				action_release_subject
+				action_ask_to_be_released_subject
+				action_negotiate_existing_agreement
+				action_insult
+				action_integrate_subject
+				action_cancel_subject_integration
+				action_ask_to_join_galactic_empire
+				action_add_imperial_council_member
+				action_remove_imperial_council_member
+				action_embassy
+				action_recall_embassy
+				action_pledge_secret_fealty
+				action_propose_secret_fealty
+				action_break_secret_fealty
+				action_propose_to_break_secret_fealty
+				action_reveal_presence
+				action_societal_enlightenment
+				action_stop_societal_enlightenment
+				action_open_technological_enlightenment
+				action_stop_open_technological_enlightenment
+				action_pre_ftl_trade
+				action_stop_pre_ftl_trade
+				action_open_pre_ftl_homeworld
+			}
+		}
 	}
 
 	resources = {
