@@ -134,7 +134,24 @@ save_rescources_effect = {
 	export_resource_stockpile_to_variable = { resource = society_research variable = stockpile_society_research }
 	export_resource_stockpile_to_variable = { resource = engineering_research variable = stockpile_engineering_research }
 }
-
+transfer_stockpile_data_effect = {
+	set_variable = { which = stockpile_energy value = root.stockpile_energy }
+	set_variable = { which = stockpile_minerals value = root.stockpile_minerals }
+	set_variable = { which = stockpile_food value = root.stockpile_food }
+	set_variable = { which = stockpile_alloys value = root.stockpile_alloys }
+	set_variable = { which = stockpile_consumer_goods value = root.stockpile_consumer_goods }
+	set_variable = { which = stockpile_influence value = root.stockpile_consumer_influence }
+	set_variable = { which = stockpile_exotic_gases value = root.stockpile_exotic_gases }
+	set_variable = { which = stockpile_rare_crystals value = root.stockpile_rare_crystals }
+	set_variable = { which = stockpile_volatile_motes value = root.stockpile_volatile_motes }
+	set_variable = { which = stockpile_sr_zro value = root.stockpile_sr_zro }
+	set_variable = { which = stockpile_sr_dark_matter value = root.stockpile_sr_dark_matter }
+	set_variable = { which = stockpile_sr_living_metal value = root.stockpile_sr_living_metal }
+	set_variable = { which = stockpile_unity value = root.stockpile_unity }
+	set_variable = { which = stockpile_physics_research value = root.stockpile_physics_research }
+	set_variable = { which = stockpile_society_research value = root.stockpile_society_research }
+	set_variable = { which = stockpile_engineering_research value = root.stockpile_engineering_research }
+}
 reinstate_rescources_effect = {
 	add_resource = {
 		energy = 1

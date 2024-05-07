@@ -198,3 +198,103 @@ country_event = {
 		name = OK
 	}
 }
+
+country_event = {
+	id = f93_nomadic_start.9
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	title = f93_nomadic_start.9.name
+	desc = f93_nomadic_start.9.desc
+	picture	= GFX_evt_ship_in_orbit
+	trigger = {
+		or = {
+			is_country_type = playable_nomads
+			is_country_type = playable_pirate_nomads
+		}
+	}
+	option = {
+		name = OK
+		hidden_effect = {
+			save_rescources_effect = yes
+			create_country = {
+				auto_delete = no
+				name = ROOT
+				adjective = ROOT
+				type = ROOT
+				name_list = ROOT
+				ship_prefix = ""
+				authority = ROOT
+				origin = ROOT
+				civics = root
+				species = ROOT
+				flag = root
+				ethos = ROOT
+				ignore_initial_colony_error = yes
+				effect = {
+					transfer_stockpile_data_effect = yes
+					reinstate_rescources_effect = yes
+					if = {
+						limit = { root = { is_galactic_community_member = yes } }
+						add_to_galactic_community_no_message = yes
+					}
+					if = {
+						limit = { ROOT = { is_part_of_galactic_council = yes } }
+						add_to_galactic_council = yes
+					}
+					steal_relic = { target = root relic = all }
+					give_technology = { tech = tech_nomatic_society message = no }
+					start_situation = { type = nomadic_recruitment_leaders target = ROOT }
+					start_situation = { type = nomadic_recruitment_troops target = ROOT }
+					#if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = ROOT } }
+				}
+			}
+
+			set_player = last_created_country
+
+			every_owned_fleet = {
+				set_owner = last_created_country
+			}
+			every_owned_leader = {
+				set_owner = last_created_country
+			}
+			every_owned_army = {
+				set_owner = last_created_country
+			}
+			# every_owned_pop = {
+			# 	set_owner = last_created_country
+			# }
+			# every_owned_design = {
+			# 	set_owner = last_created_country
+			# }
+			every_owned_megastructure = {
+				set_owner = last_created_country
+			}
+			every_owned_planet = {
+				set_owner = last_created_country
+			}
+			# every_owned_sector = {
+			# 	set_owner = last_created_country
+			# }
+			# every_owned_species = {
+			# 	set_owner = last_created_country
+			# }
+			every_owned_starbase = {
+				set_owner = last_created_country
+			}
+			every_owned_nonprimary_starbase = {
+				set_owner = last_created_country
+			}
+			every_country = {
+				limit = { has_communications = ROOT }
+				establish_communications_no_message = yes
+			}
+
+			destroy_country = yes
+		}
+
+	}
+
+	option = {
+		name = NO
+	}
+}

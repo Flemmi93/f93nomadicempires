@@ -26,6 +26,8 @@
  f93_nomadic_recruitment.2.a: "§V6 $assault_army_plural$"
  f93_nomadic_recruitment.2.b: "§L4 $robotic_army_plural$"
  f93_nomadic_recruitment.2.c: "§M3 $xenomorph_army_plural$"
+ f93_nomadic_start.9.name: "Save Recovery"
+ f93_nomadic_start.9.desc: "§RATTENTION§!$new_line$By hitting OK you are turned back into the default country type. This will fix your diplomacy and espionage and many other things but will make raiding less possible.$new_line$§GThis action is recommended§!$new_line$§RTHIS WILL KILL YOU, BUT YOU CAN CLICK CONTINUE AND JOIN IN TTHE EMPIRE WITH THE SAME NAME AND FLAG AS YOUR CURENT ONE TO CONTINUE PLAYING! (not in iran man i guess)§!"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
