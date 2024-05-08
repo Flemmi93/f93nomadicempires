@@ -1,0 +1,35 @@
+f93_leave_your_final_planet = {
+	owned_planets_only = yes
+	# icon = gfx
+	
+	enactment_time = 270
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1500
+		}
+	}
+
+	potential = {
+	}
+
+	allow = {
+		owner = {
+			count_system_within_border = {
+				count = 1
+				limit = {
+					any_system_planet = { is_colony = yes }
+				}
+			}
+			is_ai = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = f93_leave_your_final_planet_effect
+		hidden_effect = {
+			owner = { country_event = { id = f93_nomadic_start.10 } }
+		}
+	}
+}

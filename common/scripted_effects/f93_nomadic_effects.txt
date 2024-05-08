@@ -34,13 +34,13 @@ f93_create_nomad_country_effect = {
 	}
 }
 f93_is_thenomad_effect = {
-	event_target:homeworld = {
-		set_capital = yes
-	}
+	
+	set_custom_capital_location = root.capital_scope
+
 	give_technology = { tech = tech_nomatic_society message = no }
-	start_situation = { type = nomadic_recruitment_leaders target = ROOT }
-	start_situation = { type = nomadic_recruitment_troops target = ROOT }
-	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = ROOT } }
+	start_situation = { type = nomadic_recruitment_leaders target = this }
+	start_situation = { type = nomadic_recruitment_troops target = this }
+	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = this } }
 
 	f93_transfer_stockpile_data_from_root_effect = yes
 	f93_reinstate_resources_effect = yes
@@ -57,4 +57,111 @@ f93_is_thenomad_effect = {
 	add_ship_design = last_created_design
 
 	set_player = root
+}
+
+turn_empire_into_nomads_midgame = {
+	f93_set_income_stock_var_to_zero_effect = yes
+	f93_save_resources_effect = yes
+	create_country = {
+		auto_delete = no
+		name = ROOT
+		adjective = ROOT
+		type = ROOT
+		name_list = ROOT
+		ship_prefix = ""
+		authority = ROOT
+		origin = origin_nomadic_empire
+		civics = root
+		species = ROOT
+		flag = root
+		ethos = ROOT
+		ignore_initial_colony_error = yes
+		effect = {
+			establish_communications_no_message = root
+			f93_set_income_stock_var_to_zero_effect	=yes
+			f93_is_thenomad_effect = yes
+			if = {
+				limit = { root = { is_galactic_community_member = yes } }
+				add_to_galactic_community_no_message = yes
+			}
+			steal_relic = { target = root relic = all }
+			copy_techs_from = { target = root }
+		}
+	}
+	
+	last_created_country = { 
+		create_fleet = {
+			name = "Nomadic Construction Vessel"
+			effect = {
+				set_owner = last_created_country
+				set_location = root.capital_scope
+				create_ship = {
+					name = NAME_Nomadic_shipyard
+					design = NAME_Nomadic_shipyard
+				}
+			}
+		}
+	 }
+	every_owned_fleet = {
+		limit = {
+			NOR = {
+				is_ship_class = shipclass_starbase
+				is_ship_class = shipclass_mining_station
+				is_ship_class = shipclass_research_station
+				is_ship_class = shipclass_observation_station
+			}
+		}
+		set_owner = last_created_country
+	}
+	every_owned_fleet = {
+		limit = { is_ship_size = juggernaut }
+		last_created_country = {
+			create_fleet = {
+				name = "Nomadic Juggernaut"
+				effect = {
+					set_owner = last_created_country
+					set_location = prevprev
+					create_ship = {
+						name = random
+						random_existing_design = juggernaut
+					}
+				}
+			}
+		}
+		destroy_fleet = this
+	}
+	every_owned_leader = {
+		set_owner = last_created_country
+	}
+	every_owned_army = {
+		set_owner = last_created_country
+	}
+	# every_owned_pop = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_design = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_megastructure = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_planet = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_sector = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_species = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_starbase = {
+	# 	set_owner = last_created_country
+	# }
+	# every_owned_nonprimary_starbase = {
+	# 	set_owner = last_created_country
+	# }
+	every_country = {
+		limit = { has_communications = ROOT }
+		establish_communications_no_message = last_created_country
+	}
 }

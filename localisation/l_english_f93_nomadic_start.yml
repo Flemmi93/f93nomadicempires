@@ -55,6 +55,7 @@
  mod_country_base_engineering_research_produces_add: "$mod_country_engineering_research_produces_add$"
  mod_ships_alloys_upkeep_mult:0 "Ships £alloys£ alloys Upkeep"
  recently_created: "Not possible in the first 6 months"
+
 #Components
  f93_nomad_minerals_1: "Matter Converter 1"
  f93_nomad_minerals_1_DESC: "Matter Converter 1"
@@ -234,3 +235,8 @@
  wg_nomadic_pirate_defense: "$cb_nomadic_pirate_raid$ Defense"
  wg_nomadic_pirate_raid_accept: "§Y[from.GetName]§! will pay 20% of their £energy£ $energy$ stockpile to §Y[this.GetName]§!"
  wg_nomadic_pirate_defense_accept: "§Y[from.GetName]§! will pay 20% of their £energy£ $energy$ stockpile to §Y[this.GetName]§!"
+
+#Decisions
+ f93_leave_your_final_planet: "Escape into the Void"
+ f93_leave_your_final_planet_desc: "Everyone aboard a ship can count themself lucky."
+ f93_leave_your_final_planet_effect: "We will leave out planets behind and become a nomadic Empire.$NEW_LINE$§RWe will become Un-[Root.GetAdj].§!"
