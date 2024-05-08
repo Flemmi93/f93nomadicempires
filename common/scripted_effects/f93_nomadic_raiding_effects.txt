@@ -1,0 +1,24 @@
+#Pays a portion of an empires stockpile. based on a planets population
+f93_planet_raid_effect = {
+	event_target:nomadic_bombard_victim = {
+		hidden_effect = {
+			f93_save_resources_effect = yes
+			f93_get_rescouces_per_pop_effect = yes
+		}
+		#paying of Empires resources
+		while = {
+			count = event_target:Nomadic_bombardment.trigger:num_pops
+			f93_lose_resources_effect = yes
+		}
+	}
+	event_target:nomadic_bombarder = {
+		hidden_effect = {
+			f93_transfer_stockpile_data_from_et_Nomadic_bombardment_victim_effect = yes
+		}
+		#Payout of Victims Empire resources
+		while = {
+			count = event_target:Nomadic_bombardment.trigger:num_pops
+			f93_loot_resources_effect = yes
+		}
+	}
+}

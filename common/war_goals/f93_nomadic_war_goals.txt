@@ -89,7 +89,7 @@ wg_nomadic_pirate_raid = {
 		hidden_effect = {
 			FROM = { save_global_event_target_as = got_raided_pays }
 			THIS = { save_global_event_target_as = raided_gets_pay }
-			country_event = { id = f93_nomadic_raid.6 }
+			country_event = { id = f93_nomadic_raid.3 }
 		}
 		custom_tooltip = wg_nomadic_pirate_raid_accept
 	}
@@ -121,7 +121,7 @@ wg_nomadic_pirate_defense = {
 		hidden_effect = {
 			FROM = { save_global_event_target_as = got_raided_pays }
 			THIS = { save_global_event_target_as = raided_gets_pay }
-			country_event = { id = f93_nomadic_raid.6 }
+			country_event = { id = f93_nomadic_raid.3 }
 		}
 		custom_tooltip = wg_nomadic_pirate_defense_accept
 	}

@@ -1,0 +1,354 @@
+###############################
+# List of Stockpile Variables #
+###############################
+# stockpile_energy
+# stockpile_minerals
+# stockpile_food
+# stockpile_consumer_goods
+# stockpile_influence
+# stockpile_exotic_gases
+# stockpile_exotic_gases
+# stockpile_rare_crystals
+# stockpile_volatile_motes
+# stockpile_sr_zro
+# stockpile_sr_dark_matter
+# stockpile_sr_living_metal
+# stockpile_unity
+# stockpile_physics_research
+# stockpile_society_research
+# stockpile_engineering_research
+# If you mod ads more resources, they wont be plundered, unless you change all of this trash code. btw, thanks for using my mod in your mod. :)
+
+#Originally this was used to save the stockpiles when the country type would be switched to enable raiding. but that has changed, so now its used for raiding. 
+
+f93_set_income_stock_var_to_zero_effect = {
+	f93_set_stockpile_var_to_zero_effect = yes
+	f93_set_income_var_to_zero_effect = yes
+}
+f93_set_stockpile_var_to_zero_effect = {
+	set_variable = { which = stockpile_energy value = 0 }
+	set_variable = { which = stockpile_minerals value = 0 }
+	set_variable = { which = stockpile_food value = 0 }
+	set_variable = { which = stockpile_alloys value = 0 }
+	set_variable = { which = stockpile_consumer_goods value = 0 }
+	set_variable = { which = stockpile_influence value = 0 }
+	set_variable = { which = stockpile_exotic_gases value = 0 }
+	set_variable = { which = stockpile_rare_crystals value = 0 }
+	set_variable = { which = stockpile_volatile_motes value = 0 }
+	set_variable = { which = stockpile_sr_zro value = 0 }
+	set_variable = { which = stockpile_sr_dark_matter value = 0 }
+	set_variable = { which = stockpile_sr_living_metal value = 0 }
+	set_variable = { which = stockpile_unity value = 0 }
+	set_variable = { which = stockpile_physics_research value = 0 }
+	set_variable = { which = stockpile_society_research value = 0 }
+	set_variable = { which = stockpile_engineering_research value = 0 }
+}
+f93_set_income_var_to_zero_effect = {
+	set_variable = { which = income_energy value = 0 }
+	set_variable = { which = income_minerals value = 0 }
+	set_variable = { which = income_food value = 0 }
+	set_variable = { which = income_alloys value = 0 }
+	set_variable = { which = income_consumer_goods value = 0 }
+	set_variable = { which = income_influence value = 0 }
+	set_variable = { which = income_exotic_gases value = 0 }
+	set_variable = { which = income_rare_crystals value = 0 }
+	set_variable = { which = income_volatile_motes value = 0 }
+	set_variable = { which = income_sr_zro value = 0 }
+	set_variable = { which = income_sr_dark_matter value = 0 }
+	set_variable = { which = income_sr_living_metal value = 0 }
+	set_variable = { which = income_unity value = 0 }
+	set_variable = { which = income_physics_research value = 0 }
+	set_variable = { which = income_society_research value = 0 }
+	set_variable = { which = income_engineering_research value = 0 }
+}
+f93_save_resources_effect = {
+	export_resource_stockpile_to_variable = { resource = energy variable = stockpile_energy }
+	export_resource_stockpile_to_variable = { resource = minerals variable = stockpile_minerals }
+	export_resource_stockpile_to_variable = { resource = food variable = stockpile_food }
+	export_resource_stockpile_to_variable = { resource = alloys variable = stockpile_alloys }
+	export_resource_stockpile_to_variable = { resource = consumer_goods variable = stockpile_consumer_goods }
+	export_resource_stockpile_to_variable = { resource = influence variable = stockpile_influence }
+	export_resource_stockpile_to_variable = { resource = exotic_gases variable = stockpile_exotic_gases }
+	export_resource_stockpile_to_variable = { resource = rare_crystals variable = stockpile_rare_crystals }
+	export_resource_stockpile_to_variable = { resource = volatile_motes variable = stockpile_volatile_motes }
+	export_resource_stockpile_to_variable = { resource = sr_zro variable = stockpile_sr_zro }
+	export_resource_stockpile_to_variable = { resource = sr_dark_matter variable = stockpile_sr_dark_matter }
+	export_resource_stockpile_to_variable = { resource = sr_living_metal variable = stockpile_sr_living_metal }
+	export_resource_stockpile_to_variable = { resource = unity variable = stockpile_unity }
+	export_resource_stockpile_to_variable = { resource = physics_research variable = stockpile_physics_research }
+	export_resource_stockpile_to_variable = { resource = society_research variable = stockpile_society_research }
+	export_resource_stockpile_to_variable = { resource = engineering_research variable = stockpile_engineering_research }
+}
+
+f93_save_resources_income_effect = {
+	export_resource_income_to_variable = { resource = energy variable = income_energy }
+	export_resource_income_to_variable = { resource = minerals variable = income_minerals }
+	export_resource_income_to_variable = { resource = food variable = income_food }
+	export_resource_income_to_variable = { resource = alloys variable = income_alloys }
+	export_resource_income_to_variable = { resource = consumer_goods variable = income_consumer_goods }
+	export_resource_income_to_variable = { resource = influence variable = income_influence }
+	export_resource_income_to_variable = { resource = exotic_gases variable = income_exotic_gases }
+	export_resource_income_to_variable = { resource = rare_crystals variable = income_rare_crystals }
+	export_resource_income_to_variable = { resource = volatile_motes variable = income_volatile_motes }
+	export_resource_income_to_variable = { resource = sr_zro variable = income_sr_zro }
+	export_resource_income_to_variable = { resource = sr_dark_matter variable = income_sr_dark_matter }
+	export_resource_income_to_variable = { resource = sr_living_metal variable = income_sr_living_metal }
+	export_resource_income_to_variable = { resource = unity variable = income_unity }
+	export_resource_income_to_variable = { resource = physics_research variable = income_physics_research }
+	export_resource_income_to_variable = { resource = society_research variable = income_society_research }
+	export_resource_income_to_variable = { resource = engineering_research variable = income_engineering_research }
+}
+
+f93_transfer_stockpile_data_from_root_effect = {
+	set_variable = { which = stockpile_energy value = root.stockpile_energy }
+	set_variable = { which = stockpile_minerals value = root.stockpile_minerals }
+	set_variable = { which = stockpile_food value = root.stockpile_food }
+	set_variable = { which = stockpile_alloys value = root.stockpile_alloys }
+	set_variable = { which = stockpile_consumer_goods value = root.stockpile_consumer_goods }
+	set_variable = { which = stockpile_influence value = root.stockpile_influence }
+	set_variable = { which = stockpile_exotic_gases value = root.stockpile_exotic_gases }
+	set_variable = { which = stockpile_rare_crystals value = root.stockpile_rare_crystals }
+	set_variable = { which = stockpile_volatile_motes value = root.stockpile_volatile_motes }
+	set_variable = { which = stockpile_sr_zro value = root.stockpile_sr_zro }
+	set_variable = { which = stockpile_sr_dark_matter value = root.stockpile_sr_dark_matter }
+	set_variable = { which = stockpile_sr_living_metal value = root.stockpile_sr_living_metal }
+	set_variable = { which = stockpile_unity value = root.stockpile_unity }
+	set_variable = { which = stockpile_physics_research value = root.stockpile_physics_research }
+	set_variable = { which = stockpile_society_research value = root.stockpile_society_research }
+	set_variable = { which = stockpile_engineering_research value = root.stockpile_engineering_research }
+}
+
+f93_transfer_stockpile_data_from_et_Nomadic_bombardment_victim_effect = {
+	set_variable = { which = stockpile_energy value = event_target:nomadic_bombard_victim.stockpile_energy }
+	set_variable = { which = stockpile_minerals value = event_target:nomadic_bombard_victim.stockpile_minerals }
+	set_variable = { which = stockpile_food value = event_target:nomadic_bombard_victim.stockpile_food }
+	set_variable = { which = stockpile_alloys value = event_target:nomadic_bombard_victim.stockpile_alloys }
+	set_variable = { which = stockpile_consumer_goods value = event_target:nomadic_bombard_victim.stockpile_consumer_goods }
+	set_variable = { which = stockpile_influence value = event_target:nomadic_bombard_victim.stockpile_influence }
+	set_variable = { which = stockpile_exotic_gases value = event_target:nomadic_bombard_victim.stockpile_exotic_gases }
+	set_variable = { which = stockpile_rare_crystals value = event_target:nomadic_bombard_victim.stockpile_rare_crystals }
+	set_variable = { which = stockpile_volatile_motes value = event_target:nomadic_bombard_victim.stockpile_volatile_motes }
+	set_variable = { which = stockpile_sr_zro value = event_target:nomadic_bombard_victim.stockpile_sr_zro }
+	set_variable = { which = stockpile_sr_dark_matter value = event_target:nomadic_bombard_victim.stockpile_sr_dark_matter }
+	set_variable = { which = stockpile_sr_living_metal value = event_target:nomadic_bombard_victim.stockpile_sr_living_metal }
+	set_variable = { which = stockpile_unity value = event_target:nomadic_bombard_victim.stockpile_unity }
+	set_variable = { which = stockpile_physics_research value = event_target:nomadic_bombard_victim.stockpile_physics_research }
+	set_variable = { which = stockpile_society_research value = event_target:nomadic_bombard_victim.stockpile_society_research }
+	set_variable = { which = stockpile_engineering_research value = event_target:nomadic_bombard_victim.stockpile_engineering_research }
+}
+
+f93_transfer_income_data_from_root_effect = {
+	set_variable = { which = income_energy value = root.income_energy }
+	set_variable = { which = income_minerals value = root.income_minerals }
+	set_variable = { which = income_food value = root.income_food }
+	set_variable = { which = income_alloys value = root.income_alloys }
+	set_variable = { which = income_consumer_goods value = root.income_consumer_goods }
+	set_variable = { which = income_influence value = root.income_influence }
+	set_variable = { which = income_exotic_gases value = root.income_exotic_gases }
+	set_variable = { which = income_rare_crystals value = root.income_rare_crystals }
+	set_variable = { which = income_volatile_motes value = root.income_volatile_motes }
+	set_variable = { which = income_sr_zro value = root.income_sr_zro }
+	set_variable = { which = income_sr_dark_matter value = root.income_sr_dark_matter }
+	set_variable = { which = income_sr_living_metal value = root.income_sr_living_metal }
+	set_variable = { which = income_unity value = root.income_unity }
+	set_variable = { which = income_physics_research value = root.income_physics_research }
+	set_variable = { which = income_society_research value = root.income_society_research }
+	set_variable = { which = income_engineering_research value = root.income_engineering_research }
+}
+
+f93_transfer_income_data_from_et_Nomadic_bombardment_victim_effect = {
+	set_variable = { which = income_energy value = event_target:nomadic_bombard_victim.income_energy }
+	set_variable = { which = income_minerals value = event_target:nomadic_bombard_victim.income_minerals }
+	set_variable = { which = income_food value = event_target:nomadic_bombard_victim.income_food }
+	set_variable = { which = income_alloys value = event_target:nomadic_bombard_victim.income_alloys }
+	set_variable = { which = income_consumer_goods value = event_target:nomadic_bombard_victim.income_consumer_goods }
+	set_variable = { which = income_influence value = event_target:nomadic_bombard_victim.income_influence }
+	set_variable = { which = income_exotic_gases value = event_target:nomadic_bombard_victim.income_exotic_gases }
+	set_variable = { which = income_rare_crystals value = event_target:nomadic_bombard_victim.income_rare_crystals }
+	set_variable = { which = income_volatile_motes value = event_target:nomadic_bombard_victim.income_volatile_motes }
+	set_variable = { which = income_sr_zro value = event_target:nomadic_bombard_victim.income_sr_zro }
+	set_variable = { which = income_sr_dark_matter value = event_target:nomadic_bombard_victim.income_sr_dark_matter }
+	set_variable = { which = income_sr_living_metal value = event_target:nomadic_bombard_victim.income_sr_living_metal }
+	set_variable = { which = income_unity value = event_target:nomadic_bombard_victim.income_unity }
+	set_variable = { which = income_physics_research value = event_target:nomadic_bombard_victim.income_physics_research }
+	set_variable = { which = income_society_research value = event_target:nomadic_bombard_victim.income_society_research }
+	set_variable = { which = income_engineering_research value = event_target:nomadic_bombard_victim.income_engineering_research }
+}
+
+f93_transfer_income_data_to_stockpile_data_effect = {
+	set_variable = { which = income_energy value = stockpile_energy }
+	set_variable = { which = income_minerals value = stockpile_minerals }
+	set_variable = { which = income_food value = stockpile_food }
+	set_variable = { which = income_alloys value = stockpile_alloys }
+	set_variable = { which = income_consumer_goods value = stockpile_consumer_goods }
+	set_variable = { which = income_influence value = stockpile_influence }
+	set_variable = { which = income_exotic_gases value = stockpile_exotic_gases }
+	set_variable = { which = income_rare_crystals value = stockpile_rare_crystals }
+	set_variable = { which = income_volatile_motes value = stockpile_volatile_motes }
+	set_variable = { which = income_sr_zro value = stockpile_sr_zro }
+	set_variable = { which = income_sr_dark_matter value = stockpile_sr_dark_matter }
+	set_variable = { which = income_sr_living_metal value = stockpile_sr_living_metal }
+	set_variable = { which = income_unity value = stockpile_unity }
+	set_variable = { which = income_physics_research value = stockpile_physics_research }
+	set_variable = { which = income_society_research value = stockpile_society_research }
+	set_variable = { which = income_engineering_research value = stockpile_engineering_research }
+}
+
+f93_get_rescouces_per_pop_effect = {
+	divide_variable = { which = stockpile_energy value = trigger:num_pops }
+	divide_variable = { which = stockpile_minerals value = trigger:num_pops }
+	divide_variable = { which = stockpile_food value = trigger:num_pops }
+	divide_variable = { which = stockpile_consumer_goods value = trigger:num_pops }
+	divide_variable = { which = stockpile_influence value = trigger:num_pops }
+	divide_variable = { which = stockpile_exotic_gases value = trigger:num_pops }
+	divide_variable = { which = stockpile_exotic_gases value = trigger:num_pops }
+	divide_variable = { which = stockpile_rare_crystals value = trigger:num_pops }
+	divide_variable = { which = stockpile_volatile_motes value = trigger:num_pops }
+	divide_variable = { which = stockpile_sr_zro value = trigger:num_pops }
+	divide_variable = { which = stockpile_sr_dark_matter value = trigger:num_pops }
+	divide_variable = { which = stockpile_sr_living_metal value = trigger:num_pops }
+	divide_variable = { which = stockpile_unity value = trigger:num_pops }
+	divide_variable = { which = stockpile_physics_research value = trigger:num_pops }
+	divide_variable = { which = stockpile_society_research value = trigger:num_pops }
+	divide_variable = { which = stockpile_engineering_research value = trigger:num_pops }
+}
+
+f93_lose_resources_effect = {
+	add_resource = { energy = -0.25 mult = stockpile_energy }
+	add_resource = { minerals = -0.25 mult = stockpile_minerals }
+	add_resource = { food = -0.25 mult = stockpile_food }
+	add_resource = { alloys = -0.25 mult = stockpile_alloys }
+	add_resource = { consumer_goods = -0.25 mult = stockpile_consumer_goods }
+	add_resource = { influence = -0.25 mult = stockpile_influence }
+	add_resource = { exotic_gases = -0.25 mult = stockpile_exotic_gases }
+	add_resource = { rare_crystals = -0.25 mult = stockpile_rare_crystals }
+	add_resource = { volatile_motes = -0.25 mult = stockpile_volatile_motes }
+	add_resource = { sr_zro = -0.25 mult = stockpile_sr_zro }
+	add_resource = { sr_dark_matter = -0.25 mult = stockpile_sr_dark_matter }
+	add_resource = { sr_living_metal = -0.25 mult = stockpile_sr_living_metal }
+	add_resource = { unity = -0.25 mult = stockpile_unity }
+	add_resource = { physics_research = -0.25 mult = stockpile_physics_research }
+	add_resource = { society_research = -0.25 mult = stockpile_society_research }
+	add_resource = { engineering_research = -0.25 mult = stockpile_engineering_research }
+}
+
+
+f93_loot_resources_effect = {
+	add_resource = { energy = 0.25 mult = stockpile_energy }
+	add_resource = { minerals = 0.25 mult = stockpile_minerals }
+	add_resource = { food = 0.25 mult = stockpile_food }
+	add_resource = { alloys = 0.25 mult = stockpile_alloys }
+	add_resource = { consumer_goods = 0.25 mult = stockpile_consumer_goods }
+	add_resource = { influence = 0.25 mult = stockpile_influence }
+	add_resource = { exotic_gases = 0.25 mult = stockpile_exotic_gases }
+	add_resource = { rare_crystals = 0.25 mult = stockpile_rare_crystals }
+	add_resource = { volatile_motes = 0.25 mult = stockpile_volatile_motes }
+	add_resource = { sr_zro = 0.25 mult = stockpile_sr_zro }
+	add_resource = { sr_dark_matter = 0.25 mult = stockpile_sr_dark_matter }
+	add_resource = { sr_living_metal = 0.25 mult = stockpile_sr_living_metal }
+	add_resource = { unity = 0.25 mult = stockpile_unity }
+	add_resource = { physics_research = 0.25 mult = stockpile_physics_research }
+	add_resource = { society_research = 0.25 mult = stockpile_society_research }
+	add_resource = { engineering_research = 0.25 mult = stockpile_engineering_research }
+}
+
+f93_lose_all_resources_effect = {
+	add_resource = { energy = -1 mult = stockpile_energy }
+	add_resource = { minerals = -1 mult = stockpile_minerals }
+	add_resource = { food = -1 mult = stockpile_food }
+	add_resource = { alloys = -1 mult = stockpile_alloys }
+	add_resource = { consumer_goods = -1 mult = stockpile_consumer_goods }
+	add_resource = { influence = -1 mult = stockpile_influence }
+	add_resource = { exotic_gases = -1 mult = stockpile_exotic_gases }
+	add_resource = { rare_crystals = -1 mult = stockpile_rare_crystals }
+	add_resource = { volatile_motes = -1 mult = stockpile_volatile_motes }
+	add_resource = { sr_zro = -1 mult = stockpile_sr_zro }
+	add_resource = { sr_dark_matter = -1 mult = stockpile_sr_dark_matter }
+	add_resource = { sr_living_metal = -1 mult = stockpile_sr_living_metal }
+	add_resource = { unity = -1 mult = stockpile_unity }
+	add_resource = { physics_research = -1 mult = stockpile_physics_research }
+	add_resource = { society_research = -1 mult = stockpile_society_research }
+	add_resource = { engineering_research = -1 mult = stockpile_engineering_research }
+}
+
+f93_reinstate_resources_effect = {
+	add_resource = { energy = 1 mult = stockpile_energy }
+	add_resource = { minerals = 1 mult = stockpile_minerals }
+	add_resource = { food = 1 mult = stockpile_food }
+	add_resource = { alloys = 1 mult = stockpile_alloys }
+	add_resource = { consumer_goods = 1 mult = stockpile_consumer_goods }
+	add_resource = { influence = 1 mult = stockpile_influence }
+	add_resource = { exotic_gases = 1 mult = stockpile_exotic_gases }
+	add_resource = { rare_crystals = 1 mult = stockpile_rare_crystals }
+	add_resource = { volatile_motes = 1 mult = stockpile_volatile_motes }
+	add_resource = { sr_zro = 1 mult = stockpile_sr_zro }
+	add_resource = { sr_dark_matter = 1 mult = stockpile_sr_dark_matter }
+	add_resource = { sr_living_metal = 1 mult = stockpile_sr_living_metal }
+	add_resource = { unity = 1 mult = stockpile_unity }
+	add_resource = { physics_research = 1 mult = stockpile_physics_research }
+	add_resource = { society_research = 1 mult = stockpile_society_research }
+	add_resource = { engineering_research = 1 mult = stockpile_engineering_research }
+}
+
+f93_lose_income_effect = {
+	add_resource = { energy = -1 mult = income_energy }
+	add_resource = { minerals = -1 mult = income_minerals }
+	add_resource = { food = -1 mult = income_food }
+	add_resource = { alloys = -1 mult = income_alloys }
+	add_resource = { consumer_goods = -1 mult = income_consumer_goods }
+	add_resource = { influence = -1 mult = income_influence }
+	add_resource = { exotic_gases = -1 mult = income_exotic_gases }
+	add_resource = { rare_crystals = -1 mult = income_rare_crystals }
+	add_resource = { volatile_motes = -1 mult = income_volatile_motes }
+	add_resource = { sr_zro = -1 mult = income_sr_zro }
+	add_resource = { sr_dark_matter = -1 mult = income_sr_dark_matter }
+	add_resource = { sr_living_metal = -1 mult = income_sr_living_metal }
+	add_resource = { unity = -1 mult = income_unity }
+	add_resource = { physics_research = -1 mult = income_physics_research }
+	add_resource = { society_research = -1 mult = income_society_research }
+	add_resource = { engineering_research = -1 mult = income_engineering_research }
+}
+
+
+f93_gain_income_effect = {
+	add_resource = { energy = 1 mult = income_energy }
+	add_resource = { minerals = 1 mult = income_minerals }
+	add_resource = { food = 1 mult = income_food }
+	add_resource = { alloys = 1 mult = income_alloys }
+	add_resource = { consumer_goods = 1 mult = income_consumer_goods }
+	add_resource = { influence = 1 mult = income_influence }
+	add_resource = { exotic_gases = 1 mult = income_exotic_gases }
+	add_resource = { rare_crystals = 1 mult = income_rare_crystals }
+	add_resource = { volatile_motes = 1 mult = income_volatile_motes }
+	add_resource = { sr_zro = 1 mult = income_sr_zro }
+	add_resource = { sr_dark_matter = 1 mult = income_sr_dark_matter }
+	add_resource = { sr_living_metal = 1 mult = income_sr_living_metal }
+	add_resource = { unity = 1 mult = income_unity }
+	add_resource = { physics_research = 1 mult = income_physics_research }
+	add_resource = { society_research = 1 mult = income_society_research }
+	add_resource = { engineering_research = 1 mult = income_engineering_research }
+}
+
+f93_pays_reparation_effect = {
+	if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly1 } } add_modifier = { modifier = MOD_energy_payout_monthly1 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly3 } } add_modifier = { modifier = MOD_energy_payout_monthly3 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly4 } } add_modifier = { modifier = MOD_energy_payout_monthly4 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly5 } } add_modifier = { modifier = MOD_energy_payout_monthly5 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly6 } } add_modifier = { modifier = MOD_energy_payout_monthly6 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly7 } } add_modifier = { modifier = MOD_energy_payout_monthly7 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly8 } } add_modifier = { modifier = MOD_energy_payout_monthly8 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly9 } } add_modifier = { modifier = MOD_energy_payout_monthly9 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_payout_monthly10 } } add_modifier = { modifier = MOD_energy_payout_monthly10 days = 3600 } }
+}
+
+f93_gets_reparation_effect = {
+	if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly1 } } add_modifier = { modifier = MOD_energy_receive_monthly1 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly3 } } add_modifier = { modifier = MOD_energy_receive_monthly3 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly4 } } add_modifier = { modifier = MOD_energy_receive_monthly4 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly5 } } add_modifier = { modifier = MOD_energy_receive_monthly5 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly6 } } add_modifier = { modifier = MOD_energy_receive_monthly6 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly7 } } add_modifier = { modifier = MOD_energy_receive_monthly7 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly8 } } add_modifier = { modifier = MOD_energy_receive_monthly8 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly9 } } add_modifier = { modifier = MOD_energy_receive_monthly9 days = 3600 } }
+	else_if = { limit = { NOT = { has_modifier = MOD_energy_receive_monthly10 } } add_modifier = { modifier = MOD_energy_receive_monthly10 days = 3600 } }
+}

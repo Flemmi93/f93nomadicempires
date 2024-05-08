@@ -137,9 +137,9 @@ country_event = {
 	immediate = {
 		if = {
 			limit = { is_country_type = playable_pirate_nomads }
-			f93_save_rescources_effect = yes
+			f93_save_resources_effect = yes
 			set_country_type = playable_nomads
-			f93_reinstate_rescources_effect = yes
+			f93_reinstate_resources_effect = yes
 		}
 		if = {
 			limit = { is_country_type = default }
@@ -162,9 +162,9 @@ country_event = {
 	immediate = {
 		if = {
 			limit = { is_country_type = playable_nomads }
-			f93_save_rescources_effect = yes
+			f93_save_resources_effect = yes
 			set_country_type = playable_pirate_nomads
-			f93_reinstate_rescources_effect = yes
+			f93_reinstate_resources_effect = yes
 		}
 		if = {
 			limit = { is_country_type = default }
@@ -215,7 +215,7 @@ country_event = {
 	option = {
 		name = OK
 		hidden_effect = {
-			f93_save_rescources_effect = yes
+			f93_save_resources_effect = yes
 			create_country = {
 				auto_delete = no
 				name = ROOT
@@ -231,8 +231,8 @@ country_event = {
 				ethos = ROOT
 				ignore_initial_colony_error = yes
 				effect = {
-					f93_transfer_stockpile_data_effect = yes
-					f93_reinstate_rescources_effect = yes
+					f93_transfer_stockpile_data_from_root_effect = yes
+					f93_reinstate_resources_effect = yes
 					if = {
 						limit = { root = { is_galactic_community_member = yes } }
 						add_to_galactic_community_no_message = yes

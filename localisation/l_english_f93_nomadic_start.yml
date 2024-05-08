@@ -15,6 +15,7 @@
  f93_nomadic_raid.2.name: "Raid conducted on §Y[event_target:Nomadic_bombardment.GetName]§!"
  f93_nomadic_raid.2.desc: "Our raiders on §Y[event_target:Nomadic_bombardment.GetName]§! have returned to §Y[event_target:Nomadic_bombardment.GetName]§! and brought some goodies."
  f93_nomadic_raid.2.a: "What have we here"
+ f93_nomadic_raid.2.a.desc: "We Plundered a number of Resources"
  f93_nomadic_recruitment.1.name: "New Officer Recruits"
  f93_nomadic_recruitment.1.desc: "A handful of men seem up to the task.$NEW_LINE$Who shall fill the vacant stop?"
  f93_nomadic_recruitment.1.a: "§R$default_commander$"
@@ -44,7 +45,7 @@
  origin_nomadic_empire: "Nomadic Empire"
  origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, its only to gather some very needed components for their homefleet."
  civic_nomadic_pirate: "A Pirate's Life"
- civic_nomadic_pirate_desc: "These people decided to nolonger play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
+ civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -165,7 +166,7 @@
  nomadic_recruitment_troops_monthly_change_tooltip: "Training progress"
  nomadic_recruitment_troops_desc: "$situation_nomadic_balanced_desc$"
  begin_nomadic_raid_on_territory: "Start raiding"
- begin_nomadic_raid_on_territory_desc: "Wherever out Ships are right now, They will set out to attack. So lets make sure we will win."
+ begin_nomadic_raid_on_territory_desc: "Wherever our Ships are right now, They will set out to attack. So lets make sure we will win."
  begin_nomadic_raid_on_territory_type: "Start raiding"
  begin_nomadic_raid_on_territory_monthly_change_tooltip: "Charging Weapons"
  end_nomadic_raid_on_territory: "Stop raiding"
@@ -222,8 +223,8 @@
  MOD_energy_receive_monthly10: "Get Reparations"
 
 #CB & Wargoals
- cb_nomadic_pirate_raid: "$cb_pirate_raid$"
- casus_belli_cb_nomadic_pirate_raid: "$cb_pirate_raid$"
+ cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
+ casus_belli_cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
  wg_nomadic_pirate_raid: "$cb_nomadic_pirate_raid$"
  war_goal_wg_nomadic_pirate_raid: "$cb_nomadic_pirate_raid$"
  war_goal_wg_nomadic_pirate_raid_desc: "$war_goal_wg_plunder_desc$"
