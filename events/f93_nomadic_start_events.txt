@@ -31,9 +31,11 @@ country_event = {
 		name = f93_nomadic_start.1.c
 		hidden_effect = {
 			f93_create_nomad_country_effect = yes
-			add_resource = { unity = 500 }
-			country_event = { id = f93_nomadic_start.8 }
-			set_government_cooldown = 0
+			last_created_country = {
+				add_resource = { unity = 500 }
+				country_event = { id = f93_nomadic_start.8 }
+				set_government_cooldown = 0
+			}
 		}
 	}
 }
