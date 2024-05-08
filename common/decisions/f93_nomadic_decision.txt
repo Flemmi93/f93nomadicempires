@@ -7,11 +7,12 @@ f93_leave_your_final_planet = {
 	resources = {
 		category = decisions
 		cost = {
-			alloys = 1500
+			alloys = 847
 		}
 	}
 
 	potential = {
+		owner = { NOT = { has_origin = origin_nomadic_empire } }
 	}
 
 	allow = {

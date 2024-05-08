@@ -239,4 +239,4 @@
 #Decisions
  f93_leave_your_final_planet: "Escape into the Void"
  f93_leave_your_final_planet_desc: "Everyone aboard a ship can count themself lucky."
- f93_leave_your_final_planet_effect: "We will leave out planets behind and become a nomadic Empire.$NEW_LINE$§RWe will become Un-[Root.GetAdj].§!"
+ f93_leave_your_final_planet_effect: "Custruct a Nomadic $NAME_Nomadic_shipyard$ Vessel and leave all planets behind.$NEW_LINE$Gain the §Y$origin_nomadic_empire$ Civic§!.$NEW_LINE$$NEW_LINE$§RWe will become Un-[Root.GetAdj].§!"
