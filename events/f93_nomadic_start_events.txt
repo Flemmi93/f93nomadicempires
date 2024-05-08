@@ -81,6 +81,44 @@ country_event = {
 				set_owner = event_target:homeworld_leavers
 				set_location = event_target:homeworld
 				create_ship = {
+					name = random
+					random_existing_design = constructor
+				}
+			}
+		}
+				
+		create_fleet = {
+			name = "Nomadic Fleet"
+			effect = {
+				set_owner = event_target:homeworld_leavers
+				set_location = event_target:homeworld
+				create_ship = {
+					name = random
+					random_existing_design = science
+				}
+			}
+		}
+			
+		create_fleet = {
+			name = "Combat Fleet"
+			effect = {
+				set_owner = event_target:homeworld_leavers
+				set_location = event_target:homeworld
+				while = {
+					count = 8
+					create_ship = {
+						name = random
+						random_existing_design = corvette
+					}
+				}
+			}
+		}
+		create_fleet = {
+			name = "Nomadic Fleet"
+			effect = {
+				set_owner = event_target:homeworld_leavers
+				set_location = event_target:homeworld
+				create_ship = {
 					name = NAME_Nomadic_freighter_mins
 					design = NAME_Nomadic_freighter_mins
 				}

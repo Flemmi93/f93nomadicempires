@@ -2,73 +2,49 @@
 # ROOT = old country
 # Last_created_country = nomadic country
 f93_create_nomad_country_effect = {
-	capital_scope = {
+	f93_save_resources_effect = yes
+	capital_scope = {	
 		save_global_event_target_as = homeworld
-		create_country = {
-			auto_delete = no
-			name = ROOT
-			adjective = ROOT
-			type = ROOT
-			name_list = ROOT
-			ship_prefix = ""
-			authority = ROOT
-			origin = origin_nomadic_empire
-			civics = root
-			species = ROOT
-			flag = root
-			ethos = ROOT
-			ignore_initial_colony_error = yes
-			effect = {
-				establish_communications_no_message = root
-				save_global_event_target_as = homeworld_leavers
-				f93_is_thenomad_effect = yes
-				country_event = { id = f93_nomadic_start.3 }
-				country_event = { id = game_start.8 }
-				country_event = { id = game_start.9 }
-				country_event = { id = game_start.60 }
-				country_event = { id = game_start.70 }
-				country_event = { id = game_start.72 }
-				country_event = { id = country.900 days = 460 random = 60 }
-			}
-		}
-		
 	}
-	destroy_country = yes
-	# every_owned_fleet = {
-		# 	limit = {
-		# 		OR = {
-		# 			is_ship_class = shipclass_starbase 
-		# 			is_ship_class = shipclass_mining_station
-		# 			is_ship_class = shipclass_research_station
-		# 		}
-		# 	}
-		# 	set_owner = last_created_country
-		# }
-	# capital_scope = {
-	# 	destroy_colony = yes
-	# }
+	create_country = {
+		auto_delete = no
+		name = ROOT
+		adjective = ROOT
+		type = ROOT
+		name_list = ROOT
+		ship_prefix = ""
+		authority = ROOT
+		origin = origin_nomadic_empire
+		civics = root
+		species = ROOT
+		flag = root
+		ethos = ROOT
+		ignore_initial_colony_error = yes
+		effect = {
+			establish_communications_no_message = root
+			save_global_event_target_as = homeworld_leavers
+			f93_is_thenomad_effect = yes
+			country_event = { id = f93_nomadic_start.3 }
+			country_event = { id = game_start.8 }
+			country_event = { id = game_start.60 }
+			country_event = { id = game_start.70 }
+			country_event = { id = game_start.72 }
+			country_event = { id = country.900 days = 460 random = 60 }
+		}
+	}
 }
 f93_is_thenomad_effect = {
+	event_target:homeworld = {
+		set_capital = yes
+	}
 	give_technology = { tech = tech_nomatic_society message = no }
 	start_situation = { type = nomadic_recruitment_leaders target = ROOT }
 	start_situation = { type = nomadic_recruitment_troops target = ROOT }
 	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = ROOT } }
-	add_resource = {
-		energy = 150
-		minerals = 300
-		alloys = 150
-		unity = 50
-	}
-	if = { limit = { is_machine_empire = no }
-		add_resource = {
-			food = 150
-		}
-	}
-	if = { limit = { is_machine_empire = yes }
-		add_resource = {
-			energy = 150
-		}
-	}
+
+	f93_transfer_stockpile_data_from_root_effect = yes
+	f93_reinstate_resources_effect = yes
+
 	create_ship_design = { design = NAME_Nomadic_shipyard }
 	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_mins }
@@ -81,38 +57,4 @@ f93_is_thenomad_effect = {
 	add_ship_design = last_created_design
 
 	set_player = root
-	capital_scope = {
-		destroy_colony = yes
-		create_country = {
-			name = ROOT
-			adjective = ROOT
-			type = default
-			name_list = ROOT
-			ship_prefix = ""
-			authority = ROOT
-			origin = origin_default
-			civics = random
-			species = ROOT
-			flag = random
-			ethos = ROOT
-			effect = {
-				establish_communications_no_message = event_target:homeworld_leavers
-				capital_scope = {
-					while = {
-						count = 28
-						create_pop = {
-							species = root
-						}
-					}
-				}
-							
-				country_event = { id = game_start.8 }
-				country_event = { id = game_start.9 }
-				country_event = { id = game_start.60 }
-				country_event = { id = game_start.70 }
-				country_event = { id = game_start.72 }
-			}
-		}
-	}
-	
 }
