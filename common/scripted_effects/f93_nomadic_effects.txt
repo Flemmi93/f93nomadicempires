@@ -1,7 +1,7 @@
 #Effect to create a nomad Empire.
 # ROOT = old country
 # Last_created_country = nomadic country
-create_nomad_country_effect = {
+f93_create_nomad_country_effect = {
 	capital_scope = {
 		save_global_event_target_as = homeworld
 		create_country = {
@@ -21,7 +21,7 @@ create_nomad_country_effect = {
 			effect = {
 				establish_communications_no_message = root
 				save_global_event_target_as = homeworld_leavers
-				is_thenomad_effect = yes
+				f93_is_thenomad_effect = yes
 				country_event = { id = f93_nomadic_start.3 }
 				country_event = { id = game_start.8 }
 				country_event = { id = game_start.9 }
@@ -48,7 +48,7 @@ create_nomad_country_effect = {
 	# 	destroy_colony = yes
 	# }
 }
-is_thenomad_effect = {
+f93_is_thenomad_effect = {
 	give_technology = { tech = tech_nomatic_society message = no }
 	start_situation = { type = nomadic_recruitment_leaders target = ROOT }
 	start_situation = { type = nomadic_recruitment_troops target = ROOT }
@@ -116,7 +116,7 @@ is_thenomad_effect = {
 	}
 	
 }
-save_rescources_effect = {
+f93_save_rescources_effect = {
 	export_resource_stockpile_to_variable = { resource = energy variable = stockpile_energy }
 	export_resource_stockpile_to_variable = { resource = minerals variable = stockpile_minerals }
 	export_resource_stockpile_to_variable = { resource = food variable = stockpile_food }
@@ -134,7 +134,7 @@ save_rescources_effect = {
 	export_resource_stockpile_to_variable = { resource = society_research variable = stockpile_society_research }
 	export_resource_stockpile_to_variable = { resource = engineering_research variable = stockpile_engineering_research }
 }
-transfer_stockpile_data_effect = {
+f93_transfer_stockpile_data_effect = {
 	set_variable = { which = stockpile_energy value = root.stockpile_energy }
 	set_variable = { which = stockpile_minerals value = root.stockpile_minerals }
 	set_variable = { which = stockpile_food value = root.stockpile_food }
@@ -152,7 +152,7 @@ transfer_stockpile_data_effect = {
 	set_variable = { which = stockpile_society_research value = root.stockpile_society_research }
 	set_variable = { which = stockpile_engineering_research value = root.stockpile_engineering_research }
 }
-reinstate_rescources_effect = {
+f93_reinstate_rescources_effect = {
 	add_resource = {
 		energy = 1
 		mult = stockpile_energy
@@ -216,5 +216,137 @@ reinstate_rescources_effect = {
 	add_resource = {
 		engineering_research = 1
 		mult = stockpile_engineering_research
+	}
+}
+
+f93_pays_reparation_effect = {
+	if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly1 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly1
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly3 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly3
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly4 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly4
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly5 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly5
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly6 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly6
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly7 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly7
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly8 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly8
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly9 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly9
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_payout_monthly10 } }
+		add_modifier = {
+			modifier = MOD_energy_payout_monthly10
+			days = 3600
+		}
+	}
+}
+
+f93_gets_reparation_effect = {
+	if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly1 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly1
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly3 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly3
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly4 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly4
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly5 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly5
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly6 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly6
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly7 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly7
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly8 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly8
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly9 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly9
+			days = 3600
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_modifier = MOD_energy_receive_monthly10 } }
+		add_modifier = {
+			modifier = MOD_energy_receive_monthly10
+			days = 3600
+		}
 	}
 }

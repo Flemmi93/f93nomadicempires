@@ -148,7 +148,26 @@ country_event = {
 		}
 	}
 }
-
+country_event = {
+	id = f93_nomadic_raid.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:got_raided_pays = {
+			export_resource_stockpile_to_variable = { resource = energy variable = energy_payout }
+			divide_variable = { which = energy_payout value = 5 }
+			add_resource = { energy = -1 mult = energy_payout }
+			f93_pays_reparation_effect = yes
+		}
+		event_target:raided_gets_pay = {
+			set_variable = { which = energy_payout value = event_target:got_raided_pays.energy_payout }
+			add_resource = { energy = 1 mult = energy_payout }
+			f93_gets_reparation_effect = yes
+		}
+		clear_global_event_target = got_raided_pays
+		clear_global_event_target = got_raided_pays
+	}
+}
 planet_event = {
 	id = f93_nomadic_raid.5
 	is_triggered_only = yes

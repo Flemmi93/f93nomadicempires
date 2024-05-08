@@ -169,8 +169,21 @@ spriteTypes = {
 		name = "GFX_ship_part_living_metal"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_living_metal.dds"
 	}
+
 	spriteType = {
 		name = "GFX_ship_part_shipyard"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_shipyard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_wg_nomadic_pirate_defense"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_wg_nomadic_pirate_raid"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
 	}
 }

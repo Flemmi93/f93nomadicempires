@@ -38,3 +38,63 @@ unity_deficit_nomadic = {
 influence_deficit_nomadic = {
 	
 }
+MOD_energy_payout_monthly1 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly2 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly3 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly4 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly5 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly6 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly7 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly8 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly9 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_payout_monthly10 = {
+	country_energy_produces_mult = -0.1
+}
+MOD_energy_receive_monthly1 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly2 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly3 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly4 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly5 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly6 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly7 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly8 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly9 = {
+	country_energy_produces_mult = 0.1
+}
+MOD_energy_receive_monthly10 = {
+	country_energy_produces_mult = 0.1
+}
