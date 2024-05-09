@@ -22,3 +22,27 @@ f93_planet_raid_effect = {
 		}
 	}
 }
+
+f93_raid_mining_station_effect = {
+	event_target:nomadic_system_raider = {
+		reroll_random = yes
+		random_list = {
+			25 = { add_resource = { minerals = 75 } }
+			25 = { add_resource = { energy = 75 } }
+			25 = { add_resource = { alloys = 25 } }
+		}
+	}
+	destroy_fleet = this
+}
+
+f93_raid_research_station_effect = {
+	event_target:nomadic_system_raider = {
+		reroll_random = yes
+		random_list = {
+			33 = { add_resource = { physics_research = 500 } }
+			33 = { add_resource = { engineering_research = 500 } }
+			33 = { add_resource = { society_research = 500 } }
+		}
+	}
+	destroy_fleet = this
+}

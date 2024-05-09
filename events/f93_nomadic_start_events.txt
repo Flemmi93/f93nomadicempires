@@ -123,8 +123,8 @@ country_event = {
 					design = NAME_Nomadic_freighter_mins
 				}
 				create_ship = {
-					name = NAME_Nomadic_freighter_gen
-					design = NAME_Nomadic_freighter_gen
+					name = NAME_Nomadic_freighter_mins
+					design = NAME_Nomadic_freighter_mins
 				}
 				create_ship = {
 					name = NAME_Nomadic_freighter_gen

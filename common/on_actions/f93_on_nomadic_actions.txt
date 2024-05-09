@@ -6,12 +6,23 @@ on_game_start_country = {
 	}
 }
 
-# This = station
-# From = planet/astral_rift it was built on
-on_destroying_station = {
+# This = starbase being disabled (not ship!)
+# From = fleet that disabled the starbase
+on_starbase_disabled = {
 	events = {
+		# f93_nomadic_raid.4
 	}
 }
+
+# Pop is abducted by raiding stance
+# This = Pop scope
+# From = planet abducted from
+on_pop_abducted = {
+	events = {
+		# f93_nomadic_raid.5
+	}
+}
+
 
 # Planet has taken damage from orbital bombardment - Damage is applied daily
 # This = Planet
@@ -49,4 +60,16 @@ on_post_government_changed = {
 	events = {
 		f93_nomadic_start.6
 	}
+}
+
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		f93_nomadic_raid.4
+	}
+	
 }

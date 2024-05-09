@@ -24,9 +24,9 @@
 @pro_minerals1 = 5
 @pro_minerals2 = 10
 @pro_minerals3 = 20
-@pro_energy1 = 50
-@pro_energy2 = 100
-@pro_energy3 = 200
+@pro_energy1 = 35
+@pro_energy2 = 75
+@pro_energy3 = 150
 @pro_alloys1 = 8
 @pro_alloys2 = 24
 @pro_alloys3 = 64

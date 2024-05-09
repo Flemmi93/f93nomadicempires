@@ -1,5 +1,6 @@
 namespace = f93_nomadic_raid
 
+# when from is used its because event_target behaves oddly
 # from = event_target:Nomadic_bombardment
 # root = event_target:nomadic_bombarder
 country_event = {
@@ -14,13 +15,14 @@ country_event = {
 		event_target:nomadic_bombard_victim = { f93_set_income_stock_var_to_zero_effect = yes }
 		event_target:nomadic_bombarder = { f93_set_income_stock_var_to_zero_effect = yes }
 		event_target:Nomadic_bombardment = { f93_set_income_stock_var_to_zero_effect = yes }
+		set_variable = { which = Nomadic_bombardment_num_pops value = event_target:Nomadic_bombardment.trigger:num_pops } 
 	}
 
 	option = {
 		name = f93_nomadic_raid.2.a
-		# custom_tooltip = f93_nomadic_raid.2.a.desc
+		custom_tooltip = f93_nomadic_raid.2.a.desc
 		#Resource Raid
-		f93_planet_raid_effect = yes
+		hidden_effect  = { f93_planet_raid_effect = yes }
 		#Research Raid
 		if = {
 			limit = {
@@ -66,6 +68,7 @@ planet_event = {
 
 	}
 	immediate = {
+		add_planet_devastation = 10
 		fromfrom = { save_global_event_target_as = nomadic_bombarder }
 		from = { save_global_event_target_as = nomadic_bombard_victim }
 		save_global_event_target_as = Nomadic_bombardment
@@ -101,5 +104,143 @@ country_event = {
 		}
 		clear_global_event_target = raided_gets_pay
 		clear_global_event_target = got_raided_pays
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+country_event = {
+	id = f93_nomadic_raid.4
+	is_triggered_only = yes
+	# hide_window = yes
+	title = f93_nomadic_raid.4.name
+	desc = f93_nomadic_raid.4.desc
+	picture = GFX_evt_space_debris
+	show_sound = event_ship_explosion
+	
+	trigger = {
+		has_civic = civic_nomadic_pirate
+		FromFromFrom = {
+			is_ship_class = shipclass_starbase
+		}
+		NOT = { From = { is_at_war_with = root } }
+		NOT = { root = { is_at_war_with = from } }
+	}
+
+	immediate = {
+		save_global_event_target_as = nomadic_system_raider
+		fromfrom.solar_system = {
+			set_timed_star_flag = {
+				flag = station_recently_raided
+				days = 480
+			}
+			system_event = { id = f93_nomadic_raid.6 }
+		}
+	}
+
+	option = {
+		name = f93_nomadic_raid.2.a
+		fromfrom.solar_system = {
+			custom_tooltip =  f93_nomadic_raid.4.a_desc
+			hidden_effect = {
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = from
+						is_ship_class = shipclass_mining_station
+					}
+					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
+
+				}
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = from
+						is_ship_class = shipclass_research_station
+					}
+					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
+				}
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = from
+						is_ship_class = shipclass_observation_station
+					}
+					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
+				}
+			}
+		}
+	}
+}
+
+# # Pop is abducted by raiding stance
+# # This = Pop scope
+# # From = planet abducted from
+# planet_event = {
+# 	id = f93_nomadic_raid.5
+# 	is_triggered_only = yes
+# 	title = f93_nomadic_raid.5.name
+# 	desc = f93_nomadic_raid.5.desc
+# 	picture = GFX_evt_space_debris
+# 	show_sound = event_ship_explosion
+
+# 	trigger = {
+# 		from = {
+# 			any_fleet_in_orbit = {
+# 				owner = {
+# 					is_hostile = root.owner
+# 					has_civic = civic_nomadic_pirate
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+
+# 	}
+
+# 	option = {
+
+# 	}
+# }
+
+system_event = {
+	id = f93_nomadic_raid.6
+	is_triggered_only = yes
+	title = f93_nomadic_raid.6.name
+	desc = f93_nomadic_raid.6.desc
+	picture = GFX_evt_space_debris
+	show_sound = event_ship_explosion
+
+	trigger = { owner = { NOT = { has_country_flag = station_recently_raided } } }
+
+	option = {
+		name = CURSES
+	}
+}
+fleet_event = {
+	id = f93_nomadic_raid.7
+	is_triggered_only = yes
+	hide_window	= yes
+	show_sound = event_ship_explosion
+
+	immediate = {
+		if = {
+			limit = {
+				is_ship_class = shipclass_research_station
+			}
+			f93_raid_research_station_effect = yes
+		}
+		if = {
+			limit = {
+				is_ship_class = shipclass_mining_station
+			}
+			f93_raid_mining_station_effect = yes
+		}
+		if = {
+			limit = {
+				is_ship_class = shipclass_observation_station
+			}
+			f93_raid_research_station_effect = yes
+		}
 	}
 }

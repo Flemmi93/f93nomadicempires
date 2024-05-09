@@ -15,7 +15,7 @@
  f93_nomadic_raid.2.name: "Raid conducted on §Y[event_target:Nomadic_bombardment.GetName]§!"
  f93_nomadic_raid.2.desc: "Our raiders on §Y[event_target:Nomadic_bombardment.GetName]§! have returned to §Y[event_target:Nomadic_bombardment.GetName]§! and brought some goodies."
  f93_nomadic_raid.2.a: "What have we here"
- f93_nomadic_raid.2.a.desc: "We Plundered a number of Resources"
+ f93_nomadic_raid.2.a.desc: "§GGain Resources based on §Y[from.GetName]'s§G £pops£ Population§!$NEW_LINE$"
  f93_nomadic_recruitment.1.name: "New Officer Recruits"
  f93_nomadic_recruitment.1.desc: "A handful of men seem up to the task.$NEW_LINE$Who shall fill the vacant stop?"
  f93_nomadic_recruitment.1.a: "§R$default_commander$"
@@ -29,6 +29,11 @@
  f93_nomadic_recruitment.2.c: "§M3 $xenomorph_army_plural$"
  f93_nomadic_start.9.name: "Save Recovery"
  f93_nomadic_start.9.desc: "§RATTENTION§!$new_line$By hitting OK you are turned back into the default country type. This will fix your diplomacy and espionage and many other things but will make raiding less possible.$new_line$§GThis action is recommended§!$new_line$§RTHIS WILL KILL YOU, BUT YOU CAN CLICK CONTINUE AND JOIN IN TTHE EMPIRE WITH THE SAME NAME AND FLAG AS YOUR CURENT ONE TO CONTINUE PLAYING! (not in iran man i guess)§!"
+ f93_nomadic_raid.4.name: "[FromFromFrom.solar_system.GetName] System Plundered"
+ f93_nomadic_raid.4.desc: "We craacked the Space Station of the §Y[FromFromFrom.solar_system.GetName] System§! and can now plunder the outlying mining and research stations"
+ f93_nomadic_raid.4.a_desc: "We will Plunder the now unprotected Stations in this system."
+ f93_nomadic_raid.6.name: "Pirate raid in [root.GetName]"
+ f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§! "
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
