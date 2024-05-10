@@ -32,6 +32,11 @@ f93_create_nomad_country_effect = {
 			country_event = { id = country.900 days = 460 random = 60 }
 		}
 	}
+	set_closed_borders = {
+		who = last_created_country
+		status = no
+		forced = 999
+	}
 }
 f93_is_thenomad_effect = {
 	

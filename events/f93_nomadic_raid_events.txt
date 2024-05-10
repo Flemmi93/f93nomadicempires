@@ -125,8 +125,16 @@ country_event = {
 		FromFromFrom = {
 			is_ship_class = shipclass_starbase
 		}
-		NOT = { From = { is_at_war_with = root } }
-		NOT = { root = { is_at_war_with = from } }
+		or = {
+			and = {
+				NOT = { From = { is_at_war_with = root } }
+				NOT = { root = { is_at_war_with = from } }
+			}
+			any_war = {
+				using_war_goal = { type  = wg_nomadic_pirate_raid owner = fromfrom }
+				any_defender = { is_country = FromFromFrom }
+			}
+		}
 	}
 
 	immediate = {
