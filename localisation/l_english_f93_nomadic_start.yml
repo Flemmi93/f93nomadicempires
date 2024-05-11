@@ -33,7 +33,8 @@
  f93_nomadic_raid.4.desc: "We craacked the Space Station of the §Y[FromFromFrom.solar_system.GetName] System§! and can now plunder the outlying mining and research stations"
  f93_nomadic_raid.4.a_desc: "We will Plunder the now unprotected Stations in this system."
  f93_nomadic_raid.6.name: "Pirate raid in [root.GetName]"
- f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§! "
+ f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§!"
+ no_more_sys_raid_pop_up: "No more Pop ups about System Raids"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
@@ -125,7 +126,7 @@
  f93_nomad_living_metal: "Living Metal Growtank"
  f93_nomad_living_metal_DESC: "Living Metal Growtank"
  f93_nomad_shipyard: "Shipyard"
- f93_nomad_shipyard_desc: "Shipyard"
+ f93_nomad_shipyard_desc: "The Shipyard module does not work. The bonus it gives can ONLY work on stations, for now it give a little bonus to Naval Cap"
 
  NOMADIC_FISSION_REACTOR: "$DESTROYER_FISSION_REACTOR$"
  NOMADIC_FUSION_REACTOR: "$DESTROYER_FUSION_REACTOR$"
@@ -153,6 +154,7 @@
  nomadic_freighter: "$civilian_freighter$"
  nomadic_freighter_plural: "$civilian_freighter_plural$"
  nomadic_freighter_sectionS: "$civilian_freighter$ $stern$"
+ nomadic_freighter_sectionS2: "$civilian_freighter$ $stern$"
  nomadic_freighter_sectionB: "$civilian_freighter$ $bow$"
  nomadic_shipyard_sectionB: "$CIVILIAN$ $sshipyard$ $bow$"
  nomadic_shipyard_sectionM: "$CIVILIAN$ $sshipyard$ $mid$"

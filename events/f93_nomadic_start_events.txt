@@ -185,12 +185,13 @@ country_event = {
 			limit = { is_country_type = default }
 			set_faction_hostility = { target = every_playable_country set_hostile = no set_neutral = no set_friendly = no }
 		}
-		while = {
-			count = 5
-			add_resource = { energy = -500 }
-			random_relation = {
+		every_country = {
+			limit = { has_country_flag = was_raieded_by_@root }
+			add_resource = { energy = 500 }
+			root = {
 				add_resource = { energy = 500 }
 			}
+			remove_country_flag = was_raieded_by_@root
 		}
 	}
 }

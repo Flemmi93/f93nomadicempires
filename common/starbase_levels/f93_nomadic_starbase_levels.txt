@@ -15,4 +15,5 @@ starbase_level_nomadic_shipyard = {
 	ship_size = nomadic_shipyard
 	potential_home_base = yes
 	show_in_outliner = no
+	collects_trade = yes
 }

@@ -31,7 +31,7 @@ nomadic_freighter = {
 
 	prerequisites = { "tech_nomatic_society" }
 
-	combat_disengage_chance = 5
+	combat_disengage_chance = 1.75
 
 	class = shipclass_military
 	construction_type = starbase_shipyard
@@ -65,6 +65,10 @@ nomadic_shipyard = {
 		ship_evasion_add = @cruiser_evasion
 		starbase_shipyard_capacity_add = 1
 	}
+	# triggered_ship_modifier = {
+	# 	potential = { has_component = f93_nomad_shipyard }
+	# 	starbase_shipyard_capacity_add = 1
+	# }
 
 	base_buildtime = @battleship_build_time
 	resources = {
@@ -96,7 +100,7 @@ nomadic_shipyard = {
 	class = shipclass_starbase
 	construction_type = starbase_shipyard
 
-	combat_disengage_chance = 3
+	combat_disengage_chance = 1.75
 
 	required_component_set = "power_core"
 	required_component_set = "ftl_components"

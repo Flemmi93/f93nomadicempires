@@ -835,7 +835,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = -75
 	modifier = {
-		starbase_shipyard_capacity_add = 1
+		# starbase_shipyard_capacity_add = 1
+		country_naval_cap_add = 25
 	}
 	size_restriction = { nomadic_shipyard juggernaut }
 	resources = {
@@ -845,10 +846,12 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = @pro_energy1
-			consumer_goods =@upkeepcsg1
+			consumer_goods = @upkeepcsg1
 		}
 	}
-
+	blocked_by = {
+		f93_nomad_shipyard
+	}
 	prerequisites = { "tech_nomatic_society" }
 	component_set = "f93_nomad_shipyard"
 }

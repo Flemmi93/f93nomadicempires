@@ -121,6 +121,7 @@ country_event = {
 	show_sound = event_ship_explosion
 	
 	trigger = {
+		NOT = { has_country_flag = no_more_sys_raid_pop_up }
 		has_civic = civic_nomadic_pirate
 		FromFromFrom = {
 			is_ship_class = shipclass_starbase
@@ -138,6 +139,7 @@ country_event = {
 	}
 
 	immediate = {
+		from = { set_country_flag = was_raieded_by_@root }
 		save_global_event_target_as = nomadic_system_raider
 		fromfrom.solar_system = {
 			set_timed_star_flag = {
@@ -145,6 +147,34 @@ country_event = {
 				days = 480
 			}
 			system_event = { id = f93_nomadic_raid.6 }
+		}
+		if = {
+			limit = { has_country_flag = no_more_sys_raid_pop_up }
+		
+			fromfrom.solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = from
+						is_ship_class = shipclass_mining_station
+					}
+					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
+
+				}
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = from
+						is_ship_class = shipclass_research_station
+					}
+					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
+				}
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = from
+						is_ship_class = shipclass_observation_station
+					}
+					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
+				}
+			}
 		}
 	}
 
@@ -177,6 +207,10 @@ country_event = {
 				}
 			}
 		}
+	}
+	option = {
+		name = no_more_sys_raid_pop_up
+		set_country_flag = no_more_sys_raid_pop_up
 	}
 }
 
