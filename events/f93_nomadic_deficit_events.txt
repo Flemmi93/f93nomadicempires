@@ -6,7 +6,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		is_ai = no
-		has_origin = origin_nomadic_empire
+		is_f93_nomadic = yes
 	}
 
 	immediate = {

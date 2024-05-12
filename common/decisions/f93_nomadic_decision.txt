@@ -12,7 +12,7 @@ f93_leave_your_final_planet = {
 	}
 
 	potential = {
-		owner = { NOT = { has_origin = origin_nomadic_empire } }
+		owner = { is_f93_nomadic = no }
 	}
 
 	allow = {

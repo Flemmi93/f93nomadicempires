@@ -1,0 +1,5 @@
+is_f93_nomadic = {
+	or = {
+		has_origin = origin_nomadic_empire
+	}
+}

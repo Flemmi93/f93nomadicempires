@@ -1,0 +1,14 @@
+# situation_f93_nomadic_population_deficit = {
+# 	complete_icon = GFX_situation_outcome_meh
+# 	complete_icon_frame = GFX_situation_outcome_frame_blue
+# 	fail_icon = GFX_situation_outcome_meh
+# 	fail_icon_frame = GFX_situation_outcome_frame_blue
+# 	on_progress_complete = {			
+# 		destroy_situation = this
+# 		owner = { country_event = { id = f93_nomadic_start.7 } }
+# 		owner = { start_situation = { type = end_nomadic_raid_on_territory target = owner } }
+#  	}
+# 	 abort_trigger = {
+# 		owner = { is_nomadic = no }
+# 	}
+# }

@@ -79,7 +79,7 @@ wg_nomadic_pirate_raid = {
 	}
 	
 	potential = {
-		has_origin = origin_nomadic_empire
+		is_f93_nomadic = yes
 	}
 	possible = {
 		has_country_flag = has_Access_to_raiding
@@ -107,7 +107,7 @@ wg_nomadic_pirate_defense = {
 	
 	allowed_peace_offers = {
 		status_quo
-		surrender
+		# surrender
 		demand_surrender
 	}
 	potential = {

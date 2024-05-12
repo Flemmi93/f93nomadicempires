@@ -1,0 +1,36 @@
+### System Resources
+
+# allow_deficit = no				# default yes // only implemented for tech resources
+# market_amount = 100			# default -1, if non-positive, resource cannot be traded in the Market
+# market_price = 100				# default -1, if non-positive, resource cannot be traded in the Market
+# fixed_max_amount = yes/no		# default no, if yes maximum storage capacity of the resource is fixed to the amount specified in max = INT
+# special_max_amount = yes/no	# default no, if yes maximum storage capacity of the resource is fixed to the amount specified in max = INT + country_resource_max_RESOURCE_NAME_add modifiers + dynamic_capacity
+#								This explicitly ignores MOD_COUNTRY_RESOURCE_MAX_ADD modifiers.
+# tradable_in_market = {}		# default yes, trigger for blocking a resource from the market but still leaving it open for trade agreements								
+
+time = {
+	# Must be present here, but really: do not add a Deficit situation for Time.
+}
+
+
+### Population Simulation
+
+# sr_f93_nomadic_population = {
+# 	tradable = yes
+# 	max = 5
+# 	tooltip_decimals  = 1
+# 	category = basic
+# 	special_max_amount = yes
+# 	deficit_situation = situation_f93_nomadic_population_deficit
+# 	market_amount = -1
+# 	prerequisites = { "tech_nomatic_society" }
+# 	visibility_prerequisite  = { "tech_nomatic_society" }
+
+# 	ai_weight = {
+# 		weight = 1.5
+# 	}
+
+# 	ai_wants = {
+# 		base = 5
+# 	}
+# }

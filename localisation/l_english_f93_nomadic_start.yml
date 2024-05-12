@@ -30,7 +30,7 @@
  f93_nomadic_start.9.name: "Save Recovery"
  f93_nomadic_start.9.desc: "§RATTENTION§!$new_line$By hitting OK you are turned back into the default country type. This will fix your diplomacy and espionage and many other things but will make raiding less possible.$new_line$§GThis action is recommended§!$new_line$§RTHIS WILL KILL YOU, BUT YOU CAN CLICK CONTINUE AND JOIN IN TTHE EMPIRE WITH THE SAME NAME AND FLAG AS YOUR CURENT ONE TO CONTINUE PLAYING! (not in iran man i guess)§!"
  f93_nomadic_raid.4.name: "[FromFromFrom.solar_system.GetName] System Plundered"
- f93_nomadic_raid.4.desc: "We craacked the Space Station of the §Y[FromFromFrom.solar_system.GetName] System§! and can now plunder the outlying mining and research stations"
+ f93_nomadic_raid.4.desc: "We craacked the Space Station of the §Y[FromFromFrom.solar_system.GetName] System§! and can now plunder the outlying mining and research stations$NEW_LINE$§RATTENTION:$NEW_LINE$§!Invading planets during the §YRAID War Goal§! will let you loot a bunch of §GResources§! and even §GTechnology§! from your victim, try it."
  f93_nomadic_raid.4.a_desc: "We will Plunder the now unprotected Stations in this system."
  f93_nomadic_raid.6.name: "Pirate raid in [root.GetName]"
  f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§!"

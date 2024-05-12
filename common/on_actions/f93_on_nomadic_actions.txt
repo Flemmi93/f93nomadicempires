@@ -6,11 +6,18 @@ on_game_start_country = {
 	}
 }
 
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		nomadic_deficit.1
+	}
+}
 # This = starbase being disabled (not ship!)
 # From = fleet that disabled the starbase
 on_starbase_disabled = {
 	events = {
-		# f93_nomadic_raid.4
+		# f93_nomadic_raid.4 
 	}
 }
 

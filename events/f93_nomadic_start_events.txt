@@ -10,7 +10,14 @@ country_event = {
 	
 	trigger = {
 		is_ai = no
-		NOT = { has_origin = origin_nomadic_empire }
+		is_f93_nomadic = no
+	}
+	
+	option = {
+		name = f93_nomadic_start.1.b
+		ai_chance = {
+			base = 1000
+		}
 	}
 
 	option = {
@@ -21,12 +28,6 @@ country_event = {
 		}
 	}
 	
-	option = {
-		name = f93_nomadic_start.1.b
-		ai_chance = {
-			base = 1000
-		}
-	}
 	option = {
 		name = f93_nomadic_start.1.c
 		hidden_effect = {
@@ -50,7 +51,7 @@ country_event = {
 	}
 
 	trigger = {
-		has_origin = origin_nomadic_empire
+		is_f93_nomadic = yes
 	}
 
 	immediate = {
@@ -153,12 +154,12 @@ country_event = {
 	id = f93_nomadic_start.4
 	is_triggered_only = yes
 	hide_window = yes
-	trigger = { has_origin = origin_nomadic_empire }
+	trigger = { is_f93_nomadic = yes }
 	immediate = {
 		every_country = {
 			limit = {
 				is_country_type = default
-				NOT = { has_origin = origin_nomadic_empire }
+				is_f93_nomadic = no
 				has_communications = root
 			}
 			set_closed_borders = {
