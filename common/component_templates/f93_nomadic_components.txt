@@ -12,6 +12,7 @@
 @nomadic_upkeeptier1 = 1	#1 at 100%
 @nomadic_upkeeptier2 = 4	#5 at 80%
 @nomadic_upkeeptier3 = 9	#15 at 60% to symbolizing tech getting more efficient
+@nomadic_upkeeptier4 = 12	#25 at 50% to symbolizing tech getting more efficient
 @nomadic_upkeepcsg1 = 2		#2 at 100%
 @nomadic_upkeepcsg2 = 3.6	#4 at 90%
 @nomadic_upkeepcsg3 = 6.4	#9 at 80% linea growth to simulate more pops
@@ -578,7 +579,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = @nomadic_production_energy2
+			energy = @nomadic_upkeeptier3
+			consumer_goods = @nomadic_upkeepcsg1
 		}
 		produces = {
 			exotic_gases = @nomadic_production_sr_res1
@@ -605,8 +607,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods = @nomadic_upkeepcsg1
+			energy = @nomadic_production_energy4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			exotic_gases = @nomadic_production_sr_res2
@@ -633,7 +635,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = 4
+			energy = @nomadic_upkeeptier3
+			consumer_goods = @nomadic_upkeepcsg1
 		}
 		produces = {
 			rare_crystals = @nomadic_production_sr_res1
@@ -660,8 +663,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods = @nomadic_upkeepcsg1
+			energy = @nomadic_upkeeptier4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			rare_crystals = @nomadic_production_sr_res2
@@ -688,7 +691,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = @nomadic_production_energy2
+			energy = @nomadic_upkeeptier3
+			consumer_goods = @nomadic_upkeepcsg1
 		}
 		produces = {
 			volatile_motes = @nomadic_production_sr_res1
@@ -715,8 +719,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods = @nomadic_upkeepcsg1
+			energy = @nomadic_upkeeptier4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			volatile_motes = @nomadic_production_sr_res2
@@ -743,8 +747,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods =@nomadic_upkeepcsg1
+			energy = @nomadic_upkeeptier4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			sr_zro = @nomadic_production_sr_res1
@@ -771,8 +775,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods =@nomadic_upkeepcsg1
+			energy = @nomadic_upkeeptier4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			sr_zro = @nomadic_production_sr_res2
@@ -799,8 +803,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods =@nomadic_upkeepcsg1
+			energy = @nomadic_upkeeptier4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			nanites = @nomadic_production_sr_res1
@@ -827,8 +831,8 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy3
-			consumer_goods =@nomadic_upkeepcsg1
+			energy = @nomadic_upkeeptier4
+			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {
 			sr_living_metal = @nomadic_production_sr_res1

@@ -80,3 +80,27 @@ on_fleet_destroyed_perp = {
 	}
 	
 }
+
+
+# The game will generate one on_building_X on_action for every station ship-size
+# Orbital stations will get the planet in FROM, space stations only get they building ship
+
+# This = construction ship
+# From = planet OR Astral Rift it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_mining_station = {
+	events = {
+		# f93_steppe_nomad.2
+	}
+}
+
+# This = construction ship
+# From = planet OR Astral Rift it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_research_station = {
+	events = {
+		# f93_steppe_nomad.2
+	}
+}

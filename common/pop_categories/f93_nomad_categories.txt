@@ -1,0 +1,25 @@
+# nomadic_roamer_cat = {
+# 	rank = 10
+# 	clothes_texture_index = 1
+# 	demotion_time = 1
+# 	assign_to_pop = {
+# 		always = yes
+# 	}
+
+# 	weight = {
+# 		weight = 200
+# 	}
+
+# 	# scope: pop to be resettled
+# 	allow_resettlement = {
+# 		always = yes
+# 	}
+
+# 	resettlement_cost = {
+# 		energy = 100
+# 		unity = 50
+# 	}
+# 	resources = {
+# 		category = pop_category_purge
+# 	}
+# }

@@ -1,0 +1,84 @@
+namespace = f93_steppe_nomad
+
+country_event = {
+	id = f93_steppe_nomad.1
+	hide_window = yes
+	is_triggered_only = yes
+
+}
+
+ship_event = {
+	id = f93_steppe_nomad.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_space_steppe_nomad = yes }
+		from = { not = { has_planet_flag = recently_exploited_by_nomad_roamersc } }
+	}
+
+	immediate = {
+		from = {
+			planet_event = { id = f93_steppe_nomad.3 days = 90 }
+			add_modifier = {
+				modifier = pm_f93_steppe_nomad_station_output
+				multiplier = 50 #12 = one year
+			}
+		}
+	}
+}
+
+
+planet_event = {
+	id = f93_steppe_nomad.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		planet_event = { id = f93_steppe_nomad.3 days = 9000 }
+		remove_modifier = pm_f93_steppe_nomad_station_output
+		save_orbital_deposit = yes
+		orbital_station = {
+			dismantle = yes
+		}
+		every_deposit = {
+			limit = {
+				is_orbital_deposit_unknown = yes
+			}
+			if = {
+				limit = {
+					is_orbital_deposit_unknown = yes
+					is_orbital_deposit_known = no
+				}
+				root = {
+					set_planet_flag = recently_exploited_by_nomad_roamers
+					add_modifier = {
+						modifier = pm_f93_steppe_nomad_station_output
+						multiplier = -100
+					}
+				}
+			}
+			if = {
+				limit = { is_orbital_deposit_known = yes }
+				remove_deposit = yes 
+			}
+		}
+	}
+}
+
+
+planet_event = {
+	id = f93_steppe_nomad.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		restore_orbital_deposit = yes
+		if = {
+			limit = { has_planet_flag = recently_exploited_by_nomad_roamers }
+			remove_planet_flag = recently_exploited_by_nomad_roamers
+			remove_modifier = pm_f93_steppe_nomad_station_output
+		}
+	}
+}
+

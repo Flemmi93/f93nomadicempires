@@ -1,0 +1,89 @@
+is_f93_nomadic = {
+	or = {
+		has_origin = origin_nomadic_empire
+		has_country_flag = country_is_f93_nomadic_flag # mainly for other modders to use this if they want
+	}
+}
+
+is_space_steppe_nomad = {
+	or = {
+		has_origin = origin_space_steppe_nomads
+		has_country_flag = country_is_f93_sapce_steppe_nomads_flag # mainly for other modders to use this if they want
+	}
+}
+is_orbital_deposit_unknown = { #useful when i can make it more mod friendly
+	or = {
+		planet = {
+			OR = {
+				has_deposit_for = shipclass_research_station
+				has_deposit_for = shipclass_mining_station
+			}
+		}
+	}
+}
+
+is_orbital_deposit_known = {
+	or = {
+		has_deposit = d_energy_1
+		has_deposit = d_energy_2
+		has_deposit = d_energy_3
+		has_deposit = d_energy_4
+		has_deposit = d_energy_5
+		has_deposit = d_energy_6
+		has_deposit = d_energy_7
+		has_deposit = d_energy_8
+		has_deposit = d_energy_9
+		has_deposit = d_energy_10
+		has_deposit = d_minerals_1
+		has_deposit = d_minerals_2
+		has_deposit = d_minerals_3
+		has_deposit = d_minerals_4
+		has_deposit = d_minerals_5
+		has_deposit = d_minerals_6
+		has_deposit = d_minerals_7
+		has_deposit = d_minerals_8
+		has_deposit = d_minerals_9
+		has_deposit = d_minerals_10
+		has_deposit = d_alloys_1
+		has_deposit = d_alloys_2
+		has_deposit = d_alloys_3
+		has_deposit = d_alloys_4
+		has_deposit = d_alloys_5
+		has_deposit = d_alloys_10
+		has_deposit = d_alloys_25
+		has_deposit = d_society_1
+		has_deposit = d_society_2
+		has_deposit = d_society_3
+		has_deposit = d_society_4
+		has_deposit = d_society_5
+		has_deposit = d_society_6
+		has_deposit = d_society_7
+		has_deposit = d_society_8
+		has_deposit = d_society_9
+		has_deposit = d_society_10
+		has_deposit = d_physics_1
+		has_deposit = d_physics_2
+		has_deposit = d_physics_3
+		has_deposit = d_physics_4
+		has_deposit = d_physics_5
+		has_deposit = d_physics_6
+		has_deposit = d_physics_7
+		has_deposit = d_physics_8
+		has_deposit = d_physics_9
+		has_deposit = d_physics_10
+		has_deposit = d_engineering_1
+		has_deposit = d_engineering_2
+		has_deposit = d_engineering_3
+		has_deposit = d_engineering_4
+		has_deposit = d_engineering_5
+		has_deposit = d_engineering_6
+		has_deposit = d_engineering_7
+		has_deposit = d_engineering_8
+		has_deposit = d_engineering_9
+		has_deposit = d_engineering_10
+		has_deposit = d_food_3
+		has_deposit = d_food_10
+		has_deposit = d_guardian_dragon_hoard
+		has_deposit = d_consumer_goods_obsessional_directive
+	}
+}

@@ -1,6 +1,0 @@
-is_f93_nomadic = {
-	or = {
-		has_origin = origin_nomadic_empire
-		has_country_flag = country_is_f93_nomadic_flag
-	}
-}

@@ -52,6 +52,8 @@
  origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, its only to gather some very needed components for their homefleet."
  civic_nomadic_pirate: "A Pirate's Life"
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
+ origin_space_steppe_nomads: "Vast Steppes"
+ origin_space_steppe_nomads_desc: "The People have always roamed the vast steppes of our homeworld. With the advent of FTL travel, nothing has changed, we still wont stay still for too long."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -229,6 +231,19 @@
  MOD_energy_receive_monthly8: "Get Reparations"
  MOD_energy_receive_monthly9: "Get Reparations"
  MOD_energy_receive_monthly10: "Get Reparations"
+ pm_f93_steppe_nomad_station_output: "Steppe Nomad's Resource Rush"
+ mod_station_gatherers_influence_produces_mult: "Mining Station Influence Output"
+ mod_station_gatherers_consumer_goods_produces_mult: "Mining Station Consumer Goods Output"
+ mod_station_gatherers_alloys_produces_mult: "Mining Station Allyos Output"
+ mod_station_gatherers_sr_zro_produces_mult: "Mining Station Zro Output"
+ mod_station_gatherers_sr_dark_matter_produces_mult: "Mining Station Dark Matter Output"
+ mod_station_gatherers_nanites_produces_mult: "Mining Station Nanite Output"
+ mod_station_gatherers_minor_artifacts_produces_mult: "Mining Station Minor Artifacts Output"
+ mod_station_gatherers_unity_produces_mult: "Mining Station Unity Output"
+ mod_station_researchers_physics_research_produces_mult: "Research Station Physics Output"
+ mod_station_researchers_society_research_produces_mult: "Research Station Society Output"
+ mod_station_researchers_engineering_research_produces_mult: "Research Station Engineering Output"
+ job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
@@ -247,3 +262,8 @@
  f93_leave_your_final_planet: "Escape into the Void"
  f93_leave_your_final_planet_desc: "Everyone aboard a ship can count themself lucky."
  f93_leave_your_final_planet_effect: "Custruct a Nomadic $NAME_Nomadic_shipyard$ Vessel and leave all planets behind.$NEW_LINE$Gain the §Y$origin_nomadic_empire$ Civic§!.$NEW_LINE$$NEW_LINE$§RWe will become Un-[Root.GetAdj].§!"
+
+#Jobs
+ nomadic_roamer_cat: "Roamer"
+ job_f93_nomadic_roamer: "Nomadic Roamer"
+ job_f93_nomadic_roamer_desc: "Our People Love to roam the Steppes, it is not very effecient for our empire, but who are we to deny our people's wishes."
