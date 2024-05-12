@@ -27,7 +27,7 @@ country_event = {
 			f93_create_nomad_country_effect = yes
 		}
 	}
-	
+
 	option = {
 		name = f93_nomadic_start.1.c
 		hidden_effect = {
@@ -47,11 +47,8 @@ country_event = {
 	hide_window = yes
 
 	trigger = {
-		is_ai = no
-	}
-
-	trigger = {
 		is_f93_nomadic = yes
+		is_ai = no
 	}
 
 	immediate = {
@@ -196,6 +193,20 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = f93_nomadic_start.6
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		days_passed > 29
+		has_civic = civic_nomadic_pirate
+		NOT = {	has_country_flag = has_Access_to_raiding }
+	}
+	immediate = {
+		start_situation = { type = begin_nomadic_raid_on_territory target = owner }
+	}
+}
 country_event = {
 	id = f93_nomadic_start.7
 	is_triggered_only = yes
@@ -212,19 +223,6 @@ country_event = {
 			limit = { is_country_type = default }
 			set_faction_hostility = { target = every_playable_country set_hostile = yes set_neutral = no set_friendly = no }
 		}
-	}
-}
-country_event = {
-	id = f93_nomadic_start.6
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		days_passed > 29
-		has_civic = civic_nomadic_pirate
-		NOT = {	has_country_flag = has_Access_to_raiding }
-	}
-	immediate = {
-		start_situation = { type = begin_nomadic_raid_on_territory target = owner }
 	}
 }
 
