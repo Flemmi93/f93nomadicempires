@@ -268,7 +268,6 @@ country_event = {
 	hide_window = yes
 
 	immediate = {
-		name = OK
 		turn_empire_into_nomads_midgame = yes
 	}
 }

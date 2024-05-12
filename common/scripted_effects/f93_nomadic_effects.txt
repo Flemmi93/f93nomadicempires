@@ -75,13 +75,14 @@ turn_empire_into_nomads_midgame = {
 		name_list = ROOT
 		ship_prefix = ""
 		authority = ROOT
-		origin = origin_nomadic_empire
+		origin = root #origin_nomadic_empire
 		civics = root
 		species = ROOT
 		flag = root
 		ethos = ROOT
 		ignore_initial_colony_error = yes
 		effect = {
+			set_country_flag = country_is_f93_nomadic_flag
 			establish_communications_no_message = root
 			f93_set_income_stock_var_to_zero_effect	=yes
 			f93_is_thenomad_effect = yes
@@ -89,7 +90,12 @@ turn_empire_into_nomads_midgame = {
 				limit = { root = { is_galactic_community_member = yes } }
 				add_to_galactic_community_no_message = yes
 			}
-			steal_relic = { target = root relic = all }
+			if = {
+				limit = {
+					root = { num_owned_relics > 0 }
+				}
+				steal_relic = { target = root relic = all }
+			}
 			copy_techs_from = { target = root }
 		}
 	}
@@ -125,9 +131,9 @@ turn_empire_into_nomads_midgame = {
 				name = "Nomadic Juggernaut"
 				effect = {
 					set_owner = last_created_country
-					set_location = prevprev
+					set_location = root.capital_scope
 					create_ship = {
-						name = random
+						name = "Nomadic Juggernaut"
 						random_existing_design = juggernaut
 					}
 				}
@@ -140,6 +146,17 @@ turn_empire_into_nomads_midgame = {
 	}
 	every_owned_army = {
 		set_owner = last_created_country
+	}
+	create_fleet = {
+		name = "Final Colonizer"
+		effect = {
+			set_owner = last_created_country
+			set_location = root.capital_scope
+			create_ship = {
+				name = "Final Colonizer"
+				random_existing_design = colonizer
+			}
+		}
 	}
 	# every_owned_pop = {
 	# 	set_owner = last_created_country

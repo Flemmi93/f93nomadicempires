@@ -9,6 +9,6 @@
 # 		owner = { start_situation = { type = end_nomadic_raid_on_territory target = owner } }
 #  	}
 # 	 abort_trigger = {
-# 		owner = { is_nomadic = no }
+# 		owner = { is_f93_nomadic = no }
 # 	}
 # }

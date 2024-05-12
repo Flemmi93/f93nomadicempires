@@ -222,3 +222,16 @@ component_set = {
 	icon = "GFX_ship_part_shipyard"
 	icon_frame = 1
 }
+component_set = {
+	key = "f93_nomad_storage_1"
+
+	icon = "GFX_ship_part_storage_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "f93_nomad_storage_2"
+
+	icon = "GFX_ship_part_storage_2"
+	icon_frame = 1
+}

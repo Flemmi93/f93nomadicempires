@@ -30,7 +30,7 @@ f93_leave_your_final_planet = {
 	effect = {
 		custom_tooltip = f93_leave_your_final_planet_effect
 		hidden_effect = {
-			owner = { country_event = { id = f93_nomadic_start.10 } }
+			owner = { country_event = { id = f93_nomadic_start.10 } } #just does turn_empire_into_nomads_midgame = yes
 		}
 	}
 }

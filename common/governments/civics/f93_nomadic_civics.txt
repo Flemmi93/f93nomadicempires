@@ -1,7 +1,9 @@
 civic_nomadic_pirate = {
 	icon = gfx/interface/icons/governments/civics/nomadic_empire.dds
 	possible = {
-		origin = { value = origin_nomadic_empire }
+		OR = {
+			origin = { value = origin_nomadic_empire }
+		}
 	}
 	modifier = {
 		ship_fire_rate_mult = 0.1
