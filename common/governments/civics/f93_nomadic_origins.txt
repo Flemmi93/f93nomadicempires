@@ -31,6 +31,6 @@ origin_space_steppe_nomads = {
 		country_commander_cap_add = 1
 		divided_patrongage_max_subjects = 2
 		planet_jobs_produces_mult = -0.15
-		job_f93_nomadic_roamer_per_pop = 1
+		job_f93_nomadic_roamer_per_pop = 0.07
 	}
 }

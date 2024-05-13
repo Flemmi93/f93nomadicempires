@@ -110,6 +110,6 @@ on_building_research_station = {
 # Scope = Planet
 on_colonized = {
 	events = {
-		f93_steppe_nomad.1
+		# f93_steppe_nomad.1
 	}
 }
