@@ -39,7 +39,7 @@ ship_event = {
 			planet_event = { id = f93_steppe_nomad.3 days = 180 }
 			add_modifier = {
 				modifier = pm_f93_steppe_nomad_station_output
-				multiplier = 25 # 10 years = 10*12*6+10 10years*12monthsin a year*6months the station is active+10 as a bonus
+				multiplier = 40 # 20 years = 20*12*6 12years*12monthsin a year*6months the station is active
 			}
 		}
 	}
