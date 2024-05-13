@@ -54,7 +54,7 @@
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
  origin_space_steppe_nomads: "Vast Steppes"
  origin_space_steppe_nomads_desc: "$this_feature_is_WIP$$works_partially_please_feedback$§LThe People have always roamed the vast steppes of the homeworld.$NEW_LINE$This world was unified by bloodshed. A roving gang of Nomadic Warrior's took over steppe after steppe, even the occasional settlements, growing their power and influence until suddenly there was nowhere left to conquer. With the advent of FTL travel, nothing has changed, the People still wont stay still for too long but now, new avenues of conquest have opened up.§!"
- origin_space_steppe_nomads_effect: "§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G20 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!."
+ origin_space_steppe_nomads_effect: "§RCHALLANGING ORIGIN§!$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G24 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!."
  origin_space_steppe_nomads_colony_exploit_effect: "§Y$New$ $COLONIES$§! Will be similarly exploited."
 
 #Misc

@@ -41,12 +41,24 @@ f93_create_nomad_country_effect = {
 f93_is_thenomad_effect = {
 	
 	set_custom_capital_location = root.capital_scope
-
 	give_technology = { tech = tech_nomatic_society message = no }
 	start_situation = { type = nomadic_recruitment_leaders target = this }
 	start_situation = { type = nomadic_recruitment_troops target = this }
 	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = this } }
-
+	if = {
+		limit = { is_gestalt = yes }
+		create_leader = {
+			name = random
+			species = root
+			class = commander
+		}
+		create_leader = {
+			name = random
+			species = root
+			class = scientist
+		}
+		
+	}
 	f93_transfer_stockpile_data_from_root_effect = yes
 	f93_reinstate_resources_effect = yes
 

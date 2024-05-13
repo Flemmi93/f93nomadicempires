@@ -32,7 +32,7 @@ origin_space_steppe_nomads = {
 		country_vassal_naval_capacity_contribution_mult = 0.25
 		country_commander_cap_add = 1
 		divided_patrongage_max_subjects = 2
-		planet_jobs_produces_mult = -0.1
+		planet_jobs_produces_mult = -0.15
 		job_f93_nomadic_roamer_per_pop = 0.066
 		empire_size_systems_mult = -0.25
 	}

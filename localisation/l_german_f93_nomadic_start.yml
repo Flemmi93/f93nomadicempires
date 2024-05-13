@@ -54,7 +54,7 @@
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
  origin_space_steppe_nomads: "Weit Steppen"
  origin_space_steppe_nomads_desc: "$this_feature_is_WIP$$works_partially_please_feedback$§LDie Menschen durchstreiften schon immer die weiten Steppen der Heimatwelt.$NEW_LINE$Diese Welt wurde durch Blutvergießen geeint. Eine umherziehende Bande nomadischer Krieger eroberte eine Steppe nach der anderen, sogar einzelne Siedlungen, und steigerte ihre Macht und ihren Einfluss, bis es plötzlich keinen Ort mehr gab, den es zu erobern galt. Mit dem Aufkommen des FTL-Reisens hat sich nichts geändert, die Menschen bleiben immer noch nicht allzu lange still, aber jetzt haben sich neue Eroberungswege eröffnet.§!"
- origin_space_steppe_nomads_effect: "§Y$mining_station_plural$§! and §Y$research_station_plural$§! wird §G20 Jahre§! Produktionswert in kurzer Zeit erzeugen. Sie stehen dann für §R20 Jahre§! nicht zur Ausbeutung zur Verfügung."
+ origin_space_steppe_nomads_effect: "§RHERRAUSFORDERNDE ORIGIN§!$NEW_LINE$§Y$mining_station_plural$§! und §Y$research_station_plural$§! werden §G24 $YEARS$§! Produktionswert in kurzer Zeit erzeugen. Sie stehen dann für §R20 $YEARS$! nicht zur Ausbeutung zur Verfügung."
  origin_space_steppe_nomads_colony_exploit_effect: "§Y$New$ $COLONIES$§! werden in ähnlicher Weise ausgenutzt."
 
 #Misc

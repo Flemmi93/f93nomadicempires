@@ -54,7 +54,7 @@
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
  origin_space_steppe_nomads: "Vast Steppes"
  origin_space_steppe_nomads_desc: "$this_feature_is_WIP$$works_partially_please_feedback$§LThe People have always roamed the vast steppes of the homeworld.$NEW_LINE$This world was unified by bloodshed. A roving gang of Nomadic Warrior's took over steppe after steppe, even the occasional settlements, growing their power and influence until suddenly there was nowhere left to conquer. With the advent of FTL travel, nothing has changed, the People still wont stay still for too long but now, new avenues of conquest have opened up.§!"
- origin_space_steppe_nomads_effect: "§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G20 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!.$NEW_LINE$§Y"
+ origin_space_steppe_nomads_effect: "§RCHALLANGING ORIGIN§!$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G24 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!."
  origin_space_steppe_nomads_colony_exploit_effect: "§Y$New$ $COLONIES$§! Will be similarly exploited."
 
 #Misc
@@ -247,7 +247,8 @@
  mod_station_researchers_physics_research_produces_mult: "Research Station Physics Output"
  mod_station_researchers_society_research_produces_mult: "Research Station Society Output"
  mod_station_researchers_engineering_research_produces_mult: "Research Station Engineering Output"
- job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
+ mod_job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
+ mod_shipclass_research_station_build_speed_mult: "Research Station Build Speed"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
@@ -269,5 +270,5 @@
 
 #Jobs
  nomadic_roamer_cat: "Roamer"
- job_f93_nomadic_roamer: "Nomadic Roamer"
- job_f93_nomadic_roamer_desc: "Our People Love to roam the Steppes, it is not very effecient for our empire, but who are we to deny our people's wishes."
+ job_f93_nomadic_roamer: "Nomadic Warlord"
+ job_f93_nomadic_roamer_desc: "Our People Love to wander the steppes, it is not very effecient for our empire, but who are we to deny our people's wishes."

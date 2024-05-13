@@ -1,26 +1,7 @@
 namespace = f93_steppe_nomad
 
-planet_event = {
-	id = f93_steppe_nomad.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		owner = { is_space_steppe_nomad = yes }
-		is_homeworld = no
-	}
-
-	immediate = {
-		set_variable = { which = all_pops value = trigger:num_pops }
-		while = {
-			count = all_pops
-			random_owned_pop = { resettle_pop = { pop = this planet = owner.capital_scope } }
-		}
-	}
-}
-
 ship_event = {
-	id = f93_steppe_nomad.2
+	id = f93_steppe_nomad.1
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -36,10 +17,10 @@ ship_event = {
 
 	immediate = {
 		from = {
-			planet_event = { id = f93_steppe_nomad.3 days = 180 }
+			planet_event = { id = f93_steppe_nomad.2 days = 180 }
 			add_modifier = {
 				modifier = pm_f93_steppe_nomad_station_output
-				multiplier = 40 # 20 years = 20*12*6 12years*12monthsin a year*6months the station is active
+				multiplier = 48 # 20 years = 240 Months / 6 Months of runtime = 40 -> *120%
 			}
 		}
 	}
@@ -47,12 +28,12 @@ ship_event = {
 
 
 planet_event = {
-	id = f93_steppe_nomad.3
+	id = f93_steppe_nomad.2
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		planet_event = { id = f93_steppe_nomad.3 days = 7200 }
+		planet_event = { id = f93_steppe_nomad.2 days = 7200 }
 		remove_modifier = pm_f93_steppe_nomad_station_output
 		save_orbital_deposit = yes
 		orbital_station = {
@@ -85,7 +66,7 @@ planet_event = {
 
 
 planet_event = {
-	id = f93_steppe_nomad.4
+	id = f93_steppe_nomad.3
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -99,3 +80,18 @@ planet_event = {
 	}
 }
 
+
+planet_event = {
+	id = f93_steppe_nomad.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_space_steppe_nomad = yes }
+		is_homeworld = no
+	}
+
+	immediate = {
+		
+	}
+}

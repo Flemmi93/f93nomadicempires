@@ -12,7 +12,8 @@
 @nomadic_upkeeptier1 = 1	#1 at 100%
 @nomadic_upkeeptier2 = 4	#5 at 80%
 @nomadic_upkeeptier3 = 9	#15 at 60% to symbolizing tech getting more efficient
-@nomadic_upkeeptier4 = 12	#25 at 50% to symbolizing tech getting more efficient
+@nomadic_upkeeptierSR1 = 4
+@nomadic_upkeeptierSR2 = 6
 @nomadic_upkeepcsg1 = 2		#2 at 100%
 @nomadic_upkeepcsg2 = 3.6	#4 at 90%
 @nomadic_upkeepcsg3 = 6.4	#9 at 80% linea growth to simulate more pops
@@ -117,7 +118,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = 3
+			energy = @nomadic_upkeeptier1
 		}
 		produces = {
 			minerals = @nomadic_production_minerals3
@@ -145,7 +146,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
 		}
 		produces = {
 			energy = @nomadic_production_energy1
@@ -173,7 +181,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			energy = @nomadic_production_energy2
@@ -201,7 +216,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg3
 		}
 		produces = {
 			energy = @nomadic_production_energy3
@@ -398,7 +420,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = @nomadic_upkeeptier1
-			consumer_goods = @nomadic_upkeepcsg1 
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
 		}
 		produces = {
 			unity = @nomadic_production_research1
@@ -426,7 +455,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = @nomadic_upkeeptier2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			unity = @nomadic_production_research2
@@ -454,7 +490,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = @nomadic_upkeeptier3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg3
 		}
 		produces = {
 			unity = @nomadic_production_research3
@@ -484,7 +527,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = @nomadic_upkeeptier1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
 		}
 		produces = {
 			physics_research = @nomadic_production_research1
@@ -517,7 +567,14 @@ utility_component_template = {
 		upkeep = {
 			energy = @nomadic_upkeeptier2
 			exotic_gases = @nomadic_upkeepsr_res1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			physics_research = @nomadic_production_research2
@@ -550,7 +607,14 @@ utility_component_template = {
 		upkeep = {
 			energy = @nomadic_upkeeptier3
 			exotic_gases = @nomadic_upkeepsr_res1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg3
 		}
 		produces = {
 			physics_research = @nomadic_production_research3
@@ -579,8 +643,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier3
+			energy = @nomadic_upkeeptierSR1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
 		}
 		produces = {
 			exotic_gases = @nomadic_production_sr_res1
@@ -607,8 +678,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			exotic_gases = @nomadic_production_sr_res2
@@ -635,8 +713,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier3
+			energy = @nomadic_upkeeptierSR1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
 		}
 		produces = {
 			rare_crystals = @nomadic_production_sr_res1
@@ -663,8 +748,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			rare_crystals = @nomadic_production_sr_res2
@@ -692,7 +784,14 @@ utility_component_template = {
 		}
 		upkeep = {
 			energy = @nomadic_upkeeptier3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
 		}
 		produces = {
 			volatile_motes = @nomadic_production_sr_res1
@@ -719,8 +818,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			volatile_motes = @nomadic_production_sr_res2
@@ -747,8 +853,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			sr_zro = @nomadic_production_sr_res1
@@ -775,8 +888,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			sr_zro = @nomadic_production_sr_res2
@@ -803,8 +923,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			nanites = @nomadic_production_sr_res1
@@ -831,8 +958,15 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier4
+			energy = @nomadic_upkeeptierSR2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
 			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
 			sr_living_metal = @nomadic_production_sr_res1
