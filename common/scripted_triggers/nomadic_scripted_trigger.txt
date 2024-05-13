@@ -87,3 +87,15 @@ is_orbital_deposit_known = {
 		has_deposit = d_consumer_goods_obsessional_directive
 	}
 }
+has_incompatible_megastructure_for_nomadic_roamers = {
+	OR = {
+		#Arc Furnace
+		has_megastructure = orbital_arc_furnace_1
+		has_megastructure = orbital_arc_furnace_2
+		has_megastructure = orbital_arc_furnace_3
+		has_megastructure = orbital_arc_furnace_4
+		has_megastructure = orbital_arc_furnace_destroyed
+		has_megastructure = orbital_arc_furnace_restored
+	}
+}
+		

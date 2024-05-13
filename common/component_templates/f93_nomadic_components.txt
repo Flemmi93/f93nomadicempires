@@ -607,7 +607,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_production_energy4
+			energy = @nomadic_upkeeptier4
 			consumer_goods = @nomadic_upkeepcsg2
 		}
 		produces = {

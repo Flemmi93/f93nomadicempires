@@ -53,7 +53,8 @@
  civic_nomadic_pirate: "A Pirate's Life"
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
  origin_space_steppe_nomads: "Vast Steppes"
- origin_space_steppe_nomads_desc: "The People have always roamed the vast steppes of our homeworld. With the advent of FTL travel, nothing has changed, we still wont stay still for too long."
+ origin_space_steppe_nomads_desc: "$this_feature_is_WIP$$works_partially_please_feedback$§LThe People have always roamed the vast steppes of our homeworld. With the advent of FTL travel, nothing has changed, we still wont stay still for too long.§!"
+ origin_space_steppe_nomads_effect: "§YMining Stations§! and §YResearch Stations§! will produce §G10 years§! worth of Production in a short time. They will than be unavaiable to exploit for §R20 years§!."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -63,6 +64,8 @@
  mod_country_base_engineering_research_produces_add: "$mod_country_engineering_research_produces_add$"
  mod_ships_alloys_upkeep_mult:0 "Ships £alloys£ alloys Upkeep"
  recently_created: "Not possible in the first 6 months"
+ this_feature_is_WIP: "§_This Feature is WIP$NEW_LINE$§!"
+ works_partially_please_feedback: "It works partially, §Gfeedback§! will be greatly appreciated$NEW_LINE$"
 
 #Components
  f93_nomad_minerals_1: "Matter Converter 1"
