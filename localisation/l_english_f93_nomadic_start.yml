@@ -247,6 +247,7 @@
  mod_station_researchers_society_research_produces_mult: "Research Station Society Output"
  mod_station_researchers_engineering_research_produces_mult: "Research Station Engineering Output"
  mod_job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
+ mod_shipclass_research_station_build_speed_mult: "Research Station Build Speed"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
