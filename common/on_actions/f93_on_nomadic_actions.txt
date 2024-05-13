@@ -104,3 +104,12 @@ on_building_research_station = {
 		f93_steppe_nomad.2
 	}
 }
+
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		f93_steppe_nomad.1
+	}
+}

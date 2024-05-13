@@ -1,10 +1,22 @@
 namespace = f93_steppe_nomad
 
-country_event = {
+planet_event = {
 	id = f93_steppe_nomad.1
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		owner = { is_space_steppe_nomad = yes }
+		is_homeworld = no
+	}
+
+	immediate = {
+		set_variable = { which = all_pops value = trigger:num_pops }
+		while = {
+			count = all_pops
+			random_owned_pop = { resettle_pop = { pop = this planet = owner.capital_scope } }
+		}
+	}
 }
 
 ship_event = {
@@ -15,7 +27,7 @@ ship_event = {
 	trigger = {
 		owner = { is_space_steppe_nomad = yes }
 		from = { not = { has_planet_flag = recently_exploited_by_nomad_roamersc } }
-		fleet.star_system = {
+		solar_system = {
 			NOT = {
 				has_incompatible_megastructure_for_nomadic_roamers = yes #scripted trigger
 			}
@@ -27,7 +39,7 @@ ship_event = {
 			planet_event = { id = f93_steppe_nomad.3 days = 90 }
 			add_modifier = {
 				modifier = pm_f93_steppe_nomad_station_output
-				multiplier = 50 #12 = one year + bonus
+				multiplier = 50 # 10 years = 10*12*3+10 10years*12monthsin a year*3months the station is active+10 as a bonus
 			}
 		}
 	}

@@ -19,6 +19,7 @@ origin_nomadic_empire = {
 origin_space_steppe_nomads = {
 	is_origin = yes
 	potential = { always = yes }
+	possible = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	icon = gfx/interface/icons/governments/civics/nomadic_empire.dds
 	picture = GFX_evt_alien_cavemen	
 	starting_colony = pc_arid
@@ -26,11 +27,10 @@ origin_space_steppe_nomads = {
 	modifier = {
 		shipclass_mining_station_build_cost_mult = -0.25
 		shipclass_research_station_build_cost_mult = -0.25
-		command_limit_mult = 0.25
-		country_naval_cap_add = 20
+		country_vassal_naval_capacity_contribution_mult = 0.25
 		country_commander_cap_add = 1
+		divided_patrongage_max_subjects = 2
 		planet_jobs_produces_mult = -0.15
-		ship_base_speed_mult = 0.1
-		# job_f93_nomadic_roamer_per_pop = 1
+		job_f93_nomadic_roamer_per_pop = 1
 	}
 }
