@@ -62,7 +62,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	immediate = {	   
+	immediate = {  
 		create_fleet = {
 			name = "Nomadic Construction Vessel"
 			effect = {
@@ -145,6 +145,7 @@ country_event = {
 		}
 		clear_global_event_target = homeworld
 		clear_global_event_target = homeworld_leavers
+		
 	}
 }
 
@@ -270,5 +271,26 @@ country_event = {
 
 	immediate = {
 		turn_empire_into_nomads_midgame = yes
+	}
+}
+
+country_event = {
+	id = f93_nomadic_start.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		create_leader = {
+			name = random
+			species = owner_main_species
+			class = commander
+			skill = 1
+		}
+		create_leader = {
+			name = random
+			species = owner_main_species
+			class = scientist
+			skill = 1
+		}
 	}
 }

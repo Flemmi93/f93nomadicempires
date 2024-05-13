@@ -25,6 +25,7 @@ country_event = {
 			name = random
 			species = owner_main_species
 			class = commander
+			skill = 1
 		}
 	}
 	option = {
@@ -33,6 +34,7 @@ country_event = {
 			name = random
 			species = owner_main_species
 			class = scientist
+			skill = 1
 		}
 	}
 	option = {
@@ -41,6 +43,7 @@ country_event = {
 			name = random
 			species = owner_main_species
 			class = official
+			skill = 1
 		}
 	}
 }

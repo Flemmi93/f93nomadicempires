@@ -25,6 +25,7 @@ f93_create_nomad_country_effect = {
 			save_global_event_target_as = homeworld_leavers
 			f93_is_thenomad_effect = yes
 			country_event = { id = f93_nomadic_start.3 }
+			country_event = { id = f93_nomadic_start.11 days = 1 }
 			country_event = { id = game_start.8 }
 			country_event = { id = game_start.60 }
 			country_event = { id = game_start.70 }
@@ -45,20 +46,7 @@ f93_is_thenomad_effect = {
 	start_situation = { type = nomadic_recruitment_leaders target = this }
 	start_situation = { type = nomadic_recruitment_troops target = this }
 	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = this } }
-	if = {
-		limit = { is_gestalt = yes }
-		create_leader = {
-			name = random
-			species = root
-			class = commander
-		}
-		create_leader = {
-			name = random
-			species = root
-			class = scientist
-		}
-		
-	}
+
 	f93_transfer_stockpile_data_from_root_effect = yes
 	f93_reinstate_resources_effect = yes
 
