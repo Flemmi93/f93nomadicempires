@@ -36,10 +36,10 @@ ship_event = {
 
 	immediate = {
 		from = {
-			planet_event = { id = f93_steppe_nomad.3 days = 90 }
+			planet_event = { id = f93_steppe_nomad.3 days = 180 }
 			add_modifier = {
 				modifier = pm_f93_steppe_nomad_station_output
-				multiplier = 50 # 10 years = 10*12*3+10 10years*12monthsin a year*3months the station is active+10 as a bonus
+				multiplier = 25 # 10 years = 10*12*6+10 10years*12monthsin a year*6months the station is active+10 as a bonus
 			}
 		}
 	}

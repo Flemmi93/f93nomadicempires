@@ -303,6 +303,36 @@ save_orbital_deposit = {
 		limit = { has_deposit = d_consumer_goods_obsessional_directive }
 		set_planet_flag = d_consumer_goods_obsessional_directive
 	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_research_1 }
+		set_planet_flag = d_artifacts_research_1
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_research_2 }
+		set_planet_flag = d_artifacts_research_2
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_research_3 }
+		set_planet_flag = d_artifacts_research_3
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_mining_1 }
+		set_planet_flag = d_artifacts_mining_1
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_mining_2 }
+		set_planet_flag = d_artifacts_mining_2
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_mining_3 }
+		set_planet_flag = d_artifacts_mining_3
+	}
 }
 
 restore_orbital_deposit = {
@@ -670,5 +700,41 @@ restore_orbital_deposit = {
 		limit = { has_planet_flag = d_consumer_goods_obsessional_directive }
 		add_deposit = d_consumer_goods_obsessional_directive
 		remove_planet_flag = d_consumer_goods_obsessional_directive
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_research_1 }
+		add_deposit = d_artifacts_research_1
+		remove_planet_flag = d_artifacts_research_1
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_research_2 }
+		add_deposit = d_artifacts_research_2
+		remove_planet_flag = d_artifacts_research_2
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_research_3 }
+		add_deposit = d_artifacts_research_3
+		remove_planet_flag = d_artifacts_research_3
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_mining_1 }
+		add_deposit = d_artifacts_mining_1
+		remove_planet_flag = d_artifacts_mining_1
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_mining_2 }
+		add_deposit = d_artifacts_mining_2
+		remove_planet_flag = d_artifacts_mining_2
+	}
+
+	if = {
+		limit = { has_deposit = d_artifacts_mining_3 }
+		add_deposit = d_artifacts_mining_3
+		remove_planet_flag = d_artifacts_mining_3
 	}
 }

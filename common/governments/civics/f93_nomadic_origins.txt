@@ -25,12 +25,15 @@ origin_space_steppe_nomads = {
 	starting_colony = pc_arid
 	description = origin_space_steppe_nomads_effect
 	modifier = {
-		shipclass_mining_station_build_cost_mult = -0.25
-		shipclass_research_station_build_cost_mult = -0.25
+		shipclass_mining_station_build_cost_mult = -0.5
+		shipclass_mining_station_build_speed_mult = 0.5
+		shipclass_research_station_build_cost_mult = -0.5
+		shipclass_research_station_build_speed_mult = 0.5
 		country_vassal_naval_capacity_contribution_mult = 0.25
 		country_commander_cap_add = 1
 		divided_patrongage_max_subjects = 2
-		planet_jobs_produces_mult = -0.15
-		job_f93_nomadic_roamer_per_pop = 0.0667
+		planet_jobs_produces_mult = -0.1
+		job_f93_nomadic_roamer_per_pop = 0.066
+		empire_size_systems_mult = -0.25
 	}
 }
