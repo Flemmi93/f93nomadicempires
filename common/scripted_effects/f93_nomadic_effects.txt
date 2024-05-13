@@ -186,4 +186,8 @@ turn_empire_into_nomads_midgame = {
 		limit = { has_communications = ROOT }
 		establish_communications_no_message = last_created_country
 	}
+	every_system = {
+		limit = { is_surveyed = { who = root status = yes } }
+		set_surveyed = { surveyed = yes surveyor = last_created_country }
+	}
 }
