@@ -3,7 +3,7 @@ on_game_start_country = {
 	events = {
 		f93_nomadic_start.1
 		f93_nomadic_start.2
-		f93_steppe_nomad.10
+		f93_steppe_nomad.99
 	}
 }
 
@@ -93,7 +93,7 @@ on_fleet_destroyed_perp = {
 # immediately before station is created
 on_building_mining_station = {
 	events = {
-		# f93_steppe_nomad.1 #<- strong version
+		f93_steppe_nomad.1 #<- strong version
 		f93_steppe_nomad.6 #<- light version
 	}
 }
@@ -104,7 +104,7 @@ on_building_mining_station = {
 # immediately before station is created
 on_building_research_station = {
 	events = {
-		# f93_steppe_nomad.1 #<- strong version
+		f93_steppe_nomad.1 #<- strong version
 		f93_steppe_nomad.6 #<- light version
 	}
 }

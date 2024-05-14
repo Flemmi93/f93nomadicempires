@@ -7,8 +7,28 @@ is_f93_nomadic = {
 
 is_space_steppe_nomad = {
 	or = {
-		has_origin = origin_space_steppe_nomads
+		and = {
+			has_origin = origin_space_steppe_nomads
+		}
 		has_country_flag = country_is_f93_sapce_steppe_nomads_flag # mainly for other modders to use this if they want
+	}
+}
+is_slow_space_steppe_nomad = {
+	or = {
+		and = {
+			has_origin = origin_space_steppe_nomads
+			has_country_flag = choose_slow_nomads
+		}
+		has_country_flag = country_is_f93_slow_sapce_steppe_nomads_flag # mainly for other modders to use this if they want
+	}
+}
+is_rush_space_steppe_nomad = {
+	or = {
+		and = {
+			has_origin = origin_space_steppe_nomads
+			has_country_flag = choose_rush_nomads
+		}
+		has_country_flag = country_is_f93_rush_sapce_steppe_nomads_flag # mainly for other modders to use this if they want
 	}
 }
 is_orbital_deposit_unknown = { #useful when i can make it more mod friendly

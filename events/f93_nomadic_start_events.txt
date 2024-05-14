@@ -12,6 +12,8 @@ country_event = {
 		is_ai = no
 		is_f93_nomadic = no
 		is_space_steppe_nomad = no
+		is_rush_space_steppe_nomad = no
+		is_slow_space_steppe_nomad = no
 	}
 	
 	option = {

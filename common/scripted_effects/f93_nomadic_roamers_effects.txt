@@ -29,8 +29,14 @@ update_produces_modifier = {
 
 planet_add_produces_modifier_variable = {
 	set_variable = { which = produces_modifier value = 1 }
-	planet_event = { id = f93_steppe_nomad.7 days = 180 }
 	update_produces_modifier = yes
+}
+
+f93_steppe_resource_rush_effect = {
+	add_modifier = {
+		modifier = pm_f93_steppe_nomad_station_output
+		multiplier = resource_rush_multiplier
+	}
 }
 
 save_orbital_deposit = {

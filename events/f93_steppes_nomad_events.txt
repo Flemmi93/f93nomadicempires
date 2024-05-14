@@ -1,12 +1,65 @@
 namespace = f93_steppe_nomad
-
+@deplete_time = 180
+@regenerate_time = 7200
+country_event = {
+	id = f93_steppe_nomad.99
+	is_triggered_only = yes
+	title = f93_steppe_nomad.99.name
+	desc = f93_steppe_nomad.99.desc
+	picture = GFX_evt_alien_cavemen
+	trigger = { has_origin = origin_space_steppe_nomads }
+	immediate = { # 20 years = 240 Months / 6 Months of runtime = 40 -> *120%
+		set_variable = { which = deplete_time value = @deplete_time } #days for resource flow to stop
+		set_variable = { which = regenerate_time value = @regenerate_time } #days for deposit to return to normal
+		set_variable = { which = deplete_time_months value = deplete_time } 
+		set_variable = { which = regenerate_time_months value = regenerate_time }
+		set_variable = { which = regenerate_time_years value = regenerate_time }
+		divide_variable = { which = deplete_time_months value = 30 } #days in a month
+		divide_variable = { which = regenerate_time_months value = 30 } #days in a month
+		divide_variable = { which = regenerate_time_years value = 360 } #days in a year
+		set_variable = { which = resource_rush_multiplier value = regenerate_time_months }
+		divide_variable = { which = resource_rush_multiplier value = deplete_time_months } #adjust the value for deplete_time_months
+		multiply_variable = { which = resource_rush_multiplier value = 1.1 } #10% more resources
+	}
+	option = {
+		name = f93_steppe_nomad.99.a
+		hidden_effect = {
+			set_country_flag = choose_rush_nomads
+			every_system_within_border = {
+				every_system_planet = {
+					limit = {
+						solar_system = {
+							NOT = {
+								has_incompatible_megastructure_for_nomadic_roamers = yes #scripted trigger
+							}
+						}
+						OR = {
+							has_mining_station = yes
+							has_research_station = yes
+						}
+					}
+					set_variable = { which = resource_rush_multiplier value = root.resource_rush_multiplier }
+					f93_steppe_resource_rush_effect = yes
+					planet_event = { id = f93_steppe_nomad.2 days = @deplete_time }
+				}
+			}
+		}
+	}
+	option = {
+		name = f93_steppe_nomad.99.b
+		hidden_effect = {
+			set_country_flag = choose_slow_nomads
+			country_event = { id = f93_steppe_nomad.10 }
+		}
+	}
+}
 ship_event = {
 	id = f93_steppe_nomad.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		owner = { is_space_steppe_nomad = yes }
+		owner = { is_rush_space_steppe_nomad = yes }
 		from = { not = { has_planet_flag = recently_exploited_by_nomad_roamersc } }
 		solar_system = {
 			NOT = {
@@ -17,11 +70,9 @@ ship_event = {
 
 	immediate = {
 		from = {
-			planet_event = { id = f93_steppe_nomad.2 days = 180 }
-			add_modifier = {
-				modifier = pm_f93_steppe_nomad_station_output
-				multiplier = 48 # 20 years = 240 Months / 6 Months of runtime = 40 -> *120%
-			}
+			set_variable = { which = resource_rush_multiplier value = root.owner.resource_rush_multiplier }
+			f93_steppe_resource_rush_effect = yes
+			planet_event = { id = f93_steppe_nomad.2 days = @deplete_time }
 		}
 	}
 }
@@ -33,7 +84,8 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		planet_event = { id = f93_steppe_nomad.3 days = 7200 }
+		set_variable = { which = regenerate_time value = owner.regenerate_time } 
+		planet_event = { id = f93_steppe_nomad.3 days = @regenerate_time }
 		remove_modifier = pm_f93_steppe_nomad_station_output
 		save_orbital_deposit = yes
 		orbital_station = {
@@ -259,12 +311,13 @@ ship_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		owner = { is_space_steppe_nomad = yes }
+		owner = { is_slow_space_steppe_nomad = yes }
 	}
 
 	immediate = {
 		from = {
 			planet_add_produces_modifier_variable = yes
+			planet_event = { id = f93_steppe_nomad.7 days = @deplete_time }
 		}
 	}
 }
@@ -292,7 +345,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		is_space_steppe_nomad = yes
+		is_slow_space_steppe_nomad = yes
 	}
 	immediate = {
 		from = { every_system_planet = { remove_modifier = pm_f93_steppe_nomad_station_output } }
@@ -306,7 +359,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		is_space_steppe_nomad = yes
+		is_slow_space_steppe_nomad = yes
 	}
 	immediate = {
 		from = {
@@ -319,6 +372,7 @@ country_event = {
 						}
 					}
 					planet_add_produces_modifier_variable = yes
+					planet_event = { id = f93_steppe_nomad.7 days = @deplete_time }
 				}
 			}
 		}
@@ -330,7 +384,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		is_space_steppe_nomad = yes
+		is_slow_space_steppe_nomad = yes
 	}
 	immediate = {
 		every_system_within_border = {
@@ -343,6 +397,7 @@ country_event = {
 						}
 					}
 					planet_add_produces_modifier_variable = yes
+					planet_event = { id = f93_steppe_nomad.7 days = @deplete_time }
 				}
 			}
 		}

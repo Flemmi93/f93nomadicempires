@@ -8,4 +8,6 @@ planet_job_researcher_produces_mult = {
 	country_physics_research_produces_mult = 1
 	country_society_research_produces_mult = 1
 	country_engineering_research_produces_mult = 1
+	country_unity_produces_mult = 1
+	country_minor_artifacts_produces_mult = 1
 }
