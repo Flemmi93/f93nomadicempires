@@ -71,7 +71,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = {"tech_nomatic_society" }
+	prerequisites = { "tech_nomatic_society" }
 	component_set = "f93_nomad_minerals_1"
 	upgrades_to = "f93_nomad_minerals_2"
 }
@@ -160,7 +160,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = {"tech_nomatic_society" }
+	prerequisites = { "tech_nomatic_society" }
 	component_set = "f93_nomad_energy_1"
 	upgrades_to = "f93_nomad_energy_2"
 }

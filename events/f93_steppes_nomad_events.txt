@@ -33,7 +33,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		planet_event = { id = f93_steppe_nomad.2 days = 7200 }
+		planet_event = { id = f93_steppe_nomad.3 days = 7200 }
 		remove_modifier = pm_f93_steppe_nomad_station_output
 		save_orbital_deposit = yes
 		orbital_station = {
@@ -83,8 +83,11 @@ planet_event = {
 
 planet_event = {
 	id = f93_steppe_nomad.4
-	hide_window = yes
+	# hide_window = yes
 	is_triggered_only = yes
+	picture = GFX_evt_alien_cavemen
+	title = f93_steppe_nomad.4.name
+	desc = f93_steppe_nomad.4.desc
 
 	trigger = {
 		owner = { is_space_steppe_nomad = yes }
@@ -92,6 +95,268 @@ planet_event = {
 	}
 
 	immediate = {
-		
+		if = { limit = { planet_devastation < 25 NOT = { planet_devastation > 25 } } add_planet_devastation = 75 set_variable = { which = devastation_caused value = 75 } }
+		if = { limit = { planet_devastation < 50 NOT = { planet_devastation < 25 } } add_planet_devastation = 50 set_variable = { which = devastation_caused value = 50 } }
+		if = { limit = { planet_devastation < 75 NOT = { planet_devastation < 50 } } add_planet_devastation = 25 set_variable = { which = devastation_caused value = 25 } }
+
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_mins value = devastation_result }
+		multiply_variable = { which = result_mins value = 75 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_energy value = devastation_result }
+		multiply_variable = { which = result_energy value = 75 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_alloys value = devastation_result }
+		multiply_variable = { which = result_alloys value = 25 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_engineering value = devastation_result }
+		multiply_variable = { which = result_engineering value = 15 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_society value = devastation_result }
+		multiply_variable = { which = result_society value = 15 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_physics value = devastation_result }
+		multiply_variable = { which = result_physics value = 15 }
+		ceiling_variable = result_mins
+		ceiling_variable = result_energy
+		ceiling_variable = result_alloys
+		ceiling_variable = result_engineering
+		ceiling_variable = result_society
+		ceiling_variable = result_physics
+	}
+	option = {
+		name = f93_steppe_nomad.4.a
+		custom_tooltip = f93_steppe_nomad.4.a.desc
+		hidden_effect = {
+			owner = {
+				set_variable = { which = result_mins value = root.result_mins }
+				add_resource = {
+					minerals = 1
+					multiplier = result_mins
+				}
+				set_variable = { which = result_energy value = root.result_energy }
+				add_resource = {
+					energy = 1
+					multiplier = result_energy
+				}
+				set_variable = { which = result_alloys value = root.result_alloys }
+				add_resource = {
+					alloys = 1
+					multiplier = result_alloys
+				}
+				set_variable = { which = result_physics value = root.result_physics }
+				add_resource = {
+					physics_research = 1
+					multiplier = result_physics
+				}
+				set_variable = { which = result_society value = root.result_society }
+				add_resource = {
+					society_research = 1
+					multiplier = result_society
+				}
+				set_variable = { which = result_engineering value = root.result_engineering }
+				add_resource = {
+					engineering_research = 1
+					multiplier = result_engineering
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = f93_steppe_nomad.5
+	# hide_window = yes
+	is_triggered_only = yes
+	picture = GFX_evt_alien_cavemen
+	title = f93_steppe_nomad.5.name
+	desc = f93_steppe_nomad.4.desc
+
+	trigger = {
+		FromFrom = { is_space_steppe_nomad = yes }
+	}
+
+	immediate = {
+		if = { limit = { planet_devastation < 75 } add_planet_devastation = 25 set_variable = { which = devastation_caused value = trigger:num_pops } }
+
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_mins value = devastation_result }
+		multiply_variable = { which = result_mins value = 50 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_energy value = devastation_result }
+		multiply_variable = { which = result_energy value = owner.trigger:income }
+		divide_variable = { which = result_energy value = owner.trigger:num_owned_planets }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_alloys value = devastation_result }
+		multiply_variable = { which = result_alloys value = 15 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_engineering value = devastation_result }
+		multiply_variable = { which = result_engineering value = 10 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_society value = devastation_result }
+		multiply_variable = { which = result_society value = 10 }
+		radomized_devastation_calc_effect = yes
+		set_variable = { which = result_physics value = devastation_result }
+		multiply_variable = { which = result_physics value = 10 }
+		ceiling_variable = result_mins
+		ceiling_variable = result_energy
+		ceiling_variable = result_alloys
+		ceiling_variable = result_engineering
+		ceiling_variable = result_society
+		ceiling_variable = result_physics
+	}
+	option = {
+		name = f93_steppe_nomad.5.a
+		custom_tooltip = f93_steppe_nomad.4.a.desc
+		fromfrom = {
+			create_message = {
+				type = EVENT_MESSAGE_TYPE
+				localization = f93_steppe_nomad.4.a.desc
+				days = 30
+				target = root
+			}
+		}
+		hidden_effect = {
+			FromFrom = {
+				set_variable = { which = result_mins value = root.result_mins }
+				add_resource = {
+					minerals = 1
+					multiplier = result_mins
+				}
+				set_variable = { which = result_energy value = root.result_energy }
+				add_resource = {
+					energy = 1
+					multiplier = result_energy
+				}
+				set_variable = { which = result_alloys value = root.result_alloys }
+				add_resource = {
+					alloys = 1
+					multiplier = result_alloys
+				}
+				set_variable = { which = result_physics value = root.result_physics }
+				add_resource = {
+					physics_research = 1
+					multiplier = result_physics
+				}
+				set_variable = { which = result_society value = root.result_society }
+				add_resource = {
+					society_research = 1
+					multiplier = result_society
+				}
+				set_variable = { which = result_engineering value = root.result_engineering }
+				add_resource = {
+					engineering_research = 1
+					multiplier = result_engineering
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = f93_steppe_nomad.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_space_steppe_nomad = yes }
+	}
+
+	immediate = {
+		from = {
+			planet_add_produces_modifier_variable = yes
+		}
+	}
+}
+
+
+planet_event = {
+	id = f93_steppe_nomad.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		check_variable = { which = produces_modifier value > 0.35 } #always reduces the modifiert to the next lower 0.# integer
+	}
+	immediate = {
+		planet_event = { id = f93_steppe_nomad.7 days = 180 random = 30 }
+		reduce_produces_modifier_by_10_perc = yes
+		update_produces_modifier = yes
+	}
+}
+
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+country_event = {
+	id = f93_steppe_nomad.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_space_steppe_nomad = yes
+	}
+	immediate = {
+		from = { every_system_planet = { remove_modifier = pm_f93_steppe_nomad_station_output } }
+	}
+}
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+country_event = {
+	id = f93_steppe_nomad.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_space_steppe_nomad = yes
+	}
+	immediate = {
+		from = {
+			every_system_planet	= {
+				if = {
+					limit = {
+						OR = {
+							has_mining_station = yes
+							has_research_station = yes
+						}
+					}
+					planet_add_produces_modifier_variable = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = f93_steppe_nomad.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_space_steppe_nomad = yes
+	}
+	immediate = {
+		every_system_within_border = {
+			every_system_planet	= {
+				if = {
+					limit = {
+						OR = {
+							has_mining_station = yes
+							has_research_station = yes
+						}
+					}
+					planet_add_produces_modifier_variable = yes
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = f93_steppe_nomad.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_modifier = pm_f93_steppe_nomad_station_output
+	}
+	immediate = {
+		remove_modifier = pm_f93_steppe_nomad_station_output
 	}
 }

@@ -1,3 +1,38 @@
+radomized_devastation_calc_effect = {
+		set_variable_to_random_value = { which = devastation_changer min = 0.95 max = 1.05 rounded = no }
+		set_variable = { which = devastation_result value = devastation_caused }
+		multiply_variable = { which = devastation_result value = devastation_changer }
+}
+
+reduce_produces_modifier_by_10_perc = {
+	if = { limit = { check_variable = { which = produces_modifier value = 0.2 } } set_variable = { which = produces_modifier value = 0.1 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.3 } } set_variable = { which = produces_modifier value = 0.2 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.4 } } set_variable = { which = produces_modifier value = 0.3 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.5 } } set_variable = { which = produces_modifier value = 0.4 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.6 } } set_variable = { which = produces_modifier value = 0.5 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.7 } } set_variable = { which = produces_modifier value = 0.6 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.8 } } set_variable = { which = produces_modifier value = 0.7 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 0.9 } } set_variable = { which = produces_modifier value = 0.8 } }
+	if = { limit = { check_variable = { which = produces_modifier value = 1.0 } } set_variable = { which = produces_modifier value = 0.9 } }
+
+}
+
+update_produces_modifier = {
+	remove_modifier = pm_f93_steppe_nomad_station_output
+	subtract_variable  = { which = produces_modifier value = 1 }
+	add_modifier = {
+		modifier = pm_f93_steppe_nomad_station_output
+		multiplier = produces_modifier
+	}
+	change_variable  = { which = produces_modifier value = 1 }
+}
+
+planet_add_produces_modifier_variable = {
+	set_variable = { which = produces_modifier value = 1 }
+	planet_event = { id = f93_steppe_nomad.7 days = 180 }
+	update_produces_modifier = yes
+}
+
 save_orbital_deposit = {
 	if = {
 		limit = { has_deposit = d_energy_1 }

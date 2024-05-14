@@ -3,3 +3,9 @@ pm_f93_steppe_nomad_station_output = {
 	station_researchers_produces_mult = 1
 	# station_gatherers_MY_RRESOURCE_produces_mult = 1 # If you are a modder, you wanna add your resource here if it can be mined in space.
 }
+
+planet_job_researcher_produces_mult = {
+	country_physics_research_produces_mult = 1
+	country_society_research_produces_mult = 1
+	country_engineering_research_produces_mult = 1
+}

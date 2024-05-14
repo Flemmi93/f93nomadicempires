@@ -35,6 +35,10 @@
  f93_nomadic_raid.6.name: "Pirate raid in [root.GetName]"
  f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§!"
  no_more_sys_raid_pop_up: "No more Pop ups about System Raids"
+ f93_steppe_nomad.4.name: "Planed Colonized"
+ f93_steppe_nomad.4.desc: "We colonized §Y[ROOT.GetName]§! and found plenty of Resources, our Specialist Surveyed the planet and brought back plenty of hey to grass on."
+ f93_steppe_nomad.4.a: "This will come in handy"
+
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"

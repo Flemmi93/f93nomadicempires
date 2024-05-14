@@ -35,6 +35,12 @@
  f93_nomadic_raid.6.name: "Pirate raid in [root.GetName]"
  f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§!"
  no_more_sys_raid_pop_up: "No more Pop ups about System Raids"
+ f93_steppe_nomad.4.name: "Planet Colonized"
+ f93_steppe_nomad.5.name: "Planet Plundered"
+ f93_steppe_nomad.4.desc: "We colonized §Y[ROOT.GetName]§! and found plenty of Resources, our Specialist Surveyed the planet and brought back plenty of hey to grass on."
+ f93_steppe_nomad.4.a: "This will come in handy"
+ f93_steppe_nomad.4.a.desc: "Resources:$TABBED_NEW_LINE$$energy$ Gained: £energy£ §Y[root.result_energy] $TABBED_NEW_LINE$§!$minerals$ Gained: £minerals£ §Y[root.result_mins]$TABBED_NEW_LINE$§!$alloys$ Gained: £alloys£ §Y[root.result_alloys] $TABBED_NEW_LINE$§!$physics_research$ Gained: £physics£ §Y[root.result_physics]$TABBED_NEW_LINE$§!$society_research$ Gained: £society£ §Y[root.result_society]$TABBED_NEW_LINE$§!$engineering_research$ Gained: £engineering£ §Y[root.result_engineering]"
+ f93_steppe_nomad.5.a: "Tribute Collected"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
@@ -235,7 +241,7 @@
  MOD_energy_receive_monthly8: "Get Reparations"
  MOD_energy_receive_monthly9: "Get Reparations"
  MOD_energy_receive_monthly10: "Get Reparations"
- pm_f93_steppe_nomad_station_output: "Steppe Nomad's Resource Rush"
+ pm_f93_steppe_nomad_station_output: "Steppe Nomad's Resource Modifier"
  mod_station_gatherers_influence_produces_mult: "Mining Station Influence Output"
  mod_station_gatherers_consumer_goods_produces_mult: "Mining Station Consumer Goods Output"
  mod_station_gatherers_alloys_produces_mult: "Mining Station Allyos Output"
@@ -247,8 +253,8 @@
  mod_station_researchers_physics_research_produces_mult: "Research Station Physics Output"
  mod_station_researchers_society_research_produces_mult: "Research Station Society Output"
  mod_station_researchers_engineering_research_produces_mult: "Research Station Engineering Output"
- mod_job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
  mod_shipclass_research_station_build_speed_mult: "Research Station Build Speed"
+ planet_job_researcher_produces_mult: "Monthly £job_researcher£ §HResearch§! Output:"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
@@ -269,6 +275,12 @@
  f93_leave_your_final_planet_effect: "Custruct a Nomadic $NAME_Nomadic_shipyard$ Vessel and leave all planets behind.$NEW_LINE$Gain the §Y$origin_nomadic_empire$ Civic§!.$NEW_LINE$$NEW_LINE$§RWe will become Un-[Root.GetAdj].§!"
 
 #Jobs
- nomadic_roamer_cat: "Roamer"
  job_f93_nomadic_roamer: "Nomadic Warlord"
+ job_f93_nomadic_roamer_plural: "Nomadic Warlords"
+ job_f93_nomadic_roamer_icon: "£mod_job_hunter_gatherer_add£"
+ job_f93_nomadic_roamer_with_icon: "£mod_job_hunter_gatherer_add£$job_f93_nomadic_roamer$"
+ job_f93_nomadic_roamer_plural_with_icon: "£mod_job_hunter_gatherer_add£$job_f93_nomadic_roamer_plural$"
  job_f93_nomadic_roamer_desc: "Our People Love to wander the steppes, it is not very effecient for our empire, but who are we to deny our people's wishes."
+ mod_job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
+ mod_job_f93_nomadic_roamer_per_pop_short:0 "\n§G+1§! £mod_job_hunter_gatherer_add£ per $VALUE$ £pop£"
+ 
