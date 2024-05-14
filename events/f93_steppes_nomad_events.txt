@@ -23,6 +23,7 @@ country_event = {
 	}
 	option = {
 		name = f93_steppe_nomad.99.a
+		add_modifier = { modifier = f93_rush_space_steppe_nomads }
 		hidden_effect = {
 			set_country_flag = choose_rush_nomads
 			every_system_within_border = {
@@ -47,6 +48,7 @@ country_event = {
 	}
 	option = {
 		name = f93_steppe_nomad.99.b
+		add_modifier = { modifier = f93_slow_space_steppe_nomads }
 		hidden_effect = {
 			set_country_flag = choose_slow_nomads
 			country_event = { id = f93_steppe_nomad.10 }

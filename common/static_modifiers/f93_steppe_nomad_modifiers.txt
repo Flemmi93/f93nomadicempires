@@ -4,10 +4,24 @@ pm_f93_steppe_nomad_station_output = {
 	# station_gatherers_MY_RRESOURCE_produces_mult = 1 # If you are a modder, you wanna add your resource here if it can be mined in space.
 }
 
-planet_job_researcher_produces_mult = {
+f93_planet_job_researcher_produces_mult = {
 	country_physics_research_produces_mult = 1
 	country_society_research_produces_mult = 1
 	country_engineering_research_produces_mult = 1
 	country_unity_produces_mult = 1
 	country_minor_artifacts_produces_mult = 1
+}
+
+f93_rush_space_steppe_nomads = {
+	shipclass_mining_station_build_speed_mult = 0.5
+	shipclass_research_station_build_speed_mult = 0.5
+}
+f93_slow_space_steppe_nomads = {
+	planet_jobs_produces_mult = -0.35
+	planet_jobs_upkeep_mult = -0.5
+	planet_pops_upkeep_mult = -0.5
+	f93_planet_job_researcher_produces_mult = 0.5
+	country_alloys_produces_mult = 0.2
+	ships_upkeep_mult = -0.5
+	starbase_shipyard_build_cost_mult = -0.5
 }

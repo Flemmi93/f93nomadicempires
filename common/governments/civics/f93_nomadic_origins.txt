@@ -26,31 +26,14 @@ origin_space_steppe_nomads = {
 	habitability_preference = pc_arid
 	description = origin_space_steppe_nomads_effect
 	modifier = {
-	#old system
-		shipclass_mining_station_build_cost_mult = -0.5
-		shipclass_mining_station_build_speed_mult = 0.5
-		shipclass_research_station_build_cost_mult = -0.5
-		shipclass_research_station_build_speed_mult = 0.5
+	#Both systems
+		job_f93_nomadic_roamer_per_pop = 0.066
+		empire_size_systems_mult = -0.25
+		planet_jobs_produces_mult = -0.15
 		country_vassal_naval_capacity_contribution_mult = 0.25
 		country_commander_cap_add = 1
 		divided_patrongage_max_subjects = 2
-		planet_jobs_produces_mult = -0.15
-		job_f93_nomadic_roamer_per_pop = 0.066
-		empire_size_systems_mult = -0.25
-	#New System
-		# job_f93_nomadic_roamer_per_pop = 0.066
-		# empire_size_systems_mult = -0.25
-		# shipclass_mining_station_build_cost_mult = -0.5
-		# shipclass_research_station_build_cost_mult = -0.5
-		# country_vassal_naval_capacity_contribution_mult = 0.25
-		# country_commander_cap_add = 1
-		# divided_patrongage_max_subjects = 2
-		# planet_jobs_produces_mult = -0.75
-		# planet_jobs_upkeep_mult = -0.75
-		# planet_pops_upkeep_mult = -0.75
-		# planet_job_researcher_produces_mult = 0.75
-		# ships_upkeep_mult = -0.5
-		# starbase_shipyard_build_cost_mult = -0.5
-		# country_trade_fee = 0.25
+		shipclass_research_station_build_cost_mult = -0.35
+		shipclass_mining_station_build_cost_mult = -0.35
 	}
 }
