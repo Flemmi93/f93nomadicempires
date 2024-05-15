@@ -98,7 +98,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_space_mining_3" "tech_nomatic_society" }
+	prerequisites = { "tech_mineral_purification_1" "tech_nomatic_society" }
 	component_set = "f93_nomad_minerals_2"
 	upgrades_to = "f93_nomad_minerals_3"
 }
@@ -125,7 +125,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_space_mining_5" "tech_nomatic_society" }
+	prerequisites = { "tech_mineral_purification_2" "tech_nomatic_society" }
 	component_set = "f93_nomad_minerals_3"
 }
 
@@ -286,7 +286,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_advanced_metallurgy_1" "tech_nomatic_society" }
+	prerequisites = { "tech_alloys_1" "tech_nomatic_society" }
 	component_set = "f93_nomad_refinery_2"
 	upgrades_to = "f93_nomad_refinery_3"
 }
@@ -314,7 +314,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_advanced_metallurgy_2" "tech_nomatic_society" }
+	prerequisites = { "tech_alloys_2" "tech_nomatic_society" }
 	component_set = "f93_nomad_refinery_3"
 }
 
@@ -371,7 +371,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_consumer_good_refinement_1" "tech_nomatic_society" }
+	prerequisites = { "tech_luxuries_1" "tech_nomatic_society" }
 	component_set = "f93_nomad_factory_2"
 	upgrades_to = "f93_nomad_factory_3"
 }
@@ -399,7 +399,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_consumer_good_refinement_2" "tech_nomatic_society" }
+	prerequisites = { "tech_luxuries_2" "tech_nomatic_society" }
 	component_set = "f93_nomad_factory_3"
 }
 
@@ -583,7 +583,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_basic_science_lab_2" "tech_space_science_2" "tech_nomatic_society" }
+	prerequisites = { "tech_basic_science_lab_2" "tech_nomatic_society" }
 	component_set = "f93_nomad_science_lab_2"
 	upgrades_to = "f93_nomad_science_lab_3"
 }
@@ -623,7 +623,7 @@ utility_component_template = {
 		}
 	}
 
-	prerequisites = { "tech_basic_science_lab_3" "tech_space_science_4" "tech_nomatic_society" }
+	prerequisites = { "tech_basic_science_lab_3" "tech_nomatic_society" }
 	component_set = "f93_nomad_science_lab_3"
 }
 

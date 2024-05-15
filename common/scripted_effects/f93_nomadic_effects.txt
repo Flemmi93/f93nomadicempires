@@ -58,6 +58,8 @@ f93_is_thenomad_effect = {
 	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
 	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_csg }
+	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_science }
 	add_ship_design = last_created_design
 
