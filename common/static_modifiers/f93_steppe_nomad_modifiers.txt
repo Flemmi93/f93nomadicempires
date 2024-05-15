@@ -36,7 +36,8 @@ f93_slow_space_steppe_nomads = {
 }
 
 f93_combo_space_steppe_nomads = {
-	job_f93_nomadic_roamer_per_pop = 0.684
+	job_f93_nomadic_roamer_specialist_per_pop = 0.25
+	job_f93_nomadic_roamer_worker_per_pop = 0.5
 	planet_jobs_produces_mult = -0.75
 	planet_jobs_upkeep_mult = -0.85
 	planet_pops_upkeep_mult = -0.8

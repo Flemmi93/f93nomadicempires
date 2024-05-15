@@ -21,7 +21,7 @@ f93_nomadic_roamer = {
 		planet_amenities_add = 3
 	}
 	country_modifier = {
-		country_naval_cap_add = 1
+		country_naval_cap_add = 5
 	}
 	triggered_country_modifier = {
 		potential = {
@@ -32,7 +32,7 @@ f93_nomadic_roamer = {
 			}
 		}
 		modifier = {
-			country_naval_cap_add = 1
+			country_naval_cap_add = 3
 		}
 	}
 
@@ -49,7 +49,7 @@ f93_nomadic_roamer = {
 		}
 
 		modifier = {
-			country_naval_cap_add = 1
+			country_naval_cap_add = 2
 		}
 		mult = value:bellicose_naval_cap
 	}
@@ -63,71 +63,133 @@ f93_nomadic_roamer = {
 				owner = { has_country_flag = choose_combo_nomads }
 			}
 		}
-		planet_max_buildings_add = 0.2
+		planet_max_buildings_add = 1
 		planet_housing_add = 1
 	}
-	
-
-	triggered_country_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				NOT = { has_country_flag = choose_combo_nomads }
-				any_owned_leader = {
-					is_councilor = yes
-					has_trait = leader_trait_bellicose
-				}
-			}
-		}
-
-		modifier = {
-			country_naval_cap_add = 1
-		}
-		mult = value:bellicose_naval_cap
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			exists = planet
-			owner = { NOT = { has_country_flag = choose_combo_nomads } }
-		}
-		country_naval_cap_add = 4
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				exists = owner
-				owner = { NOT = { has_country_flag = choose_combo_nomads } }
-				owner = { has_technology = "tech_ground_defense_planning" }
-			}
-		}
-		modifier = {
-			country_naval_cap_add = 2
-		}
-	}
-	
 
 	resources = {
 		category = planet_jobs
 		produces = {
-			unity = 1
-		}
-		
-		produces = {
-			trigger = {
-				planet = {
-				exists = owner
-				owner = { NOT = { has_country_flag = choose_combo_nomads } }
-				}
-			}
-			unity = 4
+			unity = 5
 		}
 	}
 
 	weight = {
 		weight = @ruler_job_weight
+		modifier = {
+			factor = 1.25
+			has_trait = trait_nomadic
+		}
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+		}
+	}
+	inline_script = "jobs/automodding_priority_food"
+}
+f93_nomadic_roamer_specialist = {
+	category = specialist
+	exempt_from_ai_amenity_prioritization = yes
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = holding_park_ranger_lodge
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	planet_modifier = {
+		planet_stability_add = 2
+		planet_housing_add = 1
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			minor_artifacts = 0.25
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 1.25
+			has_trait = trait_nomadic
+		}
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+		}
+	}
+	inline_script = "jobs/automodding_priority_food"
+}
+f93_nomadic_roamer_worker = {
+	category = worker
+	exempt_from_ai_amenity_prioritization = yes
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = holding_park_ranger_lodge
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	planet_modifier = {
+		trade_value_add = 3
+		planet_housing_add = 1
+	}
+
+
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_robot_empire = yes
+				}
+			}
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_reduction
+		}
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_reduction
+		}
+	}
+
+
+	weight = {
+		weight = @worker_job_weight
 		modifier = {
 			factor = 1.25
 			has_trait = trait_nomadic

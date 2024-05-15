@@ -27,7 +27,7 @@ origin_space_steppe_nomads = {
 	description = origin_space_steppe_nomads_effect
 	modifier = {
 	#Both systems
-		job_f93_nomadic_roamer_per_pop = 0.066
+		job_f93_nomadic_roamer_per_pop = 0.05
 		empire_size_systems_mult = -0.25
 		planet_jobs_produces_mult = -0.15
 		country_vassal_naval_capacity_contribution_mult = 0.25
