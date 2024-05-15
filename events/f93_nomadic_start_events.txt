@@ -140,6 +140,10 @@ country_event = {
 					design = NAME_Nomadic_freighter_aloy
 				}
 				create_ship = {
+					name = NAME_Nomadic_freighter_aloy
+					design = NAME_Nomadic_freighter_csg
+				}
+				create_ship = {
 					name = NAME_Nomadic_freighter_science
 					design = NAME_Nomadic_freighter_science
 				}

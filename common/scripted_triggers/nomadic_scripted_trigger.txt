@@ -18,6 +18,7 @@ is_slow_space_steppe_nomad = {
 		and = {
 			has_origin = origin_space_steppe_nomads
 			has_country_flag = choose_slow_nomads
+			has_country_flag = choose_combo_nomads
 		}
 		has_country_flag = country_is_f93_slow_sapce_steppe_nomads_flag # mainly for other modders to use this if they want
 	}

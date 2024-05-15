@@ -21,6 +21,11 @@ country_event = {
 		set_variable = { which = resource_rush_multiplier value = regenerate_time_months }
 		divide_variable = { which = resource_rush_multiplier value = deplete_time_months } #adjust the value for deplete_time_months
 		multiply_variable = { which = resource_rush_multiplier value = @percent_bonus } #10% more resources
+		every_system_within_border = {
+			every_system_planet = {
+				set_variable = { which = resource_rush_multiplier value = root.resource_rush_multiplier }
+			}
+		}
 	}
 	option = {
 		name = f93_steppe_nomad.99.a
@@ -40,7 +45,6 @@ country_event = {
 							has_research_station = yes
 						}
 					}
-					set_variable = { which = resource_rush_multiplier value = root.resource_rush_multiplier }
 					f93_steppe_resource_rush_effect = yes
 					planet_event = { id = f93_steppe_nomad.2 days = @deplete_time }
 				}
@@ -53,6 +57,61 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = choose_slow_nomads
 			country_event = { id = f93_steppe_nomad.10 }
+		}
+	}
+	option = {
+		name = f93_steppe_nomad.99.c
+		add_modifier = { modifier = f93_combo_space_steppe_nomads }
+		hidden_effect = {
+			set_country_flag = choose_combo_nomads
+			country_event = { id = f93_steppe_nomad.10 }
+			give_technology = { tech = tech_nomatic_society }
+			add_resource = { minerals = 1000 alloys = 500 }
+			capital_scope = {
+				remove_all_districts = yes
+			}
+
+			create_ship_design = { design = NAME_Nomadic_shipyard }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_mins }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_csg }
+			add_ship_design = last_created_design
+			create_ship_design = { design =  NAME_Nomadic_freighter_science }
+			add_ship_design = last_created_design
+		}
+		
+	}
+	after = {
+		if = {
+			limit = { has_country_flag = choose_combo_nomads }
+			create_fleet = {
+				name = "Nomadic Fleet"
+				effect = {
+					set_owner = root
+					set_location = owner.capital_scope
+					create_ship = {
+						name = NAME_Nomadic_freighter_mins
+						design = NAME_Nomadic_freighter_mins
+					}
+					create_ship = {
+						name = NAME_Nomadic_freighter_aloy
+						design = NAME_Nomadic_freighter_aloy
+					}
+					create_ship = {
+						name = NAME_Nomadic_freighter_aloy
+						design = NAME_Nomadic_freighter_csg
+					}
+					create_ship = {
+						name = NAME_Nomadic_freighter_science
+						design = NAME_Nomadic_freighter_science
+					}
+				}
+			}
 		}
 	}
 }

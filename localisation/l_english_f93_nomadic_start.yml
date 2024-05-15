@@ -42,9 +42,10 @@
  f93_steppe_nomad.4.a.desc: "Resources:$TABBED_NEW_LINE$$energy$ Gained: £energy£ §Y[root.result_energy] $TABBED_NEW_LINE$§!$minerals$ Gained: £minerals£ §Y[root.result_mins]$TABBED_NEW_LINE$§!$alloys$ Gained: £alloys£ §Y[root.result_alloys] $TABBED_NEW_LINE$§!$physics_research$ Gained: £physics£ §Y[root.result_physics]$TABBED_NEW_LINE$§!$society_research$ Gained: £society£ §Y[root.result_society]$TABBED_NEW_LINE$§!$engineering_research$ Gained: £engineering£ §Y[root.result_engineering]"
  f93_steppe_nomad.5.a: "Tribute Collected"
  f93_steppe_nomad.99.name: "Choose"
- f93_steppe_nomad.99.desc: "Option A:$NEW_LINE$Every Desposit will give you a §Grush§! of resources but than depletes for §R[root.regenerate_time_years] Years§!$NEW_LINE$$NEW_LINE$Option B:$NEW_LINE$Every deposit delivers a §Ynormal§! amount early on but over a few years §Rdepletes§! down to a trickle."
+ f93_steppe_nomad.99.desc: "Option A:$NEW_LINE$Every Desposit will give you a §Grush§! of resources but than depletes for §R[root.regenerate_time_years] Years§!$NEW_LINE$$NEW_LINE$Option B:$NEW_LINE$Every deposit delivers a §Ynormal§! amount early on but over a few years §Rdepletes§! down to a trickle.$NEW_LINE$$NEW_LINE$Option C:$NEW_LINE$Similar to Option B but less §Rplanet economy§! and §GSpace Nomad Economy Unlocked§!, with planets."
  f93_steppe_nomad.99.a: "Option A"
  f93_steppe_nomad.99.b: "Option B"
+ f93_steppe_nomad.99.c: "Option C"
 
 
 #Global Ship Design
@@ -53,6 +54,7 @@
  NAME_Nomadic_freighter_gen: "Generator"
  NAME_Nomadic_freighter_aloy: "Refinery"
  NAME_Nomadic_freighter_science: "Research"
+ NAME_Nomadic_freighter_csg: "Fabricator"
 
 #Technology
  tech_nomatic_society: "Nomadic Travels"
@@ -265,6 +267,8 @@
  f93_slow_space_steppe_nomads_desc: "Modifies the Origin's Effect to adjust for the choosen Option"
  f93_rush_space_steppe_nomads: "$f93_slow_space_steppe_nomads$"
  f93_rush_space_steppe_nomads: "$f93_slow_space_steppe_nomads_desc$"
+ f93_combo_space_steppe_nomads: "$f93_slow_space_steppe_nomads$"
+ f93_combo_space_steppe_nomads_desc: "$f93_slow_space_steppe_nomads_desc$"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"

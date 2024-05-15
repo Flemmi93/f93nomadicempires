@@ -5,13 +5,22 @@ pm_f93_steppe_nomad_station_output = {
 }
 
 f93_planet_job_researcher_produces_mult = {
-	country_physics_research_produces_mult = 1
-	country_society_research_produces_mult = 1
-	country_engineering_research_produces_mult = 1
-	country_unity_produces_mult = 1
-	country_minor_artifacts_produces_mult = 1
+	planet_jobs_physics_research_produces_mult = 1
+	planet_jobs_society_research_produces_mult = 1
+	planet_jobs_engineering_research_produces_mult = 1
+	planet_jobs_unity_produces_mult = 1
+	planet_jobs_minor_artifacts_produces_mult = 1
 }
-
+# Origin modifiers
+# job_f93_nomadic_roamer_per_pop = 0.066
+# empire_size_systems_mult = -0.25
+# planet_jobs_produces_mult = -0.15
+# country_vassal_naval_capacity_contribution_mult = 0.25
+# country_commander_cap_add = 1
+# divided_patrongage_max_subjects = 2
+# shipclass_research_station_build_cost_mult = -0.35
+# shipclass_mining_station_build_cost_mult = -0.35
+# in addition to the following 3
 f93_rush_space_steppe_nomads = {
 	shipclass_mining_station_build_speed_mult = 0.5
 	shipclass_research_station_build_speed_mult = 0.5
@@ -24,4 +33,17 @@ f93_slow_space_steppe_nomads = {
 	country_alloys_produces_mult = 0.2
 	ships_upkeep_mult = -0.5
 	starbase_shipyard_build_cost_mult = -0.5
+}
+
+f93_combo_space_steppe_nomads = {
+	job_f93_nomadic_roamer_per_pop = 0.684
+	planet_jobs_produces_mult = -0.75
+	planet_jobs_upkeep_mult = -0.85
+	planet_pops_upkeep_mult = -0.8
+	planet_districts_cost_mult = 1
+	# planet_non_artificial_max_districts_add = -50
+	planet_max_districts_add = -10
+	planet_max_buildings_add = 1
+	planet_jobs_unity_produces_mult = 0.75
+	pop_demotion_time_mult = -1
 }

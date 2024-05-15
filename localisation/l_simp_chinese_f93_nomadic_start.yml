@@ -35,9 +35,17 @@
  f93_nomadic_raid.6.name: "Pirate raid in [root.GetName]"
  f93_nomadic_raid.6.desc: "Pirates raided our station in §Y[root.GetName]§!"
  no_more_sys_raid_pop_up: "No more Pop ups about System Raids"
- f93_steppe_nomad.4.name: "Planed Colonized"
+ f93_steppe_nomad.4.name: "Planet Colonized"
+ f93_steppe_nomad.5.name: "Planet Plundered"
  f93_steppe_nomad.4.desc: "We colonized §Y[ROOT.GetName]§! and found plenty of Resources, our Specialist Surveyed the planet and brought back plenty of hey to grass on."
  f93_steppe_nomad.4.a: "This will come in handy"
+ f93_steppe_nomad.4.a.desc: "Resources:$TABBED_NEW_LINE$$energy$ Gained: £energy£ §Y[root.result_energy] $TABBED_NEW_LINE$§!$minerals$ Gained: £minerals£ §Y[root.result_mins]$TABBED_NEW_LINE$§!$alloys$ Gained: £alloys£ §Y[root.result_alloys] $TABBED_NEW_LINE$§!$physics_research$ Gained: £physics£ §Y[root.result_physics]$TABBED_NEW_LINE$§!$society_research$ Gained: £society£ §Y[root.result_society]$TABBED_NEW_LINE$§!$engineering_research$ Gained: £engineering£ §Y[root.result_engineering]"
+ f93_steppe_nomad.5.a: "Tribute Collected"
+ f93_steppe_nomad.99.name: "Choose"
+ f93_steppe_nomad.99.desc: "Option A:$NEW_LINE$Every Desposit will give you a §Grush§! of resources but than depletes for §R[root.regenerate_time_years] Years§!$NEW_LINE$$NEW_LINE$Option B:$NEW_LINE$Every deposit delivers a §Ynormal§! amount early on but over a few years §Rdepletes§! down to a trickle.$NEW_LINE$$NEW_LINE$Option C:$NEW_LINE$Similar to Option B but less §Rplanet economy§! and §GSpace Nomad Economy Unlocked§!, with planets."
+ f93_steppe_nomad.99.a: "Option A"
+ f93_steppe_nomad.99.b: "Option B"
+ f93_steppe_nomad.99.c: "Option C"
 
 
 #Global Ship Design
@@ -46,6 +54,7 @@
  NAME_Nomadic_freighter_gen: "Generator"
  NAME_Nomadic_freighter_aloy: "Refinery"
  NAME_Nomadic_freighter_science: "Research"
+ NAME_Nomadic_freighter_csg: "Fabricator"
 
 #Technology
  tech_nomatic_society: "Nomadic Travels"
@@ -58,8 +67,8 @@
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
  origin_space_steppe_nomads: "Vast Steppes"
  origin_space_steppe_nomads_desc: "$this_feature_is_WIP$$works_partially_please_feedback$§LThe People have always roamed the vast steppes of the homeworld.$NEW_LINE$This world was unified by bloodshed. A roving gang of Nomadic Warrior's took over steppe after steppe, even the occasional settlements, growing their power and influence until suddenly there was nowhere left to conquer. With the advent of FTL travel, nothing has changed, the People still wont stay still for too long but now, new avenues of conquest have opened up.§!"
- origin_space_steppe_nomads_effect: "§RCHALLANGING ORIGIN§!$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G24 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!."
- origin_space_steppe_nomads_colony_exploit_effect: "§Y$New$ $COLONIES$§! Will be similarly exploited."
+ origin_space_steppe_nomads_effect: "§RWARNING: Challanging Gameplay changes. in Option A§!$NEW_LINE$Option A:$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G24 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!.$NEW_LINE$Option B:$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce a normal amount in the beginning and than reduce their output to a trickle."
+ origin_space_steppe_nomads_colony_exploit_effect: ""#§Y$New$ $COLONIES$§! Will be similarly exploited."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -239,7 +248,7 @@
  MOD_energy_receive_monthly8: "Get Reparations"
  MOD_energy_receive_monthly9: "Get Reparations"
  MOD_energy_receive_monthly10: "Get Reparations"
- pm_f93_steppe_nomad_station_output: "Steppe Nomad's Resource Rush"
+ pm_f93_steppe_nomad_station_output: "Steppe Nomad's Resource Modifier"
  mod_station_gatherers_influence_produces_mult: "Mining Station Influence Output"
  mod_station_gatherers_consumer_goods_produces_mult: "Mining Station Consumer Goods Output"
  mod_station_gatherers_alloys_produces_mult: "Mining Station Allyos Output"
@@ -251,8 +260,15 @@
  mod_station_researchers_physics_research_produces_mult: "Research Station Physics Output"
  mod_station_researchers_society_research_produces_mult: "Research Station Society Output"
  mod_station_researchers_engineering_research_produces_mult: "Research Station Engineering Output"
- mod_job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
  mod_shipclass_research_station_build_speed_mult: "Research Station Build Speed"
+ mod_country_minor_artifacts_produces_mult: "Monthly $minor_artifacts$"
+ f93_planet_job_researcher_produces_mult: "Monthly £job_researcher£ §HResearch§! Output:"
+ f93_slow_space_steppe_nomads: "Steppe Nomads"
+ f93_slow_space_steppe_nomads_desc: "Modifies the Origin's Effect to adjust for the choosen Option"
+ f93_rush_space_steppe_nomads: "$f93_slow_space_steppe_nomads$"
+ f93_rush_space_steppe_nomads: "$f93_slow_space_steppe_nomads_desc$"
+ f93_combo_space_steppe_nomads: "$f93_slow_space_steppe_nomads$"
+ f93_combo_space_steppe_nomads_desc: "$f93_slow_space_steppe_nomads_desc$"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
@@ -273,6 +289,12 @@
  f93_leave_your_final_planet_effect: "Custruct a Nomadic $NAME_Nomadic_shipyard$ Vessel and leave all planets behind.$NEW_LINE$Gain the §Y$origin_nomadic_empire$ Civic§!.$NEW_LINE$$NEW_LINE$§RWe will become Un-[Root.GetAdj].§!"
 
 #Jobs
- nomadic_roamer_cat: "Roamer"
  job_f93_nomadic_roamer: "Nomadic Warlord"
+ job_f93_nomadic_roamer_plural: "Nomadic Warlords"
+ job_f93_nomadic_roamer_icon: "£mod_job_hunter_gatherer_add£"
+ job_f93_nomadic_roamer_with_icon: "£mod_job_hunter_gatherer_add£$job_f93_nomadic_roamer$"
+ job_f93_nomadic_roamer_plural_with_icon: "£mod_job_hunter_gatherer_add£$job_f93_nomadic_roamer_plural$"
  job_f93_nomadic_roamer_desc: "Our People Love to wander the steppes, it is not very effecient for our empire, but who are we to deny our people's wishes."
+ mod_job_f93_nomadic_roamer_per_pop: "§G+1§! $job_f93_nomadic_roamer$ Job per $VALUE$ Pops"
+ mod_job_f93_nomadic_roamer_per_pop_short:0 "\n§G+1§! £mod_job_hunter_gatherer_add£ per $VALUE$ £pop£"
+ 
