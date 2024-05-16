@@ -8,48 +8,125 @@ country_event = {
 		is_ai = no
 		is_f93_nomadic = yes
 	}
-
 	immediate = {
-		switch = {
-			trigger = has_deficit
-			energy = {
-				add_modifier = { modifier = energy_deficit_nomadic }
+		random_situation = {
+			limit = { is_situation_type = situation_energy_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = energy_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = energy_deficit_nomadic
+				}
 			}
-			minerals = {
-				add_modifier = { modifier = minerals_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_mineral_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = minerals_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = minerals_deficit_nomadic
+				}
 			}
-			food = {
-				add_modifier = { modifier = food_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_food_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = food_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = food_deficit_nomadic
+				}
 			}
-			consumer_goods = {
-				add_modifier = { modifier = consumer_goods_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_consumer_goods_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = consumer_goods_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = consumer_goods_deficit_nomadic
+				}
 			}
-			alloys = {
-				add_modifier = { modifier = alloys_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_alloys_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = alloys_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = alloys_deficit_nomadic
+				}
 			}
-			exotic_gases = {
-				add_modifier = { modifier = exotic_gases_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_rare_crystals_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = rare_crystals_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = rare_crystals_deficit_nomadic
+				}
 			}
-			rare_crystals = {
-				add_modifier = { modifier = rare_crystals_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_volatile_motes_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = volatile_motes_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = volatile_motes_deficit_nomadic
+				}
 			}
-			volatile_motes = {
-				add_modifier = { modifier = volatile_motes_deficit_nomadic }
-			}
-			sr_zro = {
-				add_modifier = { modifier = sr_zro_deficit_nomadic }
-			}
-			sr_dark_matter = {
-				add_modifier = { modifier = sr_dark_matter_deficit_nomadic }
-			}
-			sr_living_metal = {
-				add_modifier = { modifier = sr_living_metal_deficit_nomadic }
-			}
-			unity = {
-				add_modifier = { modifier = unity_deficit_nomadic }
-			}
-			influence = {
-				add_modifier = { modifier = influence_deficit_nomadic }
+		}
+		random_situation = {
+			limit = { is_situation_type = situation_exotic_gases_deficit }
+			set_deficit_multiplier = yes
+			owner = {
+				set_variable = { which = deficit_progress value = prev.deficit_progress }
+				add_modifier = {
+					modifier = exotic_gases_deficit_nomadic
+					multiplier = deficit_progress
+				}
+				if = {
+					limit = { check_variable = { which = deficit_progress value = 0 } }
+					remove_modifier = exotic_gases_deficit_nomadic
+				}
 			}
 		}
 	}

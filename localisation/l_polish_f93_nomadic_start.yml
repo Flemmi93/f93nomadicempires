@@ -76,7 +76,6 @@
  mod_country_base_physics_research_produces_add: "$mod_country_physics_research_produces_add$"
  mod_country_base_society_research_produces_add: "$mod_country_society_research_produces_add$"
  mod_country_base_engineering_research_produces_add: "$mod_country_engineering_research_produces_add$"
- mod_ships_alloys_upkeep_mult:0 "Ships £alloys£ alloys Upkeep"
  recently_created: "Not possible in the first 6 months"
  this_feature_is_WIP: "§_This Feature is WIP$NEW_LINE$§!"
  works_partially_please_feedback: "It works partially, §Gfeedback§! will be greatly appreciated$NEW_LINE$"
@@ -269,6 +268,17 @@
  f93_rush_space_steppe_nomads: "$f93_slow_space_steppe_nomads_desc$"
  f93_combo_space_steppe_nomads: "$f93_slow_space_steppe_nomads$"
  f93_combo_space_steppe_nomads_desc: "$f93_slow_space_steppe_nomads_desc$"
+ mod_ships_minerals_upkeep_mult: "Ships £minerals£ $minerals$ Upkeep"
+ mod_ships_food_upkeep_mult: "Ships £food£ $food$ Upkeep"
+ mod_ships_unity_upkeep_mult: "Ships £unity£ $unity$ Upkeep"
+ mod_ships_consumer_goods_upkeep_mult: "Ships £consumer_goods£ $consumer_goods$ Upkeep"
+ mod_ships_volatile_motes_upkeep_mult: "Ships £volatile_motes£ $volatile_motes$ Upkeep"
+ mod_ships_exotic_gases_upkeep_mult: "Ships £excotic_gases£ $excotic_gases$ Upkeep"
+ mod_ships_rare_crystals_upkeep_mult: "Ships £rare_crystals£ $rare_crystals$ Upkeep"
+ mod_ships_sr_living_metal_upkeep_mult: "Ships £sr_living_metal£ $sr_living_metal$ Upkeep"
+ mod_ships_sr_zro_upkeep_mult: "Ships £sr_zro£ $sr_zro$ Upkeep"
+ mod_ships_sr_dark_matter_upkeep_mult: "Ships £sr_dark_matter£ $sr_dark_matter$ Upkeep"
+
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"

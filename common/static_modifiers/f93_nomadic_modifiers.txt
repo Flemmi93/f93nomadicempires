@@ -1,46 +1,58 @@
 energy_deficit_nomadic = {
-	ship_shield_mult = -0.75
-	ship_base_speed_mult = -0.25
+	ship_shield_mult = -0.01
+	ship_base_speed_mult = -0.01
+	ships_energy_upkeep_mult = -0.01
 }
 minerals_deficit_nomadic = {
-	country_alloys_produces_mult = -0.5
-	country_consumer_goods_produces_mult = -0.5
+	country_alloys_produces_mult = -0.01
+	country_consumer_goods_produces_mult = -0.01
+	ships_minerals_upkeep_mult = -0.01
 }
 food_deficit_nomadic = {
-	country_unity_produces_mult = -0.75
+	country_unity_produces_mult = -0.01
+	ships_food_upkeep_mult = -0.01
 }
 consumer_goods_deficit_nomadic = {
-	country_engineering_research_produces_mult = -0.5
-	country_physics_research_produces_mult = -0.5
-	country_society_research_produces_mult = -0.5
+	country_engineering_research_produces_mult = -0.01
+	country_physics_research_produces_mult = -0.01
+	country_society_research_produces_mult = -0.01
+	ships_consumer_goods_upkeep_mult = -0.01
 }
 alloys_deficit_nomadic = {
-	ship_fire_rate_mult = -0.15
+	ship_fire_rate_mult = -0.01
+	ships_alloys_upkeep_mult = -0.01
 }
 exotic_gases_deficit_nomadic = {
-	country_engineering_research_produces_mult = -0.5
-	country_physics_research_produces_mult = -0.5
-	country_society_research_produces_mult = -0.5
+	country_engineering_research_produces_mult = -0.01
+	country_physics_research_produces_mult = -0.01
+	country_society_research_produces_mult = -0.01
+	ships_exotic_gases_upkeep_mult = -0.01
 }
 rare_crystals_deficit_nomadic = {
-	ship_armor_mult = -0.75
-	ship_evasion_mult = -0.2
+	ship_armor_mult = -0.01
+	ship_evasion_mult = -0.01
+	ships_rare_crystals_upkeep_mult = -0.01
 }
 volatile_motes_deficit_nomadic = {
-	ship_orbital_bombardment_mult = -0.6
-	ship_armor_penetration_mult = -0.4
+	ship_orbital_bombardment_mult = -0.01
+	ship_armor_penetration_mult = -0.01
+	ships_volatile_motes_upkeep_mult = -0.01
 }
 sr_zro_deficit_nomadic = {
-	ship_accuracy_mult = -0.25
+	ship_accuracy_mult = -0.01
+	ships_sr_zro_upkeep_mult = -0.01
 }
 sr_dark_matter_deficit_nomadic = {
-	ship_shield_regen_add_perc = -0.15
+	ship_shield_regen_add_perc = -0.01
+	ships_sr_dark_matter_upkeep_mult = -0.01
 }
 sr_living_metal_deficit_nomadic = {
-	ship_hull_regen_add_perc = -0.15
+	ship_hull_regen_add_perc = -0.01
+	ships_sr_living_metal_upkeep_mult = -0.01
 }
 unity_deficit_nomadic = {
-	species_leader_exp_gain = -0.5
+	species_leader_exp_gain = -0.01
+	ships_unity_upkeep_mult = -0.01
 }
 influence_deficit_nomadic = {
 	
