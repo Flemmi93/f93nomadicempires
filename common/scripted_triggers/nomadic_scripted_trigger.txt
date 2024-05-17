@@ -4,7 +4,14 @@ is_f93_nomadic = {
 		has_country_flag = country_is_f93_nomadic_flag # mainly for other modders to use this if they want
 	}
 }
-
+has_f93_space_economy = {
+	OR = {
+		has_country_flag = has_f93_space_economy_flag
+		has_country_flag = choose_combo_nomads_flag
+		has_country_flag = choose_combo_nomads
+		
+	}
+}
 is_space_steppe_nomad = {
 	or = {
 		and = {
@@ -17,8 +24,14 @@ is_slow_space_steppe_nomad = {
 	or = {
 		and = {
 			has_origin = origin_space_steppe_nomads
-			has_country_flag = choose_slow_nomads
-			has_country_flag = choose_combo_nomads
+			or = {
+				has_country_flag = choose_slow_nomads_flag
+				has_country_flag = choose_slow_nomads
+			}
+			or = {
+				has_country_flag = choose_combo_nomads_flag
+				has_country_flag = choose_combo_nomads
+			}
 		}
 		has_country_flag = country_is_f93_slow_sapce_steppe_nomads_flag # mainly for other modders to use this if they want
 	}
@@ -27,6 +40,7 @@ is_rush_space_steppe_nomad = {
 	or = {
 		and = {
 			has_origin = origin_space_steppe_nomads
+			has_country_flag = choose_rush_nomads_flag
 			has_country_flag = choose_rush_nomads
 		}
 		has_country_flag = country_is_f93_rush_sapce_steppe_nomads_flag # mainly for other modders to use this if they want

@@ -280,6 +280,16 @@ country_event = {
 	}
 }
 
+country_event = { #event to update save files if need be. last implemente 17.05.2024
+	id = f93_nomadic_start.12
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { is_f93_nomadic = yes NOT = { has_country_flag = has_f93_space_economy_flag } }
+	immediate = {
+		set_country_flag = has_f93_space_economy_flag
+	}
+}
+
 country_event = {
 	id = f93_nomadic_start.11
 	is_triggered_only = yes

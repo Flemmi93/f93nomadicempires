@@ -4,4 +4,5 @@ tech_nomatic_society = {
 	tier = 1
 	category = { statecraft }
 	weight = 0
+	potential = { has_country_flag = has_f93_space_economy_flag }
 }

@@ -60,7 +60,7 @@ f93_nomadic_roamer = {
 			exists = planet
 			planet = {
 				exists = owner
-				owner = { has_country_flag = choose_combo_nomads }
+				owner = { has_country_flag = choose_combo_nomads_flag }
 			}
 		}
 		planet_max_buildings_add = 1

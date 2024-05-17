@@ -31,7 +31,7 @@ country_event = {
 		name = f93_steppe_nomad.99.a
 		add_modifier = { modifier = f93_rush_space_steppe_nomads }
 		hidden_effect = {
-			set_country_flag = choose_rush_nomads
+			set_country_flag = choose_rush_nomads_flag
 			every_system_within_border = {
 				every_system_planet = {
 					limit = {
@@ -55,7 +55,7 @@ country_event = {
 		name = f93_steppe_nomad.99.b
 		add_modifier = { modifier = f93_slow_space_steppe_nomads }
 		hidden_effect = {
-			set_country_flag = choose_slow_nomads
+			set_country_flag = choose_slow_nomads_flag
 			country_event = { id = f93_steppe_nomad.10 }
 		}
 	}
@@ -63,7 +63,8 @@ country_event = {
 		name = f93_steppe_nomad.99.c
 		add_modifier = { modifier = f93_combo_space_steppe_nomads }
 		hidden_effect = {
-			set_country_flag = choose_combo_nomads
+			set_country_flag = choose_combo_nomads_flag
+			set_country_flag = has_f93_space_economy_flag
 			country_event = { id = f93_steppe_nomad.10 }
 			give_technology = { tech = tech_nomatic_society }
 			add_resource = { minerals = 1000 alloys = 500 }
@@ -88,7 +89,7 @@ country_event = {
 	}
 	after = {
 		if = {
-			limit = { has_country_flag = choose_combo_nomads }
+			limit = { has_country_flag = choose_combo_nomads_flag }
 			create_fleet = {
 				name = "Nomadic Fleet"
 				effect = {

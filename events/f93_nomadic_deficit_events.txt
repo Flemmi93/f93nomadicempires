@@ -1,12 +1,12 @@
-namespace = nomadic_deficit
+namespace = f93_nomadic_deficit
 
 country_event = {
-	id = nomadic_deficit.1
+	id = f93_nomadic_deficit.1
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		is_ai = no
-		is_f93_nomadic = yes
+		has_f93_space_economy = yes
 	}
 	immediate = {
 		random_situation = {
