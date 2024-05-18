@@ -118,6 +118,25 @@ f93_transfer_stockpile_data_from_root_effect = {
 	set_variable = { which = stockpile_engineering_research value = root.stockpile_engineering_research }
 }
 
+f93_transfer_stockpile_data_from_root_owner_effect = {
+	set_variable = { which = stockpile_energy value = root.owner.stockpile_energy }
+	set_variable = { which = stockpile_minerals value = root.owner.stockpile_minerals }
+	set_variable = { which = stockpile_food value = root.owner.stockpile_food }
+	set_variable = { which = stockpile_alloys value = root.owner.stockpile_alloys }
+	set_variable = { which = stockpile_consumer_goods value = root.owner.stockpile_consumer_goods }
+	set_variable = { which = stockpile_influence value = root.owner.stockpile_influence }
+	set_variable = { which = stockpile_exotic_gases value = root.owner.stockpile_exotic_gases }
+	set_variable = { which = stockpile_rare_crystals value = root.owner.stockpile_rare_crystals }
+	set_variable = { which = stockpile_volatile_motes value = root.owner.stockpile_volatile_motes }
+	set_variable = { which = stockpile_sr_zro value = root.owner.stockpile_sr_zro }
+	set_variable = { which = stockpile_sr_dark_matter value = root.owner.stockpile_sr_dark_matter }
+	set_variable = { which = stockpile_sr_living_metal value = root.owner.stockpile_sr_living_metal }
+	set_variable = { which = stockpile_unity value = root.owner.stockpile_unity }
+	set_variable = { which = stockpile_physics_research value = root.owner.stockpile_physics_research }
+	set_variable = { which = stockpile_society_research value = root.owner.stockpile_society_research }
+	set_variable = { which = stockpile_engineering_research value = root.owner.stockpile_engineering_research }
+}
+
 f93_transfer_stockpile_data_from_et_Nomadic_bombardment_victim_effect = {
 	set_variable = { which = stockpile_energy value = event_target:nomadic_bombard_victim.stockpile_energy }
 	set_variable = { which = stockpile_minerals value = event_target:nomadic_bombard_victim.stockpile_minerals }
