@@ -10,9 +10,9 @@
 @nomadic_power_cost_bal1 = -70
 @nomadic_power_cost_balE1 = -100
 @nomadic_power_cost_bal2 = -200
-@nomadic_power_cost_balE1 = -250
+@nomadic_power_cost_balE2 = -250
 @nomadic_power_cost_bal3 = -400
-@nomadic_power_cost_balE2 = -600
+@nomadic_power_cost_balE3 = -600
 #Upkeep
 @nomadic_upkeeptier1 = 1	#1 at 100%
 @nomadic_upkeeptier2 = 4	#5 at 80%
@@ -217,9 +217,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @nomadic_component_tier4
-			alloys = @nomadic_component_tierS
-			alloys = @nomadic_component_tierS
+			alloys = @nomadic_component_tierE3
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg3
@@ -636,6 +634,42 @@ utility_component_template = {
 
 #Exotic Gases
 utility_component_template = {
+	key = "f93_nomad_exotic_gases_1_ref"
+	size = aux
+	icon = "GFX_ship_part_exotic_gases_1"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal2
+	modifier = {
+		country_base_exotic_gases_produces_add = @nomadic_production_sr_res1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tier2
+		}
+		upkeep = {
+			energy = @nomadic_upkeeptierSR1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
+		}
+		produces = {
+			exotic_gases = @nomadic_production_sr_res1
+		}
+	}
+
+	prerequisites = { "tech_exotic_gases" "tech_nomatic_society" }
+	component_set = "f93_nomad_exotic_gases_1"
+	upgrades_to = "f93_nomad_exotic_gases_2"
+}
+
+#Exotic Gases
+utility_component_template = {
 	key = "f93_nomad_exotic_gases_1"
 	size = aux
 	icon = "GFX_ship_part_exotic_gases_1"
@@ -702,6 +736,42 @@ utility_component_template = {
 
 	prerequisites = { "tech_mine_exotic_gases" "tech_exotic_gases" "tech_nomatic_society" }
 	component_set = "f93_nomad_exotic_gases_2"
+}
+
+#Rare Crystals
+utility_component_template = {
+	key = "f93_nomad_rare_crystals_1_ref"
+	size = aux
+	icon = "GFX_ship_part_rare_crystals_1"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal0
+	modifier = {
+		country_base_rare_crystals_produces_add = @nomadic_production_sr_res1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tier2
+		}
+		upkeep = {
+			energy = @nomadic_upkeeptierSR1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
+		}
+		produces = {
+			rare_crystals = @nomadic_production_sr_res1
+		}
+	}
+
+	prerequisites = { "tech_rare_crystals" "tech_nomatic_society" }
+	component_set = "f93_nomad_rare_crystals_1"
+	upgrades_to = "f93_nomad_rare_crystals_2"
 }
 
 #Rare Crystals
@@ -776,6 +846,42 @@ utility_component_template = {
 
 #Volatile Mote
 utility_component_template = {
+	key = "f93_nomad_volatile_motes_1_ref"
+	size = aux
+	icon = "GFX_ship_part_volatile_motes_1"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal0
+	modifier = {
+		country_base_volatile_motes_produces_add = @nomadic_production_sr_res1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tier2
+		}
+		upkeep = {
+			energy = @nomadic_upkeeptierSR1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
+		}
+		produces = {
+			volatile_motes = @nomadic_production_sr_res1
+		}
+	}
+
+	prerequisites = { "tech_volatile_motes" "tech_nomatic_society" }
+	component_set = "f93_nomad_volatile_motes_1"
+	upgrades_to = "f93_nomad_volatile_motes_2"
+}
+
+#Volatile Mote
+utility_component_template = {
 	key = "f93_nomad_volatile_motes_1"
 	size = aux
 	icon = "GFX_ship_part_volatile_motes_1"
@@ -809,7 +915,6 @@ utility_component_template = {
 	component_set = "f93_nomad_volatile_motes_1"
 	upgrades_to = "f93_nomad_volatile_motes_2"
 }
-
 utility_component_template = {
 	key = "f93_nomad_volatile_motes_2"
 	size = aux
