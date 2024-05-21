@@ -3,11 +3,16 @@
 @nomadic_component_tier2 = 25
 @nomadic_component_tier3 = 125
 @nomadic_component_tier4 = 300
+@nomadic_component_tierE1 = 400
+@nomadic_component_tierE2 = 750
+@nomadic_component_tierE3 = 1000
 @nomadic_power_cost_bal0 = -50
 @nomadic_power_cost_bal1 = -70
+@nomadic_power_cost_balE1 = -100
 @nomadic_power_cost_bal2 = -200
+@nomadic_power_cost_balE1 = -250
 @nomadic_power_cost_bal3 = -400
-@nomadic_power_cost_bal4 = -600
+@nomadic_power_cost_balE2 = -600
 #Upkeep
 @nomadic_upkeeptier1 = 1	#1 at 100%
 @nomadic_upkeeptier2 = 4	#5 at 80%
@@ -91,7 +96,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = 1
+			energy = @nomadic_upkeeptier1
 		}
 		produces = {
 			minerals = @nomadic_production_minerals2
@@ -118,7 +123,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tier3
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier1
+			energy = @nomadic_upkeeptier2
 		}
 		produces = {
 			minerals = @nomadic_production_minerals3
@@ -135,14 +140,14 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_energy_1"
 	icon_frame = 1
-	power = -100
+	power = @nomadic_power_cost_balE1
 	modifier = {
 		country_base_energy_produces_add = @nomadic_production_energy1
 	}
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 400
+			alloys = @nomadic_component_tierE1
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg1
@@ -170,14 +175,14 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_energy_2"
 	icon_frame = 1
-	power = -250
+	power = @nomadic_power_cost_balE2
 	modifier = {
 		country_base_energy_produces_add = @nomadic_production_energy2
 	}
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 750
+			alloys = @nomadic_component_tierE2
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg2
@@ -205,14 +210,16 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_energy_3"
 	icon_frame = 1
-	power = -600
+	power = @nomadic_power_cost_balE3
 	modifier = {
 		country_base_energy_produces_add = @nomadic_production_energy3
 	}
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 1000
+			alloys = @nomadic_component_tier4
+			alloys = @nomadic_component_tierS
+			alloys = @nomadic_component_tierS
 		}
 		upkeep = {
 			alloys = @nomadic_upkeepcsg3
@@ -635,7 +642,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = @nomadic_power_cost_bal2
 	modifier = {
-		country_base_exotic_gases_produces_add = 1
+		country_base_exotic_gases_produces_add = @nomadic_production_sr_res1
 	}
 	resources = {
 		category = ship_components
@@ -670,7 +677,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_exotic_gases_produces_add = 2
+		country_base_exotic_gases_produces_add = @nomadic_production_sr_res2
 	}
 	resources = {
 		category = ship_components
@@ -705,7 +712,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = @nomadic_power_cost_bal0
 	modifier = {
-		country_base_rare_crystals_produces_add = 1
+		country_base_rare_crystals_produces_add = @nomadic_production_sr_res1
 	}
 	resources = {
 		category = ship_components
@@ -740,7 +747,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_rare_crystals_produces_add = 2
+		country_base_rare_crystals_produces_add = @nomadic_production_sr_res2
 	}
 	resources = {
 		category = ship_components
@@ -775,7 +782,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = @nomadic_power_cost_bal0
 	modifier = {
-		country_base_volatile_motes_produces_add = 1
+		country_base_volatile_motes_produces_add = @nomadic_production_sr_res1
 	}
 	resources = {
 		category = ship_components
@@ -783,7 +790,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tier2
 		}
 		upkeep = {
-			energy = @nomadic_upkeeptier3
+			energy = @nomadic_upkeeptierSR1
 		}
 		upkeep = {
 			trigger = { exists = from from = { is_gestalt = no} }
@@ -810,7 +817,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_volatile_motes_produces_add = 2
+		country_base_volatile_motes_produces_add = @nomadic_production_sr_res2
 	}
 	resources = {
 		category = ship_components
@@ -845,7 +852,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_sr_zro_produces_add = 1
+		country_base_sr_zro_produces_add = @nomadic_production_sr_res1
 	}
 	resources = {
 		category = ship_components
@@ -880,7 +887,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_sr_dark_matter_produces_add = 1
+		country_base_sr_dark_matter_produces_add = @nomadic_production_sr_res2
 	}
 	resources = {
 		category = ship_components
@@ -915,7 +922,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_nanites_produces_add = 1
+		country_base_nanites_produces_add = @nomadic_production_sr_res1
 	}
 	resources = {
 		category = ship_components
@@ -950,7 +957,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -150
 	modifier = {
-		country_base_sr_living_metal_produces_add = 1
+		country_base_sr_living_metal_produces_add = @nomadic_production_sr_res1
 	}
 	resources = {
 		category = ship_components
