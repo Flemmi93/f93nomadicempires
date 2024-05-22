@@ -15,5 +15,13 @@ starbase_level_nomadic_shipyard = {
 	ship_size = nomadic_shipyard
 	potential_home_base = yes
 	show_in_outliner = no
+	collects_trade = no
+}
+
+# Nomadic Shipyard
+starbase_level_nomadic_mothership = {
+	ship_size = nomadic_mothership
+	potential_home_base = yes
+	show_in_outliner = no
 	collects_trade = yes
 }

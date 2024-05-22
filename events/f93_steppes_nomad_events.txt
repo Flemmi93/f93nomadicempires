@@ -490,7 +490,7 @@ country_event = {
 		every_system_within_border = {
 			limit = {
 				any_ship_in_system = {
-					is_ship_size = nomadic_shipyard
+					is_ship_size = nomadic_mothership
 				}
 			}
 			system_event = { id = action.725 }

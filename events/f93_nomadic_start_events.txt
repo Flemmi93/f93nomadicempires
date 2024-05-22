@@ -64,15 +64,15 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	immediate = {  
+	immediate = {
 		create_fleet = {
-			name = "Nomadic Construction Vessel"
+			name = "Mothership"
 			effect = {
 				set_owner = event_target:homeworld_leavers
 				set_location = event_target:homeworld
 				create_ship = {
-					name = NAME_Nomadic_shipyard
-					design = NAME_Nomadic_shipyard
+					name = "Mothership"
+					design = NAME_Nomadic_mothership
 				}
 			}
 		}
@@ -307,6 +307,32 @@ country_event = {
 			species = owner_main_species
 			class = scientist
 			skill = 1
+		}
+	}
+}
+
+country_event = {
+	id = f93_nomadic_start.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = homeworld_leavers
+		home_planet = {
+			save_event_target_as = homeworld
+		}
+		create_ship_design = { design =  NAME_Nomadic_freighter_science }
+		add_ship_design = last_created_design
+		create_fleet = {
+			name = "Mothership"
+			effect = {
+				set_owner = event_target:homeworld_leavers
+				set_location = event_target:homeworld
+				create_ship = {
+					name = NAME_Nomadic_shipyard
+					design = NAME_Nomadic_mothership
+				}
+			}
 		}
 	}
 }
