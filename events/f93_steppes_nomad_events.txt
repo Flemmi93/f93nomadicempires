@@ -478,3 +478,44 @@ planet_event = {
 		remove_modifier = pm_f93_steppe_nomad_station_output
 	}
 }
+
+country_event = {
+	id = f93_steppe_nomad.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_space_steppe_nomad = yes
+	}
+	immediate = {
+		every_system_within_border = {
+			limit = {
+				any_ship_in_system = {
+					is_ship_size = nomadic_shipyard
+				}
+			}
+			system_event = { id = action.725 }
+			system_event = { id = f93_steppe_nomad.13 days = 1 } # does nothing due to effect not impacting Combo Space Nomdas
+		}
+	}
+}
+
+system_event = {
+	id = f93_steppe_nomad.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { is_space_steppe_nomad = yes }
+	}
+	immediate = {
+		every_ship_in_system = {
+			limit = {
+				OR = {
+					is_ship_class = shipclass_research_station
+					is_ship_class = shipclass_mining_station
+				}
+			}
+			ship_event = { id = f93_steppe_nomad.1 }
+			ship_event = { id = f93_steppe_nomad.6 }
+		}
+	}
+}

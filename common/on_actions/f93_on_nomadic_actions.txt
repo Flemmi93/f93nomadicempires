@@ -12,6 +12,7 @@ on_game_start_country = {
 on_monthly_pulse_country = {
 	events = {
 		f93_nomadic_deficit.1
+		f93_steppe_nomad.12
 	}
 }
 # This = starbase being disabled (not ship!)

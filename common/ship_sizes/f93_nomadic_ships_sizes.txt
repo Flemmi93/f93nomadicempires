@@ -8,6 +8,11 @@ nomadic_freighter = {
 	rotation_speed = 0.2
 	collision_radius = @destroyer_collision_radius
 	max_hitpoints = @destroyer_hp
+
+	potential_country = {
+		has_f93_space_economy = yes
+	}
+
 	modifier = {
 		ship_evasion_add = 10
 	}
@@ -26,7 +31,6 @@ nomadic_freighter = {
 	is_designable = yes
 	default_behavior = carrier
 	ship_roles = { carrier }
-
 	components_add_to_cost = yes
 
 	prerequisites = { "tech_nomatic_society" }
@@ -61,6 +65,11 @@ nomadic_shipyard = {
 	rotation_speed = 0.15
 	collision_radius = @cruiser_collision_radius
 	max_hitpoints = @cruiser_hp
+
+	potential_country = {
+		has_f93_space_economy = yes
+	}
+
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
 		starbase_shipyard_capacity_add = 1

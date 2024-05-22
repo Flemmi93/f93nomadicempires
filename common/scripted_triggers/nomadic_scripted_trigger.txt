@@ -9,7 +9,6 @@ has_f93_space_economy = {
 		has_country_flag = has_f93_space_economy_flag
 		has_country_flag = choose_combo_nomads_flag
 		has_country_flag = choose_combo_nomads
-		
 	}
 }
 is_space_steppe_nomad = {
