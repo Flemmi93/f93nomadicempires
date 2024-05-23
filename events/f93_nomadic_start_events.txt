@@ -336,3 +336,17 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = f93_nomadic_start.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_owned_ship = {
+			is_ship_size = nomadic_mothership
+		}
+	}
+	immediate = {
+		add_modifier = { modifier = f93_has_a_mothership_modifier days = 30 }
+	}
+}

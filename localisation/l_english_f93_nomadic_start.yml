@@ -173,6 +173,7 @@
  NOMADIC_COMPUTER_SAPIENT: "$COMBAT_COMPUTER_CARRIER_SAPIENT$"
  NOMADIC_COMPUTER_AUTONOMOUS: "$COMBAT_COMPUTER_CARRIER_AUTONOMOUS$"
  NOMADIC_COMPUTER_PRECOG: "$COMBAT_COMPUTER_CARRIER_PRECOG$"
+ NOMADIC_SHIP_AURA: "Economic Aura"
 
  shipclass_starbase_nomad: "$shipclass_starbase$"
 
@@ -291,6 +292,8 @@
  mod_ships_sr_living_metal_upkeep_mult: "Ships £sr_living_metal£ $sr_living_metal$ Upkeep"
  mod_ships_sr_zro_upkeep_mult: "Ships £sr_zro£ $sr_zro$ Upkeep"
  mod_ships_sr_dark_matter_upkeep_mult: "Ships £sr_dark_matter£ $sr_dark_matter$ Upkeep"
+ f93_has_a_mothership_modifier: "Mothership Bases Logistics"
+ f93_has_a_mothership_modifier_desc: "Ships that are far away from our Mothership suffer and have increased upkeep costs"
 
 
 #CB & Wargoals

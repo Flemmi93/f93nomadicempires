@@ -484,7 +484,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		is_space_steppe_nomad = yes
+		has_f93_space_economy = yes
 	}
 	immediate = {
 		every_system_within_border = {
@@ -493,7 +493,10 @@ country_event = {
 					is_ship_size = nomadic_mothership
 				}
 			}
-			system_event = { id = action.725 }
+			while = {
+				count = 5
+				system_event = { id = action.725 }
+			}
 			system_event = { id = f93_steppe_nomad.13 days = 1 } # does nothing due to effect not impacting Combo Space Nomdas
 		}
 	}
@@ -503,9 +506,6 @@ system_event = {
 	id = f93_steppe_nomad.13
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		owner = { is_space_steppe_nomad = yes }
-	}
 	immediate = {
 		every_ship_in_system = {
 			limit = {

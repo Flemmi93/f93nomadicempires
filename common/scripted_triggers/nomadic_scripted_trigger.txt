@@ -26,8 +26,6 @@ is_slow_space_steppe_nomad = {
 			or = {
 				has_country_flag = choose_slow_nomads_flag
 				has_country_flag = choose_slow_nomads
-			}
-			or = {
 				has_country_flag = choose_combo_nomads_flag
 				has_country_flag = choose_combo_nomads
 			}

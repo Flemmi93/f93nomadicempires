@@ -31,7 +31,6 @@ f93_slow_space_steppe_nomads = {
 	planet_pops_upkeep_mult = -0.5
 	f93_planet_job_researcher_produces_mult = 0.5
 	country_alloys_produces_mult = 0.2
-	ships_upkeep_mult = -0.5
 	starbase_shipyard_build_cost_mult = -0.5
 }
 
@@ -47,4 +46,7 @@ f93_combo_space_steppe_nomads = {
 	planet_max_buildings_add = 1
 	planet_jobs_unity_produces_mult = 0.75
 	pop_demotion_time_mult = -1
+}
+f93_has_a_mothership_modifier = {
+	ships_upkeep_mult = 0.25
 }
