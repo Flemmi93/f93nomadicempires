@@ -71,7 +71,8 @@ country_event = {
 			capital_scope = {
 				remove_all_districts = yes
 			}
-
+			create_ship_design = { design =  NAME_Nomadic_mothership }
+			add_ship_design = last_created_design
 			create_ship_design = { design = NAME_Nomadic_shipyard }
 			add_ship_design = last_created_design
 			create_ship_design = { design =  NAME_Nomadic_freighter_mins }

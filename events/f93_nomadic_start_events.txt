@@ -287,6 +287,8 @@ country_event = { #event to update save files if need be. last implemente 17.05.
 	trigger = { is_f93_nomadic = yes NOT = { has_country_flag = has_f93_space_economy_flag } }
 	immediate = {
 		set_country_flag = has_f93_space_economy_flag
+		create_ship_design = { design =  NAME_Nomadic_mothership }
+		add_ship_design = last_created_design
 	}
 }
 
