@@ -331,7 +331,7 @@ country_event = {
 				set_owner = event_target:homeworld_leavers
 				set_location = event_target:homeworld
 				create_ship = {
-					name = NAME_Nomadic_shipyard
+					name = NAME_Nomadic_mothership
 					design = NAME_Nomadic_mothership
 				}
 			}
@@ -350,5 +350,22 @@ country_event = {
 	}
 	immediate = {
 		add_modifier = { modifier = f93_has_a_mothership_modifier days = 30 }
+	}
+}
+
+country_event = {
+	id = f93_nomadic_start.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = has_shipyard_design_f93 }
+		has_technology = "tech_nomatic_society"
+		has_technology = "tech_doctrine_fleet_size_4"
+		has_technology = "tech_doctrine_navy_size_4"
+	}
+	immediate = {
+		create_ship_design = { design =  NAME_Nomadic_shipyard }
+		add_ship_design = last_created_design
+		set_country_flag = has_shipyard_design_f93
 	}
 }
