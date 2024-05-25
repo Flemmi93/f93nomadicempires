@@ -579,7 +579,6 @@ utility_component_template = {
 		}
 
 		modifier = {
-			ship_upkeep_mult = -0.4
 			ships_upkeep_mult = -0.4
 			ship_fire_rate_mult = 0.1
 		}

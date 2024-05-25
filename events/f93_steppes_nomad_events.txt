@@ -520,3 +520,54 @@ system_event = {
 		}
 	}
 }
+
+# See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+fleet_event = {
+	id = f93_steppe_nomad.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ship_size = nomadic_mothership
+	}
+
+	immediate = {
+		from = {
+			every_system_planet = {
+				limit = {
+					NOT = { has_planet_flag = f93_was_visited_by_mothership@root.owner }
+					has_deposit_for = shipclass_mining_station
+					is_surveyed = { who = root.owner status = yes }
+				}
+				set_timed_planet_flag = {
+					flag = f93_was_visited_by_mothership@root.owner
+					days = 14400
+				}
+				root.owner = {
+					add_resource = {
+						minerals = 50
+					}
+				}
+			}
+			every_system_planet = {
+				limit = {
+					NOT = { has_planet_flag = f93_was_visited_by_mothership@root.owner }
+					has_deposit_for = shipclass_research_station
+					is_surveyed = { who = root.owner status = yes }
+				}
+				set_timed_planet_flag = {
+					flag = f93_was_visited_by_mothership@root.owner
+					days = 14400
+				}
+				root.owner = {
+					add_resource = {
+						physics_research = 20
+						society_research = 20
+						engineering_research = 20
+					}
+				}
+			}
+		}
+	}
+}

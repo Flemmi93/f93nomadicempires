@@ -148,3 +148,12 @@ on_terraforming_complete = {
 		f93_steppe_nomad.11
 	}
 }
+
+# See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		f93_steppe_nomad.14
+	}
+}
