@@ -36,7 +36,7 @@ f93_create_nomad_country_effect = {
 	set_closed_borders = {
 		who = last_created_country
 		status = no
-		forced = 999
+		forced = 1
 	}
 }
 f93_is_thenomad_effect = {
@@ -63,7 +63,7 @@ f93_is_thenomad_effect = {
 	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_science }
 	add_ship_design = last_created_design
-
+	set_variable = { which = f93_raidable_planets value = 1 }
 	set_player = root
 }
 

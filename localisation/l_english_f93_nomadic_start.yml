@@ -12,10 +12,10 @@
  f93_nomadic_raid.1.a: "Hard Earned Cash"
  f93_nomadic_livestyle: "Nomadic Lifestyle"
  f93_nomadic_livestyle_desc: "We are strangers wherever we go, we stick together though thick and thin."
- f93_nomadic_raid.2.name: "Raid conducted on §Y[event_target:Nomadic_bombardment.GetName]§!"
- f93_nomadic_raid.2.desc: "Our raiders on §Y[event_target:Nomadic_bombardment.GetName]§! have returned to §Y[event_target:Nomadic_bombardment.GetName]§! and brought some goodies."
+ f93_nomadic_raid.2.name: "Raid conducted on §Y[Nomadic_bombardment.GetName]§!"
+ f93_nomadic_raid.2.desc: "Our raiders have returned from §Y[Nomadic_bombardment.GetName]§! and brought some goodies."
  f93_nomadic_raid.2.a: "What have we here"
- f93_nomadic_raid.2.a.desc: "§GGain Resources based on §Y[from.GetName]'s§G £pops£ Population§!$NEW_LINE$"
+ f93_nomadic_raid.2.a.desc: "§GGain Resources§! based on §Y[Nomadic_bombardment.GetName]'s§! Stockpiles that survived the bombardments§!"
  f93_nomadic_recruitment.1.name: "New Officer Recruits"
  f93_nomadic_recruitment.1.desc: "A handful of men seem up to the task.$NEW_LINE$Who shall fill the vacant stop?"
  f93_nomadic_recruitment.1.a: "§R$default_commander$"
@@ -46,7 +46,18 @@
  f93_steppe_nomad.99.a: "Option A"
  f93_steppe_nomad.99.b: "Option B"
  f93_steppe_nomad.99.c: "Option C"
+ nomadic_ascension.1.name: "The Great Pretender"
+ nomadic_ascension.1.desc: "§RGreat Khan?! That pretender dares to challenge us? This insolence cannot be tolerated!§!§Y[Ruler.GetName] raged!§! The command deck of the flagship erupted in a frenzy of outrage and disbelief as the envoy relayed the message from the distant sector.$NEW_LINE$Who questions our supremacy? Our ancestors ruled the stars! We won't be bested by some upstart with a shiny throne!"
+ nomadic_ascension.1.a: "Our destiny awaits!"
+ nomadic_ascension.8.name: "§H$r_khan_throne$§! has appeared"
+ nomadic_ascension.8.desc: "§Y[owner_of_the_throne.GetName] came into the possession of §H$r_khan_throne$§!. How exactly is a mystery to us. Maybe the salvaged it off a debris field or found it burried in the ground. It matters not. We have to have it now!"
 
+#Event Chain
+ nomadic_ascension_quest: "The greatest Pirate there is"
+ nomadic_ascension_quest_title: "Become ruler between the stars"
+ nomadic_ascension_quest_desc: "For Ages there have been pretenders. It is time that we deal with them and claim the Throne of the Khan for our self."
+ great_khan_throne: "The Throne of the Khan"
+ maurauder_ships_killed: "Marauder ships killed:"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
@@ -80,6 +91,8 @@
  recently_created: "Not possible in the first 6 months"
  this_feature_is_WIP: "§_This Feature is WIP$NEW_LINE$§!"
  works_partially_please_feedback: "It works partially, §Gfeedback§! will be greatly appreciated$NEW_LINE$"
+ great_khan_dead: "The Great Khan is dead"
+ requires_great_khan_to_exists: "$TRIGGER_FAIL$Requires The Great Khan to have risen."
 
 #Components
  f93_nomad_minerals_1: "Matter Converter 1"
@@ -294,6 +307,7 @@
  mod_ships_sr_dark_matter_upkeep_mult: "Ships £sr_dark_matter£ $sr_dark_matter$ Upkeep"
  f93_has_a_mothership_modifier: "Mothership Bases Logistics"
  f93_has_a_mothership_modifier_desc: "Ships that are far away from our Mothership suffer and have increased upkeep costs"
+ mod_shipsize_nomadic_freighter_build_speed_mult: "Freighter Build Speed"
 
 
 #CB & Wargoals
@@ -301,13 +315,16 @@
  casus_belli_cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
  wg_nomadic_pirate_raid: "$cb_nomadic_pirate_raid$"
  war_goal_wg_nomadic_pirate_raid: "$cb_nomadic_pirate_raid$"
- war_goal_wg_nomadic_pirate_raid_desc: "$war_goal_wg_plunder_desc$"
+ war_goal_wg_nomadic_pirate_raid_desc: "$war_goal_wg_plunder_desc$$NEW_LINE$$NEW_LINE$You can plunder planets depending on how many §Y$tradition_nomadic_ambition$§! Traditions you have unlocked.$TABBED_NEW_LINE$ No Traditions = §G1§! Planet$TABBED_NEW_LINE$ one Tradition = §G2§! Planets$TABBED_NEW_LINE$ two Traditions = §G3§! Planets$TABBED_NEW_LINE$ one Traditions = §G4§! Planets$TABBED_NEW_LINE$ four Traditions = §G5§! Planets$TABBED_NEW_LINE$ all Traditions = §G10§! Planets"
+ wg_nomadic_pirate_raid_for_throne: "$cb_nomadic_pirate_raid$"
+ wg_nomadic_pirate_raid_for_throne_desc: "They has obtained the §r$r_khans_throne$§!. Now we will steal it back. Invade their §YCapital World§!!"
+ war_goal_wg_nomadic_pirate_raid_for_throne: "$cb_nomadic_pirate_raid$"
+ war_goal_wg_nomadic_pirate_raid_for_throne_desc: "$wg_nomadic_pirate_raid_for_throne_desc$"
  war_goal_wg_nomadic_pirate_defence: "$cb_nomadic_pirate_raid$"
  war_goal_wg_nomadic_pirate_defence_desc: "$war_goal_wg_plunder_desc$"
  wg_nomadic_pirate_defense: "$cb_nomadic_pirate_raid$ Defense"
- wg_nomadic_pirate_defense: "$cb_nomadic_pirate_raid$ Defense"
- wg_nomadic_pirate_raid_accept: "§Y[from.GetName]§! will pay 20% of their £energy£ $energy$ stockpile to §Y[this.GetName]§!"
- wg_nomadic_pirate_defense_accept: "§Y[from.GetName]§! will pay 20% of their £energy£ $energy$ stockpile to §Y[this.GetName]§!"
+ wg_nomadic_pirate_raid_accept: "§Y[from.GetName]§! will pay 10% of their £energy£ $energy$ stockpile to §Y[this.GetName]§!"
+ wg_nomadic_pirate_defense_accept: "§Y[from.GetName]§! will pay 10% of their £energy£ $energy$ stockpile to §Y[this.GetName]§!"
 
 #Decisions
  f93_leave_your_final_planet: "Escape into the Void"
@@ -339,3 +356,17 @@
  job_f93_nomadic_roamer_worker_desc: "$job_f93_nomadic_roamer_desc$"
  mod_job_f93_nomadic_roamer_worker_per_pop_short:0 "\n§G+1§! £mod_job_hunter_gatherer_add£ per $VALUE$ £pop£"
  mod_job_f93_nomadic_roamer_worker_per_pop: "§G+1§! $job_f93_nomadic_roamer_worker$ Job per $VALUE$ Pops"
+
+#Traditions
+ ap_f93_nomadic_ambition: "Nomadic Ambition"
+ tradition_nomadic_ambition: "Spacefaring"
+ tradition_nomadic_ambition_desc: "We rule the galaxy between the stars."
+ tr_nomadic_ambition_adopt: "Nomadic Ambition"
+ tr_nomadic_ambition_adopt_desc: "Our Society has the ambitions to become the uncontested ruler between the stars. Let the planet dweller rott in their gravity wells, let the voidborn cling to the thin shells and unastable orbits, we truly rule this galaxy!"
+ tr_nomadic_ambition_finish: "Nomadic Ambition finished"
+ tr_nomadic_ambition_1: "Star Born Ingenuity"
+ tr_nomadic_ambition_2: "Recalibrated Sensors"
+ tr_nomadic_ambition_3: "Raid Warfare"
+ tr_nomadic_ambition_3_effect: "Unlocks §Y$cb_nomadic_pirate_raid$§! Casus Belli$NEW_LINE$$MOD_COUNTRY_NAVAL_CAP_ADD$ §G+15%§!"
+ tr_nomadic_ambition_4: "Logistic Between Stars"
+ tr_nomadic_ambition_5: "Messanger Posts"

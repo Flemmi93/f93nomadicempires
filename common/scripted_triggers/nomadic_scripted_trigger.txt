@@ -4,6 +4,12 @@ is_f93_nomadic = {
 		has_country_flag = country_is_f93_nomadic_flag # mainly for other modders to use this if they want
 	}
 }
+is_f93_space_pirate = {
+	or = {
+		has_valid_civic = civic_nomadic_pirate
+		has_country_flag = country_is_f93_nomadic_pirate_flag # mainly for other modders to use this if they want
+	}
+}
 has_f93_space_economy = {
 	OR = {
 		has_country_flag = has_f93_space_economy_flag

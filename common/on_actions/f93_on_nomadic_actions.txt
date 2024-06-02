@@ -9,12 +9,23 @@ on_game_start_country = {
 
 
 # this = country
+on_yearly_pulse_country = {
+	events = {
+		f93_nomadic_start.4
+		nomadic_ascension.3
+		f93_nomadic_raid.10
+		f93_nomadic_start.14
+		f93_nomadic_start.15
+		nomadic_ascension.5
+		nomadic_ascension.7
+	}
+}
+
+# this = country
 on_monthly_pulse_country = {
 	events = {
 		f93_nomadic_deficit.1
 		f93_steppe_nomad.12
-		f93_nomadic_start.14
-		f93_nomadic_start.15
 	}
 }
 # This = starbase being disabled (not ship!)
@@ -61,6 +72,7 @@ on_post_communications_established_always_fire = {
 on_planet_occupied = {
 	events = {
 		f93_nomadic_raid.2
+		f93_nomadic_raid.8
 		# f93_steppe_nomad.5
 	}
 }
@@ -155,5 +167,45 @@ on_terraforming_complete = {
 on_entering_system_fleet = {
 	events = {
 		f93_steppe_nomad.14
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		f93_nomadic_raid.9
+	}
+}
+
+
+# This = Country
+on_relic_received = {
+	events = {
+		nomadic_ascension.4
+		nomadic_ascension.3
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		nomadic_ascension.6
+	}
+	random_events = {
+	}
+}
+
+
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
+	events = {
+		f93_nomadic_raid.12
 	}
 }

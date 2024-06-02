@@ -190,10 +190,60 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
 		noOfFrames = 2
 	}
-
 	spriteType = {
 		name = "GFX_wg_nomadic_pirate_raid"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "GFX_wg_nomadic_pirate_raid_for_throne"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_ap_f93_nomadic_ambition"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_lord_of_war.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_nomadic_ambition"
+		textureFile = "gfx/interface/icons/tiles/tradition_category_tile_nomadic_ambition.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_nomadic_ambition"
+		textureFile = "gfx/interface/icons/traditions/tradition_hex_bg_nomadic_abition.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_nomadic_ambition"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_nomadic_ambition.dds"
+	}
+
+	### Nomadic Ambition ###
+
+	spriteType = {
+		name = "GFX_tr_nomadic_ambition_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_nomadic_ambition_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_nomadic_ambition_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_nomadic_ambition_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_nomadic_ambition_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_nomadic_ambition_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_nomadic_ambition_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_nomadic_ambition_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_nomadic_ambition_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_nomadic_ambition_5.dds"
+	}
+
 }

@@ -1,0 +1,66 @@
+# See traditions/README.txt for format
+
+ap_f93_nomadic_ambition = {
+	potential = {
+		is_f93_nomadic = yes
+		NOT = {
+			has_ascension_perk = ap_f93_nomadic_ambition
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "requires_great_khan_to_exists"
+			or = {
+				any_country = {
+					is_country_type = awakened_marauders
+					exists = this
+				}
+				NOR = {
+					any_country = {
+						is_country_type = awakened_marauders
+						exists = this
+					}
+					any_country = {
+						is_country_type = dormant_marauders
+						exists = this
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_the_flesh_is_weak"
+			NOT = { has_ascension_perk = ap_the_flesh_is_weak }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_organo_machine_interfacing"
+			NOT = { has_ascension_perk = ap_organo_machine_interfacing }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_mind_over_matter"
+			NOT = { has_ascension_perk = ap_mind_over_matter }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_synthetic_evolution"
+			NOT = { has_ascension_perk = ap_synthetic_evolution }
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
+		}
+	}
+	on_enabled = {
+		country_event = { id = nomadic_ascension.1 }
+	}
+
+	modifier = {
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}

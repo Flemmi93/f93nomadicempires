@@ -4,9 +4,9 @@
 # stockpile_energy
 # stockpile_minerals
 # stockpile_food
+# stockpile_alloys
 # stockpile_consumer_goods
 # stockpile_influence
-# stockpile_exotic_gases
 # stockpile_exotic_gases
 # stockpile_rare_crystals
 # stockpile_volatile_motes
@@ -20,7 +20,7 @@
 # If you mod ads more resources, they wont be plundered, unless you change all of this trash code. btw, thanks for using my mod in your mod. :)
 
 #Originally this was used to save the stockpiles when the country type would be switched to enable raiding. but that has changed, so now its used for raiding. 
-@f93loot_amount = 0.2
+@f93_loot_amount = 0.2
 @f93_n_loot_amount = -0.2
 f93_set_income_stock_var_to_zero_effect = {
 	f93_set_stockpile_var_to_zero_effect = yes
@@ -176,6 +176,44 @@ f93_transfer_income_data_from_root_effect = {
 	set_variable = { which = income_engineering_research value = root.income_engineering_research }
 }
 
+f93_round_income_variables = {
+	round_variable = income_energy
+	round_variable = income_minerals
+	round_variable = income_food
+	round_variable = income_alloys
+	round_variable = income_consumer_goods
+	round_variable = income_influence
+	round_variable = income_exotic_gases
+	round_variable = income_rare_crystals
+	round_variable = income_volatile_motes
+	round_variable = income_sr_zro
+	round_variable = income_sr_dark_matter
+	round_variable = income_sr_living_metal
+	round_variable = income_unity
+	round_variable = income_physics_research
+	round_variable = income_society_research
+	round_variable = income_engineering_research
+}
+
+f93_round_stockpile_variables = {
+	round_variable = stockpile_energy
+	round_variable = stockpile_minerals
+	round_variable = stockpile_food
+	round_variable = stockpile_alloys
+	round_variable = stockpile_consumer_goods
+	round_variable = stockpile_influence
+	round_variable = stockpile_exotic_gases
+	round_variable = stockpile_rare_crystals
+	round_variable = stockpile_volatile_motes
+	round_variable = stockpile_sr_zro
+	round_variable = stockpile_sr_dark_matter
+	round_variable = stockpile_sr_living_metal
+	round_variable = stockpile_unity
+	round_variable = stockpile_physics_research
+	round_variable = stockpile_society_research
+	round_variable = stockpile_engineering_research
+}
+
 f93_transfer_income_data_from_et_Nomadic_bombardment_victim_effect = {
 	set_variable = { which = income_energy value = event_target:nomadic_bombard_victim.income_energy }
 	set_variable = { which = income_minerals value = event_target:nomadic_bombard_victim.income_minerals }
@@ -218,6 +256,7 @@ f93_get_rescouces_per_pop_effect = {
 	divide_variable = { which = stockpile_energy value = trigger:num_pops }
 	divide_variable = { which = stockpile_minerals value = trigger:num_pops }
 	divide_variable = { which = stockpile_food value = trigger:num_pops }
+	divide_variable = { which = stockpile_alloys value = trigger:num_pops }
 	divide_variable = { which = stockpile_consumer_goods value = trigger:num_pops }
 	divide_variable = { which = stockpile_influence value = trigger:num_pops }
 	divide_variable = { which = stockpile_exotic_gases value = trigger:num_pops }
@@ -231,6 +270,26 @@ f93_get_rescouces_per_pop_effect = {
 	divide_variable = { which = stockpile_physics_research value = trigger:num_pops }
 	divide_variable = { which = stockpile_society_research value = trigger:num_pops }
 	divide_variable = { which = stockpile_engineering_research value = trigger:num_pops }
+}
+
+f93_get_rescouces_per_devastation_effect = {
+	multiply_variable = { which = stockpile_energy value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_minerals value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_food value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_alloys value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_consumer_goods value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_influence value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_exotic_gases value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_exotic_gases value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_rare_crystals value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_volatile_motes value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_sr_zro value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_sr_dark_matter value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_sr_living_metal value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_unity value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_physics_research value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_society_research value = planet_devastation_on_invasion }
+	multiply_variable = { which = stockpile_engineering_research value = planet_devastation_on_invasion }
 }
 
 f93_lose_resources_effect = {
@@ -254,22 +313,22 @@ f93_lose_resources_effect = {
 
 
 f93_loot_resources_effect = {
-	add_resource = { energy = @f93loot_amount mult = stockpile_energy }
-	add_resource = { minerals = @f93loot_amount mult = stockpile_minerals }
-	add_resource = { food = @f93loot_amount mult = stockpile_food }
-	add_resource = { alloys = @f93loot_amount mult = stockpile_alloys }
-	add_resource = { consumer_goods = @f93loot_amount mult = stockpile_consumer_goods }
-	add_resource = { influence = @f93loot_amount mult = stockpile_influence }
-	add_resource = { exotic_gases = @f93loot_amount mult = stockpile_exotic_gases }
-	add_resource = { rare_crystals = @f93loot_amount mult = stockpile_rare_crystals }
-	add_resource = { volatile_motes = @f93loot_amount mult = stockpile_volatile_motes }
-	add_resource = { sr_zro = @f93loot_amount mult = stockpile_sr_zro }
-	add_resource = { sr_dark_matter = @f93loot_amount mult = stockpile_sr_dark_matter }
-	add_resource = { sr_living_metal = @f93loot_amount mult = stockpile_sr_living_metal }
-	add_resource = { unity = @f93loot_amount mult = stockpile_unity }
-	add_resource = { physics_research = @f93loot_amount mult = stockpile_physics_research }
-	add_resource = { society_research = @f93loot_amount mult = stockpile_society_research }
-	add_resource = { engineering_research = @f93loot_amount mult = stockpile_engineering_research }
+	add_resource = { energy = @f93_loot_amount mult = stockpile_energy }
+	add_resource = { minerals = @f93_loot_amount mult = stockpile_minerals }
+	add_resource = { food = @f93_loot_amount mult = stockpile_food }
+	add_resource = { alloys = @f93_loot_amount mult = stockpile_alloys }
+	add_resource = { consumer_goods = @f93_loot_amount mult = stockpile_consumer_goods }
+	add_resource = { influence = @f93_loot_amount mult = stockpile_influence }
+	add_resource = { exotic_gases = @f93_loot_amount mult = stockpile_exotic_gases }
+	add_resource = { rare_crystals = @f93_loot_amount mult = stockpile_rare_crystals }
+	add_resource = { volatile_motes = @f93_loot_amount mult = stockpile_volatile_motes }
+	add_resource = { sr_zro = @f93_loot_amount mult = stockpile_sr_zro }
+	add_resource = { sr_dark_matter = @f93_loot_amount mult = stockpile_sr_dark_matter }
+	add_resource = { sr_living_metal = @f93_loot_amount mult = stockpile_sr_living_metal }
+	add_resource = { unity = @f93_loot_amount mult = stockpile_unity }
+	add_resource = { physics_research = @f93_loot_amount mult = stockpile_physics_research }
+	add_resource = { society_research = @f93_loot_amount mult = stockpile_society_research }
+	add_resource = { engineering_research = @f93_loot_amount mult = stockpile_engineering_research }
 }
 
 f93_lose_all_resources_effect = {

@@ -17,6 +17,7 @@ cb_nomadic_pirate_raid = {
 			is_country_type = playable_nomads
 			is_country_type = playable_pirate_nomads
 			has_civic = civic_nomadic_pirate
+			has_tradition = tr_nomadic_ambition_3
 		}
 	}
 	is_valid = {

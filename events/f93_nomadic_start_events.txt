@@ -170,7 +170,7 @@ country_event = {
 			set_closed_borders = {
 				who = root
 				status = no
-				forced = 999
+				forced = 1
 			}
 		}
 	}
@@ -349,7 +349,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		add_modifier = { modifier = f93_has_a_mothership_modifier days = 30 }
+		add_modifier = { modifier = f93_has_a_mothership_modifier days = 181 }
 	}
 }
 

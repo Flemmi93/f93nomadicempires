@@ -6,13 +6,14 @@ origin_nomadic_empire = {
 	modifier = {
 		command_limit_mult = 0.25
 		country_naval_cap_add = 20
-		leaders_upkeep_mult = -0.8
 		force_disparity_fire_rate_mult = 0.25
 		ship_armor_regen_add_perc = 0.01
 		ship_hull_regen_add_perc = 0.01
-		country_commander_cap_add = 1
-		starbase_module_capacity_add = 1
-		starbase_building_capacity_add = 1
+		country_commander_cap_add = 2
+		empire_size_systems_mult = 10
+		empire_size_colonies_mult = 5
+		country_starbase_influence_cost_mult = -10
+		
 	}
 }
 

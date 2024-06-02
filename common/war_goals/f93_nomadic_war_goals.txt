@@ -68,21 +68,24 @@ wg_nomadic_pirate_raid = {
 	threat_multiplier = 2.0
 	cede_claims = no
 	surrender_acceptance = 0.1
-	war_exhaustion = 0.5
+	war_exhaustion = 0
 	# show_claims_in_description = no 
 	galactic_empire_joins_defender = { always = no }
 	
 	allowed_peace_offers = {
 		status_quo
 		surrender
-		demand_surrender
+		# demand_surrender
 	}
 	
 	potential = {
 		is_f93_nomadic = yes
 	}
 	possible = {
-		has_country_flag = has_Access_to_raiding
+		or = {
+			has_country_flag = has_Access_to_raiding
+			has_tradition = tr_nomadic_ambition_3
+		}
 	}
 	on_status_quo = {}
 	on_accept = {
@@ -95,13 +98,53 @@ wg_nomadic_pirate_raid = {
 	}
 }
 
+
+wg_nomadic_pirate_raid_for_throne = {
+	casus_belli = cb_nomadic_pirate_raid #raid for throne
+	# set_defender_wargoal = wg_nomadic_pirate_defense
+	# galactic_community_joins_defender = { always = no }
+	secret_fealties_join_attacker = no
+	threat_multiplier = 2.0
+	cede_claims = no
+	surrender_acceptance = 0.1
+	war_exhaustion = 0
+	# show_claims_in_description = no 
+	galactic_empire_joins_defender = { always = no }
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	
+	potential = {
+		event_target:owner_of_the_throne = {
+			exists = this
+			is_same_value = from
+		}
+		is_f93_nomadic = yes
+	}
+	possible = {
+		has_event_chain = nomadic_ascension_quest
+	}
+	on_status_quo = {}
+	on_accept = {
+		if = {
+			limit = {
+				event_target:owner_of_the_throne = { has_relic = r_khans_throne exists = this }
+			}
+			steal_relic = { target = event_target:owner_of_the_throne relic = r_khans_throne }
+		}
+	}
+}
+
 wg_nomadic_pirate_defense = {
 	casus_belli = cb_event
 	# galactic_community_joins_defender = { always = no }
 	hide_if_no_cb = yes
 	
-	surrender_acceptance = 0.1
-	war_exhaustion = 0.5
+	surrender_acceptance = 0
+	war_exhaustion = 0
 	threat_multiplier = 0.5
 	# show_claims_in_description = no 
 	

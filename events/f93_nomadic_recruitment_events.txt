@@ -55,16 +55,17 @@ country_event = {
 	desc = f93_nomadic_recruitment.2.desc
 	picture = GFX_evt_salute
 	show_sound = event_big_door_opening
-	
-	option = {
-		allow = { has_resource = { type = minerals amount > 100 } }
-		name = f93_nomadic_recruitment.2.z
-		random_owned_fleet = {
+	immediate = {
+		every_owned_fleet = {
 			limit = {
-				is_ship_size = nomadic_shipyard
+				is_ship_size = nomadic_mothership
 			}
 			save_event_target_as = troop_spawn_fleet
-		}		
+		}
+	}
+	option = {
+		allow = { has_resource = { type = minerals amount > 100 } }
+		name = f93_nomadic_recruitment.2.z	
 		create_fleet = {
 			name = random
 			effect = {
@@ -88,13 +89,7 @@ country_event = {
 	}
 	option = {
 		allow = { has_resource = { type = minerals amount > 600 } }
-		name = f93_nomadic_recruitment.2.a
-		random_owned_fleet = {
-			limit = {
-				is_ship_size = nomadic_shipyard
-			}
-			save_event_target_as = troop_spawn_fleet
-		}		
+		name = f93_nomadic_recruitment.2.a	
 		create_fleet = {
 			name = random
 			effect = {
@@ -122,12 +117,6 @@ country_event = {
 		}
 		allow = { has_resource = { type = minerals amount > 600 } }
 		name = f93_nomadic_recruitment.2.b
-		random_owned_fleet = {
-			limit = {
-				is_ship_size = nomadic_shipyard
-			}
-			save_event_target_as = troop_spawn_fleet
-		}
 		create_fleet = {
 			name = random
 			effect = {
@@ -155,12 +144,6 @@ country_event = {
 		}
 		allow = { has_resource = { type = minerals amount > 600 } }
 		name = f93_nomadic_recruitment.2.c
-		random_owned_fleet = {
-			limit = {
-				is_ship_size = nomadic_shipyard
-			}
-			save_event_target_as = troop_spawn_fleet
-		}
 		create_fleet = {
 			name = random
 			effect = {

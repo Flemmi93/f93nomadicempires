@@ -1,0 +1,195 @@
+namespace = nomadic_ascension
+
+country_event = {
+	id = nomadic_ascension.1
+	is_triggered_only = yes
+	title = nomadic_ascension.1.name
+	desc = nomadic_ascension.1.desc
+	picture = GFX_evt_pirate_armada
+
+	immediate = {
+		every_system = {
+			every_fleet_in_system = {
+				limit = {
+					exists = leader
+					leader = { has_leader_flag = great_khan }
+				}
+				save_global_event_target_as = great_khan_fleet
+			}
+		}
+		begin_event_chain = {
+			event_chain = nomadic_ascension_quest
+			target = root
+		}
+	}
+	option = {
+		name = nomadic_ascension.1.a
+	}
+}
+
+country_event = {
+	id = nomadic_ascension.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_variable = { which = f93_raidable_planets value = 1 }
+		if = {
+			limit = { has_tradition = "tr_nomadic_ambition_1" }
+			change_variable = { which = f93_raidable_planets value = 1 }
+		}
+		if = {
+			limit = { has_tradition = "tr_nomadic_ambition_2" }
+			change_variable = { which = f93_raidable_planets value = 1 }
+		}
+		if = {
+			limit = { has_tradition = "tr_nomadic_ambition_3" }
+			change_variable = { which = f93_raidable_planets value = 1 }
+		}
+		if = {
+			limit = { has_tradition = "tr_nomadic_ambition_4" }
+			change_variable = { which = f93_raidable_planets value = 1 }
+		}
+		if = {
+			limit = { has_tradition = "tr_nomadic_ambition_5" }
+			change_variable = { which = f93_raidable_planets value = 1 }
+		}
+		if = {
+			limit = {
+				has_tradition = "tr_nomadic_ambition_1"
+				has_tradition = "tr_nomadic_ambition_2"
+				has_tradition = "tr_nomadic_ambition_3"
+				has_tradition = "tr_nomadic_ambition_4"
+				has_tradition = "tr_nomadic_ambition_5"
+			}
+			change_variable = { which = f93_raidable_planets value = 4 }
+		}
+		
+		every_war = {
+			limit = { using_war_goal = { type = wg_nomadic_pirate_raid owner = root } }
+			from = { set_variable = { which = f93_raidable_planets value = root.f93_raidable_planets } }
+		}
+			
+	}
+}
+
+country_event = {
+	id = nomadic_ascension.3
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_f93_nomadic = yes
+		has_event_chain = nomadic_ascension_quest
+		any_country = {
+			has_relic = r_khans_throne
+		}
+	}
+
+	immediate = {
+		clear_global_event_target = owner_of_the_throne
+		every_country = {
+			limit = { has_relic = r_khans_throne }
+			save_global_event_target_as = owner_of_the_throne
+		}
+	}
+}
+country_event = {
+	id = nomadic_ascension.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_f93_nomadic = yes
+		has_event_chain = nomadic_ascension_quest
+		has_relic = r_khans_throne
+	}
+
+	immediate = {
+		add_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_throne amount = 1 }
+	}
+}
+country_event = {
+	id = nomadic_ascension.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_f93_nomadic = yes
+		has_event_chain = nomadic_ascension_quest
+		has_global_flag = great_khan_dead
+	}
+
+	immediate = {
+		add_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_dead amount = 1 }
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+country_event = {
+	id = nomadic_ascension.6
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_f93_nomadic = yes
+		has_event_chain = nomadic_ascension_quest
+		from = { is_country_type = awakened_marauders }
+	}
+
+	immediate = {
+		add_event_chain_counter = { event_chain = nomadic_ascension_quest counter = maurauder_ships_killed amount = 1 }
+	}
+}
+
+country_event = {
+	id = nomadic_ascension.7
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_f93_nomadic = yes
+		has_ascension_perk = ap_f93_nomadic_ambition
+		has_event_chain = nomadic_ascension_quest
+		NOT = {
+			any_country = {
+				is_country_type = awakened_marauders
+			}
+		}
+		has_completed_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_throne }
+		has_completed_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_dead }
+
+	}
+
+	immediate = {
+		end_event_chain = nomadic_ascension_quest
+	}
+}
+
+country_event = {
+	id = nomadic_ascension.8
+	is_triggered_only = yes
+	title = nomadic_ascension.8.name
+	desc = nomadic_ascension.8.desc
+	picture = GFX_evt_analyzing_artifacts
+
+	trigger = {
+		is_f93_space_pirate = yes
+		has_event_chain = nomadic_ascension_quest
+		NOT = {
+			any_country = {
+				has_relic = r_khans_throne
+			}
+		}
+	}
+
+	immediate = {
+		random_playable_country = {
+			limit = { relative_power = { who = root category = all value >= equivalent } }
+			add_relic = r_khans_throne
+			save_global_event_target_as = owner_of_the_throne
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

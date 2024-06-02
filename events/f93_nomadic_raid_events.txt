@@ -1,7 +1,7 @@
 namespace = f93_nomadic_raid
 
 # when from is used its because event_target behaves oddly
-# from = event_target:Nomadic_bombardment
+# from = event_target:Nomadic_bombardment planet
 # root = event_target:nomadic_bombarder
 country_event = {
 	id = f93_nomadic_raid.1
@@ -16,6 +16,8 @@ country_event = {
 		event_target:nomadic_bombarder = { f93_set_income_stock_var_to_zero_effect = yes }
 		event_target:Nomadic_bombardment = { f93_set_income_stock_var_to_zero_effect = yes }
 		set_variable = { which = Nomadic_bombardment_num_pops value = event_target:Nomadic_bombardment.trigger:num_pops } 
+		if = { limit = { NOT = { is_variable_set = planet_devastation_on_invasion } } set_variable = { which = planet_devastation_on_invasion value = 1 } }
+		event_target:nomadic_bombard_victim = { if = { limit = { NOT = { is_variable_set = planet_devastation_on_invasion } } set_variable = { which = planet_devastation_on_invasion value = 1 } } }
 	}
 
 	option = {
@@ -63,12 +65,17 @@ planet_event = {
 	trigger = {
 		NOT = { has_planet_flag = recently_raided_army }
 		fromfrom = {
-			has_civic = civic_nomadic_pirate
+			is_f93_space_pirate = yes
 		}
 
 	}
 	immediate = {
-		add_planet_devastation = 10
+		if = {
+			limit = {
+				planet_devastation < 40
+			}
+			add_planet_devastation = 10
+		}
 		fromfrom = { save_global_event_target_as = nomadic_bombarder }
 		from = { save_global_event_target_as = nomadic_bombard_victim }
 		save_global_event_target_as = Nomadic_bombardment
@@ -133,12 +140,13 @@ country_event = {
 			}
 			any_war = {
 				using_war_goal = { type  = wg_nomadic_pirate_raid owner = fromfrom }
-				any_defender = { is_country = FromFromFrom }
+				any_defender = { is_country = from }
 			}
 		}
 	}
 
 	immediate = {
+		from = { save_event_target_as = battle_victim }
 		from = { set_country_flag = was_raieded_by_@root }
 		save_global_event_target_as = nomadic_system_raider
 		fromfrom.solar_system = {
@@ -154,7 +162,7 @@ country_event = {
 			fromfrom.solar_system = {
 				every_fleet_in_system = {
 					limit = {
-						is_owned_by = from
+						is_owned_by = event_target:battle_victim
 						is_ship_class = shipclass_mining_station
 					}
 					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
@@ -162,14 +170,14 @@ country_event = {
 				}
 				every_fleet_in_system = {
 					limit = {
-						is_owned_by = from
+						is_owned_by = event_target:battle_victim
 						is_ship_class = shipclass_research_station
 					}
 					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
 				}
 				every_fleet_in_system = {
 					limit = {
-						is_owned_by = from
+						is_owned_by = event_target:battle_victim
 						is_ship_class = shipclass_observation_station
 					}
 					fleet_event = { id = f93_nomadic_raid.7 days = 1 random = 9 }
@@ -283,6 +291,161 @@ fleet_event = {
 				is_ship_class = shipclass_observation_station
 			}
 			f93_raid_research_station_effect = yes
+		}
+	}
+}
+
+# A planets controller becomes a country not the same as the owner.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+planet_event = {
+	id = f93_nomadic_raid.8
+	is_triggered_only = yes
+	hide_window	= yes
+	trigger = {
+		fromfrom = {
+			is_variable_set = f93_raidable_planets
+			has_country_flag = has_Access_to_raiding
+			any_war = {
+				OR = {
+					using_war_goal = { type = wg_nomadic_pirate_raid owner = fromfrom }
+					using_war_goal = { type = wg_nomadic_pirate_raid_for_throne owner = fromfrom }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		fromfrom = { save_event_target_as = attacker }
+		from = { save_event_target_as = victim }
+		save_event_target_as = planet
+		event_target:attacker = {
+			random_war = {
+				limit = {
+					using_war_goal = { type = wg_nomadic_pirate_raid owner = event_target:attacker }
+					event_target:attacker = { is_war_leader = yes }
+					is_war_participant = { who = event_target:victim }
+					is_war_participant = { who = event_target:attacker }
+				}
+				change_variable = { which = f93_planets_raided value = 1 }
+				if = {
+					limit = { check_variable = { which = f93_planets_raided value >= f93_raidable_planets } }
+					remove_war_participant = event_target:victim
+					event_target:attacker = {
+						set_truce = {
+							target = event_target:victim
+							type = war
+						}
+					}
+					event_target:victim = {
+						set_truce = {
+							target = event_target:attacker
+							type = war
+						}
+					}
+				}
+			}
+			random_war = {
+				limit = {
+					using_war_goal = { type = wg_nomadic_pirate_raid_for_throne owner = fromfrom }
+				}
+				event_target:attacker = { country_event = { id = f93_nomadic_raid.11 } }
+			}
+		}
+	}
+}
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+country_event = {
+	id = f93_nomadic_raid.9
+	is_triggered_only = yes
+	hide_window	= yes
+	trigger = {
+		has_country_flag = has_Access_to_raiding
+		from = {
+			using_war_goal = { type = wg_nomadic_pirate_raid owner = root }
+		}
+	}
+
+	immediate = {
+		from = {
+			set_war_flag = f93_raider_war
+			set_variable = { which = f93_planets_raided value = 0 }
+			set_variable = { which = f93_raidable_planets value = root.f93_raidable_planets }
+		}
+	}
+}
+
+country_event = {
+	id = f93_nomadic_raid.10 #compatibility to pre 3.12.4
+	is_triggered_only = yes
+	hide_window	= yes
+	trigger = {
+		NOT = { is_variable_set = f93_raidable_planets }
+		is_f93_nomadic = yes
+	}
+
+	immediate = {
+		set_variable = { which = f93_raidable_planets value = 1 }
+	}
+}
+
+country_event = {
+	id = f93_nomadic_raid.11
+	title = "ancrel.6500.name"
+	desc = "ancrel.6500.desc"
+	picture = GFX_evt_victorious_army
+	show_sound = event_ground_battle
+	location = event_target:planet
+
+	is_triggered_only = yes
+	trigger = {
+		event_target:victim = {
+			has_relic = r_khans_throne
+		}
+	}
+	immediate = {
+		steal_relic = {
+			target = event_target:victim
+			relic = r_khans_throne
+		}
+	}
+
+	option = {
+		name = ancrel.6500.a
+		custom_tooltip = stole_relic
+		hidden_effect = {
+			event_target:victim = {
+				country_event = { id = ancrel.6505 }
+			}
+		}
+	}
+}
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+planet_event = {
+	id = f93_nomadic_raid.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_f93_space_pirate = yes
+		}
+	}
+	immediate = {
+		from = {
+			set_variable = { which = planet_devastation_on_invasion value = root.trigger:planet_devastation } #example 40 devastation
+			if = { limit = { check_variable = { which = planet_devastation_on_invasion value = 0 } } set_variable = { which = planet_devastation_on_invasion value = 100 } }
+			divide_variable = { which = planet_devastation_on_invasion value = 100 } # 40 / 100 = 0.4
+		}
+		owner = {
+			set_variable = { which = planet_devastation_on_invasion value = root.trigger:planet_devastation }
+			if = { limit = { check_variable = { which = planet_devastation_on_invasion value = 0 } } set_variable = { which = planet_devastation_on_invasion value = 100 } }
+			divide_variable = { which = planet_devastation_on_invasion value = 100 } # 40 / 100 = 0.4
 		}
 	}
 }
