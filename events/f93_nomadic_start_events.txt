@@ -15,7 +15,8 @@ country_event = {
 		is_rush_space_steppe_nomad = no
 		is_slow_space_steppe_nomad = no
 	}
-	
+	immediate = {
+	}
 	option = {
 		name = f93_nomadic_start.1.b
 		ai_chance = {
@@ -304,11 +305,78 @@ country_event = {
 			class = commander
 			skill = 1
 		}
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_individual_machine_warbots
+					has_civic = civic_distinguished_admiralty
+					has_civic = civic_hive_strength_of_legions
+					has_civic = civic_machine_warbots
+				}
+			}
+			last_created_leader = {
+				add_skill = 2
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_tradition = tr_supremacy_war_games
+				}
+			}
+			last_created_leader = {
+				add_skill = 1
+			}
+		}
+		
+		if = {
+			limit = { has_civic = civic_memory_vault }
+			last_created_leader = { add_skill = 1 }
+		}
+		if = {
+			limit = { has_policy_flag = leader_enhancement_selected_lineages }
+			last_created_leader = { add_skill = 1 }
+		}
+		if = {
+			limit = { has_policy_flag = leader_enhancement_capacity_boosters }
+			last_created_leader = { add_skill = 2 }
+		}
+		if = {
+			limit = { OR = { has_civic = civic_memory_vault_hive has_civic = civic_memory_vault_machine has_civic = civic_memory_vault_corporate } }
+			last_created_leader = { add_skill = 1 }
+		}
+
 		create_leader = {
 			name = random
 			species = owner_main_species
 			class = scientist
 			skill = 1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_tradition = tr_discovery_science_division
+				}
+			}
+			last_created_leader = {
+				add_skill = 1
+			}
+		}
+		if = {
+			limit = { has_civic = civic_memory_vault }
+			last_created_leader = { add_skill = 1 }
+		}
+		if = {
+			limit = { has_policy_flag = leader_enhancement_selected_lineages }
+			last_created_leader = { add_skill = 1 }
+		}
+		if = {
+			limit = { has_policy_flag = leader_enhancement_capacity_boosters }
+			last_created_leader = { add_skill = 2 }
+		}
+		if = {
+			limit = { OR = { has_civic = civic_memory_vault_hive has_civic = civic_memory_vault_machine has_civic = civic_memory_vault_corporate } }
+			last_created_leader = { add_skill = 1 }
 		}
 	}
 }

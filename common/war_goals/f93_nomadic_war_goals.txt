@@ -118,9 +118,8 @@ wg_nomadic_pirate_raid_for_throne = {
 	}
 	
 	potential = {
-		event_target:owner_of_the_throne = {
-			exists = this
-			is_same_value = from
+		from = {
+			has_relic = r_khans_throne
 		}
 		is_f93_nomadic = yes
 	}
