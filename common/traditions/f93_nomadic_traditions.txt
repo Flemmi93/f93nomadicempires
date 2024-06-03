@@ -120,6 +120,6 @@ tr_nomadic_ambition_5 = { #Messanger posts
 	modifier = {
 		fleet_mia_time_mult = -0.5
 		ship_jumpdrive_cooldown_mult = -0.1
-		country_subject_trust_cap_add = 40
+		country_subject_trust_cap_add = 60
 	}
 }
