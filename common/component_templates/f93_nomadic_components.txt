@@ -37,12 +37,12 @@
 @nomadic_production_alloys1 = 8
 @nomadic_production_alloys2 = 24
 @nomadic_production_alloys3 = 64
-@nomadic_production_csg1 = 4
-@nomadic_production_csg2 = 12
-@nomadic_production_csg3 = 25
-@nomadic_production_research1 = 8
-@nomadic_production_research2 = 26
-@nomadic_production_research3 = 75
+@nomadic_production_csg1 = 6
+@nomadic_production_csg2 = 20
+@nomadic_production_csg3 = 50
+@nomadic_production_research1 = 5
+@nomadic_production_research2 = 12
+@nomadic_production_research3 = 28
 @nomadic_production_sr_res1 = 1
 @nomadic_production_sr_res2 = 2
 #Population Sim

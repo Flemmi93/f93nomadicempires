@@ -308,6 +308,8 @@
  f93_has_a_mothership_modifier: "Mothership Bases Logistics"
  f93_has_a_mothership_modifier_desc: "Ships that are far away from our Mothership suffer and have increased upkeep costs"
  mod_shipsize_nomadic_freighter_build_speed_mult: "Freighter Build Speed"
+ f93_has_fewer_districts: "Vast Steppes"
+ f93_has_fewer_districts_effect: "All Steppe Nomad planets have §R-75%§! £district£Districts$NEW_LINE$§G25%§! of the £district£Districts slots are converted into £housing£Housing"
 
 
 #CB & Wargoals

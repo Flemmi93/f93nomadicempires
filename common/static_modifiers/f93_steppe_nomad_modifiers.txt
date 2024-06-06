@@ -42,11 +42,17 @@ f93_combo_space_steppe_nomads = {
 	planet_pops_upkeep_mult = -0.8
 	planet_districts_cost_mult = 1
 	# planet_non_artificial_max_districts_add = -50
-	planet_max_districts_add = -10
+	# planet_max_districts_add = -10
 	planet_max_buildings_add = 1
 	planet_jobs_unity_produces_mult = 0.75
 	pop_demotion_time_mult = -1
 }
 f93_has_a_mothership_modifier = {
 	ships_upkeep_mult = 0.25
+}
+f93_has_fewer_districts = {
+	icon_frame = 2
+	planet_max_districts_add = -0.75
+	planet_housing_add = 0.25
+	custom_tooltip = f93_has_fewer_districts_effect
 }
