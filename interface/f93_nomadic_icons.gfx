@@ -245,10 +245,4 @@ spriteTypes = {
 		name = "GFX_tr_nomadic_ambition_5"
 		textureFile = "gfx/interface/icons/traditions/tradition_nomadic_ambition_5.dds"
 	}
-	### Planet Modifiers
-
-	spriteType = {
-		name = "GFX_f93_has_fewer_districts"
-		texturefile = "gfx/interface/icons/modifiers/GFX_f93_has_fewer_districts.dds"
-	}
 }

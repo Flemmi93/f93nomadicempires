@@ -582,6 +582,7 @@ country_event = {
 			add_modifier = {
 				modifier = f93_has_fewer_districts
 				multiplier = trigger:planet_size
+				days = 31
 			}
 		}
 	}
