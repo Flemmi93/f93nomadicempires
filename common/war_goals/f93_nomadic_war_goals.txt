@@ -124,7 +124,7 @@ wg_nomadic_pirate_raid_for_throne = {
 		is_f93_nomadic = yes
 	}
 	possible = {
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 	}
 	on_status_quo = {}
 	on_accept = {

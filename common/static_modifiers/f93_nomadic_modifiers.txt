@@ -117,3 +117,6 @@ MOD_energy_receive_monthly9 = {
 MOD_energy_receive_monthly10 = {
 	country_energy_produces_mult = 0.1
 }
+f93_nomadic_naval_cap = {
+	country_naval_cap_add = 1
+}

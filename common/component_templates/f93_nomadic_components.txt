@@ -13,6 +13,8 @@
 @nomadic_power_cost_balE2 = -250
 @nomadic_power_cost_bal3 = -400
 @nomadic_power_cost_balE3 = -600
+@nomadic_power_cost_bal4 = -800
+@nomadic_power_cost_balE4 = -1500
 #Upkeep
 @nomadic_upkeeptier1 = 1	#1 at 100%
 @nomadic_upkeeptier2 = 4	#5 at 80%
@@ -33,7 +35,7 @@
 @nomadic_production_minerals3 = 20
 @nomadic_production_energy1 = 35
 @nomadic_production_energy2 = 75
-@nomadic_production_energy3 = 150
+@nomadic_production_energy3 = 160
 @nomadic_production_alloys1 = 8
 @nomadic_production_alloys2 = 24
 @nomadic_production_alloys3 = 64
@@ -45,6 +47,9 @@
 @nomadic_production_research3 = 28
 @nomadic_production_sr_res1 = 1
 @nomadic_production_sr_res2 = 2
+@nomadic_prduction_nav_cap1 = 50
+@nomadic_prduction_nav_cap2 = 125
+@nomadic_prduction_nav_cap3 = 300
 #Population Sim
 @nomadic_pop_unit_1 = 1
 @nomadic_pop_unit_2 = 2
@@ -1164,3 +1169,127 @@ utility_component_template = {
 # 	prerequisites = { "tech_nomatic_society" }
 # 	component_set = "f93_nomad_storage_2"
 # }
+
+#Naval Capacity
+utility_component_template = {
+	key = "f93_nomad_nac_cap_1"
+	size = aux
+	icon = "GFX_ship_part_nac_cap_1"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal2
+	size_restriction = { nomadic_mothership }
+	blocked_by = {
+		f93_nomad_nac_cap_1
+		f93_nomad_nac_cap_2
+		f93_nomad_nac_cap_3
+	}
+	modifier = {
+		country_naval_cap_add = @nomadic_prduction_nav_cap1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tierE1
+		}
+		upkeep = {
+			energy = @nomadic_power_cost_balE2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
+		}
+		# produces = {
+			
+		# }
+	}
+
+	prerequisites = { "tech_destroyers" "tech_nomatic_society" }
+	component_set = "f93_nomad_nac_cap_1"
+	upgrades_to = "f93_nomad_nac_cap_2"
+}
+
+utility_component_template = {
+	key = "f93_nomad_nac_cap_2"
+	size = aux
+	icon = "GFX_ship_part_nac_cap_2"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal3
+	size_restriction = { nomadic_mothership }
+	blocked_by = {
+		f93_nomad_nac_cap_1
+		f93_nomad_nac_cap_2
+		f93_nomad_nac_cap_3
+	}
+	modifier = {
+		country_naval_cap_add = @nomadic_prduction_nav_cap2
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tierE2
+		}
+		upkeep = {
+			energy = @nomadic_power_cost_balE3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
+		}
+		# produces = {
+			
+		# }
+	}
+
+	prerequisites = { "tech_battleships" "tech_nomatic_society" }
+	component_set = "f93_nomad_nac_cap_2"
+	upgrades_to = "f93_nomad_nac_cap_3"
+}
+
+
+utility_component_template = {
+	key = "f93_nomad_nac_cap_3"
+	size = aux
+	icon = "GFX_ship_part_nac_cap_3"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal4
+	size_restriction = { nomadic_mothership }
+	blocked_by = {
+		f93_nomad_nac_cap_1
+		f93_nomad_nac_cap_2
+		f93_nomad_nac_cap_3
+	}
+	modifier = {
+		country_naval_cap_add = @nomadic_prduction_nav_cap3
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tierE3
+		}
+		upkeep = {
+			energy = @nomadic_power_cost_balE4
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg3
+		}
+		# produces = {
+			
+		# }
+	}
+
+	prerequisites = { "tech_titans" "tech_nomatic_society" }
+	component_set = "f93_nomad_nac_cap_3"
+}

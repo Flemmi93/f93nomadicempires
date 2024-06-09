@@ -186,6 +186,22 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ship_part_nac_cap_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nav_cap_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nac_cap_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nav_cap_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_nac_cap_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_nav_cap_3.dds"
+	}
+
+	### WarGoals ###
+	spriteType = {
 		name = "GFX_wg_nomadic_pirate_defense"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
 		noOfFrames = 2

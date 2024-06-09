@@ -54,7 +54,7 @@ ap_f93_nomadic_ambition = {
 		}
 	}
 	on_enabled = {
-		country_event = { id = nomadic_ascension.1 }
+		country_event = { id = f93_nomadic_ascension.1 }
 	}
 
 	modifier = {

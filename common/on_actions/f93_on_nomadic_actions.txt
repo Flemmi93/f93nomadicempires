@@ -12,18 +12,19 @@ on_game_start_country = {
 on_yearly_pulse_country = {
 	events = {
 		f93_nomadic_start.4
-		nomadic_ascension.3
+		f93_nomadic_ascension.3
 		f93_nomadic_raid.10
 		f93_nomadic_start.14
 		f93_nomadic_start.15
-		nomadic_ascension.5
-		nomadic_ascension.7
+		f93_nomadic_ascension.7
 	}
 }
 
 # this = country
 on_monthly_pulse_country = {
 	events = {
+		f93_nomadic_start.99
+		f93_nomadic_ascension.5
 		f93_nomadic_deficit.1
 		f93_steppe_nomad.12
 		f93_steppe_nomad.15
@@ -184,8 +185,8 @@ on_war_beginning = {
 # This = Country
 on_relic_received = {
 	events = {
-		nomadic_ascension.4
-		nomadic_ascension.3
+		f93_nomadic_ascension.4
+		f93_nomadic_ascension.3
 	}
 }
 
@@ -195,7 +196,7 @@ on_relic_received = {
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
-		nomadic_ascension.6
+		f93_nomadic_ascension.6
 	}
 	random_events = {
 	}

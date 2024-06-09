@@ -1,10 +1,10 @@
-namespace = nomadic_ascension
+namespace = f93_nomadic_ascension
 
 country_event = {
-	id = nomadic_ascension.1
+	id = f93_nomadic_ascension.1
 	is_triggered_only = yes
-	title = nomadic_ascension.1.name
-	desc = nomadic_ascension.1.desc
+	title = f93_nomadic_ascension.1.name
+	desc = f93_nomadic_ascension.1.desc
 	picture = GFX_evt_pirate_armada
 
 	immediate = {
@@ -18,17 +18,17 @@ country_event = {
 			}
 		}
 		begin_event_chain = {
-			event_chain = nomadic_ascension_quest
+			event_chain = f93_nomadic_ascension_quest
 			target = root
 		}
 	}
 	option = {
-		name = nomadic_ascension.1.a
+		name = f93_nomadic_ascension.1.a
 	}
 }
 
 country_event = {
-	id = nomadic_ascension.2
+	id = f93_nomadic_ascension.2
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -74,12 +74,12 @@ country_event = {
 }
 
 country_event = {
-	id = nomadic_ascension.3
+	id = f93_nomadic_ascension.3
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
 		is_f93_nomadic = yes
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 		any_country = {
 			has_relic = r_khans_throne
 		}
@@ -94,31 +94,33 @@ country_event = {
 	}
 }
 country_event = {
-	id = nomadic_ascension.4
+	id = f93_nomadic_ascension.4
 	is_triggered_only = yes
 	hide_window = yes
+	fire_only_once = yes
 	trigger = {
 		is_f93_nomadic = yes
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 		has_relic = r_khans_throne
 	}
 
 	immediate = {
-		add_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_throne amount = 1 }
+		add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = great_khan_throne amount = 1 }
 	}
 }
 country_event = {
-	id = nomadic_ascension.5
+	id = f93_nomadic_ascension.5
 	is_triggered_only = yes
 	hide_window = yes
+	fire_only_once = yes
 	trigger = {
 		is_f93_nomadic = yes
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 		has_global_flag = great_khan_dead
 	}
 
 	immediate = {
-		add_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_dead amount = 1 }
+		add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = great_khan_dead amount = 1 }
 	}
 }
 
@@ -127,53 +129,54 @@ country_event = {
 # FromFrom = ship 1
 # FromFromFrom = ship 2
 country_event = {
-	id = nomadic_ascension.6
+	id = f93_nomadic_ascension.6
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
 		is_f93_nomadic = yes
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 		from = { is_country_type = awakened_marauders }
 	}
 
 	immediate = {
-		add_event_chain_counter = { event_chain = nomadic_ascension_quest counter = maurauder_ships_killed amount = 1 }
+		add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = maurauder_ships_killed amount = 1 }
 	}
 }
 
 country_event = {
-	id = nomadic_ascension.7
+	id = f93_nomadic_ascension.7
 	is_triggered_only = yes
-	hide_window = yes
+	title = f93_nomadic_ascension.7.name
+	desc = f93_nomadic_ascension.7.desc
+	picture = GFX_evt_victorious_army
 	trigger = {
 		is_f93_nomadic = yes
 		has_ascension_perk = ap_f93_nomadic_ambition
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 		NOT = {
 			any_country = {
 				is_country_type = awakened_marauders
 			}
 		}
-		has_completed_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_throne }
-		has_completed_event_chain_counter = { event_chain = nomadic_ascension_quest counter = great_khan_dead }
-
+		has_completed_all_task_for_ascension_quest = yes
 	}
 
-	immediate = {
-		end_event_chain = nomadic_ascension_quest
+	option = {
+		name = VICTORY
+		end_event_chain = f93_nomadic_ascension_quest
 	}
 }
 
 country_event = {
-	id = nomadic_ascension.8
+	id = f93_nomadic_ascension.8
 	is_triggered_only = yes
-	title = nomadic_ascension.8.name
-	desc = nomadic_ascension.8.desc
+	title = f93_nomadic_ascension.8.name
+	desc = f93_nomadic_ascension.8.desc
 	picture = GFX_evt_analyzing_artifacts
 
 	trigger = {
 		is_f93_space_pirate = yes
-		has_event_chain = nomadic_ascension_quest
+		has_event_chain = f93_nomadic_ascension_quest
 		NOT = {
 			any_country = {
 				has_relic = r_khans_throne

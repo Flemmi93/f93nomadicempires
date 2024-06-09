@@ -137,3 +137,8 @@ has_incompatible_megastructure_for_nomadic_roamers = {
 	}
 }
 		
+has_completed_all_task_for_ascension_quest = {
+	has_completed_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = great_khan_throne }
+	has_completed_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = great_khan_dead }
+}
+		
