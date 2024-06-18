@@ -177,6 +177,11 @@ country_event = {
 	option = {
 		name = VICTORY
 		end_event_chain = f93_nomadic_ascension_quest
+		remove_modifier = f93_nomadic_naval_cap_khan
+		add_modifier = {
+			modifier = f93_nomadic_naval_cap_khan_defeated
+			multiplier = 25
+		}
 	}
 }
 
@@ -199,9 +204,10 @@ country_event = {
 
 	immediate = {
 		random_playable_country = {
-			limit = { relative_power = { who = root category = all value >= equivalent } }
+			# limit = { relative_power = { who = root category = all value >= equivalent } }
 			add_relic = r_khans_throne
 			save_global_event_target_as = owner_of_the_throne
+			root = { create_point_of_interest = { id = f93_nomadic_ascension_quest.poi.2 name = f93_nomadic_ascension_quest.poi.2.name desc = f93_nomadic_ascension_quest.poi.2.desc event_chain = f93_nomadic_ascension_quest location = prev.capital_scope } }
 		}
 	}
 
@@ -376,7 +382,7 @@ ship_event = {
 	after = {
 		hidden_effect = {
 			owner = {
-				remove_point_of_interest = f93_nomadic_ascension_quest.poi.1
+				# remove_point_of_interest = f93_nomadic_ascension_quest.poi.1
 				country_event = { id = f93_nomadic_ascension.14 }
 				set_country_flag = f93_has_to_destroy_a_marauder_Ship
 				every_system = {
@@ -420,6 +426,7 @@ country_event = {
 		if = {
 			limit = { has_event_chain = f93_nomadic_ascension_quest }
 			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = optional_goals amount = 1 }
 		}
 		else = { set_country_flag = f93_nomadic_ascension_quest_4 }
 	}

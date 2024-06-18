@@ -43,8 +43,8 @@ tr_nomadic_ambition_finish = { #Unyielding Armada
 		}
 	}
 	modifier = {
-		tech_cost_empire_size_mult = 0.2
-		tradition_cost_empire_size_mult = 0.2
+		tech_cost_empire_size_mult = -0.2
+		tradition_cost_empire_size_mult = -0.2
 		country_vassal_naval_capacity_contribution_mult = 0.2
 		ascension_perks_add = 1
 	}

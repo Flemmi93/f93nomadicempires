@@ -108,7 +108,7 @@
 special_project = {
 	key = f93_weaken_the_khan
 	cost = 0
-	days_to_research = 1
+	days_to_research = 360
 	tech_department = engineering_technology
 	picture = GFX_evt_analyzing_artifacts
 	event_chain = f93_nomadic_ascension_quest

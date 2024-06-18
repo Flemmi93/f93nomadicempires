@@ -16,7 +16,9 @@ f93_nomadic_ascension_quest = {
 		great_khan_throne = {
 			max = 1
 		}
-		optional_goals = {}
+		optional_goals = {
+			max = 1
+		}
 		f93_weaken_the_khan = {
 			max = 5
 		}
