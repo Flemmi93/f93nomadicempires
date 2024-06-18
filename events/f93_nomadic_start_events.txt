@@ -121,10 +121,11 @@ country_event = {
 				set_location = event_target:homeworld
 				create_ship = {
 					name = "Mothership"
-					design = NAME_Nomadic_mothership
+					design = NAME_nomadic_mothership
 				}
 			}
 		}
+		last_created_fleet = { save_global_event_target_as = f93_homeworld_ship }
 		create_fleet = {
 			name = "Nomadic Fleet"
 			effect = {
@@ -336,7 +337,7 @@ country_event = { #event to update save files if need be. last implemente 17.05.
 	trigger = { is_f93_nomadic = yes NOT = { has_country_flag = has_f93_space_economy_flag } }
 	immediate = {
 		set_country_flag = has_f93_space_economy_flag
-		create_ship_design = { design =  NAME_Nomadic_mothership }
+		create_ship_design = { design =  NAME_nomadic_mothership }
 		add_ship_design = last_created_design
 	}
 }
@@ -447,11 +448,12 @@ country_event = {
 				set_owner = event_target:homeworld_leavers
 				set_location = event_target:homeworld
 				create_ship = {
-					name = NAME_Nomadic_mothership
-					design = NAME_Nomadic_mothership
+					name = "Mothership"
+					design = NAME_nomadic_mothership
 				}
 			}
 		}
+		last_created_fleet = { save_global_event_target_as = f93_homeworld_ship }
 	}
 }
 
@@ -465,7 +467,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		add_modifier = { modifier = f93_has_a_mothership_modifier days = 181 }
+		add_modifier = { modifier = f93_has_a_mothership_modifier days = 361 }
 	}
 }
 

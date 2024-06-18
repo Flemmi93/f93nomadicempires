@@ -120,3 +120,8 @@ MOD_energy_receive_monthly10 = {
 f93_nomadic_naval_cap = {
 	country_naval_cap_add = 1
 }
+f93_nomadic_naval_cap_khan = {
+	country_naval_cap_add = 6
+	country_vassal_naval_capacity_contribution_mult = 0.01
+	damage_vs_country_type_awakened_marauders_mult = 0.01
+}

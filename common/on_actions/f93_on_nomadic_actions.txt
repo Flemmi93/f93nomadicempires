@@ -14,9 +14,10 @@ on_yearly_pulse_country = {
 		f93_nomadic_start.4
 		f93_nomadic_ascension.3
 		f93_nomadic_raid.10
-		f93_nomadic_start.14
+		f93_nomadic_start.14 # adds mothership logistics for another year
 		f93_nomadic_start.15
 		f93_nomadic_ascension.7
+		f93_nomadic_ascension.9
 	}
 }
 

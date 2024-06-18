@@ -1,0 +1,8 @@
+f93_an_trace_kahn_weakness = {
+	picture = GFX_evt_ancient_records
+	level = 7
+	max_once = yes
+	on_success = {
+		1 = { anomaly_event = f93_nomadic_ascension.11 }
+	}
+}

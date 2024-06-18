@@ -16,6 +16,10 @@ f93_nomadic_ascension_quest = {
 		great_khan_throne = {
 			max = 1
 		}
+		optional_goals = {}
+		f93_weaken_the_khan = {
+			max = 5
+		}
 		maurauder_ships_killed = {
 		}
 	}

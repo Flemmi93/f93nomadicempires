@@ -41,6 +41,13 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = f93_nomadic_raid.2.b
+		custom_tooltip = f93_nomadic_raid.2.b.desc
+		hidden_effect = {
+			country_event = { id = f93_nomadic_ascension.10 days = 1 }
+		}
+	}
 	after = {
 		hidden_effect = {
 			clear_global_event_target = Nomadic_bombardment

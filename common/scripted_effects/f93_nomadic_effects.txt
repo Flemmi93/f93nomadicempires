@@ -3,7 +3,7 @@
 # Last_created_country = nomadic country
 f93_create_nomad_country_effect = {
 	f93_save_resources_effect = yes
-	capital_scope = {	
+	capital_scope = {
 		save_global_event_target_as = homeworld
 	}
 	create_country = {
@@ -51,7 +51,7 @@ f93_is_thenomad_effect = {
 	f93_transfer_stockpile_data_from_root_effect = yes
 	f93_reinstate_resources_effect = yes
 
-	create_ship_design = { design =  NAME_Nomadic_mothership }
+	create_ship_design = { design =  NAME_nomadic_mothership }
 	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_mins }
 	add_ship_design = last_created_design

@@ -21,9 +21,14 @@ country_event = {
 			event_chain = f93_nomadic_ascension_quest
 			target = root
 		}
+		if = {
+			limit = { exists = event_target:f93_kahn_weakness_anomaly@root }
+			create_point_of_interest = { id = f93_nomadic_ascension_quest.poi.1 name = f93_nomadic_ascension_quest.poi.1.name desc = f93_nomadic_ascension_quest.poi.1.desc event_chain = f93_nomadic_ascension_quest location = event_target:f93_kahn_weakness_anomaly@root }
+		}
 	}
 	option = {
 		name = f93_nomadic_ascension.1.a
+		add_modifier = { modifier = f93_nomadic_naval_cap_khan multiplier = 5 }
 	}
 }
 
@@ -140,6 +145,13 @@ country_event = {
 
 	immediate = {
 		add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = maurauder_ships_killed amount = 1 }
+		if = {
+			limit = {
+				has_country_flag = f93_has_to_destroy_a_marauder_Ship
+			}
+			country_event = { id = f93_nomadic_ascension.12 days = 10 }
+			remove_country_flag = f93_has_to_destroy_a_marauder_Ship
+		}
 	}
 }
 
@@ -160,6 +172,7 @@ country_event = {
 		}
 		has_completed_all_task_for_ascension_quest = yes
 	}
+	immediate = { country_event = { id = f93_nomadic_ascension.14 } }
 
 	option = {
 		name = VICTORY
@@ -194,5 +207,260 @@ country_event = {
 
 	option = {
 		name = OK
+	}
+	after = { hidden_effect = { country_event = { id = f93_nomadic_ascension.14 } } }
+}
+country_event = {
+	id = f93_nomadic_ascension.9
+	is_triggered_only = yes
+	title = f93_nomadic_ascension.9.name
+	desc = f93_nomadic_ascension.9.desc
+	picture = GFX_evt_bribery
+	trigger = {
+		is_f93_nomadic = yes
+		num_ascension_perks > 1
+		or = {
+			any_country = {
+				is_country_type = awakened_marauders
+				exists = this
+			}
+			NOR = {
+				any_country = {
+					is_country_type = awakened_marauders
+					exists = this
+				}
+				any_country = {
+					is_country_type = dormant_marauders
+					exists = this
+				}
+			}
+		}
+		NOR = {
+			has_ascension_perk = ap_f93_nomadic_ambition
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_ascension_perk = ap_organo_machine_interfacing
+			has_ascension_perk = ap_mind_over_matter
+			has_ascension_perk = ap_synthetic_evolution
+			has_country_flag = f93_no_reminder_for_ap
+		}
+		num_tradition_categories < @max_tradition_trees
+	}
+
+	option = {
+		name = f93_nomadic_ascension.9.a
+	}
+	option = {
+		name = f93_nomadic_ascension.9.c
+		set_country_flag = f93_no_reminder_for_ap
+	}
+	after = { hidden_effect = { country_event = { id = f93_nomadic_ascension.14 } } }
+}
+#discovering a trace during a raid
+country_event = {
+	id = f93_nomadic_ascension.10
+	title = f93_nomadic_ascension.10.name
+	desc = f93_nomadic_ascension.10.desc
+	picture = GFX_evt_archaeologists_escaping
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+		}
+		else = { set_country_flag = f93_nomadic_ascension_quest_1 }
+	}
+	option = {
+		name = f93_nomadic_ascension.1.a
+		add_modifier = { modifier = f93_nomadic_naval_cap_khan multiplier = 10 }
+	}
+	after = {
+		hidden_effect = { country_event = { id = f93_nomadic_ascension.14 } }
+		every_system = {
+			limit = {
+				any_fleet_in_system = {
+					exists = owner
+					owner = { is_same_value = root }
+					is_ship_size = nomadic_mothership
+				}
+			}
+			save_event_target_as = current_mothership_location
+		}
+		if = {
+			limit = {
+				any_system = {
+					any_system_planet = {
+						exists = owner
+						owner = { is_primitive = yes }
+					}
+					distance = {
+						source = event_target:current_mothership_location
+						type = euclidean
+						min_distance > 100
+						max_distance < 400
+					}
+				}
+			}
+			random_system = {
+				limit = {
+					any_system_planet = {
+						exists = owner
+						owner = { is_primitive = yes }
+					}
+					distance = {
+						source = event_target:current_mothership_location
+						type = euclidean
+						min_distance > 100
+						max_distance < 400
+					}
+				}
+				random_system_planet = {
+					limit = { exists = owner owner = { is_primitive = yes } }
+					add_anomaly = { category = f93_an_trace_kahn_weakness target = root }
+					if = {
+						limit = { root = { has_event_chain = f93_nomadic_ascension_quest } }
+						root = { create_point_of_interest = { id = f93_nomadic_ascension_quest.poi.1 name = f93_nomadic_ascension_quest.poi.1.name desc = f93_nomadic_ascension_quest.poi.1.desc event_chain = f93_nomadic_ascension_quest location = prev } }
+					}
+					else = {
+						save_global_event_target_as = f93_kahn_weakness_anomaly@root
+					}
+				}
+			}
+		}
+		else = {
+			random_system = {
+				limit = {
+					any_system_planet = {
+						colonizable_planet = yes
+					}
+					distance = {
+						source = event_target:current_mothership_location
+						type = euclidean
+						min_distance > 100
+						max_distance < 400
+					}
+				}
+				random_system_planet = {
+					add_anomaly = { category = f93_an_trace_kahn_weakness target = root }
+					if = {
+						limit = { root = { has_event_chain = f93_nomadic_ascension_quest } }
+						root = { create_point_of_interest = { id = f93_nomadic_ascension_quest.poi.1 name = f93_nomadic_ascension_quest.poi.1.name desc = f93_nomadic_ascension_quest.poi.1.desc event_chain = f93_nomadic_ascension_quest location = prev } }
+					}
+					else = {
+						save_global_event_target_as = f93_kahn_weakness_anomaly@root
+					}
+				}
+			}
+		}
+	}
+}
+#doing the annomaly discovered during the raid
+ship_event = {
+	id = f93_nomadic_ascension.11
+	title = f93_nomadic_ascension.11.name
+	desc = f93_nomadic_ascension.11.desc
+	picture = GFX_evt_ancient_records
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { owner = { has_event_chain = f93_nomadic_ascension_quest } }
+			owner = { add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 } }
+		}
+		else = { owner = { set_country_flag = f93_nomadic_ascension_quest_2 } }
+	}
+	option = {
+		name = f93_nomadic_ascension.1.a
+		owner = {
+			add_modifier = { modifier = f93_nomadic_naval_cap_khan multiplier = 15 }
+		}
+	}
+	after = {
+		hidden_effect = {
+			owner = {
+				remove_point_of_interest = f93_nomadic_ascension_quest.poi.1
+				country_event = { id = f93_nomadic_ascension.14 }
+				set_country_flag = f93_has_to_destroy_a_marauder_Ship
+				every_system = {
+					every_fleet_in_system = {
+						limit = { is_ship_size = nomadic_mothership }
+						save_global_event_target_as = f93_homeworld_ship
+					}
+				}
+			}
+		}
+	}
+}
+#destryoing a marauder ship after doing the annomaly triggers this event
+country_event = {
+	id = f93_nomadic_ascension.12
+	title = f93_nomadic_ascension.12.name
+	desc = f93_nomadic_ascension.12.desc
+	picture = GFX_evt_ancient_artifact
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+		}
+		else = { set_country_flag = f93_nomadic_ascension_quest_3 }
+	}
+	option = {
+		name = f93_nomadic_ascension.1.a
+		add_modifier = { modifier = f93_nomadic_naval_cap_khan multiplier = 20 }
+		event_target:f93_homeworld_ship = { enable_special_project = { name = f93_weaken_the_khan } }
+	}
+	after = { hidden_effect = { country_event = { id = f93_nomadic_ascension.14 } } }
+}
+country_event = {
+	id = f93_nomadic_ascension.13
+	title = f93_nomadic_ascension.13.name
+	desc = f93_nomadic_ascension.13.desc
+	picture = GFX_evt_analyzing_artifacts
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+		}
+		else = { set_country_flag = f93_nomadic_ascension_quest_4 }
+	}
+	option = {
+		name = f93_nomadic_ascension.1.a
+		add_modifier = { modifier = f93_nomadic_naval_cap_khan multiplier = 25 }
+	}
+	after = { hidden_effect = { country_event = { id = f93_nomadic_ascension.14 } } }
+}
+country_event = {
+	id = f93_nomadic_ascension.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_flag = f93_nomadic_ascension_quest_1
+			has_country_flag = f93_nomadic_ascension_quest_2
+			has_country_flag = f93_nomadic_ascension_quest_3
+			has_country_flag = f93_nomadic_ascension_quest_4
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest has_country_flag = f93_nomadic_ascension_quest_1 }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			remove_country_flag = f93_nomadic_ascension_quest_1
+		}
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest has_country_flag = f93_nomadic_ascension_quest_2 }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			remove_country_flag = f93_nomadic_ascension_quest_2
+		}
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest has_country_flag = f93_nomadic_ascension_quest_3 }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			remove_country_flag = f93_nomadic_ascension_quest_3
+		}
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest has_country_flag = f93_nomadic_ascension_quest_4 }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			remove_country_flag = f93_nomadic_ascension_quest_4
+		}
 	}
 }

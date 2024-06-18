@@ -53,6 +53,22 @@
  f93_nomadic_ascension.7.desc: "We have defeated the false Khan, stolen his throne and put his head on a pike. Its time this galaxy learns what it means to oppose us!"
  f93_nomadic_ascension.8.name: "§H$r_khan_throne$§! has appeared"
  f93_nomadic_ascension.8.desc: "§Y[owner_of_the_throne.GetName] came into the possession of §H$r_khan_throne$§!. How exactly is a mystery to us. Maybe the salvaged it off a debris field or found it burried in the ground. It matters not. We have to have it now!"
+ f93_nomadic_ascension.9.name: "Reminder"
+ f93_nomadic_ascension.9.desc: "We have access to the §Y$ap_f93_nomadic_ambition$§! Ascension Perk."
+ f93_nomadic_ascension.9.a:  "Remind me again in a year"
+ f93_nomadic_ascension.9.b: "Take it right away"
+ f93_nomadic_ascension.9.c: "Dont remind me again"
+ f93_nomadic_raid.2.b: "Raid the other thing"
+ f93_nomadic_raid.2.b.desc: "We heard of something §Gvery interesting§! here. we should concentrate on stealing that instead."
+ f93_nomadic_ascension.10.name: "Daring Heist"
+ f93_nomadic_ascension.10.desc: "Our acquisition specialist have liberated some juicy intel. We should immeediatly send a science ship to the coordiantes it revealed."
+ f93_nomadic_ascension.11.name: "Ancient Edifice"
+ f93_nomadic_ascension.11.desc: "Our Expedition entered the edifice$NEW_LINE$This highly advanced but all the same Ancient facility was puzzeling, but our Team was able to deduce some new insights.$NEW_LINE$$NEW_LINE$We also now know we have to destroy a couple of ships of the §YKhan§! to further our research."
+ f93_nomadic_ascension.12.name: "Boarding Action"
+ f93_nomadic_ascension.12.desc: "Our boarding party has returned!$NEW_LINE$§LThousands of marines have thrown themself into boarding capsules and where launched at the enemy ship. Dozens were shot down by random crossfire and hundrets fell to the dedicated point defense but the waves finally overwhelmed the defenses and the first boarding troops entered the enemy ship. With high speed and disregard for their own safty they managed to secure a key ship component. The Survivors threw themself into space hoping one of their own would pick them back up.§!$NEW_LINE$$NEW_LINE$Now we can analize this ship component and learn its weaknesses."
+ f93_nomadic_ascension.13.name: "Hacking Action"
+ f93_nomadic_ascension.13.desc: "Construction plans, Tactics, Strategies, Encryption Keys, this false pretender is little more than a glas figure to us now."
+
 
 #Event Chain
  f93_nomadic_ascension_quest: "The greatest Pirate there is"
@@ -60,6 +76,11 @@
  f93_nomadic_ascension_quest_desc: "For Ages there have been pretenders. It is time that we deal with them and claim the Throne of the Khan for our self."
  great_khan_throne: "The Throne of the Khan"
  maurauder_ships_killed: "Marauder ships killed:"
+ f93_nomadic_ascension_quest.poi.1: "A hint of a Trace"
+ f93_nomadic_ascension_quest.poi.1.name: "A hint of a Trace"
+ f93_nomadic_ascension_quest.poi.1.desc: "During a recent raid we have optained these coordinates.s"
+ f93_weaken_the_khan: "Finding the Khans Weakspot"
+ optional_goals: "Optional Goals"
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Construction"
@@ -68,7 +89,8 @@
  NAME_Nomadic_freighter_aloy: "Refinery"
  NAME_Nomadic_freighter_science: "Research"
  NAME_Nomadic_freighter_csg: "Fabricator"
- NAME_Nomadic_mothership: "Mothership"
+ NAME_nomadic_mothership: "Mothership"
+ NAME_nomadic_mothership-class: "Mothership"
 
 #Technology
  tech_nomatic_society: "Nomadic Travels"
@@ -322,6 +344,7 @@
  f93_has_fewer_districts: "Vast Steppes"
  f93_has_fewer_districts_effect: "All Steppe Nomad planets have §R-75%§! £district£Districts$NEW_LINE$§G25%§! of the £district£Districts slots are converted into £housing£Housing"
  f93_nomadic_naval_cap: "Naval Cap Bonus from Mothership Component"
+ f93_nomadic_naval_cap_khan: "Hunting the Khan"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"
@@ -383,3 +406,7 @@
  tr_nomadic_ambition_3_effect: "Unlocks §Y$cb_nomadic_pirate_raid$§! Casus Belli$NEW_LINE$$MOD_COUNTRY_NAVAL_CAP_ADD$ §G+15%§!"
  tr_nomadic_ambition_4: "Logistic Between Stars"
  tr_nomadic_ambition_5: "Messanger Posts"
+
+#Anomalies
+ f93_an_trace_kahn_weakness: "The Trace of a Hint"
+ f93_an_trace_kahn_weakness_desc: "During a recent raid we have discovered documents that suggest we can find something to strenghten out Quest against the Khan."

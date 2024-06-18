@@ -334,7 +334,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = NAME_Nomadic_mothership
+	name = NAME_nomadic_mothership
 	ship_size = nomadic_mothership
 	is_event_design = no
 	hide_size = yes
