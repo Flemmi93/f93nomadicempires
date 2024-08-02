@@ -48,6 +48,11 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = f93_khan_weakness_raid_done
 			country_event = { id = f93_nomadic_ascension.10 days = 1 }
+			if = {
+				limit = { has_event_chain = f93_nomadic_ascension_quest }
+				add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			}
+			else = { set_country_flag = f93_nomadic_ascension_quest_1 }
 		}
 	}
 	after = {

@@ -50,7 +50,7 @@
  f93_nomadic_ascension.1.desc: "§RGreat Khan?! That pretender dares to challenge us? This insolence cannot be tolerated!§!§Y[Ruler.GetName] raged!§! The command deck of the flagship erupted in a frenzy of outrage and disbelief as the envoy relayed the message from the distant sector.$NEW_LINE$Who questions our supremacy? Our ancestors ruled the stars! We won't be bested by some upstart with a shiny throne!"
  f93_nomadic_ascension.1.a: "Our destiny awaits!"
  f93_nomadic_ascension.7.name: "Victory"
- f93_nomadic_ascension.7.desc: "We have defeated the false Khan, stolen his throne and put his head on a pike. Its time this galaxy learns what it means to oppose us!"
+ f93_nomadic_ascension.7.desc: "We have defeated the false Khan, stolen his throne and put his head on a pike. it's time this galaxy learns what it means to oppose us!"
  f93_nomadic_ascension.8.name: "§H$r_khans_throne$§! has appeared"
  f93_nomadic_ascension.8.desc: "§Y[owner_of_the_throne.GetName]§! came into the possession of §H$r_khans_throne$§!. How exactly is a mystery to us. Maybe the salvaged it off a debris field or found it burried in the ground. It matters not. We have to have it now!"
  f93_nomadic_ascension.9.name: "Reminder"
@@ -65,7 +65,7 @@
  f93_nomadic_ascension.11.name: "Ancient Edifice"
  f93_nomadic_ascension.11.desc: "Our Expedition entered the edifice$NEW_LINE$This highly advanced but all the same ancient facility was puzzeling, but our team was able to deduce some new insights.$NEW_LINE$$NEW_LINE$We also now know we have to destroy a couple of ships of the §YKhan§! to further our research."
  f93_nomadic_ascension.12.name: "Boarding Action"
- f93_nomadic_ascension.12.desc: "Our boarding party has returned!$NEW_LINE$§LThousands of marines have thrown themself into boarding capsules and where launched at the enemy ship. Dozens were shot down by random crossfire and hundrets fell to the dedicated point defense but the waves finally overwhelmed the defenses and the first boarding troops entered the enemy ship. With high speed and disregard for their own safty they managed to secure a key ship component. The survivors threw themself into space hoping one of their own would pick them back up.§!$NEW_LINE$$NEW_LINE$Now we can analize this ship component and learn its weaknesses."
+ f93_nomadic_ascension.12.desc: "Our boarding party has returned!$NEW_LINE$§LThousands of marines have thrown themself into boarding capsules and where launched at the enemy ship. Dozens were shot down by random crossfire and hundrets fell to the dedicated point defense but the waves finally overwhelmed the defenses and the first boarding troops entered the enemy ship. With high speed and disregard for their own safty they managed to secure a key ship component. The survivors threw themself into space hoping one of their own would pick them back up.§!$NEW_LINE$$NEW_LINE$Now we can analize this ship component and learn it's weaknesses."
  f93_nomadic_ascension.13.name: "Hacking Action"
  f93_nomadic_ascension.13.desc: "Construction plans, Tactics, Strategies, Encryption Keys, this false pretender is little more than a glas figure to us now."
 
@@ -102,13 +102,15 @@
 
 #government
  origin_nomadic_empire: "Nomadic Empire"
- origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, its only to gather some very needed components for their homefleet."
+ origin_nomadic_empire_desc: "This generally peaceful empire decided to no longer live on worlds bound by gravity wells. If they do, it's only to gather some very needed components for their homefleet."
  civic_nomadic_pirate: "A Pirate's Life"
  civic_nomadic_pirate_desc: "These people decided to no longer play by the rules, they plunder and run. As long as rum and money flows these people will be happy."
  origin_space_steppe_nomads: "Vast Steppes"
  origin_space_steppe_nomads_desc: "$this_feature_is_WIP$§LThe People have always roamed the vast steppes of the homeworld.$NEW_LINE$This world was unified by bloodshed. A roving gang of Nomadic Warrior's took over steppe after steppe, even the occasional settlements, growing their power and influence until suddenly there was nowhere left to conquer. With the advent of FTL travel, little has changed.§!"
  origin_space_steppe_nomads_effect: "§RWARNING: Challanging Gameplay changes in Option A§!$NEW_LINE$Option A:$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G24 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!.$NEW_LINE$Option B:$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce a normal amount in the beginning and than reduce their output to a trickle.$NEW_LINE$Option C:$NEW_LINE$Similar to B + Nomadic Space Economy and nerved planet Economy and the Mothership-size vessel will construct §YResearch Station§! and §YMining Stations§! automaticly."
  origin_space_steppe_nomads_colony_exploit_effect: ""#§Y$New$ $COLONIES$§! Will be similarly exploited."
+ civic_nomadic_empire: "Nomadic Empire"
+ civic_nomadic_empire_desc: "§RThis Civic is for special case use only!§!\n\nThe intention is that modded origins could be used in combination with this civic to enable fun starting scnearios. if you intent to play a nomadic empire, use the origin, unless you found a fun combo and wanna use it. go ahead, this civic is for fun here."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -265,7 +267,7 @@
  end_nomadic_raid_on_territory_monthly_change_tooltip: "Powering down Weapons"
  situation_pirate_atttack: "Start Attack"
  situation_pirate_atttack_stop: "End the Attack"
- situation_pirate_atttack_stop_desc: "Its enough, they surly learned their lesson."
+ situation_pirate_atttack_stop_desc: "it's enough, they surly learned their lesson."
  situation_pirate_atttack_desc: "We have waited long enough, time to show the galaxy who is boss."
  cant_be_undone: "$new_line$§RTHIS ACTION CANNOT BE UNDONE"
  
@@ -350,6 +352,9 @@
  f93_nomadic_naval_cap: "Naval Cap Bonus from Mothership Component"
  f93_nomadic_naval_cap_khan: "Hunting the Khan"
  f93_nomadic_naval_cap_khan_defeated: "Defeated the Khan"
+ shipsize_nomadic_mothership_build_speed_mult: "Mothership Build Speed"
+ mod_shipsize_nomadic_mothership_build_speed_mult: "Mothership Build Speed"
+ f93_nomadic_mothership_build_speed: "Mothership Build Speed"
 
 #CB & Wargoals
  cb_nomadic_pirate_raid: "$casus_belli_cb_pirate_raid$"

@@ -13,3 +13,22 @@ civic_nomadic_pirate = {
 		force_disparity_fire_rate_mult = 0.25
 	}
 }
+
+civic_nomadic_empire = {
+	# is_origin = yes
+	potential = { always = yes }
+	icon = gfx/interface/icons/governments/civics/nomadic_empire.dds
+	picture = GFX_evt_unknown_ships	
+	modifier = {
+		command_limit_mult = 0.25
+		country_naval_cap_add = 20
+		force_disparity_fire_rate_mult = 0.25
+		ship_armor_regen_add_perc = 0.01
+		ship_hull_regen_add_perc = 0.01
+		country_commander_cap_add = 2
+		empire_size_systems_mult = 10
+		empire_size_colonies_mult = 5
+		country_starbase_influence_cost_mult = -10
+		
+	}
+}

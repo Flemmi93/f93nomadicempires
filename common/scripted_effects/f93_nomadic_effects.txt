@@ -31,6 +31,7 @@ f93_create_nomad_country_effect = {
 			country_event = { id = game_start.70 }
 			country_event = { id = game_start.72 }
 			country_event = { id = country.900 days = 460 random = 60 }
+			copy_techs_from = { target = event_target:nomadic_empires_origin_country }
 		}
 	}
 	set_closed_borders = {
@@ -86,20 +87,23 @@ turn_empire_into_nomads_midgame = {
 		ignore_initial_colony_error = yes
 		effect = {
 			set_country_flag = country_is_f93_nomadic_flag
-			establish_communications_no_message = root
+			establish_communications_no_message = event_target:nomadic_empires_origin_country
 			f93_set_income_stock_var_to_zero_effect	=yes
 			f93_is_thenomad_effect = yes
 			if = {
-				limit = { root = { is_galactic_community_member = yes } }
+				limit = { event_target:nomadic_empires_origin_country = { is_galactic_community_member = yes } }
 				add_to_galactic_community_no_message = yes
 			}
 			if = {
 				limit = {
-					root = { num_owned_relics > 0 }
+					event_target:nomadic_empires_origin_country = { num_owned_relics > 0 }
 				}
-				steal_relic = { target = root relic = all }
+				steal_relic = { target = event_target:nomadic_empires_origin_country relic = all }
 			}
-			copy_techs_from = { target = root }
+			copy_techs_from = { target = event_target:nomadic_empires_origin_country }
+			add_modifier = {
+				modifier = f93_nomadic_mothership_build_speed mult = 10
+			}
 		}
 	}
 	

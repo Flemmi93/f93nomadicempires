@@ -130,3 +130,6 @@ f93_nomadic_naval_cap_khan_defeated = {
 	country_vassal_naval_capacity_contribution_mult = 0.01
 	ships_upkeep_mult = -0.005
 }
+f93_nomadic_mothership_build_speed = {
+	shipsize_nomadic_mothership_build_speed_mult = 1
+}

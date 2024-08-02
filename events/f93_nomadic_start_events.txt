@@ -64,6 +64,7 @@ country_event = {
 		is_slow_space_steppe_nomad = no
 	}
 	immediate = {
+		save_global_event_target_as = nomadic_empires_origin_country
 	}
 	option = {
 		name = f93_nomadic_start.1.b
@@ -91,6 +92,9 @@ country_event = {
 			}
 		}
 	}
+	after = {
+		clear_global_event_target = nomadic_empires_origin_country
+	}
 }
 
 country_event = {
@@ -104,7 +108,11 @@ country_event = {
 	}
 
 	immediate = {
+		save_global_event_target_as = nomadic_empires_origin_country
 		f93_create_nomad_country_effect = yes
+	}
+	after = {
+		clear_global_event_target = nomadic_empires_origin_country
 	}
 }
 
@@ -326,7 +334,12 @@ country_event = {
 	hide_window = yes
 
 	immediate = {
+		save_global_event_target_as = nomadic_empires_origin_country
 		turn_empire_into_nomads_midgame = yes
+	}
+	
+	after = {
+		clear_global_event_target = nomadic_empires_origin_country
 	}
 }
 
@@ -468,6 +481,10 @@ country_event = {
 	}
 	immediate = {
 		add_modifier = { modifier = f93_has_a_mothership_modifier days = 361 }
+		if = {
+			limit = { has_modifier = f93_nomadic_mothership_build_speed }
+			remove_modifier = f93_nomadic_mothership_build_speed
+		}
 	}
 }
 

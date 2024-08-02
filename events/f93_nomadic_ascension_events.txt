@@ -273,7 +273,7 @@ country_event = {
 			limit = { has_event_chain = f93_nomadic_ascension_quest }
 			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
 		}
-		else = { set_country_flag = f93_nomadic_ascension_quest_1 }
+		else = { set_country_flag = f93_nomadic_ascension_quest_2 }
 	}
 	option = {
 		name = f93_nomadic_ascension.1.a
@@ -371,7 +371,7 @@ ship_event = {
 			limit = { owner = { has_event_chain = f93_nomadic_ascension_quest } }
 			owner = { add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 } }
 		}
-		else = { owner = { set_country_flag = f93_nomadic_ascension_quest_2 } }
+		else = { owner = { set_country_flag = f93_nomadic_ascension_quest_3 } }
 	}
 	option = {
 		name = f93_nomadic_ascension.1.a
@@ -407,7 +407,7 @@ country_event = {
 			limit = { has_event_chain = f93_nomadic_ascension_quest }
 			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
 		}
-		else = { set_country_flag = f93_nomadic_ascension_quest_3 }
+		else = { set_country_flag = f93_nomadic_ascension_quest_4 }
 	}
 	option = {
 		name = f93_nomadic_ascension.1.a
@@ -428,7 +428,7 @@ country_event = {
 			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
 			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = optional_goals amount = 1 }
 		}
-		else = { set_country_flag = f93_nomadic_ascension_quest_4 }
+		else = { set_country_flag = f93_nomadic_ascension_quest_5 }
 	}
 	option = {
 		name = f93_nomadic_ascension.1.a
@@ -446,6 +446,7 @@ country_event = {
 			has_country_flag = f93_nomadic_ascension_quest_2
 			has_country_flag = f93_nomadic_ascension_quest_3
 			has_country_flag = f93_nomadic_ascension_quest_4
+			has_country_flag = f93_nomadic_ascension_quest_5
 		}
 	}
 	immediate = {
@@ -468,6 +469,11 @@ country_event = {
 			limit = { has_event_chain = f93_nomadic_ascension_quest has_country_flag = f93_nomadic_ascension_quest_4 }
 			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
 			remove_country_flag = f93_nomadic_ascension_quest_4
+		}
+		if = {
+			limit = { has_event_chain = f93_nomadic_ascension_quest has_country_flag = f93_nomadic_ascension_quest_5 }
+			add_event_chain_counter = { event_chain = f93_nomadic_ascension_quest counter = f93_weaken_the_khan amount = 1 }
+			remove_country_flag = f93_nomadic_ascension_quest_5
 		}
 	}
 }
