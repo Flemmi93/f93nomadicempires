@@ -101,7 +101,7 @@ nomadic_shipyard = {
 	default_behavior = carrier
 	ship_roles = { carrier artillery }
 
-	prerequisites = { "tech_nomatic_society" "tech_doctrine_fleet_size_4" "tech_doctrine_navy_size_4" }
+	prerequisites = { "tech_nomatic_society" }# "tech_doctrine_fleet_size_4" "tech_doctrine_navy_size_4" }
 	class = shipclass_starbase
 	construction_type = starbase_shipyard
 
@@ -139,15 +139,22 @@ nomadic_mothership = {
 
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
-		starbase_shipyard_capacity_add = 10
+		starbase_shipyard_capacity_add = 8
 	}
 
-	base_buildtime = @juggernaut_build_time
+	base_buildtime = 0 # @juggernaut_build_time
 	resources = {
 		category = ships
 		upkeep = {
 			energy = @juggernaut_upkeep_energy
 			alloys = @juggernaut_upkeep_alloys
+		}
+	}
+
+	potential_construction = {
+		owner = {
+			has_country_flag = has_f93_space_economy_flag
+			NOT = { any_owned_ship = { is_ship_size = nomadic_mothership } }
 		}
 	}
 
@@ -170,7 +177,7 @@ nomadic_mothership = {
 	ship_roles = { carrier artillery }
 
 	prerequisites = { "tech_nomatic_society" }
-	class = shipclass_starbase
+	class = shipclass_starbase #shipclass_military 
 	construction_type = starbase_shipyard
 
 	combat_disengage_chance = 0.75

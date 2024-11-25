@@ -345,6 +345,7 @@
  f93_has_a_mothership_modifier: "Mothership Bases Logistics"
  f93_has_a_mothership_modifier_desc: "Ships that are far away from our Mothership suffer and have increased upkeep costs"
  mod_shipsize_nomadic_freighter_build_speed_mult: "Freighter Build Speed"
+ mod_shipsize_nomadic_mothership_build_speed_mult: "Mothership Build Speed"
  f93_has_fewer_districts: "Vast Steppes"
  f93_has_fewer_districts_effect: "All Steppe Nomad planets have §R-75%§! £district£Districts$NEW_LINE$§G25%§! of the £district£Districts slots are converted into £housing£Housing"
  f93_nomadic_naval_cap: "Naval Cap Bonus from Mothership Component"
@@ -418,3 +419,9 @@
 #Anomalies
  f93_an_trace_kahn_weakness: "The Trace of a Hint"
  f93_an_trace_kahn_weakness_desc: "During a recent raid we have discovered documents that suggest we can find something to strenghten out Quest against the Khan."
+
+#Tutorial
+ f93_nomadic_start.16.name: "§RTUTORIAL"
+ f93_nomadic_start.16.b: "I will build a new Mothership"
+ f93_nomadic_start.16.desc: "§RThis is important!§!\n\nDue to a bug that has appeared in V3.14 mobile shipyards only work when they are constructed ingame. Simply spawning them in as starting ships does not work.\n\n§GWhat you need to do:§!$TABBED_NEW_LINE$1. Go into the Shipdesigner, design a Shipyard-Class Ship$TABBED_NEW_LINE$2. Construct a starbase with a shipyard$TABBED_NEW_LINE$3. Build a Mobile Shipyard\n\nTo help you get this started here are some alloys.\n\nSorry for the hassle but I will fix this bus as soon as i find out how.\n\nYou can demolish the station afterwards."
+ f93_nomadic_start.16.a: "I know what i am doing!"

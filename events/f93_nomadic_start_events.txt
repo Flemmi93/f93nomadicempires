@@ -122,6 +122,22 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# create_fleet = {
+		# 	name = "Construction Fleet"
+		# 	effect = {
+		# 		set_owner = event_target:homeworld_leavers
+		# 		set_location = event_target:homeworld
+		# 		create_ship = {
+		# 			name = "Shipyard"
+		# 			design = NAME_Nomadic_shipyard
+		# 		}
+		# 	}
+		# }
+		
+		create_ship_design = { design =  NAME_Nomadic_shipyard }
+		add_ship_design = last_created_design
+		set_country_flag = has_shipyard_design_f93
+
 		create_fleet = {
 			name = "Mothership"
 			effect = {
@@ -210,6 +226,7 @@ country_event = {
 		clear_global_event_target = homeworld
 		clear_global_event_target = homeworld_leavers
 		
+		country_event = { id = f93_nomadic_start.16 days = 1 }
 	}
 }
 
@@ -502,5 +519,47 @@ country_event = {
 		create_ship_design = { design =  NAME_Nomadic_shipyard }
 		add_ship_design = last_created_design
 		set_country_flag = has_shipyard_design_f93
+	}
+}
+
+
+country_event = {
+	id = f93_nomadic_start.16
+	is_triggered_only = yes
+	title = f93_nomadic_start.16.name
+	desc = f93_nomadic_start.16.desc
+	picture	= GFX_evt_ship_in_orbit
+	
+	option = {
+		name = f93_nomadic_start.16.a
+		hidden_effect = {
+			create_ship_design = { design = NAME_Nomadic_shipyard }
+			add_ship_design = last_created_design
+			set_country_flag = has_shipyard_design_f93
+		}
+	}
+	option = {
+ 		name = f93_nomadic_start.16.b
+		add_resource = {
+			alloys = 5500
+		}
+		random_owned_fleet = {
+			limit = { is_ship_size = nomadic_mothership }
+			closest_system = {
+				limit = {
+					has_access_fleet = root.owner
+					has_owner = no
+				}
+				create_starbase = {
+					owner = root
+					size = starbase_starport
+					module = shipyard
+				}
+			}
+			delete_fleet = {
+				target = THIS
+				kill_leader = no
+			}
+		}
 	}
 }
