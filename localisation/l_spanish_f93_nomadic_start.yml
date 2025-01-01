@@ -5,6 +5,11 @@
  f93_nomadic_start.1.a: "§GLet's get Moving"
  f93_nomadic_start.1.b: "§RWe will stay!"
  f93_nomadic_start.1.c: "§LI be a Pirate!"
+ f93_nomadic_start.1.d: "§rWe have always been on the move."
+ f93_nomadic_start.2.name: "Did we like it back home?"
+ f93_nomadic_start.2.desc: "There where long and argues debates about if we should leave our home, then when it was decided that we will leave, there where long and argues debates about if anyone should stay behind, many people kept their opinion secret at first about what they think about the idea of anyone staying behind or nobody staying behind. but at some point, everyone reached a peaceful consensus$NEW_LINE$Now we happen to pass by our ancestral homeworld and you remember the decisions people made back then…"
+ f93_nomadic_start.2.a: "§RSome chose to stay behind!"
+ f93_nomadic_start.2.b: "§rWe where unanomous and all left together."
  f93_nomadic_start.8.name: "We have to Change our ways!"
  f93_nomadic_start.8.desc: "To start §Graiding§! we have to enact the §Y$civic_nomadic_pirate$§! Civic.$new_line$We should do so now."
  f93_nomadic_raid.1.name: "Station Dismantled"
@@ -423,5 +428,5 @@
 #Tutorial
  f93_nomadic_start.16.name: "§RTUTORIAL"
  f93_nomadic_start.16.b: "I will build a new Mothership"
- f93_nomadic_start.16.desc: "§RThis is important!§!\n\nDue to a bug that has appeared in V3.14 mobile shipyards only work when they are constructed ingame. Simply spawning them in as starting ships does not work.\n\n§GWhat you need to do:§!$TABBED_NEW_LINE$1. Go into the Shipdesigner, design a Shipyard-Class Ship$TABBED_NEW_LINE$2. Construct a starbase with a shipyard$TABBED_NEW_LINE$3. Build a Mobile Shipyard\n\nTo help you get this started here are some alloys.\n\nSorry for the hassle but I will fix this bus as soon as i find out how.\n\nYou can demolish the station afterwards."
+ f93_nomadic_start.16.desc: "§RThis is important!§!\n\nDue to a bug that has appeared in V3.14 mobile shipyards only work when they are constructed ingame. §YCheck your Mothership if you can construct ships with it.§! If it works, you can skip this event.\n\n§GWhat you need to do:§!$TABBED_NEW_LINE$1. Go into the Shipdesigner, design a Shipyard-Class Ship$TABBED_NEW_LINE$2. Construct a starbase with a shipyard$TABBED_NEW_LINE$3. Build a Mobile Shipyard\n\nTo help you get this started here are some alloys.\n\nSorry for the hassle but I will fix this bus as soon as i find out how.\n\nYou can demolish the station afterwards."
  f93_nomadic_start.16.a: "I know what i am doing!"

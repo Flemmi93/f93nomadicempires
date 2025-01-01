@@ -92,6 +92,24 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = f93_nomadic_start.1.d
+		hidden_effect = {
+			f93_create_nomad_country_effect = yes
+			every_owned_fleet = {
+				delete_fleet = this
+			}
+			every_owned_planet = {
+				destroy_colony = yes
+			}
+			every_owned_pop = {
+				kill_pop = yes
+			}
+			every_owned_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
 	after = {
 		clear_global_event_target = nomadic_empires_origin_country
 	}
@@ -110,10 +128,39 @@ country_event = {
 	immediate = {
 		save_global_event_target_as = nomadic_empires_origin_country
 		f93_create_nomad_country_effect = yes
+		last_created_country = { country_event = { id = f93_nomadic_start.2b } }
 	}
-	after = {
-		clear_global_event_target = nomadic_empires_origin_country
+}
+
+country_event = {
+	id = f93_nomadic_start.2b
+	is_triggered_only = yes
+	title = f93_nomadic_start.2.name
+	desc = f93_nomadic_start.2.desc
+	picture	= GFX_evt_hangar_bay
+	show_sound = event_ship_bridge
+
+	option = {
+		name = f93_nomadic_start.2.a
 	}
+	option = {
+		name = f93_nomadic_start.2.b
+		event_target:nomadic_empires_origin_country = {
+			every_owned_fleet = {
+				delete_fleet = this
+			}
+			every_owned_planet = {
+				destroy_colony = yes
+			}
+			every_owned_pop = {
+				kill_pop = yes
+			}
+			every_owned_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	after = { clear_global_event_target = nomadic_empires_origin_country }
 }
 
 country_event = {
@@ -226,7 +273,7 @@ country_event = {
 		clear_global_event_target = homeworld
 		clear_global_event_target = homeworld_leavers
 		
-		country_event = { id = f93_nomadic_start.16 days = 1 }
+		# country_event = { id = f93_nomadic_start.16 days = 1 }
 	}
 }
 
