@@ -128,12 +128,12 @@ country_event = {
 	immediate = {
 		save_global_event_target_as = nomadic_empires_origin_country
 		f93_create_nomad_country_effect = yes
-		last_created_country = { country_event = { id = f93_nomadic_start.2b } }
+		last_created_country = { country_event = { id = f93_nomadic_start.17 } }
 	}
 }
 
 country_event = {
-	id = f93_nomadic_start.2b
+	id = f93_nomadic_start.17
 	is_triggered_only = yes
 	title = f93_nomadic_start.2.name
 	desc = f93_nomadic_start.2.desc

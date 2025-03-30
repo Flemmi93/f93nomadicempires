@@ -518,6 +518,111 @@ utility_component_template = {
 	component_set = "f93_nomad_unity_3"
 }
 
+#Unity
+utility_component_template = {
+	key = "f93_nomad_unity_1_hive"
+	size = aux
+	icon = "GFX_ship_part_nomad_unity_1"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal0
+	modifier = {
+		country_base_unity_produces_add = @nomadic_production_research1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tier1
+		}
+		upkeep = {
+			energy = @nomadic_upkeeptier1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg1
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg1
+		}
+		produces = {
+			unity = @nomadic_production_research1
+		}
+	}
+
+	prerequisites = { "tech_hive_node" "tech_nomatic_society" }
+	component_set = "f93_nomad_unity_1"
+	upgrades_to = "f93_nomad_unity_2"
+}
+
+utility_component_template = {
+	key = "f93_nomad_unity_2_hive"
+	size = aux
+	icon = "GFX_ship_part_nomad_unity_2"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal2
+	modifier = {
+		country_base_unity_produces_add = @nomadic_production_research2
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tier2
+		}
+		upkeep = {
+			energy = @nomadic_upkeeptier2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg2
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg2
+		}
+		produces = {
+			unity = @nomadic_production_research2
+		}
+	}
+
+	prerequisites = { "tech_hive_cluster" "tech_nomatic_society" }
+	component_set = "f93_nomad_unity_2"
+	upgrades_to = "f93_nomad_unity_3"
+}
+
+utility_component_template = {
+	key = "f93_nomad_unity_3_hive"
+	size = aux
+	icon = "GFX_ship_part_nomad_unity_3"
+	icon_frame = 1
+	power = @nomadic_power_cost_bal3
+	modifier = {
+		country_base_unity_produces_add = @nomadic_production_research3
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @nomadic_component_tier3
+		}
+		upkeep = {
+			energy = @nomadic_upkeeptier3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = no} }
+			consumer_goods = @nomadic_upkeepcsg3
+		}
+		upkeep = {
+			trigger = { exists = from from = { is_gestalt = yes } }
+			minerals = @nomadic_upkeepcsg3
+		}
+		produces = {
+			unity = @nomadic_production_research3
+		}
+	}
+
+	prerequisites = { "tech_hive_confluence" "tech_nomatic_society" }
+	component_set = "f93_nomad_unity_3"
+}
+
 #Science
 utility_component_template = {
 	key = "f93_nomad_science_lab_1"
