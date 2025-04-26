@@ -165,30 +165,6 @@ turn_empire_into_nomads_midgame = {
 			}
 		}
 	}
-	# every_owned_pop = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_design = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_megastructure = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_planet = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_sector = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_species = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_starbase = {
-	# 	set_owner = last_created_country
-	# }
-	# every_owned_nonprimary_starbase = {
-	# 	set_owner = last_created_country
-	# }
 	every_country = {
 		limit = { has_communications = ROOT }
 		establish_communications_no_message = last_created_country
