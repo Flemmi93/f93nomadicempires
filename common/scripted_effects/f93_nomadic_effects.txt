@@ -109,6 +109,10 @@ turn_empire_into_nomads_midgame = {
 		}
 	}
 	
+	every_owned_leader = {
+		set_owner = last_created_country
+	}
+
 	last_created_country = { 
 		create_fleet = {
 			name = "Nomadic Construction Vessel"

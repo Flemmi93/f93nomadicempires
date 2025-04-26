@@ -96,6 +96,22 @@ country_event = {
 		name = f93_nomadic_start.1.d
 		hidden_effect = {
 			f93_create_nomad_country_effect = yes
+			last_created_country = {
+				every_owned_leader = {
+					limit = { is_ruler = no }
+					set_leader_flag = f93_remove_this_flag
+				}
+			}
+			every_owned_leader = {
+				unassign_leader = this
+				set_owner = last_created_country
+			}
+			last_created_country = {
+				every_owned_leader = {
+					limit = { is_ruler = no has_leader_flag = f93_remove_this_flag  }
+					kill_leader = { show_notification = no }
+				}
+			}
 			every_owned_fleet = {
 				delete_fleet = this
 			}
@@ -105,9 +121,9 @@ country_event = {
 			every_owned_pop = {
 				kill_pop = yes
 			}
-			every_owned_leader = {
-				kill_leader = { show_notification = no }
-			}
+			# every_owned_leader = {
+			# 	kill_leader = { show_notification = no }
+			# }
 		}
 	}
 	after = {
@@ -128,20 +144,12 @@ country_event = {
 	immediate = {
 		save_global_event_target_as = nomadic_empires_origin_country
 		f93_create_nomad_country_effect = yes
-<<<<<<< HEAD
 		last_created_country = { country_event = { id = f93_nomadic_start.20 } }
-=======
-		last_created_country = { country_event = { id = f93_nomadic_start.17 } }
->>>>>>> a173f5ab88563ccf7e34d01fe7631e38903cd88a
 	}
 }
 
 country_event = {
-<<<<<<< HEAD
 	id = f93_nomadic_start.20
-=======
-	id = f93_nomadic_start.17
->>>>>>> a173f5ab88563ccf7e34d01fe7631e38903cd88a
 	is_triggered_only = yes
 	title = f93_nomadic_start.2.name
 	desc = f93_nomadic_start.2.desc
@@ -153,7 +161,16 @@ country_event = {
 	}
 	option = {
 		name = f93_nomadic_start.2.b
+		hidden_effect = {
+			every_owned_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
 		event_target:nomadic_empires_origin_country = {
+			every_owned_leader = {
+				unassign_leader = this
+				set_owner = root
+			}
 			every_owned_fleet = {
 				delete_fleet = this
 			}
@@ -163,9 +180,9 @@ country_event = {
 			every_owned_pop = {
 				kill_pop = yes
 			}
-			every_owned_leader = {
-				kill_leader = { show_notification = no }
-			}
+			# every_owned_leader = {
+			# 	kill_leader = { show_notification = no }
+			# }
 		}
 	}
 	after = { clear_global_event_target = nomadic_empires_origin_country }
