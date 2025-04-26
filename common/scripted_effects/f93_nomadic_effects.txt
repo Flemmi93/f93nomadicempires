@@ -19,6 +19,7 @@ f93_create_nomad_country_effect = {
 		species = ROOT
 		flag = root
 		ethos = ROOT
+		day_zero_contact = no
 		ignore_initial_colony_error = yes
 		effect = {
 			establish_communications_no_message = root
@@ -41,6 +42,7 @@ f93_create_nomad_country_effect = {
 	}
 }
 f93_is_thenomad_effect = {
+	set_graphical_culture = root
 	assign_leader = root.ruler
 	set_custom_capital_location = root.capital_scope
 	set_country_flag = has_f93_space_economy_flag
