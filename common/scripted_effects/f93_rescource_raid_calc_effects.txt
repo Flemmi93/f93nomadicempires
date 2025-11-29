@@ -1,0 +1,68 @@
+# Needs $resource$ defined as a valid resource in game
+# needs $ACCURACY$ defined as any positive integer
+calc_resource_production_raid = {
+	if = {
+		limit = {
+			planet_resource_compare = {
+				resource = $resource$
+				type = produces
+				value > 0
+			}
+		}
+		# arbitrary boundaries at 100k production
+		set_variable = { which = low value = 0 }
+		set_variable = { which = high value = 100000 }
+		# low_plus_x where x is the $ACCURACY$ we desire
+		# lower $ACCURACY$ is more accurate
+		# with x = 1 it takes 17 steps to arrive at a starting planets rough mineral production
+		# with 100 steps accuracy to 2 decimal places can be achieved.
+		set_variable = { which = low_plus_x value = low }
+		change_variable = { which = low_plus_x value = 1 }
+		#the counter just runs in the background to see how many calcs we had to made last time we checked
+		set_variable = { which = counter value = 0 }
+		while = {
+			limit = {
+				check_variable = { which = high value > low_plus_x }
+			}
+			# mid = (low + high) / 2
+			set_variable = { which = mid value = low }
+			change_variable = { which = mid value = high }
+			divide_variable = { which = mid value = 2 }
+			# If produces >= mid -> narrow from below
+			if = {
+				limit = {
+					planet_resource_compare = {
+						resource = $resource$
+						type = produces
+						value >= mid
+					}
+				}
+				set_variable = { which = low value = mid }
+			}
+			else = {
+				set_variable = { which = high value = mid }
+			}
+			#set low_plus_x to new value and increment counter
+			set_variable = { which = low_plus_x value = low }
+			change_variable = { which = low_plus_x value = $ACCURACY$ }
+			change_variable = { which = counter value = 1 }
+		}
+		# Final value is low
+		set_variable = { which = $resource$ value = low }
+		if = {
+			limit = { is_variable_set = planet_devastation_on_invasion }
+			multiply_variable = { which = $resource$ value = planet_devastation_on_invasion }
+		}
+		# owner looses resources
+		if = {
+			limit = { has_planet_flag = this_is_a_raid }
+			owner = { add_resource = { $resource$ = -1 mult = prev.$resource$ } }
+		}
+		if = {
+			limit = { has_planet_flag = this_is_a_raid exists = event_target:nomadic_bombarder }
+			event_target:nomadic_bombarder = { add_resource = { $resource$ = 1 mult = prev.$resource$ } }
+		}
+	}
+}
+# Needs $resource$ defined as a valid resource in game
+# needs $ACCURACY$ defined as any positive integer

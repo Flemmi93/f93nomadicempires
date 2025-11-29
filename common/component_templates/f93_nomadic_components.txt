@@ -1301,7 +1301,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tierE1
 		}
 		upkeep = {
-			energy = @nomadic_power_cost_balE2P
+			energy = @nomadic_power_cost_balE2p
 		}
 		upkeep = {
 			trigger = { exists = from from = { is_gestalt = no} }
@@ -1342,7 +1342,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tierE2
 		}
 		upkeep = {
-			energy = @nomadic_power_cost_balE3P
+			energy = @nomadic_power_cost_balE3p
 		}
 		upkeep = {
 			trigger = { exists = from from = { is_gestalt = no} }

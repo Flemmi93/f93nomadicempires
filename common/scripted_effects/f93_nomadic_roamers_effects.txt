@@ -1,4 +1,4 @@
-radomized_devastation_calc_effect = {
+randomized_devastation_calc_effect = {
 		set_variable_to_random_value = { which = devastation_changer min = 0.95 max = 1.05 rounded = no }
 		set_variable = { which = devastation_result value = devastation_caused }
 		multiply_variable = { which = devastation_result value = devastation_changer }

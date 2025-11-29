@@ -252,7 +252,7 @@ f93_transfer_income_data_to_stockpile_data_effect = {
 	set_variable = { which = income_engineering_research value = stockpile_engineering_research }
 }
 
-f93_get_rescouces_per_pop_effect = {
+f93_get_resources_per_pop_effect = {
 	divide_variable = { which = stockpile_energy value = trigger:num_pops }
 	divide_variable = { which = stockpile_minerals value = trigger:num_pops }
 	divide_variable = { which = stockpile_food value = trigger:num_pops }
@@ -272,7 +272,7 @@ f93_get_rescouces_per_pop_effect = {
 	divide_variable = { which = stockpile_engineering_research value = trigger:num_pops }
 }
 
-f93_get_rescouces_per_devastation_effect = {
+f93_get_resources_per_devastation_effect = {
 	multiply_variable = { which = stockpile_energy value = planet_devastation_on_invasion }
 	multiply_variable = { which = stockpile_minerals value = planet_devastation_on_invasion }
 	multiply_variable = { which = stockpile_food value = planet_devastation_on_invasion }

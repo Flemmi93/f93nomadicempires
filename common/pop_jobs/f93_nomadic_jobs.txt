@@ -1,8 +1,13 @@
 f93_nomadic_roamer = {
 	category = ruler
 	exempt_from_ai_amenity_prioritization = yes
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = holding_park_ranger_lodge
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = holding_park_ranger_lodge
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -90,8 +95,13 @@ f93_nomadic_roamer = {
 f93_nomadic_roamer_specialist = {
 	category = specialist
 	exempt_from_ai_amenity_prioritization = yes
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = holding_park_ranger_lodge
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = holding_park_ranger_lodge
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -129,8 +139,13 @@ f93_nomadic_roamer_specialist = {
 f93_nomadic_roamer_worker = {
 	category = worker
 	exempt_from_ai_amenity_prioritization = yes
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = holding_park_ranger_lodge
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = holding_park_ranger_lodge
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -142,11 +157,20 @@ f93_nomadic_roamer_worker = {
 	possible_precalc = can_fill_worker_job
 
 	planet_modifier = {
-		trade_value_add = 3
+		pop_lifestyle_trade_value_add = 2
 		planet_housing_add = 1
 	}
 
 
+	resources = {
+		category = planet_traders
+		produces = {
+			trade = 2
+		}
+		upkeep = {
+			consumer_goods = 0.1
+		}
+	}
 
 	resources = {
 		category = planet_technician
