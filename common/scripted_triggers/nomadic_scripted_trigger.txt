@@ -2,13 +2,15 @@ is_f93_nomadic = {
 	or = {
 		has_origin = origin_nomadic_empire
 		has_civic = civic_nomadic_empire
-		has_country_flag = country_is_f93_nomadic_flag # mainly for other modders to use this if they want
+		has_country_flag = country_is_f93_nomadic_flag # mainly for other modders to use this if they want HAS TO BE EXCLUSIVE WITH country_is_f93_nomadic_pirate_flag
+		is_country_type = playable_nomads
 	}
 }
 is_f93_space_pirate = {
 	or = {
 		has_valid_civic = civic_nomadic_pirate
-		has_country_flag = country_is_f93_nomadic_pirate_flag # mainly for other modders to use this if they want
+		has_country_flag = country_is_f93_nomadic_pirate_flag # mainly for other modders to use this if they want HAS TO BE EXCLUSIVE WITH country_is_f93_nomadic_flag
+		is_country_type = playable_pirate_nomads
 	}
 }
 has_f93_space_economy = {

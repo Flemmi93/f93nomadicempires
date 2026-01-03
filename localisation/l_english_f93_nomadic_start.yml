@@ -92,10 +92,11 @@
  optional_goals: "Optional Goals"
 
 #Global Ship Design
- NAME_Nomadic_shipyard: "Construction"
+ NAME_Nomadic_shipyard: "Mobile Shipyard"
+ NAME_Nomadic_shipyard_mothership :"$NAME_Nomadic_shipyard$"
  NAME_Nomadic_freighter_mins: "Matter Converter"
  NAME_Nomadic_freighter_gen: "Generator"
- NAME_Nomadic_freighter_aloy: "Refinery"
+ NAME_Nomadic_freighter_alloy: "Refinery"
  NAME_Nomadic_freighter_science: "Research"
  NAME_Nomadic_freighter_csg: "Fabricator"
  NAME_nomadic_mothership: "Mothership"
@@ -256,6 +257,9 @@
  nomadic_shipyard_plural: "Nomadic $sshipyard$"
  nomadic_mothership: "Mothership"
  nomadic_mothership_plural: "Motherships"
+ nomadic_freighter_cap: "$civilian_freighter$"
+ nomadic_shipyard_cap: "$nomadic_shipyard$"
+ nomadic_mothership_cap: "$nomadic_mothership$"
 
 #Situations
  situation_nomadic_balanced: "Searching for new Officers"

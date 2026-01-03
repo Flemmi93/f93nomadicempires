@@ -1,4 +1,146 @@
 #Effect to create a nomad Empire.
+
+f93_make_nomad_country_effect_new = {
+	set_faction_needs_colony = no
+	capital_scope = {
+		save_event_target_as = homeworld
+		solar_system = {
+			every_fleet_in_system = {
+				limit = { is_mobile = no }
+				destroy_fleet = this
+			}
+		}
+	}
+	set_origin = origin_nomadic_empire
+	every_owned_planet = { destroy_colony = yes reset_planet = yes }
+	set_custom_capital_location = event_target:homeworld
+	set_country_flag = has_f93_space_economy_flag
+	set_country_flag = f93_nomadic_new_system
+	give_technology = { tech = tech_nomatic_society message = no }
+	start_situation = { type = nomadic_recruitment_leaders target = this }
+	start_situation = { type = nomadic_recruitment_troops target = this }
+	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = this } }
+	
+	create_ship_design = { design =  NAME_Nomadic_freighter_mins }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_alloy }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_csg }
+	add_ship_design = last_created_design
+	create_ship_design = { design =  NAME_Nomadic_freighter_science }
+	add_ship_design = last_created_design
+	set_variable = { which = f93_raidable_planets value = 1 }
+	set_country_flag = has_shipyard_design_f93
+	if = {
+		#since the mothertship uses juggernaut entity, it wont spawn without the dlc in any case, but this is to spawn in the alternative
+		limit = { host_has_dlc = "Federations" }
+		create_ship_design = { design =  NAME_nomadic_mothership }
+		add_ship_design = last_created_design
+		create_fleet = {
+			name = "Mothership"
+			effect = {
+				set_owner = root
+				set_location = event_target:homeworld
+				create_ship = {
+					name = "Mothership"
+					design = NAME_nomadic_mothership
+				}
+			}
+		}
+	}
+	else = {
+		create_ship_design = { design =  NAME_Nomadic_shipyard_mothership }
+		add_ship_design = last_created_design
+		create_fleet = {
+			name = "Mothership"
+			effect = {
+				set_owner = root
+				set_location = event_target:homeworld
+				create_ship = {
+					name = "Mothership"
+					design = NAME_Nomadic_shipyard_mothership
+				}
+			}
+		}
+	}
+	last_created_fleet = { save_global_event_target_as = f93_homeworld_ship }
+	create_fleet = {
+		name = "Nomadic Fleet"
+		effect = {
+			set_owner = root
+			set_location = event_target:homeworld
+			create_ship = {
+				name = random
+				random_existing_design = constructor
+			}
+		}
+	}
+			
+	create_fleet = {
+		name = "Nomadic Fleet"
+		effect = {
+			set_owner = root
+			set_location = event_target:homeworld
+			create_ship = {
+				name = random
+				random_existing_design = science
+			}
+		}
+	}
+		
+	create_fleet = {
+		name = "Combat Fleet"
+		effect = {
+			set_owner = root
+			set_location = event_target:homeworld
+			while = {
+				count = 8
+				create_ship = {
+					name = random
+					random_existing_design = corvette
+				}
+			}
+		}
+	}
+	create_fleet = {
+		name = "Nomadic Fleet"
+		effect = {
+			set_owner = root
+			set_location = event_target:homeworld
+			create_ship = {
+				name = NAME_Nomadic_freighter_mins
+				design = NAME_Nomadic_freighter_mins
+			}
+			create_ship = {
+				name = NAME_Nomadic_freighter_mins
+				design = NAME_Nomadic_freighter_mins
+			}
+			create_ship = {
+				name = NAME_Nomadic_freighter_gen
+				design = NAME_Nomadic_freighter_gen
+			}
+			create_ship = {
+				name = NAME_Nomadic_freighter_alloy
+				design = NAME_Nomadic_freighter_alloy
+			}
+			create_ship = {
+				name = NAME_Nomadic_freighter_alloy
+				design = NAME_Nomadic_freighter_alloy
+			}
+			create_ship = {
+				name = NAME_Nomadic_freighter_alloy
+				design = NAME_Nomadic_freighter_csg
+			}
+			create_ship = {
+				name = NAME_Nomadic_freighter_science
+				design = NAME_Nomadic_freighter_science
+			}
+		}
+	}
+	country_event = { id = f93_nomadic_start.11 days = 1 }
+}
 # ROOT = old country
 # Last_created_country = nomadic country
 f93_create_nomad_country_effect = {
@@ -60,7 +202,7 @@ f93_is_thenomad_effect = {
 	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
 	add_ship_design = last_created_design
-	create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
+	create_ship_design = { design =  NAME_Nomadic_freighter_alloy }
 	add_ship_design = last_created_design
 	create_ship_design = { design =  NAME_Nomadic_freighter_csg }
 	add_ship_design = last_created_design
@@ -70,6 +212,46 @@ f93_is_thenomad_effect = {
 	set_player = root
 }
 
+turn_empire_into_nomads_midgame_new = {
+	set_faction_needs_colony = no
+	add_modifier = {
+		modifier = f93_nomadic_mothership_build_speed mult = 10
+	}
+	create_fleet = {
+		name = "Nomadic Construction Vessel"
+		effect = {
+			set_owner = root
+			set_location = root.capital_scope
+			create_ship = {
+				name = NAME_Nomadic_shipyard
+				design = NAME_Nomadic_shipyard
+			}
+		}
+	}
+	create_fleet = {
+		name = "Nomadic Juggernaut"
+		effect = {
+			set_owner = root
+			set_location = root.capital_scope
+			create_ship = {
+				name = "Nomadic Juggernaut"
+				random_existing_design = juggernaut
+			}
+		}
+	}
+	create_fleet = {
+		name = "Final Colonizer"
+		effect = {
+			set_owner = root
+			set_location = root.capital_scope
+			create_ship = {
+				name = "Final Colonizer"
+				random_existing_design = colonizer
+			}
+		}
+	}
+
+}
 turn_empire_into_nomads_midgame = {
 	f93_set_income_stock_var_to_zero_effect = yes
 	f93_save_resources_effect = yes

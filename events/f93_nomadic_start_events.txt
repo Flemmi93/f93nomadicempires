@@ -77,53 +77,57 @@ country_event = {
 		name = f93_nomadic_start.1.a
 		
 		hidden_effect = {
-			f93_create_nomad_country_effect = yes
+			# f93_create_nomad_country_effect = yes
+			f93_make_nomad_country_effect_new = yes
 		}
 	}
 
 	option = {
 		name = f93_nomadic_start.1.c
 		hidden_effect = {
-			f93_create_nomad_country_effect = yes
-			last_created_country = {
-				add_resource = { unity = 500 }
-				country_event = { id = f93_nomadic_start.8 }
-				set_government_cooldown = 0
-			}
+			# f93_create_nomad_country_effect = yes
+			# last_created_country = {
+			# 	country_event = { id = f93_nomadic_start.8 }
+			# 	set_government_cooldown = 0
+			# }
+			f93_make_nomad_country_effect_new = yes
+			country_event = { id = f93_nomadic_start.8 }
+			set_government_cooldown = 0
 		}
 	}
 	option = {
 		name = f93_nomadic_start.1.d
 		hidden_effect = {
-			f93_create_nomad_country_effect = yes
-			last_created_country = {
-				every_owned_leader = {
-					limit = { is_ruler = no }
-					set_leader_flag = f93_remove_this_flag
-				}
-			}
-			every_owned_leader = {
-				unassign_leader = this
-				set_owner = last_created_country
-			}
-			last_created_country = {
-				every_owned_leader = {
-					limit = { is_ruler = no has_leader_flag = f93_remove_this_flag  }
-					kill_leader = { show_notification = no }
-				}
-			}
-			every_owned_fleet = {
-				delete_fleet = this
-			}
-			every_owned_planet = {
-				destroy_colony = yes
-			}
-			every_owned_pop = {
-				kill_pop = yes
-			}
-			# every_owned_leader = {
-			# 	kill_leader = { show_notification = no }
-			# }
+			f93_make_nomad_country_effect_new = yes
+		# 	f93_create_nomad_country_effect = yes
+		# 	last_created_country = {
+		# 		every_owned_leader = {
+		# 			limit = { is_ruler = no }
+		# 			set_leader_flag = f93_remove_this_flag
+		# 		}
+		# 	}
+		# 	every_owned_leader = {
+		# 		unassign_leader = this
+		# 		set_owner = last_created_country
+		# 	}
+		# 	last_created_country = {
+		# 		every_owned_leader = {
+		# 			limit = { is_ruler = no has_leader_flag = f93_remove_this_flag  }
+		# 			kill_leader = { show_notification = no }
+		# 		}
+		# 	}
+		# 	every_owned_fleet = {
+		# 		delete_fleet = this
+		# 	}
+		# 	every_owned_planet = {
+		# 		destroy_colony = yes
+		# 	}
+		# 	every_owned_pop = {
+		# 		kill_pop = yes
+		# 	}
+		# 	# every_owned_leader = {
+		# 	# 	kill_leader = { show_notification = no }
+		# 	# }
 		}
 	}
 	after = {
@@ -142,9 +146,10 @@ country_event = {
 	}
 
 	immediate = {
-		save_global_event_target_as = nomadic_empires_origin_country
-		f93_create_nomad_country_effect = yes
-		last_created_country = { country_event = { id = f93_nomadic_start.20 } }
+		# save_global_event_target_as = nomadic_empires_origin_country
+		# f93_create_nomad_country_effect = yes
+		# last_created_country = { country_event = { id = f93_nomadic_start.20 } }
+		f93_make_nomad_country_effect_new = yes
 	}
 }
 
@@ -177,8 +182,8 @@ country_event = {
 			every_owned_planet = {
 				destroy_colony = yes
 			}
-			every_owned_pop = {
-				kill_pop = yes
+			every_owned_pop_group = {
+				kill_pop_group = { pop_group = this percentage = 1 }
 			}
 			# every_owned_leader = {
 			# 	kill_leader = { show_notification = no }
@@ -278,15 +283,15 @@ country_event = {
 					design = NAME_Nomadic_freighter_gen
 				}
 				create_ship = {
-					name = NAME_Nomadic_freighter_aloy
-					design = NAME_Nomadic_freighter_aloy
+					name = NAME_Nomadic_freighter_alloy
+					design = NAME_Nomadic_freighter_alloy
 				}
 				create_ship = {
-					name = NAME_Nomadic_freighter_aloy
-					design = NAME_Nomadic_freighter_aloy
+					name = NAME_Nomadic_freighter_alloy
+					design = NAME_Nomadic_freighter_alloy
 				}
 				create_ship = {
-					name = NAME_Nomadic_freighter_aloy
+					name = NAME_Nomadic_freighter_alloy
 					design = NAME_Nomadic_freighter_csg
 				}
 				create_ship = {
@@ -391,6 +396,7 @@ country_event = {
 
 	option = {
 		name = OK
+		add_resource = { unity = 600 }
 	}
 }
 
@@ -403,13 +409,17 @@ country_event = {
 	picture	= GFX_evt_ship_in_orbit
 	trigger = {
 		or = {
-			is_country_type = playable_nomads
-			is_country_type = playable_pirate_nomads
+			# is_country_type = playable_nomads
+			# is_country_type = playable_pirate_nomads
+			is_f93_space_pirate = yes
+			is_f93_nomadic = yes
 		}
+		NOT = { has_country_flag = f93_nomadic_new_system }
 	}
 	option = {
 		name = OK
-		hidden_effect = { turn_empire_into_nomads_midgame = yes }
+		# hidden_effect = { turn_empire_into_nomads_midgame = yes }
+		hidden_effect = { turn_empire_into_nomads_midgame_new = yes }
 	}
 
 	option = {
@@ -424,7 +434,8 @@ country_event = {
 
 	immediate = {
 		save_global_event_target_as = nomadic_empires_origin_country
-		turn_empire_into_nomads_midgame = yes
+		# turn_empire_into_nomads_midgame = yes
+		turn_empire_into_nomads_midgame_new = yes
 	}
 	
 	after = {

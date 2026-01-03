@@ -12,13 +12,13 @@
 @nomadic_power_cost_balE1p = 100
 @nomadic_power_cost_bal2 = -200
 @nomadic_power_cost_balE2 = -250
-@nomadic_power_cost_balE2p = 250
+@nomadic_power_cost_balE2P = 250
 @nomadic_power_cost_bal3 = -400
 @nomadic_power_cost_balE3 = -600
-@nomadic_power_cost_balE3p = 600
+@nomadic_power_cost_balE3P = 600
 @nomadic_power_cost_bal4 = -800
 @nomadic_power_cost_balE4 = -1500
-@nomadic_power_cost_balE4p = 1500
+@nomadic_power_cost_balE4P = 1500
 #Upkeep
 @nomadic_upkeeptier1 = 1	#1 at 100%
 @nomadic_upkeeptier2 = 4	#5 at 80%
@@ -1384,7 +1384,7 @@ utility_component_template = {
 			alloys = @nomadic_component_tierE3
 		}
 		upkeep = {
-			energy = @nomadic_power_cost_balE4p
+			energy = @nomadic_power_cost_balE4P
 		}
 		upkeep = {
 			trigger = { exists = from from = { is_gestalt = no} }

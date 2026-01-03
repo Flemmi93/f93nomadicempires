@@ -102,8 +102,8 @@ nomad_personality = {
 
 	allow = {
 		OR = {
-		is_country_type = playable_pirate_nomads
-		is_country_type = playable_nomads
+			is_f93_space_pirate = yes
+			is_f93_nomadic = yes
 		}
 	}
 

@@ -72,11 +72,11 @@ wg_nomadic_pirate_raid = {
 	# show_claims_in_description = no 
 	galactic_empire_joins_defender = { always = no }
 	
-	allowed_peace_offers = {
-		status_quo
-		surrender
-		# demand_surrender
-	}
+	# allowed_peace_offers = {
+	# 	status_quo
+	# 	surrender
+	# 	# demand_surrender
+	# }
 	
 	potential = {
 		is_f93_nomadic = yes
@@ -111,11 +111,11 @@ wg_nomadic_pirate_raid_for_throne = {
 	# show_claims_in_description = no 
 	galactic_empire_joins_defender = { always = no }
 	
-	allowed_peace_offers = {
-		status_quo
-		surrender
-		demand_surrender
-	}
+	# allowed_peace_offers = {
+	# 	status_quo
+	# 	surrender
+	# 	demand_surrender
+	# }
 	
 	potential = {
 		from = {
@@ -147,11 +147,12 @@ wg_nomadic_pirate_defense = {
 	threat_multiplier = 0.5
 	# show_claims_in_description = no 
 	
-	allowed_peace_offers = {
-		status_quo
-		# surrender
-		demand_surrender
-	}
+	# allowed_peace_offers = {
+	# 	status_quo
+	# 	# surrender
+	# 	demand_surrender
+	# }
+	
 	potential = {
 		always = yes
 	}

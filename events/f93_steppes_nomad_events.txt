@@ -79,7 +79,7 @@ country_event = {
 			add_ship_design = last_created_design
 			create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
 			add_ship_design = last_created_design
-			create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
+			create_ship_design = { design =  NAME_Nomadic_freighter_alloy }
 			add_ship_design = last_created_design
 			create_ship_design = { design =  NAME_Nomadic_freighter_csg }
 			add_ship_design = last_created_design
@@ -101,11 +101,11 @@ country_event = {
 						design = NAME_Nomadic_freighter_mins
 					}
 					create_ship = {
-						name = NAME_Nomadic_freighter_aloy
-						design = NAME_Nomadic_freighter_aloy
+						name = NAME_Nomadic_freighter_alloy
+						design = NAME_Nomadic_freighter_alloy
 					}
 					create_ship = {
-						name = NAME_Nomadic_freighter_aloy
+						name = NAME_Nomadic_freighter_alloy
 						design = NAME_Nomadic_freighter_csg
 					}
 					create_ship = {
@@ -215,22 +215,22 @@ planet_event = {
 		if = { limit = { planet_devastation < 50 NOT = { planet_devastation < 25 } } add_planet_devastation = 50 set_variable = { which = devastation_caused value = 50 } }
 		if = { limit = { planet_devastation < 75 NOT = { planet_devastation < 50 } } add_planet_devastation = 25 set_variable = { which = devastation_caused value = 25 } }
 
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_mins value = devastation_result }
 		multiply_variable = { which = result_mins value = 75 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_energy value = devastation_result }
 		multiply_variable = { which = result_energy value = 75 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_alloys value = devastation_result }
 		multiply_variable = { which = result_alloys value = 25 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_engineering value = devastation_result }
 		multiply_variable = { which = result_engineering value = 15 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_society value = devastation_result }
 		multiply_variable = { which = result_society value = 15 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_physics value = devastation_result }
 		multiply_variable = { which = result_physics value = 15 }
 		ceiling_variable = result_mins
@@ -293,25 +293,26 @@ planet_event = {
 	}
 
 	immediate = {
-		if = { limit = { planet_devastation < 75 } add_planet_devastation = 25 set_variable = { which = devastation_caused value = trigger:num_pops } }
+		#has to find pop numbers but currently only goes with 25
+		if = { limit = { planet_devastation < 75 } add_planet_devastation = 25 set_variable = { which = devastation_caused value = 25 } } # trigger:num_pops } }
 
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_mins value = devastation_result }
 		multiply_variable = { which = result_mins value = 50 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_energy value = devastation_result }
 		multiply_variable = { which = result_energy value = owner.trigger:income }
 		divide_variable = { which = result_energy value = owner.trigger:num_owned_planets }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_alloys value = devastation_result }
 		multiply_variable = { which = result_alloys value = 15 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_engineering value = devastation_result }
 		multiply_variable = { which = result_engineering value = 10 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_society value = devastation_result }
 		multiply_variable = { which = result_society value = 10 }
-		radomized_devastation_calc_effect = yes
+		randomized_devastation_calc_effect = yes
 		set_variable = { which = result_physics value = devastation_result }
 		multiply_variable = { which = result_physics value = 10 }
 		ceiling_variable = result_mins

@@ -12,10 +12,10 @@ country_event = {
 	show_sound = event_finding_loot
 
 	immediate = {
-		event_target:nomadic_bombard_victim = { f93_set_income_stock_var_to_zero_effect = yes }
-		event_target:nomadic_bombarder = { f93_set_income_stock_var_to_zero_effect = yes }
-		event_target:Nomadic_bombardment = { f93_set_income_stock_var_to_zero_effect = yes }
-		set_variable = { which = Nomadic_bombardment_num_pops value = event_target:Nomadic_bombardment.trigger:num_pops } 
+		# event_target:nomadic_bombard_victim = { f93_set_income_stock_var_to_zero_effect = yes }
+		# event_target:nomadic_bombarder = { f93_set_income_stock_var_to_zero_effect = yes }
+		# event_target:Nomadic_bombardment = { f93_set_income_stock_var_to_zero_effect = yes }
+		# set_variable = { which = Nomadic_bombardment_num_pops value = event_target:Nomadic_bombardment.trigger:num_pops } 
 		if = { limit = { NOT = { is_variable_set = planet_devastation_on_invasion } } set_variable = { which = planet_devastation_on_invasion value = 1 } }
 		event_target:nomadic_bombard_victim = { if = { limit = { NOT = { is_variable_set = planet_devastation_on_invasion } } set_variable = { which = planet_devastation_on_invasion value = 1 } } }
 	}
@@ -24,7 +24,10 @@ country_event = {
 		name = f93_nomadic_raid.2.a
 		custom_tooltip = f93_nomadic_raid.2.a.desc
 		#Resource Raid
-		hidden_effect  = { f93_planet_raid_effect = yes }
+			#pre 4.0 effect
+		# hidden_effect  = { f93_planet_raid_effect = yes }
+			#new effect
+		hidden_effect  = { event_target:Nomadic_bombardment = { f93_resource_raid_effect = yes } }
 		#Research Raid
 		if = {
 			limit = {
@@ -37,7 +40,7 @@ country_event = {
 			limit = { can_copy_random_tech_from = { who = from.owner } }
 			copy_random_tech_from = {
 				who = from.owner
-				progress = 0.1
+				progress = 0.6
 			}
 		}
 	}

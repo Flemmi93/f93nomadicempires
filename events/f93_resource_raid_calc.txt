@@ -1,0 +1,48 @@
+namespace = planet_resource_raid
+event = {
+	id = planet_resource_raid.99
+	hide_window =yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			every_planet_within_border = {
+				limit = { is_colony = yes }
+				planet_event = { id = planet_resource_raid.1 }
+			}
+		}
+	}
+}
+planet_event = {
+	id = planet_resource_raid.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# check scripted effects for more details
+		calc_resource_production_raid = { resource = energy ACCURACY = 1 }
+		calc_resource_production_raid = { resource = minerals ACCURACY = 1 }
+		calc_resource_production_raid = { resource = food ACCURACY = 1 }
+		calc_resource_production_raid = { resource = physics_research ACCURACY = 1 }
+		calc_resource_production_raid = { resource = society_research ACCURACY = 1 }
+		calc_resource_production_raid = { resource = engineering_research ACCURACY = 1 }
+		calc_resource_production_raid = { resource = unity ACCURACY = 1 }
+		calc_resource_production_raid = { resource = trade ACCURACY = 1 }
+		calc_resource_production_raid = { resource = consumer_goods ACCURACY = 1 }
+		calc_resource_production_raid = { resource = alloys ACCURACY = 1 }
+		calc_resource_production_raid = { resource = volatile_motes ACCURACY = 1 }
+		calc_resource_production_raid = { resource = exotic_gases ACCURACY = 1 }
+		calc_resource_production_raid = { resource = rare_crystals ACCURACY = 1 }
+		calc_resource_production_raid = { resource = sr_living_metal ACCURACY = 1 }
+		calc_resource_production_raid = { resource = sr_zro ACCURACY = 1 }
+		calc_resource_production_raid = { resource = sr_dark_matter ACCURACY = 1 }
+		calc_resource_production_raid = { resource = nanites ACCURACY = 1 }
+		calc_resource_production_raid = { resource = minor_artifacts ACCURACY = 1 }
+
+		clear_variable = high
+		clear_variable = mid
+		clear_variable = low_plus_x
+		clear_variable = low
+		clear_variable = counter
+	}
+}
