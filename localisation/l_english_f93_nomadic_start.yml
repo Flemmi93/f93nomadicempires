@@ -93,7 +93,7 @@
 
 #Global Ship Design
  NAME_Nomadic_shipyard: "Mobile Shipyard"
- NAME_Nomadic_shipyard_mothership :"$NAME_Nomadic_shipyard$"
+ NAME_Nomadic_shipyard_mothership: "$NAME_Nomadic_shipyard$"
  NAME_Nomadic_freighter_mins: "Matter Converter"
  NAME_Nomadic_freighter_gen: "Generator"
  NAME_Nomadic_freighter_alloy: "Refinery"

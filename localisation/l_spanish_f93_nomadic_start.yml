@@ -92,10 +92,11 @@
  optional_goals: "Optional Goals"
 
 #Global Ship Design
- NAME_Nomadic_shipyard: "Construction"
+ NAME_Nomadic_shipyard: "Mobile Shipyard"
+ NAME_Nomadic_shipyard_mothership: "$NAME_Nomadic_shipyard$"
  NAME_Nomadic_freighter_mins: "Matter Converter"
  NAME_Nomadic_freighter_gen: "Generator"
- NAME_Nomadic_freighter_aloy: "Refinery"
+ NAME_Nomadic_freighter_alloy: "Refinery"
  NAME_Nomadic_freighter_science: "Research"
  NAME_Nomadic_freighter_csg: "Fabricator"
  NAME_nomadic_mothership: "Mothership"
@@ -114,6 +115,8 @@
  origin_space_steppe_nomads_desc: "$this_feature_is_WIP$§LThe People have always roamed the vast steppes of the homeworld.$NEW_LINE$This world was unified by bloodshed. A roving gang of Nomadic Warrior's took over steppe after steppe, even the occasional settlements, growing their power and influence until suddenly there was nowhere left to conquer. With the advent of FTL travel, little has changed.§!"
  origin_space_steppe_nomads_effect: "§RWARNING: Challanging Gameplay changes in Option A§!$NEW_LINE$Option A:$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce §G24 $YEARS$§! worth of Production in a short time. They will then be unavailable to exploit for §R20 $YEARS$§!.$NEW_LINE$Option B:$NEW_LINE$§Y$mining_station_plural$§! and §Y$research_station_plural$§! will produce a normal amount in the beginning and than reduce their output to a trickle.$NEW_LINE$Option C:$NEW_LINE$Similar to B + Nomadic Space Economy and nerved planet Economy and the Mothership-size vessel will construct §YResearch Station§! and §YMining Stations§! automaticly."
  origin_space_steppe_nomads_colony_exploit_effect: ""#§Y$New$ $COLONIES$§! Will be similarly exploited."
+ civic_nomadic_empire: "Nomadic Empire"
+ civic_nomadic_empire_desc: "§RThis Civic is for special case use only!§!\n\nThe intention is that modded origins could be used in combination with this civic to enable fun starting scnearios. if you intent to play a nomadic empire, use the origin, unless you found a fun combo and wanna use it. go ahead, this civic is for fun here."
 
 #Misc
  mod_edicts_unity_cost_mult: "$mod_edicts_cost_mult$ ($unity$)"
@@ -152,7 +155,7 @@
  f93_nomad_refinery_2_DESC: ""
  f93_nomad_refinery_3: "Alloy Refinery 3"
  f93_nomad_refinery_3_DESC: ""
- f93_nomad_factory_1: ""
+ f93_nomad_factory_1: "2D Printer"
  f93_nomad_factory_1_DESC: ""
  f93_nomad_factory_2: "3D Printer"
  f93_nomad_factory_2_DESC: ""
@@ -254,6 +257,9 @@
  nomadic_shipyard_plural: "Nomadic $sshipyard$"
  nomadic_mothership: "Mothership"
  nomadic_mothership_plural: "Motherships"
+ nomadic_freighter_cap: "$civilian_freighter$"
+ nomadic_shipyard_cap: "$nomadic_shipyard$"
+ nomadic_mothership_cap: "$nomadic_mothership$"
 
 #Situations
  situation_nomadic_balanced: "Searching for new Officers"
@@ -433,6 +439,6 @@
 
 #Tutorial
  f93_nomadic_start.16.name: "§RTUTORIAL"
- f93_nomadic_start.16.b: "I will build a new Mothership"
- f93_nomadic_start.16.desc: "§RThis is important!§!\n\nDue to a bug that has appeared in V3.14 mobile shipyards only work when they are constructed ingame. §YCheck your Mothership if you can construct ships with it.§! If it works, you can skip this event.\n\n§GWhat you need to do:§!$TABBED_NEW_LINE$1. Go into the Shipdesigner, design a Shipyard-Class Ship$TABBED_NEW_LINE$2. Construct a starbase with a shipyard$TABBED_NEW_LINE$3. Build a Mobile Shipyard\n\nTo help you get this started here are some alloys.\n\nSorry for the hassle but I will fix this bus as soon as i find out how.\n\nYou can demolish the station afterwards."
+ f93_nomadic_start.16.desc: "§RThis is important!§!\n\nDue to a bug that has appeared in V3.14 mobile shipyards only work when they are constructed ingame. Simply spawning them in as starting ships does not work.\n\n§GWhat you need to do:§!$TABBED_NEW_LINE$1. Go into the Shipdesigner, design a Shipyard-Class Ship$TABBED_NEW_LINE$2. Construct a starbase with a shipyard$TABBED_NEW_LINE$3. Build a Mobile Shipyard\n\nTo help you get this started here are some alloys.\n\nSorry for the hassle but I will fix this bus as soon as i find out how.\n\nYou can demolish the station afterwards."
  f93_nomadic_start.16.a: "I know what i am doing!"
+ f93_nomadic_start.16.b: "I will build a new Mothership"
