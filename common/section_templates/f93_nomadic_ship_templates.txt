@@ -7,7 +7,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "destroyer_bow_L1_entity"
 	icon = "GFX_ship_part_core_bow"
-	ai_tags = { gunship brawler carrier }
+	ai_tags = { carrier }
 
 	component_slot = {
 		name = "MEDIUM_GUN_01"
@@ -24,8 +24,6 @@ ship_section_template = {
 		}
 	}
 }
-
-
 
 ship_section_template = {
 	key = "nomadic_freighter_sectionS"
@@ -60,7 +58,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "destroyer_stern_M1_entity"
 	icon = "GFX_ship_part_core_stern"
-	ai_tags = { gunship brawler }
+	ai_tags = { carrier }
 
 	component_slot = {
 		name = "MEDIUM_GUN_01"
@@ -85,7 +83,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_bow_M2_entity"
 	icon = "GFX_ship_part_core_bow"
-	ai_tags = { gunship }
+	ai_tags = { carrier }
 
 	component_slot = {
 		name = "MEDIUM_GUN_01"
@@ -141,7 +139,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_stern_M1_entity"
 	icon = "GFX_ship_part_core_stern"
-	ai_tags = { gunship }
+	ai_tags = { carrier }
 
 	component_slot = {
 		name = "MEDIUM_GUN_01"
@@ -194,6 +192,93 @@ ship_section_template = {
 		category = ship_sections
 		cost = {
 			alloys = 4000
+		}
+	}
+}
+# no dlc mothership
+ship_section_template = {
+	key = "nomadic_mothership_no_dlc_BOW_M1S2SHB"
+	ship_size = nomadic_mothership_no_dlc
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = "battleship_bow_M1S2SHB_entity"
+	icon = "GFX_ship_part_core_bow"
+	ai_tags = { carrier }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	large_utility_slots = 4
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 1000
+		}
+	}
+}
+
+ship_section_template = {
+	key = "nomadic_mothership_no_dlc_MID_S4LHB"
+	ship_size = nomadic_mothership_no_dlc
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "battleship_mid_S4LHB_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { carrier }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = -90
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	large_utility_slots = 4
+	aux_utility_slots = 4
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 2000
+		}
+	}
+}
+
+ship_section_template = {
+	key = "nomadic_mothership_no_dlc_STERN_M2"
+	ship_size = nomadic_mothership_no_dlc
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "battleship_stern_M2_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_tags = { carrier }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = -90
+		locatorname = "medium_gun_01"
+	}
+
+	large_utility_slots = 4
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 1000
 		}
 	}
 }

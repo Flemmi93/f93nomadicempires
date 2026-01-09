@@ -235,7 +235,7 @@ utility_component_template = {
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -264,7 +264,7 @@ utility_component_template = {
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -292,7 +292,7 @@ utility_component_template = {
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -320,7 +320,7 @@ utility_component_template = {
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -349,7 +349,7 @@ utility_component_template = {
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = "thruster_components"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 
 	ai_weight = {
 		weight = 5
@@ -377,7 +377,7 @@ utility_component_template = {
 		}
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	component_set = "combat_computers"
 	ship_behavior = "default"
 	prerequisites = { "tech_nomatic_society" }
@@ -412,7 +412,7 @@ utility_component_template = {
 		}
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	component_set = "combat_computers"
 	ship_behavior = "default"
 	prerequisites = { "tech_combat_computers_2" }
@@ -447,7 +447,7 @@ utility_component_template = {
 		}
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	component_set = "combat_computers"
 	ship_behavior = "default"
 	prerequisites = { "tech_combat_computers_3" }
@@ -493,7 +493,7 @@ utility_component_template = {
 		}
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	component_set = "combat_computers"
 	ship_behavior = "default"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -527,7 +527,7 @@ utility_component_template = {
 		}
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership }
+	size_restriction = { nomadic_shipyard nomadic_freighter nomadic_mothership nomadic_mothership_no_dlc }
 	component_set = "combat_computers"
 	ship_behavior = "default"
 	prerequisites = { "tech_precognition_interface" }
@@ -548,7 +548,6 @@ utility_component_template = {
 	}
 }
 
-
 utility_component_template = {
 	key = "NOMADIC_SHIP_AURA"
 	size = small
@@ -560,9 +559,17 @@ utility_component_template = {
 		cost = {
 			alloys = 500
 		}
+		# tooltip says it makes Unity
+		produces = {
+			unity = 20
+		}
+	}
+	# it acctually makes unity with this
+	modifier = {
+		country_base_unity_produces_add = 20
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	component_set = "ship_aura_components"
 	ship_behavior = "default"
 	prerequisites = { "tech_nomatic_society" }
@@ -605,6 +612,59 @@ utility_component_template = {
 }
 
 utility_component_template = {
+	key = "NOMADIC_SHIP_FREIGHTER_AURA"
+	size = small
+	icon = "GFX_ship_part_aura_hyperlane"
+	icon_frame = 1
+	power = -250
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 350
+		}
+	}
+	#class_restriction = { shipclass_military }
+	size_restriction = { nomadic_freighter nomadic_shipyard }
+	component_set = "ship_aura_components"
+	ship_behavior = "default"
+	prerequisites = { "tech_nomatic_society" }
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	friendly_aura = {
+		name = "aura_freighter"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_nomad_economy
+			priority = 2
+		}
+
+		modifier = {
+			ships_upkeep_mult = -0.35
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+}
+utility_component_template = {
 	key = "NOMADIC_MOTHERSHIP_FISSION_REACTOR"
 	size = small
 	icon = "GFX_ship_part_reactor_1"
@@ -624,7 +684,7 @@ utility_component_template = {
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_MOTHERSHIP_FUSION_REACTOR"
 
 	ai_weight = {
@@ -653,7 +713,7 @@ utility_component_template = {
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_MOTHERSHIP_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -681,7 +741,7 @@ utility_component_template = {
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_MOTHERSHIP_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -709,7 +769,7 @@ utility_component_template = {
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_MOTHERSHIP_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -737,7 +797,7 @@ utility_component_template = {
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "power_core"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	upgrades_to = "NOMADIC_MOTHERSHIP_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -766,7 +826,7 @@ utility_component_template = {
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
 	#class_restriction = { shipclass_military }
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 
 	ai_weight = {
 		weight = 6

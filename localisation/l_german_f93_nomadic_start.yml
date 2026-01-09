@@ -100,7 +100,7 @@
  NAME_Nomadic_freighter_science: "Research"
  NAME_Nomadic_freighter_csg: "Fabricator"
  NAME_nomadic_mothership: "Mothership"
- NAME_nomadic_mothership-class: "Mothership"
+ NAME_nomadic_mothership_no_dlc: "Mothership"
 
 #Technology
  tech_nomatic_society: "Nomadic Travels"
@@ -206,6 +206,8 @@
  f93_nomad_shipyard_DESC: ""
  aura_mothership: "Mothership Aura"
  aura_mothership_desc: ""
+ aura_freighter: "Mothership Aura"
+ aura_freighter_desc: ""
  f93_nomad_nac_cap_1: "Heligraphic Communication Room"
  f93_nomad_nac_cap_1_desc: ""
  f93_nomad_nac_cap_2: "Battle Meditation Center"
@@ -214,6 +216,10 @@
  f93_nomad_nac_cap_3_desc: ""
  nomadic_mothership_core: "Mothership Core"
  nomadic_mothership_core_desc: ""
+ nomadic_mothership_no_dlc_BOW_M1S2SHB: "$BATTLESHIP_BOW_M1S2SHB$"
+ nomadic_mothership_no_dlc_BOW_M1S2SHB_DESC: "$BATTLESHIP_BOW_M1S2SHB_DESC$"
+ nomadic_mothership_no_dlc_MID_S4LHB: "$BATTLESHIP_MID_S4LHB$"
+ nomadic_mothership_no_dlc_STERN_M2: "$BATTLESHIP_STERN_M2$"
 
  NOMADIC_FISSION_REACTOR: "$DESTROYER_FISSION_REACTOR$"
  NOMADIC_FUSION_REACTOR: "$DESTROYER_FUSION_REACTOR$"
@@ -238,6 +244,7 @@
  NOMADIC_COMPUTER_AUTONOMOUS: "$COMBAT_COMPUTER_CARRIER_AUTONOMOUS$"
  NOMADIC_COMPUTER_PRECOG: "$COMBAT_COMPUTER_CARRIER_PRECOG$"
  NOMADIC_SHIP_AURA: "Economic Aura"
+ NOMADIC_SHIP_FREIGHTER_AURA: "Economic Aura"
 
  shipclass_starbase_nomad: "$shipclass_starbase$"
 
@@ -257,9 +264,12 @@
  nomadic_shipyard_plural: "Nomadic $sshipyard$"
  nomadic_mothership: "Mothership"
  nomadic_mothership_plural: "Motherships"
+ nomadic_mothership_no_dlc: "Mothership"
+ nomadic_mothership_no_dlc_plural: "Motherships"
  nomadic_freighter_cap: "$civilian_freighter$"
  nomadic_shipyard_cap: "$nomadic_shipyard$"
  nomadic_mothership_cap: "$nomadic_mothership$"
+ nomadic_mothership_no_dlc_cap: "$nomadic_mothership$"
 
 #Situations
  situation_nomadic_balanced: "Searching for new Officers"

@@ -1,5 +1,4 @@
 #Effect to create a nomad Empire.
-
 f93_make_nomad_country_effect_new = {
 	set_faction_needs_colony = no
 	capital_scope = {
@@ -17,7 +16,7 @@ f93_make_nomad_country_effect_new = {
 	set_country_flag = has_f93_space_economy_flag
 	set_country_flag = f93_nomadic_new_system
 	give_technology = { tech = tech_nomatic_society message = no }
-	start_situation = { type = nomadic_recruitment_leaders target = this }
+	# start_situation = { type = nomadic_recruitment_leaders target = this }
 	start_situation = { type = nomadic_recruitment_troops target = this }
 	if = { limit = { has_civic = civic_nomadic_pirate } start_situation = { type = begin_nomadic_raid_on_territory target = this } }
 	
@@ -51,7 +50,7 @@ f93_make_nomad_country_effect_new = {
 		}
 	}
 	else = {
-		create_ship_design = { design =  NAME_Nomadic_shipyard_mothership }
+		create_ship_design = { design =  NAME_nomadic_mothership_no_dlc }
 		add_ship_design = last_created_design
 		create_fleet = {
 			name = "Mothership"
@@ -60,7 +59,7 @@ f93_make_nomad_country_effect_new = {
 				set_location = event_target:homeworld
 				create_ship = {
 					name = "Mothership"
-					design = NAME_Nomadic_shipyard_mothership
+					design = NAME_nomadic_mothership_no_dlc
 				}
 			}
 		}

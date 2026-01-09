@@ -1125,7 +1125,7 @@ utility_component_template = {
 			minerals = @nomadic_upkeepcsg2
 		}
 		produces = {
-			sr_zro = @nomadic_production_sr_res2
+			sr_dark_matter = @nomadic_production_sr_res2
 		}
 	}
 
@@ -1202,82 +1202,6 @@ utility_component_template = {
 	prerequisites = { "tech_mine_living_metal" "tech_nomatic_society" }
 	component_set = "f93_nomad_living_metal"
 }
-#Shipyard
-# utility_component_template = {
-# 	key = "f93_nomad_shipyard"
-# 	size = aux
-# 	icon = "GFX_ship_part_shipyard"
-# 	icon_frame = 1
-# 	power = -75
-# 	modifier = {
-# 		# starbase_shipyard_capacity_add = 1
-# 		country_naval_cap_add = 25
-# 	}
-# 	size_restriction = { nomadic_shipyard juggernaut }
-# 	resources = {
-# 		category = ship_components
-# 		cost = {
-# 			alloys = @nomadic_component_tier2
-# 		}
-# 		upkeep = {
-# 			energy = @nomadic_production_energy1
-# 			consumer_goods = @nomadic_upkeepcsg1
-# 		}
-# 	}
-# 	blocked_by = {
-# 		f93_nomad_shipyard
-# 	}
-# 	prerequisites = { "tech_nomatic_society" }
-# 	component_set = "f93_nomad_shipyard"
-# }
-
-#Resource Silo
-# utility_component_template = {
-# 	key = "f93_nomad_storage_1"
-# 	size = aux
-# 	icon = "GFX_ship_part_storage_1"
-# 	icon_frame = 1
-# 	power = 0
-# 	modifier = {
-# 		country_resource_max_add = 500
-# 	}
-# 	resources = {
-# 		category = ship_components
-# 		cost = {
-# 			alloys = @nomadic_component_tier2
-# 		}
-# 		upkeep = {
-# 			energy = @nomadic_production_energy1
-# 			consumer_goods = @nomadic_upkeepcsg1
-# 		}
-# 	}
-# 	prerequisites = { "tech_nomatic_society" }
-# 	component_set = "f93_nomad_storage_1"
-# 	upgrades_to = "f93_nomad_storage_2"
-# }
-
-# utility_component_template = {
-# 	key = "f93_nomad_storage_2"
-# 	size = aux
-# 	icon = "GFX_ship_part_storage_2"
-# 	icon_frame = 1
-# 	power = 0
-# 	modifier = {
-# 		country_resource_max_add = 1500
-# 	}
-# 	resources = {
-# 		category = ship_components
-# 		cost = {
-# 			alloys = @nomadic_component_tier2
-# 		}
-# 		upkeep = {
-# 			energy = @nomadic_production_energy1
-# 			consumer_goods = @nomadic_upkeepcsg1
-# 		}
-# 	}
-# 	prerequisites = { "tech_nomatic_society" }
-# 	component_set = "f93_nomad_storage_2"
-# }
 
 #Naval Capacity
 utility_component_template = {
@@ -1286,7 +1210,7 @@ utility_component_template = {
 	icon = "GFX_ship_part_nac_cap_1"
 	icon_frame = 1
 	power = @nomadic_power_cost_bal2
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	blocked_by = {
 		f93_nomad_nac_cap_1
 		f93_nomad_nac_cap_2
@@ -1327,7 +1251,7 @@ utility_component_template = {
 	icon = "GFX_ship_part_nac_cap_2"
 	icon_frame = 1
 	power = @nomadic_power_cost_bal3
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	blocked_by = {
 		f93_nomad_nac_cap_1
 		f93_nomad_nac_cap_2
@@ -1369,7 +1293,7 @@ utility_component_template = {
 	icon = "GFX_ship_part_nac_cap_3"
 	icon_frame = 1
 	power = @nomadic_power_cost_bal4
-	size_restriction = { nomadic_mothership }
+	size_restriction = { nomadic_mothership nomadic_mothership_no_dlc }
 	blocked_by = {
 		f93_nomad_nac_cap_1
 		f93_nomad_nac_cap_2

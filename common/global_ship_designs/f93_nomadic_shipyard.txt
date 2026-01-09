@@ -85,6 +85,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 ship_design = {
@@ -174,6 +175,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 
@@ -223,6 +225,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 
@@ -272,6 +275,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 
@@ -317,6 +321,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 
@@ -366,6 +371,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 
@@ -419,6 +425,7 @@ ship_design = {
 	required_component = "NOMADIC_SHIP_THRUSTER_1"
 	required_component = "SENSOR_1"
 	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "SHIP_AURA_EMPTY"
 
 }
 
@@ -504,6 +511,109 @@ ship_design = {
 		}
 		component = {
 			slot = AUX_UTILITY_7
+			template = f93_nomad_unity_1
+		}
+	}
+
+	required_component = "NOMADIC_MOTHERSHIP_FISSION_REACTOR"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "NOMADIC_SHIP_THRUSTER_1"
+	required_component = "SENSOR_1"
+	required_component = "NOMADIC_COMPUTER_BASIC"
+	required_component = "NOMADIC_SHIP_AURA"
+
+}
+
+ship_design = {
+	name = NAME_nomadic_mothership_no_dlc
+	ship_size = nomadic_mothership_no_dlc
+	is_event_design = no
+	hide_size = yes
+	section = {
+		template = nomadic_mothership_no_dlc_BOW_M1S2SHB
+		slot = core
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = LARGE_SCOUT_HANGAR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_1
+			template = LARGE_ARMOR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = LARGE_ARMOR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = LARGE_ARMOR_1
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = f93_nomad_energy_1
+		}
+		component = {
+			slot = AUX_UTILITY_2
+			template = f93_nomad_refinery_1
+		}
+	}
+	section = {
+		template = nomadic_mothership_no_dlc_MID_S4LHB
+		slot = core
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = LARGE_SCOUT_HANGAR_1
+		}
+		component = {
+			slot = STRIKE_CRAFT_02
+			template = LARGE_SCOUT_HANGAR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_1
+			template = LARGE_ARMOR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = LARGE_ARMOR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = LARGE_ARMOR_1
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = f93_nomad_minerals_1
+		}
+		component = {
+			slot = AUX_UTILITY_2
+			template = f93_nomad_science_lab_1
+		}
+		component = {
+			slot = AUX_UTILITY_3
+			template = f93_nomad_factory_1
+		}
+	}
+	section = {
+		template = nomadic_mothership_no_dlc_STERN_M2
+		slot = core
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = LARGE_SCOUT_HANGAR_1
+		}
+		component = {
+			slot = LARGE_UTILITY_1
+			template = LARGE_SHIELD_1
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = LARGE_SHIELD_1
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = f93_nomad_minerals_1
+		}
+		component = {
+			slot = AUX_UTILITY_2
 			template = f93_nomad_unity_1
 		}
 	}
