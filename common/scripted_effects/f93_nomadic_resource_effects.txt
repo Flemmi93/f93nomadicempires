@@ -119,6 +119,25 @@ f93_transfer_stockpile_data_from_root_effect = {
 	set_variable = { which = stockpile_engineering_research value = root.stockpile_engineering_research }
 }
 
+f93_transfer_stockpile_data_from_SCOPE_effect = {
+	set_variable = { which = stockpile_energy value = $SCOPE$.stockpile_energy }
+	set_variable = { which = stockpile_minerals value = $SCOPE$.stockpile_minerals }
+	set_variable = { which = stockpile_food value = $SCOPE$.stockpile_food }
+	set_variable = { which = stockpile_alloys value = $SCOPE$.stockpile_alloys }
+	set_variable = { which = stockpile_consumer_goods value = $SCOPE$.stockpile_consumer_goods }
+	set_variable = { which = stockpile_influence value = $SCOPE$.stockpile_influence }
+	set_variable = { which = stockpile_exotic_gases value = $SCOPE$.stockpile_exotic_gases }
+	set_variable = { which = stockpile_rare_crystals value = $SCOPE$.stockpile_rare_crystals }
+	set_variable = { which = stockpile_volatile_motes value = $SCOPE$.stockpile_volatile_motes }
+	set_variable = { which = stockpile_sr_zro value = $SCOPE$.stockpile_sr_zro }
+	set_variable = { which = stockpile_sr_dark_matter value = $SCOPE$.stockpile_sr_dark_matter }
+	set_variable = { which = stockpile_sr_living_metal value = $SCOPE$.stockpile_sr_living_metal }
+	set_variable = { which = stockpile_unity value = $SCOPE$.stockpile_unity }
+	set_variable = { which = stockpile_physics_research value = $SCOPE$.stockpile_physics_research }
+	set_variable = { which = stockpile_society_research value = $SCOPE$.stockpile_society_research }
+	set_variable = { which = stockpile_engineering_research value = $SCOPE$.stockpile_engineering_research }
+}
+
 f93_transfer_stockpile_data_from_root_owner_effect = {
 	set_variable = { which = stockpile_energy value = root.owner.stockpile_energy }
 	set_variable = { which = stockpile_minerals value = root.owner.stockpile_minerals }
@@ -350,6 +369,25 @@ f93_lose_all_resources_effect = {
 	add_resource = { engineering_research = -1 mult = stockpile_engineering_research }
 }
 
+f93_reset_resources_effect = {
+	set_resource = { resource = energy mult = stockpile_energy }
+	set_resource = { resource = minerals mult = stockpile_minerals }
+	set_resource = { resource = food mult = stockpile_food }
+	set_resource = { resource = alloys mult = stockpile_alloys }
+	set_resource = { resource = consumer_goods mult = stockpile_consumer_goods }
+	set_resource = { resource = influence mult = stockpile_influence }
+	set_resource = { resource = exotic_gases mult = stockpile_exotic_gases }
+	set_resource = { resource = rare_crystals mult = stockpile_rare_crystals }
+	set_resource = { resource = volatile_motes mult = stockpile_volatile_motes }
+	set_resource = { resource = sr_zro mult = stockpile_sr_zro }
+	set_resource = { resource = sr_dark_matter mult = stockpile_sr_dark_matter }
+	set_resource = { resource = sr_living_metal mult = stockpile_sr_living_metal }
+	set_resource = { resource = unity mult = stockpile_unity }
+	set_resource = { resource = physics_research mult = stockpile_physics_research }
+	set_resource = { resource = society_research mult = stockpile_society_research }
+	set_resource = { resource = engineering_research mult = stockpile_engineering_research }
+}
+
 f93_reinstate_resources_effect = {
 	add_resource = { energy = 1 mult = stockpile_energy }
 	add_resource = { minerals = 1 mult = stockpile_minerals }
@@ -368,6 +406,7 @@ f93_reinstate_resources_effect = {
 	add_resource = { society_research = 1 mult = stockpile_society_research }
 	add_resource = { engineering_research = 1 mult = stockpile_engineering_research }
 }
+
 
 f93_lose_income_effect = {
 	add_resource = { energy = -1 mult = income_energy }

@@ -14,8 +14,10 @@ cb_nomadic_pirate_raid = {
 	show_notification = yes
 	potential = {
 		OR = {
-			is_country_type = playable_nomads
-			is_country_type = playable_pirate_nomads
+			is_f93_space_pirate = yes
+			is_f93_nomadic = yes
+			# is_country_type = playable_nomads
+			# is_country_type = playable_pirate_nomads
 			has_civic = civic_nomadic_pirate
 			has_tradition = tr_nomadic_ambition_3
 		}
@@ -23,14 +25,14 @@ cb_nomadic_pirate_raid = {
 	is_valid = {
 		OR = {
 			has_country_flag = has_Access_to_raiding
-			is_country_type = playable_pirate_nomads
+			is_f93_space_pirate = yes
 		}
 		
 	}
 	destroy_if = {
 		NOR = {
 			has_country_flag = has_Access_to_raiding
-			is_country_type = playable_pirate_nomads
+			is_f93_nomadic = yes
 		}
 	}
 }

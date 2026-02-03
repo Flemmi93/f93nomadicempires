@@ -26,6 +26,8 @@ country_event = {
 			species = owner_main_species
 			class = commander
 			skill = 1
+			#if the mothership orbits a planet it is set as the background planet, else its empty
+			background_planet = event_target:f93_homeworld_ship
 		}
 		hidden_effect = {
 			if = {
@@ -61,6 +63,8 @@ country_event = {
 			species = owner_main_species
 			class = scientist
 			skill = 1
+			#if the mothership orbits a planet it is set as the background planet, else its empty
+			background_planet = event_target:f93_homeworld_ship
 		}
 		hidden_effect = {
 			if = {
@@ -82,6 +86,8 @@ country_event = {
 			species = owner_main_species
 			class = official
 			skill = 1
+			#if the mothership orbits a planet it is set as the background planet, else its empty
+			background_planet = event_target:f93_homeworld_ship
 		}
 		hidden_effect = {
 			if = {

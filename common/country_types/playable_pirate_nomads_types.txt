@@ -121,8 +121,8 @@ playable_nomads = {
 	ownership_limits = default
 
 	faction = {
-		# needs_colony = no
-		# needs_border_access = no
+		needs_colony = no
+		needs_border_access = no
 	}
 	ai = {
 		enabled = yes
@@ -213,8 +213,8 @@ playable_pirate_nomads = {
 
 	faction = {
 		hostile = yes
-		# needs_colony = no
-		# needs_border_access = no
+		needs_colony = no
+		needs_border_access = no
 	}
 	ai = {
 		enabled = yes

@@ -79,7 +79,7 @@ country_event = {
 			add_ship_design = last_created_design
 			create_ship_design = { design =  NAME_Nomadic_freighter_gen	 }
 			add_ship_design = last_created_design
-			create_ship_design = { design =  NAME_Nomadic_freighter_aloy }
+			create_ship_design = { design =  NAME_Nomadic_freighter_alloy }
 			add_ship_design = last_created_design
 			create_ship_design = { design =  NAME_Nomadic_freighter_csg }
 			add_ship_design = last_created_design
@@ -101,11 +101,11 @@ country_event = {
 						design = NAME_Nomadic_freighter_mins
 					}
 					create_ship = {
-						name = NAME_Nomadic_freighter_aloy
-						design = NAME_Nomadic_freighter_aloy
+						name = NAME_Nomadic_freighter_alloy
+						design = NAME_Nomadic_freighter_alloy
 					}
 					create_ship = {
-						name = NAME_Nomadic_freighter_aloy
+						name = NAME_Nomadic_freighter_alloy
 						design = NAME_Nomadic_freighter_csg
 					}
 					create_ship = {
@@ -416,6 +416,7 @@ country_event = {
 		from = { every_system_planet = { remove_modifier = pm_f93_steppe_nomad_station_output } }
 	}
 }
+
 # From = system
 # FromFrom = country (previous owner)
 # This = country (new owner)
@@ -584,6 +585,96 @@ country_event = {
 				modifier = f93_has_fewer_districts
 				multiplier = trigger:planet_size
 				days = 31
+			}
+		}
+	}
+}
+
+# # From = system
+# # FromFrom = country (new owner)
+# # This = country (previous owner)
+# country_event = {
+# 	id = f93_steppe_nomad.16
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		is_f93_nomadic = yes
+# 	}
+# 	immediate = {
+# 		f93_save_resources_effect = yes
+# 		random_system = {
+# 			f93_transfer_stockpile_data_from_SCOPE_effect = { SCOPE = prev }
+# 			save_event_target_as = data_vault
+# 			set_name = vault
+# 		}
+# 		if = {
+# 			limit = { is_f93_nomadic = yes }
+# 			set_country_type = playable_nomads
+# 		}
+# 		if = {
+# 			limit = { is_f93_space_pirate = yes }
+# 			set_country_type = playable_pirate_nomads
+# 		}
+# 		country_event = { id = f93_steppe_nomad.17 days = 1 scopes = { from = event_target:data_vault } }
+# 	}
+# }
+
+# Fired whenever a new owner is set for a planet, following a war or through trade
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Country scope (previous owner, if any)
+planet_event = {
+	id = f93_steppe_nomad.16
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = fromfrom
+		fromfrom = { is_f93_nomadic = yes }
+	}
+	immediate = {
+		fromfrom = {
+			if = {
+				limit = { any_country = { has_country_flag = ship_saving_country } }
+				random_country = {
+					limit = { has_country_flag = ship_saving_country }
+					save_event_target_as = ship_saving_country
+				}
+			}
+			else = {
+				create_country = {
+					country_type = nomad
+					auto_delete = no
+					effect = {
+						set_country_flag = ship_saving_country
+						every_country = {
+							set_faction_hostility = { target = last_created_country set_friendly = yes }
+						}
+						root = { country_event = { id = f93_steppe_nomad.17 days = 1 scopes = { from = last_created_country } } }
+					}
+				}
+			}
+		}
+		solar_system = { set_timed_fleet_flag = { flag = traded_system days = 2 } }
+		fromfrom = {
+			every_owned_fleet = {
+				limit = { is_mobile = yes NOT = { any_owned_ship = { is_f93_mothership = yes } } }
+				set_owner = event_target:ship_saving_country
+			}
+		}
+		every_system = {
+			limit = { has_star_flag = traded_system }
+			set_owner = from
+		}
+	}
+}
+country_event = {
+	id = f93_steppe_nomad.17
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			every_owned_fleet = {
+				set_owner = root
 			}
 		}
 	}

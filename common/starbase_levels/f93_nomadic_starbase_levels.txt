@@ -23,3 +23,10 @@ starbase_level_nomadic_mothership = {
 	potential_home_base = yes
 	show_in_outliner = no
 }
+
+# Nomadic Shipyard
+starbase_level_nomadic_mothership_no_dlc = {
+	ship_size = nomadic_mothership_no_dlc
+	potential_home_base = yes
+	show_in_outliner = no
+}

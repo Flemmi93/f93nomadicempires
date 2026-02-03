@@ -136,6 +136,16 @@ on_colonized = {
 	}
 }
 
+# Fired whenever a new owner is set for a planet, following a war or through trade
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Country scope (previous owner, if any)
+on_planet_transfer = {
+	events = {
+		f93_steppe_nomad.16
+	}
+}
+
 
 # From = system
 # FromFrom = country (new owner)

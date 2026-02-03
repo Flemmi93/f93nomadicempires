@@ -27,6 +27,7 @@
 nomadic_mothership_limit = {
 	ship_types = {
 		nomadic_mothership
+		nomadic_mothership_no_dlc
 	}
 	base = 24 # 1 * Motherships's size_multiplier
 	show = {
