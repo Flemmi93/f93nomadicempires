@@ -632,38 +632,27 @@ planet_event = {
 		fromfrom = { is_f93_nomadic = yes }
 	}
 	immediate = {
-		fromfrom = {
-			if = {
-				limit = { any_country = { has_country_flag = ship_saving_country } }
-				random_country = {
-					limit = { has_country_flag = ship_saving_country }
-					save_event_target_as = ship_saving_country
-				}
-			}
-			else = {
-				create_country = {
-					country_type = nomad
-					auto_delete = no
-					effect = {
-						set_country_flag = ship_saving_country
-						every_country = {
-							set_faction_hostility = { target = last_created_country set_friendly = yes }
-						}
-						root = { country_event = { id = f93_steppe_nomad.17 days = 1 scopes = { from = last_created_country } } }
+			create_country = {
+				country_type = nomad
+				ignore_initial_colony_error = yes
+				auto_delete = no
+				effect = {
+					every_country = {
+						set_faction_hostility = { target = last_created_country set_friendly = yes }
 					}
+					fromfrom = { country_event = { id = f93_steppe_nomad.17 days = 1 scopes = { from = last_created_country } } }
 				}
 			}
-		}
-		solar_system = { set_timed_fleet_flag = { flag = traded_system days = 2 } }
+		solar_system = { set_timed_star_flag = { flag = traded_system days = 2 } }
 		fromfrom = {
 			every_owned_fleet = {
-				limit = { is_mobile = yes NOT = { any_owned_ship = { is_f93_mothership = yes } } }
-				set_owner = event_target:ship_saving_country
+				limit = { NOT = { any_owned_ship = { is_f93_mothership = yes } } }
+				set_owner = last_created_country
 			}
 		}
 		every_system = {
 			limit = { has_star_flag = traded_system }
-			set_owner = from
+			starbase = { set_owner = from }
 		}
 	}
 }
