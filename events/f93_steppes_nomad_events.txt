@@ -633,7 +633,7 @@ planet_event = {
 	}
 	immediate = {
 			create_country = {
-				country_type = nomad
+				country_type = global_event
 				ignore_initial_colony_error = yes
 				auto_delete = no
 				effect = {
@@ -668,3 +668,74 @@ country_event = {
 		}
 	}
 }
+
+# # Escrow fleets before owner/controller is cleared
+# # Scope = Planet (on_colony_destroyed)
+# planet_event = {
+#     id = nmod_backend.500
+#     hide_window = yes
+#     is_triggered_only = yes
+
+#     trigger = {
+#         exists = owner
+#         owner = {
+#             num_owned_planets = 1
+#             any_owned_fleet = { has_fleet_flag = nmod_arkship }
+#             NOT = { has_country_flag = nmod_fleets_escrowed }
+#         }
+#     }
+
+#     immediate = {
+#         owner = { save_event_target_as = nmod_escrow_owner }
+
+#         # Create temp country to hold fleets
+#         create_country = {
+#             name = "NMOD_FLEET_ESCROW"
+#             type = global_event
+#             effect = {
+#                 save_global_event_target_as = nmod_fleet_escrow_country_@event_target:nmod_escrow_owner
+#                 set_country_flag = nmod_fleet_escrow
+#             }
+#         }
+
+#         # Transfer all fleets to temp country
+#         owner = {
+#             save_event_target_as = nmod_original_owner
+#             every_owned_fleet = {
+#                 set_owner = event_target:nmod_fleet_escrow_country_@event_target:nmod_escrow_owner
+#             }
+#             set_country_flag = nmod_fleets_escrowed
+#         }
+#     }
+# }
+
+
+# # Restore fleets after owner is cleared
+# # Scope = Planet (on_planet_ownerless), FromFrom = former owner
+# planet_event = {
+#     id = nmod_backend.501
+#     hide_window = yes
+#     is_triggered_only = yes
+
+#     trigger = {
+#         fromfrom = { has_country_flag = nmod_fleets_escrowed }
+#         exists = event_target:nmod_fleet_escrow_country_@fromfrom
+#     }
+
+#     immediate = {
+#         fromfrom = { save_event_target_as = nmod_original_owner }
+#         # Transfer all fleets back from temp country
+#         event_target:nmod_fleet_escrow_country_@fromfrom = {
+#             every_owned_fleet = {
+#                 set_owner = event_target:nmod_original_owner
+#             }
+#             # Destroy the temp country
+#             destroy_country = yes
+#         }
+#         fromfrom = {
+#             remove_country_flag = nmod_fleets_escrowed
+#         }
+#         # Clear the global event target
+#         clear_global_event_target = nmod_fleet_escrow_country_@fromfrom
+#     }
+# }
